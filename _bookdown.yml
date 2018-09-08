@@ -1,0 +1,6 @@
+book_filename: "431-2018-project"
+language:
+  ui:
+    chapter_name: "Chapter "
+output_dir: "docs"    
+delete_merged_file: true
