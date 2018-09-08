@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="purpose.html">
+<link rel="prev" href="task-d-instructions.html">
+<link rel="next" href="task-f-instructions.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -129,49 +129,59 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">431 Project Instructions</h1>
-<h4 class="author"><em>Thomas E. Love</em></h4>
-<h4 class="date"><em>2018-09-08 12:08:54</em></h4>
-</div>
-<div id="overview" class="section level1 unnumbered">
-<h1>Overview</h1>
-<p>This website contains the Fall 2018 project information for PQHS / CRSP / MPHP 431: Statistical Methods in Biological &amp; Medical Sciences, Section 1.</p>
-<div id="your-project-includes-two-studies" class="section level2 unnumbered">
-<h2>Your Project includes Two Studies</h2>
-<p>Your final project for this course will result in a portfolio of work related to two studies.</p>
-<ol style="list-style-type: decimal">
-<li><p>[Study 1 - the Class Survey] In the first study, you (sometimes working individually, sometimes in a group) will design, administer, analyze and present the results of a survey designed to compare two or three groups of subjects on some <em>categorical</em> and <em>quantitative</em> outcomes we will develop from your initial ideas.</p></li>
-<li><p>[Study 2 - your Data] In the second study, you (working individually) will propose a research question and relevant data of interest to you, and then complete all elements of a data science project designed to create a statistical model for a <em>quantitative</em> outcome, then use it for prediction and assess the quality of those predictions.</p></li>
-</ol>
-<p>All materials related to the project (including these instructions) are maintained and linked at <a href="https://github.com/THOMASELOVE/431-2018-project" class="uri">https://github.com/THOMASELOVE/431-2018-project</a>. The course home page is at <a href="https://github.com/THOMASELOVE/431-2018" class="uri">https://github.com/THOMASELOVE/431-2018</a></p>
-</div>
-<div id="your-tasks" class="section level2 unnumbered">
-<h2>Your Tasks</h2>
-<p>The project involves two analyses (one for the class survey and one for your personal study), and four tasks.</p>
+<div id="task-e-instructions" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Task E Instructions</h1>
+<p>Task E requires you to provide a written portfolio of materials, which you will also make use of in your final presentation.</p>
+<div id="logistics" class="section level2">
+<h2><span class="header-section-number">6.1</span> Logistics</h2>
 <ul>
-<li>Task A (the proposal) is due at noon on <strong>SPECIFY DATE</strong>.</li>
-<li>Task B (the progress report) is due at noon on <strong>SPECIFY DATE</strong>.</li>
-<li>Task C (the final portfolio) is due at noon on 2018-12-13, regardless of the date of your final presentation.</li>
-<li>Task D (the final presentation) will be held on 2018-12-10, 2018-12-11 or 2018-12-13.</li>
+<li>Submit your portfolio via email to Dr. Love. Make your email’s subject: <code>431 TASK E FOR YOUR NAME</code>.</li>
+<li>The portfolio should be contained in a single .zip file that contains each of the elements below.</li>
+<li>Name your .zip file YOURNAME-TASK E.zip</li>
+<li>The .zip file should contain
+<ul>
+<li>(for Study 1) a .csv, a .Rmd and a .doc/.docx/.pdf file generated from that .Rmd file, and</li>
+<li>(for Study 2) a .Rmd and a .doc/.docx/.pdf file generated from that .Rmd file.</li>
+</ul></li>
 </ul>
 </div>
-<div id="working-with-this-document" class="section level2 unnumbered">
-<h2>Working with This Document</h2>
-<ol style="list-style-type: decimal">
-<li>This document is broken down into multiple sections. Use the table of contents at left to navigate.</li>
-<li>At the top of the document, you’ll see icons which you can click to
+<div id="materials-for-task-e" class="section level2">
+<h2><span class="header-section-number">6.2</span> Materials for Task E</h2>
 <ul>
-<li>search the document,</li>
-<li>change the size, font or color scheme of the page, and</li>
-<li>download a PDF or EPUB (Kindle-readable) version of the entire document.</li>
-</ul></li>
-<li>The document is a work in progress, and will be updated occasionally through the semester. Check the Version information above to verify the last update time.</li>
-</ol>
+<li>[<code>.csv</code> file] A clean, tidy data set for Study 1, which will require combining the two data sets you are provided, dealing with any missing data and any necessary combination into scales on the variables in which you are interested.</li>
+<li>[<code>.Rmd</code> and <code>.doc/.docx/.pdf</code> files] The six required analyses for Study 1, as both a Markdown file and Word/PDF that work with the clean and tidy data set for Study 1.</li>
+<li>[<code>.Rmd</code> and <code>.doc/.docx/.pdf</code> files] The eight required analyses for Study 2, as both a Markdown file and Word/PDF that work with the clean and tidy data set you submitted in Task D.</li>
+</ul>
 </div>
-<div id="need-help" class="section level2 unnumbered">
-<h2>Need Help?</h2>
-<p>Questions about the project or the course can be directed to <strong>431-help at case dot edu</strong> or to Dr. Love directly at <code>thomas dot love at case dot edu</code>.</p>
+<div id="the-six-required-analyses-for-study-1-the-survey" class="section level2">
+<h2><span class="header-section-number">6.3</span> The Six Required Analyses for Study 1 (The Survey)</h2>
+<p>The required analyses for the Project Survey that need to be in your Portfolio are:</p>
+<ol style="list-style-type: decimal">
+<li>A two-group comparison of population means (could use paired or independent samples)</li>
+<li>An analysis of variance with Tukey HSD pairwise comparisons of population means across K subgroups, where 3 <span class="math inline">\(\leq\)</span> K &lt; 7</li>
+<li>A regression model to amplify the indepedent samples comparison in a or b by incorporating a quantitative covariate.</li>
+<li>A 2x2 Table and resulting analyses for comparison of two population proportions in terms of relative risk, odds ratio and probability difference</li>
+<li>A two-way JxK contingency table where 2 <span class="math inline">\(\leq\)</span> J &lt; 7 and 3 <span class="math inline">\(\leq\)</span> K &lt; 7 with an appropriate chi-square test</li>
+<li>A three way 2 x 2 x J contingency table analysis whch will expand your 2x2 table from #4 and where 3 <span class="math inline">\(\leq\)</span> J &lt; 7</li>
+</ol>
+<p>A demonstration of an appropriate analysis for each of these pieces will be provided at <a href="https://sites.google.com/a/case.edu/love-431/home/projects/class-survey" class="uri">https://sites.google.com/a/case.edu/love-431/home/projects/class-survey</a>.</p>
+
+</div>
+<div id="the-eight-required-analyses-for-study-2-your-data" class="section level2">
+<h2><span class="header-section-number">6.4</span> The Eight Required Analyses for Study 2 (Your Data)</h2>
+<p>For your portfolio presentation in Study 2 (Your Data) complete these steps:</p>
+<ol start="0" style="list-style-type: decimal">
+<li>Identify all the variables in your tidy data set that have missing (NA) values. Delete all observations with missing outcomes, and use simple imputation to impute values for the candidate predictors with NAs. Use the resulting imputed data set in all subsequent work.</li>
+<li>Obtain a training sample with a randomly selected 80% of your data, and have the remaining 20% in a test sample, properly labeled, and using <code>set.seed</code> so that the results can be replicated later. Use this training sample for Steps 2-6 below.</li>
+<li>Using the training sample, provide numerical summaries of each predictor variable and the outcome (with <code>Hmisc::describe</code>), as well as graphical summaries of the outcome variable. Your results should now show no missing values in any variable. Are there any evident problems, such as substantial skew in the outcome variable?</li>
+<li>Build and interpret a scatterplot matrix to describe the associations (both numerically and graphically) between the outcome and all predictors. Use a Box-Cox plot to investigate whether a transformation of your outcome is suggested. Describe what a correlation matrix suggests about collinearity between candidate predictors.</li>
+<li>Specify a “kitchen sink” linear regression model to describe the relationship between your outcome (potentially after transformation) and the main effects of each of your predictors. Assess the overall effectiveness, within your training sample, of your model, by specifying and interpreting the R<sup>2</sup>, adjusted R<sup>2</sup> (especially in light of your collinearity conclusions below), the residual standard error, and the ANOVA F test. Does collinearity in the kitchen sink model have a meaningful impact? How can you tell? Specify the size, magnitude and meaning of all coefficients, and identify appropriate conclusions regarding effect sizes with 90% confidence intervals.</li>
+<li>Build a second linear regression model using a subset of your four predictors, chosen by you to maximize predictive value within your training sample. Specify the method you used to obtain this new model. (Backwards stepwise elimination is a likely approach in many cases, but if that doesn’t produce a new model, feel free to select two of your more interesting predictors from the kitchen sink model and run that as a new model.)</li>
+<li>Compare this new (second) model to your “kitchen sink” model within your training sample using adjusted R<sup>2</sup>, the residual standard error, AIC and BIC. Specify the complete regression equation in both models, based on the training sample. Which model appears better in these comparisons of the four summaries listed above? Produce a table to summarize your results. Does one model “win” each competition in the training sample?</li>
+<li>Now, use your two regression models to predict the value of your outcome using the predictor values you observe in the test sample. Be sure to back-transform the predictions to the original units if you wound up fitting a model to a transformed outcome. Compare the two models in terms of mean squared prediction error and mean absolute prediction error in a Table, which Dr. Love will <strong>definitely want to see</strong> in your portfolio. Which model appears better at out-of-sample prediction according to these comparisons, and how do you know?</li>
+<li>Select the better of your two models (based on the results you obtain in Questions 6 and 7) and apply it to the entire data set. Do the coefficients or summaries the model show any important changes when applied to the entire data set, and not just the training set? Plot residuals against fitted values, and also a Normal probability plot of the residuals, each of which Dr. Love <strong>will be looking for</strong> in your portfolio. What do you conclude about the validity of standard regression assumptions for your final model based on these two plots?</li>
+</ol>
+<p>A demonstration of an appropriate analysis for each of these pieces is available at <a href="https://sites.google.com/a/case.edu/love-431/home/projects/your-data" class="uri">https://sites.google.com/a/case.edu/love-431/home/projects/your-data</a></p>
 
 </div>
 </div>
@@ -180,8 +190,8 @@
           </div>
         </div>
       </div>
-
-<a href="purpose.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="task-d-instructions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="task-f-instructions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -211,7 +221,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-taskE.Rmd",
 "text": "Edit"
 },
 "download": ["431-2018-project.pdf", "431-2018-project.epub"],

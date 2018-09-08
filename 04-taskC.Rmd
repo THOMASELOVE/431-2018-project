@@ -1,0 +1,35 @@
+# Task C Instructions
+
+Task C includes two sub-tasks - completion of the main survey (on Google Forms), *and* a Word document submitted via Blackboard, following the **Template for Task C**.
+
+1. **A Word document submitted via Blackboard**, specifying the list of items from the survey that you want to be able to use in your analysis, using the **Template for Task C** available at https://sites.google.com/a/case.edu/love-431/home/projects/class-survey.
+    - You need not do any analyses connected to the items you originally suggested, nor do you need to do analyses that mirror your original research questions.
+    - The Template asks you to specify (by item number and name) the items you wish to you use in your analyses, for each of the six analyses you will complete for Study 1. 
+    - Task E has details. You need to complete either Analysis 1a or 1b, and then Analyses 2-6.
+    - In addition to the items you select related to each Analysis, you will also select two backup quantitative variables, and two backup factors, as described in the Template.
+    - Items with at least 10 possible responses will be treated as quantitative. Other items will be treated as categorical (factors.) For ordered categories, you can consider assigning a score to each response, then treating that score as quantitative.
+        + You are permitted to categorize any quantitative item you choose.
+        + You are permitted to collapse any categories in an item with more than 2 categories, as you choose.
+        + Some items are part of multiple-item scales. If you want to use a scale, specify each item that would go into that scale in Task C.
+
+Analysis | Variables needed
+---------------------: | --------------------------------------------
+[1a] 2 means via paired samples | Two quantitative (outcomes)
+[1b] 2 means via indep. samples | One quantitative (outcome) and one categorical (2 levels)
+[2] ANOVA with Tukey | One quantitative (outcome) and one categorical (3-6 levels)
+[3] Regression Model | Same as either [1b] or [2], plus one quantitative (covariate)
+[4] 2x2 Table        | Two categorical (2 level) variables
+[5] JxK Table        | Two categorical variables, one with 2-6, other with 3-6 levels
+[6] 2x2xJ Table      | Same as [4], plus one categorical with 3-6 levels
+
+2. **Completion (Google form) of the final course survey**, available on November 7 by 5 PM.
+    - The final item asks for your name, and the system is collecting your email address (you must be logged into Google via CWRU). These will be pruned from the survey before data sets are created.
+    - You should answer all of the items. Please don't skip any items you can answer. Your colleagues need data.
+    - If you want to save your work and return later, note that only the *first* item in each section of the survey must be completed for Google to let you submit your work. Once you've submitted a partially completed survey, you can return as often as you like before the deadline to finish up.
+
+## Receiving Your Study 1 Data (November 18)
+
+- We will post **two** data files for you, each containing some of the variables you need.
+- You will need to download both files, and then *combine* and tidy to suit your needs. 
+- The two files will be linked by the subject `id` number. 
+- We discuss combining two data sets, using `dplyr`, as part of the Data Management Tips section.

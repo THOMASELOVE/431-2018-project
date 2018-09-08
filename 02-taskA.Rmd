@@ -1,0 +1,189 @@
+# Task A Instructions: The Proposal
+
+Task A requires you to:
+
+1. develop and propose two research questions for Study 1. Here, your research questions should clearly identify meaningful statistical comparisons.
+2. propose 5 "homemade" survey questions for Study 1 (EPBI MS/PhD students have an additional requirement here.)
+3. develop and propose a meaningful research question for Study 2. This question needs to clearly relate to modeling and prediction of a quantitative outcome on the basis of a set of predictor variables.
+4. identify and present a data set that is likely to lead to an answer to the research question proposed for Study 2
+
+The rest of this section contains guidance as to what sort of questions you need to propose for the survey, and as to what sorts of data sets and research questions are appropriate for your proposal. You will submit your proposal via Blackboard.
+
+## Study 1 work for Task A
+
+In Study 1, you will survey your fellow students through an instrument we will develop in September and October and administer in November. The course survey will be done online, and will include responses (de-identified, of course) from all students in the current 431 class, plus the teaching assistants, and perhaps some volunteers from previous iterations of the course, in an effort to get a reasonable sample of graduate students at CWRU. The final survey will be much longer than would be ideal, and will include questions from each student in the class. 
+
+In Task A, all students will specify first specify two *research questions*, and then specify 5 *survey questions*. Students in the MS/PhD programs in EPBI will also specify a published scale (with proper citations) that is available for our use.
+
+### Study 1 is about Making Comparisons
+
+In your eventual analysis of Study 1, you will be responsible for comparing both quantitative and categorical outcomes across two (or three) groups. Some tools you will use in completing Study 1 include:
+
+- Descriptive and exploratory summaries of the data across the groups for each of your chosen outcomes, including, of course, attractive and well-constructed visualizations, graphs and tables.
+- Comparisons of the population mean difference for at least one quantitative outcome across a set of two (or three) groups, including appropriate demonstrations of the reasons behind the choices you made between parametric, non-parametric and bootstrap procedures.
+- Comparisons of the population proportions for at least one categorical outcome across your set of two (or three) groups, including appropriately interpreted point estimates and confidence intervals.
+
+Note well that Study 1 is **not** about building sophisticated statistical models, and using them to make predictions. That's Study 2.
+
+### Specifying Research Questions
+
+- The research questions you write for Study 1 state the main objective of the study in terms that allow us to apply statistical methods to test data to obtain an answer.
+- The research question should be written in the form of a comparison of two exposures or groups in terms of first your quantitative outcome, and then, in a second question, your categorical outcome.
+- A research question is the fundamental core of a research project, study, or review of literature. It focuses the study, determines the methodology, and guides all stages of inquiry, analysis, and reporting. [Source](https://researchrundowns.com/intro/writing-research-questions/)
+
+Quoting Roger Peng, from [Exploratory Data Analysis with R](https://bookdown.org/rdpeng/exdata/):
+
+> Formulating a question can be a useful way to guide the exploratory data analysis process and to limit the exponential number of paths that can be taken with any sizeable dataset. In particular, a sharp question or hypothesis can serve as a dimension reduction tool that can eliminate variables that are not immediately relevant to the question. For example, (suppose that we are interested in) looking at an air pollution dataset from the U.S. Environmental Protection Agency (EPA). 
+
+> A general question one could ask is "Are air pollution levels higher on the east coast than on the west coast?" But a more specific question might be "Are hourly ozone levels on average higher in New York City than they are in Los Angeles?"
+
+> Note that both questions may be of interest, and neither is right or wrong. But the first question requires looking at all pollutants across the entire east and west coasts, while the second question only requires looking at single pollutant in two cities. It's usually a good idea to spend a few minutes to figure out what is the question you're really interested in, and narrow it down to be as specific as possible (without becoming uninteresting).
+
+### Checklist for Research Questions
+
+1. Is my research question (RQ) something that I am curious about and that others might care about? 
+2. Does my RQ present an issue on which I can justify a stand prior to data collection about what I think will happen?
+3. Is my RQ too broad, too narrow, or OK, given the time frame and restrictions of this assignment?
+4. Is my RQ measurable? What type of information do I need? Can I find a way to ask a limited number of survey questions in such a way to allow me to (after the data are collected) either support or contradict a position on my RQ? 
+- Adapted from [this online tutorial from Empire State College](http://www8.esc.edu/htmlpages/writerold/menus.htm#develop)
+
+### Tips on Writing Good Research Questions
+
+- [Duke](http://twp.duke.edu/uploads/media_items/research-questions.original.pdf) has a nice overview online of key issues.
+- [Vanderbilt](http://vanderbilt.edu/writing/manage/wp-content/uploads/2013/06/Formulating%20Your%20Research%20Question.pdf) has some nice materials, built from the [tutorial at Empire State College](http://www8.esc.edu/htmlpages/writerold/menus.htm#develop) quoted earlier
+- Jeff Leek provides several relevant tips in *The Elements of Data Analytic Style*
+- https://researchrundowns.com/intro/writing-research-questions/ has some excellent tips on wording
+
+### Specifying Survey Questions
+
+A piece of Task A, then is to specify the exact wording for your survey questions (and potential answers for any categorical responses), which will likely require some editing and rework, once we have the complete set of proposed questions from all students. Be prepared to revise and resubmit, quickly, so that all items can be resolved in time for publication of the survey.
+
+- Question 1 should ask the people taking the survey to provide you a number that expresses a quantitative outcome of interest to you, and this outcome should directly relate to your research question(s). 
+- Question 2 should do the same thing as Question 1: ask for a quantitative measure of interest that will serve as your backup outcome in case the first question does not work well. A sensible item will show some variation across individuals, and also across groups of interest.
+- Question 3 should ask the people taking the survey to provide you a response that expresses a categorical outcome of interest to you, and this outcome should directly relate to your research question(s). You will need to specify each of the available responses that you wish to use in the survey. No more than five options for your categorical outcome, please.
+- Question 4 should do the same thing as Question 3 and will again serve as a backup. Again, all responses must be pre-specified.
+- Question 5 should ask the people taking the survey to categorize themselves into one of two (or three) groups. You will need to have at least 10 students in each group. 
+
+For each survey question, you will need to specify the *type* of question you are asking, and the type of outcome (quantitative, or categorical.)
+
+#### Permitted Types of Items
+
+The survey will be conducted using a Google Form, rather than Survey Monkey or some other tool. Thus, we have a somewhat restricted set of item types.
+
+For **quantitative measures**, Google Forms permit the use of
+
+1. a *short answer* item without any restrictions on the response (except a character limit)
+2. a *short answer* item where respondents are forced to insert a number within a given range through a validation process that only accepts the response if it falls within the specified limits.
+3. *linear scale* items for ordered categorical ratings (but only on a scale of up to ten points - i.e. 1 to 10)
+
+For **categorical measures**, Google Forms permit the use of 
+
+1. *multiple choice* items for endorsing a single choice from a group of 2-10 alternatives.
+2. *checkbox* items for the endorsement of one or more choices from a group of 2-10 alternatives.
+3. *linear scale* items for ordered categorical ratings (often on a 1-X scale, where X is between 2 and 10)
+4. *dropdown* items for selections of one option from a group of 2-3 choices.
+
+#### A Few Notes
+
+- If you are asking people to respond to a prompt using a scale, that scale should be expressed on a wide scale. We will accept 1-10 so long as careful descriptions are provided for the meaning of each endpoint.
+- Our preference is a 0-100 scale for quantitative items, where 0 represents the most negative result and 100 the most positive reaction to the item. One common choice is 0 = Strongly Disagree to 100 = Strongly Agree. The reason we prefer a 0-100 scale is to increase variation in our responses. When answering questions, please use the whole scale.
+- In the survey, I will ask students to provide their age, select their sex, and whether they were born in the United States. I will use this to provide three additional groupings (lower half of ages vs. higher, males vs. females, and US natives vs. non-natives) that you will be able to use instead of your Question 5 grouping if that grouping doesn't work out for some reason. So, don't include age, gender or country of origin in your survey questions.
+- If you are curious about questions that have been used in the past, the 2014 survey is available at [this link](https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLScEgrawEzqKZNyYQZj3_AvqOzo8ay5NpqvEIg-Bwpcg2fqMKw/viewform?c=0&w=1) and the 2015 survey is available [here](https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLSduLMePv2ZGnjL8zM9a2p_H8JS1-ux0W1Xe3A6iDZW5MxJnMA/viewform).
+
+### Extra task for EPBI MS/PhD students
+
+Students in the EPBI MS/PhD track for the course will also specify a published scale (available for public use) to generate an outcome or grouping(s) of interest from those completing the survey. 
+
+Those outside the EPBI MS/PhD track are permitted to submit a scale as well, if they would prefer to use such a scale instead of some part of their homemade group of 5 questions. Please indicate this preference clearly in your proposal.
+
+## Study 2 Work for Task A
+
+You will present a proposal **summary** (< 300 words) and a brief **data description** for Study 2 in Task A.
+
+You will be building a multiple regression model, and using it to predict your outcome of interest. 
+
+- We prefer data sets for this work containing 250 to 250,000 observations, including at least one quantitative outcome, and at least four predictor variables (one of which may be identified as the "key" predictor of interest.)
+- Predictors may be quantitative or categorical. 
+- If you would like to use a data set which does not meet these specifications, contact Dr. Love via email well in advance of the Task A deadline (2016-10-11) to explain your reasons so that he can either approve your choice of data set, or not, in time for you to find a new data set.
+
+### The Proposal Summary
+
+Take the time to come up with a good, interesting title. You are going to work hard on this thing; please resist the temptation to kill my interest at the start by calling it "EPBI 431 Statistics Project."
+
+Provide me a very brief summary of what you're trying to accomplish - specifically, what your research question is, and what you hypothesize will happen.
+
+- The summary is the heart of the proposal, and requires some care. You will need to convince me that your topic is interesting, your data are relevant, and building a model and making predictions of a quantitative outcome using the predictors available to you will be worthwhile.
+- The summary ends with a statement of the research question or questions (you may have one, or possibly two.) An excellent question conveys the main objective of the study in terms that allow us to apply statistical models to describe an association between one or more predictors and a quantitative outcome. 
+- It should be possible for me to explain your study accurately just by reading this summary. If it's not possible, it will come back to you for speedy rework.
+- This summary should be less than 300 words.
+- Use complete English sentences. Write in plain language. Use words we all know. Avoid jargon.
+
+### The Data Description
+
+Your data description can be as long as it needs to be. It should include:
+
+1. Your data source, which can be an online source (in which case include a working link), a published paper or journal article (in which case I need a link and a PDF copy of the paper), or unpublished data (in which case I need the details of how the data were gathered)
+
+2. A thorough description of the data collection process, with complete details as to the nature of the variables, the setting for data collection, and complete details of any apparatus you used which may affect results.
+
+3. Specification of the people and methods involved.
+    + Who are the subjects under study? 
+    + When were the data gathered? By whom?
+    + How many subjects are included?
+    + What caused subjects to be included or excluded from the study?
+
+4. Your planned quantitative outcome, which must relate directly to the research question you specified above. Provide a complete definition, including specifying the exact wording of the question or details of the measurement procedure used to obtain the outcome. If available, you can also include descriptios of secondary quantitative outcomes.
+
+5. Your predictors of interest, which should also relate to the research question in an obvious way. Again, define the variables carefully, as you did with the outcome.
+
+6. If you already have the data, tell me that. If you don't, specify any steps you must still take in order to get the data, and specify the date by which you will have your data (must be no later than 2016-11-01.)
+
+
+### Some Potentially Useful Data Sources
+
+The ideal choice of data source for this project is a public-use version of a meaningful data set without access restrictions. With so many students in the class, I cannot be responsible for supervising your work with restricted data personally. Some appealing sources to explore include:
+
+- https://www.data.gov/ The home of the U.S. Government's open data
+- http://www.census.gov/data.html The U.S. Census Bureau has many interesting data sets, including the [Current Population Survey](http://www.census.gov/programs-surveys/cps.html)
+- http://www.healthdata.gov/ 125 years of U.S. Health Care Data
+- http://www.cdc.gov/nchs/nhanes/index.htm National Health and Nutrition Examination Survey. 
+    + You may want to look at [the nhanesA package in R](https://cran.r-project.org/web/packages/nhanesA/vignettes/Introducing_nhanesA.html)
+- http://dashboard.healthit.gov/datadashboard/data.php Office of the National Coordinator for Health IT's dashboard
+- http://www.icpsr.umich.edu/icpsrweb/ ICSPR (Inter-university Consortium for Political and Social Research) is a source for many public-use data sets
+    + This includes the [Health and Medical Care data archive of the Robert Wood Johnson Foundation](http://www.icpsr.umich.edu/icpsrweb/HMCA/)
+- http://gss.norc.org/ The General Social Survey
+- http://www.bls.gov/data/ Bureau of Labor Statistics
+- http://nces.ed.gov/surveys/ National Center for Education Statistics
+- http://www.odh.ohio.gov/healthstats/dataandstats.aspx Ohio Department of Health
+- http://open.canada.ca/en Canada Open Data
+- http://digital.nhs.uk/home Health data sets from the UK National Health Service.
+- http://www.who.int/en/ World Health Organization
+- http://www.unicef.org/statistics/ UNICEF has some available data on women and children
+- http://www.pewinternet.org/datasets/ Pew Research Center's Internet Project
+- http://portals.broadinstitute.org/cgi-bin/cancer/datasets.cgi Broad Institute's Cancer Program
+- http://www.kdnuggets.com/datasets/index.html is a big index of lots of available data repositories
+- https://www.kaggle.com/ Kaggle competition data sets are an interesting possibility
+
+I cannot guarantee the quality of any of the data sets available at these sites, but I've spent at least a little time at most of them in recent months.
+
+### Some Restrictions
+
+Note that it is especially appealing, in Study 2, to make use of data that you are studying in your own
+field that fit the criteria I describe and which can be made available to me. Ideally, therefore, you would be working with data that are available to the public.
+
+1. You need to be able to share your data with a statistician (Dr. Love) following [Jeff Leek's guide to sharing data with a statistician](https://github.com/jtleek/datasharing). This means you need to have access to the data in the raw, and it means that I have to be able to have access to it in the raw, as well. So, studies involving protected health information are **not** appropriate. 
+
+2. A full citation for any and all data elements, including a complete codebook, must be provided as part of your proposal.
+
+3. There is more to a statistical application than the analysis of a canned data set, even a good canned data set. Googling "data sets for regression projects" or something similar is not a good strategy. I am not interested in you using pre-cleaned data from an educational repository, such as:
+    + [this one at the Cleveland Clinic](http://www.lerner.ccf.org/qhs/datasets/), or [this one at Vanderbilt University](http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets), or [this one at UCLA](http://www.stat.ucla.edu/projects/datasets/), or [this one at the University of Florida](http://www.stat.ufl.edu/~winner/datasets.html), or [this one at Florida State University](http://people.sc.fsu.edu/~jburkardt/datasets/datasets.html), or
+    + [StatLib at Carnegie-Mellon University](http://lib.stat.cmu.edu/datasets/), or [the Journal of Statistics Education Data Archive](http://www.amstat.org/publications/jse/jse_data_archive.htm), or
+    + [StatSci.org's repository of textbook examples and ready for teaching data](http://www.statsci.org/datasets.html), or
+    + any of the many textbook-linked repositories of data sets, like [this one for Statistics: Unlocking the Power of Data](http://www.lock5stat.com/datapage.html), or
+    + any similar repository Professor Love deems to be inappropriate
+
+4. While there are some great resources available to some people in this class by virtue of their affiliation with one of the health systems in town, I can do nothing to get you access to health system specific data as part of your project for this class or for 432, and in general, data from those sources are not especially appropriate because of issues with protected health information.
+
+## Evaluating Task A
+
+Dr. Love will evaluate all proposals (Task A) personally, in the order in which they are received. Proposals will receive one of two grades: OK or REDO. REDO will be accompanied with specific requests that should be accomplished within a short time window (approximately 24 hours). If you materially deviate from these specifications, he will return your proposal without comment other than to re-specify what needs to be fixed before he responds.

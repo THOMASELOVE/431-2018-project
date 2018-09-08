@@ -1,0 +1,17 @@
+# Purpose
+
+It is hard to learn statistics (or anything else) passively; concurrent theory and application
+are essential\footnote{Though by no means an original idea, this particular phrasing is stolen from Harry Roberts.} The distinguished statistician, George Box, noted that "statistics has no reason for existence except as the catalyst for investigation and discovery." I am primarily interested in your learning something interesting, useful and even valuable from your project.
+
+An effective project will demonstrate:
+
+1. The ability to create and formulate research questions that are statistically and scientifically appropriate.
+2. The ability to turn research questions into measures of interest.
+3. The ability to pull and merge and clean and tidy data, then present the data set following [Jeff Leek's guide to sharing data with a statistician](https://github.com/jtleek/datasharing).
+4. The ability to identify appropriate estimation / testing procedures for the class survey using both continuous and categorical outcomes.
+5. The ability to build a reasonable model, including interactions and transformations to deal with non-linearity, assess the quality of the model and residual plots, then use the model to make predictions.
+6. The ability to build a Table 1 to showcase potential differences between variables.
+7. The ability to identify and (with help) solve problems that crop up
+8. The ability to comment on your work within code, and in written and oral presentation.
+9. The ability to build a Markdown-based report and a Markdown-based set of slides for presentation.
+
