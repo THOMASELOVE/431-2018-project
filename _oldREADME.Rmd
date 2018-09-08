@@ -1,0 +1,1333 @@
+---
+title: "431 Project Portfolio Instructions"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(comment = NA)
+```
+
+```{r import data and load packages, message = FALSE}
+library(pander); library(mice); library(Epi)
+library(gridExtra); library(vcd); library(Hmisc)
+library(mosaic); library(car); library(forcats) 
+library(tidyverse)
+
+source("data/Love-boost.R")
+
+hbp_study <- read.csv("data/hbp_study.csv") %>% tbl_df
+```
+
+
+
+# Overview
+
+Your final project for this course will result in a portfolio of work related to two studies.
+
+1. [Study 1 - the Class Survey] In the first study, you (sometimes working individually, sometimes in a group of students) will design, administer, analyze and present the results of a survey designed to compare two or three groups of subjects on some *categorical* and *continuous* outcomes we will develop from your initial ideas.
+
+2. [Study 2 - your Data] In the second study, you (working individually) will propose a research question and relevant data of interest to you, and then complete all elements of a data science project designed to create a statistical model for a *quantitative* outcome, then use it for prediction and assess the quality of those predictions.
+
+All materials related to the project will be maintained at https://sites.google.com/a/case.edu/love-431/home/projects where regular updates to this material will be posted throughout the semester.
+
+## Purpose
+
+It is hard to learn statistics (or anything else) passively; concurrent theory and application
+are essential\footnote{Though by no means an original idea, this particular phrasing is stolen from Harry Roberts.} The distinguished statistician, George Box, noted that "statistics has no reason for existence except as the catalyst for investigation and discovery." I am primarily interested in your learning something interesting, useful and even valuable from your project.
+
+An effective project will demonstrate:
+
+1. The ability to create and formulate research questions that are statistically and scientifically appropriate.
+2. The ability to turn research questions into measures of interest.
+3. The ability to pull and merge and clean and tidy data, then present the data set following [Jeff Leek's guide to sharing data with a statistician](https://github.com/jtleek/datasharing).
+4. The ability to identify appropriate estimation / testing procedures for the class survey using both continuous and categorical outcomes.
+5. The ability to build a reasonable model, including interactions and transformations to deal with non-linearity, assess the quality of the model and residual plots, then use the model to make predictions.
+6. The ability to build a Table 1 to showcase potential differences between variables.
+7. The ability to identify and (with help) solve problems that crop up
+8. The ability to comment on your work within code, and in written and oral presentation.
+9. The ability to build a Markdown-based report and a Markdown-based set of slides for presentation.
+
+# Project Timeline (Stages and Deliverables)
+
+The project involves two analyses (one for the class survey and one for your personal study), and four tasks.
+
+- Task A (the proposal) is due at 5 PM on 2016-10-13.
+- Task B (the progress report) is due at noon on 2016-11-15.
+- Task C (the final portfolio) is due at noon on 2016-12-13.
+- Task D (the final presentation) will be held on 2016-12-12, 12-13 or 12-15.
+
+\newpage
+
+# Task A: The Proposal
+
+Task A requires you to:
+
+1. develop and propose two research questions for Study 1. Here, your research questions should clearly identify meaningful statistical comparisons.
+2. propose 5 "homemade" survey questions for Study 1 (EPBI MS/PhD students have an additional requirement here.)
+3. develop and propose a meaningful research question for Study 2. This question needs to clearly relate to modeling and prediction of a quantitative outcome on the basis of a set of predictor variables.
+4. identify and present a data set that is likely to lead to an answer to the research question proposed for Study 2
+
+The rest of this section contains guidance as to what sort of questions you need to propose for the survey, and as to what sorts of data sets and research questions are appropriate for your proposal. You will submit your proposal via Blackboard.
+
+## Study 1 work for Task A
+
+In Study 1, you will survey your fellow students through an instrument we will develop in September and October and administer in November. The course survey will be done online, and will include responses (de-identified, of course) from all students in the current 431 class, plus the teaching assistants, and perhaps some volunteers from previous iterations of the course, in an effort to get a reasonable sample of graduate students at CWRU. The final survey will be much longer than would be ideal, and will include questions from each student in the class. 
+
+In Task A, all students will specify first specify two *research questions*, and then specify 5 *survey questions*. Students in the MS/PhD programs in EPBI will also specify a published scale (with proper citations) that is available for our use.
+
+### Study 1 is about Making Comparisons
+
+In your eventual analysis of Study 1, you will be responsible for comparing both quantitative and categorical outcomes across two (or three) groups. Some tools you will use in completing Study 1 include:
+
+- Descriptive and exploratory summaries of the data across the groups for each of your chosen outcomes, including, of course, attractive and well-constructed visualizations, graphs and tables.
+- Comparisons of the population mean difference for at least one quantitative outcome across a set of two (or three) groups, including appropriate demonstrations of the reasons behind the choices you made between parametric, non-parametric and bootstrap procedures.
+- Comparisons of the population proportions for at least one categorical outcome across your set of two (or three) groups, including appropriately interpreted point estimates and confidence intervals.
+
+Note well that Study 1 is **not** about building sophisticated statistical models, and using them to make predictions. That's Study 2.
+
+### Specifying Research Questions
+
+- The research questions you write for Study 1 state the main objective of the study in terms that allow us to apply statistical methods to test data to obtain an answer.
+- The research question should be written in the form of a comparison of two exposures or groups in terms of first your quantitative outcome, and then, in a second question, your categorical outcome.
+- A research question is the fundamental core of a research project, study, or review of literature. It focuses the study, determines the methodology, and guides all stages of inquiry, analysis, and reporting. [Source](https://researchrundowns.com/intro/writing-research-questions/)
+
+Quoting Roger Peng, from [Exploratory Data Analysis with R](https://bookdown.org/rdpeng/exdata/):
+
+> Formulating a question can be a useful way to guide the exploratory data analysis process and to limit the exponential number of paths that can be taken with any sizeable dataset. In particular, a sharp question or hypothesis can serve as a dimension reduction tool that can eliminate variables that are not immediately relevant to the question. For example, (suppose that we are interested in) looking at an air pollution dataset from the U.S. Environmental Protection Agency (EPA). 
+
+> A general question one could ask is "Are air pollution levels higher on the east coast than on the west coast?" But a more specific question might be "Are hourly ozone levels on average higher in New York City than they are in Los Angeles?"
+
+> Note that both questions may be of interest, and neither is right or wrong. But the first question requires looking at all pollutants across the entire east and west coasts, while the second question only requires looking at single pollutant in two cities. It's usually a good idea to spend a few minutes to figure out what is the question you're really interested in, and narrow it down to be as specific as possible (without becoming uninteresting).
+
+### Checklist for Research Questions
+
+1. Is my research question (RQ) something that I am curious about and that others might care about? 
+2. Does my RQ present an issue on which I can justify a stand prior to data collection about what I think will happen?
+3. Is my RQ too broad, too narrow, or OK, given the time frame and restrictions of this assignment?
+4. Is my RQ measurable? What type of information do I need? Can I find a way to ask a limited number of survey questions in such a way to allow me to (after the data are collected) either support or contradict a position on my RQ? 
+- Adapted from [this online tutorial from Empire State College](http://www8.esc.edu/htmlpages/writerold/menus.htm#develop)
+
+### Tips on Writing Good Research Questions
+
+- [Duke](http://twp.duke.edu/uploads/media_items/research-questions.original.pdf) has a nice overview online of key issues.
+- [Vanderbilt](http://vanderbilt.edu/writing/manage/wp-content/uploads/2013/06/Formulating%20Your%20Research%20Question.pdf) has some nice materials, built from the [tutorial at Empire State College](http://www8.esc.edu/htmlpages/writerold/menus.htm#develop) quoted earlier
+- Jeff Leek provides several relevant tips in *The Elements of Data Analytic Style*
+- https://researchrundowns.com/intro/writing-research-questions/ has some excellent tips on wording
+
+### Specifying Survey Questions
+
+A piece of Task A, then is to specify the exact wording for your survey questions (and potential answers for any categorical responses), which will likely require some editing and rework, once we have the complete set of proposed questions from all students. Be prepared to revise and resubmit, quickly, so that all items can be resolved in time for publication of the survey.
+
+- Question 1 should ask the people taking the survey to provide you a number that expresses a quantitative outcome of interest to you, and this outcome should directly relate to your research question(s). 
+- Question 2 should do the same thing as Question 1: ask for a quantitative measure of interest that will serve as your backup outcome in case the first question does not work well. A sensible item will show some variation across individuals, and also across groups of interest.
+- Question 3 should ask the people taking the survey to provide you a response that expresses a categorical outcome of interest to you, and this outcome should directly relate to your research question(s). You will need to specify each of the available responses that you wish to use in the survey. No more than five options for your categorical outcome, please.
+- Question 4 should do the same thing as Question 3 and will again serve as a backup. Again, all responses must be pre-specified.
+- Question 5 should ask the people taking the survey to categorize themselves into one of two (or three) groups. You will need to have at least 10 students in each group. 
+
+For each survey question, you will need to specify the *type* of question you are asking, and the type of outcome (quantitative, or categorical.)
+
+#### Permitted Types of Items
+
+The survey will be conducted using a Google Form, rather than Survey Monkey or some other tool. Thus, we have a somewhat restricted set of item types.
+
+For **quantitative measures**, Google Forms permit the use of
+
+1. a *short answer* item without any restrictions on the response (except a character limit)
+2. a *short answer* item where respondents are forced to insert a number within a given range through a validation process that only accepts the response if it falls within the specified limits.
+3. *linear scale* items for ordered categorical ratings (but only on a scale of up to ten points - i.e. 1 to 10)
+
+For **categorical measures**, Google Forms permit the use of 
+
+1. *multiple choice* items for endorsing a single choice from a group of 2-10 alternatives.
+2. *checkbox* items for the endorsement of one or more choices from a group of 2-10 alternatives.
+3. *linear scale* items for ordered categorical ratings (often on a 1-X scale, where X is between 2 and 10)
+4. *dropdown* items for selections of one option from a group of 2-3 choices.
+
+#### A Few Notes
+
+- If you are asking people to respond to a prompt using a scale, that scale should be expressed on a wide scale. We will accept 1-10 so long as careful descriptions are provided for the meaning of each endpoint.
+- Our preference is a 0-100 scale for quantitative items, where 0 represents the most negative result and 100 the most positive reaction to the item. One common choice is 0 = Strongly Disagree to 100 = Strongly Agree. The reason we prefer a 0-100 scale is to increase variation in our responses. When answering questions, please use the whole scale.
+- In the survey, I will ask students to provide their age, select their sex, and whether they were born in the United States. I will use this to provide three additional groupings (lower half of ages vs. higher, males vs. females, and US natives vs. non-natives) that you will be able to use instead of your Question 5 grouping if that grouping doesn't work out for some reason. So, don't include age, gender or country of origin in your survey questions.
+- If you are curious about questions that have been used in the past, the 2014 survey is available at [this link](https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLScEgrawEzqKZNyYQZj3_AvqOzo8ay5NpqvEIg-Bwpcg2fqMKw/viewform?c=0&w=1) and the 2015 survey is available [here](https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLSduLMePv2ZGnjL8zM9a2p_H8JS1-ux0W1Xe3A6iDZW5MxJnMA/viewform).
+
+### Extra task for EPBI MS/PhD students
+
+Students in the EPBI MS/PhD track for the course will also specify a published scale (available for public use) to generate an outcome or grouping(s) of interest from those completing the survey. 
+
+Those outside the EPBI MS/PhD track are permitted to submit a scale as well, if they would prefer to use such a scale instead of some part of their homemade group of 5 questions. Please indicate this preference clearly in your proposal.
+
+## Study 2 Work for Task A
+
+You will present a proposal **summary** (< 300 words) and a brief **data description** for Study 2 in Task A.
+
+You will be building a multiple regression model, and using it to predict your outcome of interest. 
+
+- We prefer data sets for this work containing 250 to 250,000 observations, including at least one quantitative outcome, and at least four predictor variables (one of which may be identified as the "key" predictor of interest.)
+- Predictors may be quantitative or categorical. 
+- If you would like to use a data set which does not meet these specifications, contact Dr. Love via email well in advance of the Task A deadline (2016-10-11) to explain your reasons so that he can either approve your choice of data set, or not, in time for you to find a new data set.
+
+### The Proposal Summary
+
+Take the time to come up with a good, interesting title. You are going to work hard on this thing; please resist the temptation to kill my interest at the start by calling it "EPBI 431 Statistics Project."
+
+Provide me a very brief summary of what you're trying to accomplish - specifically, what your research question is, and what you hypothesize will happen.
+
+- The summary is the heart of the proposal, and requires some care. You will need to convince me that your topic is interesting, your data are relevant, and building a model and making predictions of a quantitative outcome using the predictors available to you will be worthwhile.
+- The summary ends with a statement of the research question or questions (you may have one, or possibly two.) An excellent question conveys the main objective of the study in terms that allow us to apply statistical models to describe an association between one or more predictors and a quantitative outcome. 
+- It should be possible for me to explain your study accurately just by reading this summary. If it's not possible, it will come back to you for speedy rework.
+- This summary should be less than 300 words.
+- Use complete English sentences. Write in plain language. Use words we all know. Avoid jargon.
+
+### The Data Description
+
+Your data description can be as long as it needs to be. It should include:
+
+1. Your data source, which can be an online source (in which case include a working link), a published paper or journal article (in which case I need a link and a PDF copy of the paper), or unpublished data (in which case I need the details of how the data were gathered)
+
+2. A thorough description of the data collection process, with complete details as to the nature of the variables, the setting for data collection, and complete details of any apparatus you used which may affect results.
+
+3. Specification of the people and methods involved.
+    + Who are the subjects under study? 
+    + When were the data gathered? By whom?
+    + How many subjects are included?
+    + What caused subjects to be included or excluded from the study?
+
+4. Your planned quantitative outcome, which must relate directly to the research question you specified above. Provide a complete definition, including specifying the exact wording of the question or details of the measurement procedure used to obtain the outcome. If available, you can also include descriptios of secondary quantitative outcomes.
+
+5. Your predictors of interest, which should also relate to the research question in an obvious way. Again, define the variables carefully, as you did with the outcome.
+
+6. If you already have the data, tell me that. If you don't, specify any steps you must still take in order to get the data, and specify the date by which you will have your data (must be no later than 2016-11-01.)
+
+
+### Some Potentially Useful Data Sources
+
+The ideal choice of data source for this project is a public-use version of a meaningful data set without access restrictions. With so many students in the class, I cannot be responsible for supervising your work with restricted data personally. Some appealing sources to explore include:
+
+- https://www.data.gov/ The home of the U.S. Government's open data
+- http://www.census.gov/data.html The U.S. Census Bureau has many interesting data sets, including the [Current Population Survey](http://www.census.gov/programs-surveys/cps.html)
+- http://www.healthdata.gov/ 125 years of U.S. Health Care Data
+- http://www.cdc.gov/nchs/nhanes/index.htm National Health and Nutrition Examination Survey. 
+    + You may want to look at [the nhanesA package in R](https://cran.r-project.org/web/packages/nhanesA/vignettes/Introducing_nhanesA.html)
+- http://dashboard.healthit.gov/datadashboard/data.php Office of the National Coordinator for Health IT's dashboard
+- http://www.icpsr.umich.edu/icpsrweb/ ICSPR (Inter-university Consortium for Political and Social Research) is a source for many public-use data sets
+    + This includes the [Health and Medical Care data archive of the Robert Wood Johnson Foundation](http://www.icpsr.umich.edu/icpsrweb/HMCA/)
+- http://gss.norc.org/ The General Social Survey
+- http://www.bls.gov/data/ Bureau of Labor Statistics
+- http://nces.ed.gov/surveys/ National Center for Education Statistics
+- http://www.odh.ohio.gov/healthstats/dataandstats.aspx Ohio Department of Health
+- http://open.canada.ca/en Canada Open Data
+- http://digital.nhs.uk/home Health data sets from the UK National Health Service.
+- http://www.who.int/en/ World Health Organization
+- http://www.unicef.org/statistics/ UNICEF has some available data on women and children
+- http://www.pewinternet.org/datasets/ Pew Research Center's Internet Project
+- http://portals.broadinstitute.org/cgi-bin/cancer/datasets.cgi Broad Institute's Cancer Program
+- http://www.kdnuggets.com/datasets/index.html is a big index of lots of available data repositories
+- https://www.kaggle.com/ Kaggle competition data sets are an interesting possibility
+
+I cannot guarantee the quality of any of the data sets available at these sites, but I've spent at least a little time at most of them in recent months.
+
+### Some Restrictions
+
+Note that it is especially appealing, in Study 2, to make use of data that you are studying in your own
+field that fit the criteria I describe and which can be made available to me. Ideally, therefore, you would be working with data that are available to the public.
+
+1. You need to be able to share your data with a statistician (Dr. Love) following [Jeff Leek's guide to sharing data with a statistician](https://github.com/jtleek/datasharing). This means you need to have access to the data in the raw, and it means that I have to be able to have access to it in the raw, as well. So, studies involving protected health information are **not** appropriate. 
+
+2. A full citation for any and all data elements, including a complete codebook, must be provided as part of your proposal.
+
+3. There is more to a statistical application than the analysis of a canned data set, even a good canned data set. Googling "data sets for regression projects" or something similar is not a good strategy. I am not interested in you using pre-cleaned data from an educational repository, such as:
+    + [this one at the Cleveland Clinic](http://www.lerner.ccf.org/qhs/datasets/), or [this one at Vanderbilt University](http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets), or [this one at UCLA](http://www.stat.ucla.edu/projects/datasets/), or [this one at the University of Florida](http://www.stat.ufl.edu/~winner/datasets.html), or [this one at Florida State University](http://people.sc.fsu.edu/~jburkardt/datasets/datasets.html), or
+    + [StatLib at Carnegie-Mellon University](http://lib.stat.cmu.edu/datasets/), or [the Journal of Statistics Education Data Archive](http://www.amstat.org/publications/jse/jse_data_archive.htm), or
+    + [StatSci.org's repository of textbook examples and ready for teaching data](http://www.statsci.org/datasets.html), or
+    + any of the many textbook-linked repositories of data sets, like [this one for Statistics: Unlocking the Power of Data](http://www.lock5stat.com/datapage.html), or
+    + any similar repository Professor Love deems to be inappropriate
+
+4. While there are some great resources available to some people in this class by virtue of their affiliation with one of the health systems in town, I can do nothing to get you access to health system specific data as part of your project for this class or for 432, and in general, data from those sources are not especially appropriate because of issues with protected health information.
+
+## Evaluating Task A
+
+Dr. Love will evaluate all proposals (Task A) personally, in the order in which they are received. Proposals will receive one of two grades: OK or REDO. REDO will be accompanied with specific requests that should be accomplished within a short time window (approximately 24 hours). If you materially deviate from these specifications, he will return your proposal without comment other than to re-specify what needs to be fixed before he responds.
+
+# Task B: The Progress Report
+
+Leading up to Task B, 
+
+- we will work as a class with the raw questions provided in Task A to build and administer a survey. Some of this will involve group work.
+- You'll work individually on getting your proposed research questions for Task C approved, and your data set cleaned and tidied.
+
+Task B will require you to:
+
+- complete the class survey for Study 1, and 
+- provide an update on your work toward Task C. 
+
+You will receive additional details on requirements related to Task B no later than 2016-10-11.
+
+## Tasks B-F in brief
+
+- Task B is a one-page Word document that asks you to review the initial survey draft for typos, and points that need to be clarified, and then suggest 0-3 additional items you want to add to the survey.
+- Task C is [a] a two-page Word document (from a Template) that describes the items you want to analyze from the survey, and [b] also requires you to take the whole survey online.
+- Task D requires you to share your data for Study 2, following the model of Jeff Leek's [Guide to Data Sharing](https://github.com/jtleek/datasharing). This requires a raw data set, a tidy data set, a codebook, and a study description (which updates things from the Proposal).
+- Task E is the project portfolio - it requires you to provide a tidy data set and 6 analyses for Study 1 and a set of 8 analyses for Study 2. Model examples for each of these 14 analyses will be available to you well in advance.
+- Task F is the project presentation - you have a little over 15 minutes, and this document provides details on what will happen during that session and how you can be best prepared.
+
+## Timeline
+
+Date | Details
+--------------------: | :-------------------------------------------:
+Th Oct 27    | Dr. Love presents the initial survey draft of 96 items.
+Tu Nov 1     | In-class small groups will review survey.
+**Wed Nov 2 at NOON** | **Task B**, which is a 1-page Word document.
+Th Nov 3     | In-class discussion of additional survey items
+Mon Nov 7     | Survey finalized, and goes live at 5 PM
+**Mon Nov 14 at NOON** | **Task C**, which has two sub-tasks.
+Fri Nov 18    | Students receive data from the survey
+**Fr Dec 2 at NOON** | **Task D**, the clean, tidy data for Study 2
+Nov 19 to Dec 13 | Students complete required analyses for Study 1
+Now to Dec 13 | Students complete their modeling tasks for Study 2
+**Wed Dec 14 at NOON**    | **Task E**: The Project Portfolio
+**Dec 12, 13, 15** | **Task F**: Presentation (schedule: https://goo.gl/PivgQx)
+
+\newpage
+
+# Task B (due Wednesday 2016-11-02 at NOON via Blackboard)
+
+For Task B, you need to submit via Blackboard, a single Word document (maximum one page, 12 point font, with your name and Project Task B on the top of the Word document) containing these two things: 
+
+1. Your list of typographical errors, clarifications or other edits to the 96 items currently included in the Survey Draft, available at https://sites.google.com/a/case.edu/love-431/home/projects/class-survey. If you found no errors or items in need of clarification, write a sentence saying that. If you did find an issue, please be sure to specify the item number (1-96) where you feel a revision is needed. 
+    + If you see any items in these 96 that you, personally, are not comfortable answering, **please indicate that to us** in this list, and we will consider revisions appropriately.
+2. Your list of 0-3 new items\footnote{We will not consider more than 3 new items from anyone, and are eager to hold the total set of new items to 25 or less, across all 66 students. I would argue that data related to each of the 66 accepted project proposals may be found in the existing set of 96 items.} that you would like to add to the survey. 
+    + Note that your new items *can* be but do not *need* to be anything you've previously suggested.
+    + Please begin with the following sentence: `I would like to submit # new items for consideration.` 
+    + If your number of new items to suggest is zero, then you need not write anything else here. 
+    + Should you wish to have us include 1-3 additional items, please remember that nothing about sex, drugs, or performance in 431 can be asked, and:
+        a. list each new item, being sure to specify the type (for instance, short answer, multiple choice, or checkbox) and the set of possible responses, as you did in the proposal.
+        b. describe (in 2-3 complete sentences per new item) your reasons to include the item. 
+            - Good reasons would begin with a statement of what you intend to do. As an example of such a statement, consider `I wish to study the result of this new item as a quantitative outcome across groups established by current item #*** from the survey.` Or, perhaps, something like: `I wish to use this new item as a grouping variable to study current item #***.` 
+            - In either case, follow your statement with a short explanation as to why your new item's result is of interest, and is not already captured by the existing survey.
+
+\newpage
+
+# Task C (due Monday 2016-11-14 at NOON, 2 sub-tasks)
+
+Task C includes two sub-tasks - completion of the main survey (on Google Forms), *and* a Word document submitted via Blackboard, following the **Template for Task C**.
+
+1. **A Word document submitted via Blackboard**, specifying the list of items from the survey that you want to be able to use in your analysis, using the **Template for Task C** available at https://sites.google.com/a/case.edu/love-431/home/projects/class-survey.
+    - You need not do any analyses connected to the items you originally suggested, nor do you need to do analyses that mirror your original research questions.
+    - The Template asks you to specify (by item number and name) the items you wish to you use in your analyses, for each of the six analyses you will complete for Study 1. 
+    - Task E has details. You need to complete either Analysis 1a or 1b, and then Analyses 2-6.
+    - In addition to the items you select related to each Analysis, you will also select two backup quantitative variables, and two backup factors, as described in the Template.
+    - Items with at least 10 possible responses will be treated as quantitative. Other items will be treated as categorical (factors.) For ordered categories, you can consider assigning a score to each response, then treating that score as quantitative.
+        + You are permitted to categorize any quantitative item you choose.
+        + You are permitted to collapse any categories in an item with more than 2 categories, as you choose.
+        + Some items are part of multiple-item scales. If you want to use a scale, specify each item that would go into that scale in Task C.
+
+Analysis | Variables needed
+---------------------: | --------------------------------------------
+[1a] 2 means via paired samples | Two quantitative (outcomes)
+[1b] 2 means via indep. samples | One quantitative (outcome) and one categorical (2 levels)
+[2] ANOVA with Tukey | One quantitative (outcome) and one categorical (3-6 levels)
+[3] Regression Model | Same as either [1b] or [2], plus one quantitative (covariate)
+[4] 2x2 Table        | Two categorical (2 level) variables
+[5] JxK Table        | Two categorical variables, one with 2-6, other with 3-6 levels
+[6] 2x2xJ Table      | Same as [4], plus one categorical with 3-6 levels
+
+2. **Completion (Google form) of the final course survey**, available on November 7 by 5 PM.
+    - The final item asks for your name, and the system is collecting your email address (you must be logged into Google via CWRU). These will be pruned from the survey before data sets are created.
+    - You should answer all of the items. Please don't skip any items you can answer. Your colleagues need data.
+    - If you want to save your work and return later, note that only the *first* item in each section of the survey must be completed for Google to let you submit your work. Once you've submitted a partially completed survey, you can return as often as you like before the deadline to finish up.
+
+## Receiving Your Study 1 Data (November 18)
+
+- We will post **two** data files for you, each containing some of the variables you need.
+- You will need to download both files, and then *combine* and tidy to suit your needs. 
+- The two files will be linked by the subject `id` number. 
+- We discuss combining two data sets, using `dplyr`, as part of the Data Management Tips section.
+
+\newpage
+
+# Task D (due Friday 2016-12-02 at NOON)
+
+Task D requires you to share your data for Study 2. The model for this Task is Jeff Leek's [Guide to Data Sharing](https://github.com/jtleek/datasharing). Specifically, Task D requires that you submit the following to Dr. Love via email by the deadline. Please make your email's subject: `431 TASK D for YOUR NAME`
+
+1. a direct link to the raw data set (without any need for me to sign up for anything) or a .csv copy of the raw data set called `yourname-raw.csv`
+2. a single .csv file with a name of your choice containing a clean, tidy data set for Study 2, along with 
+3. a Word or PDF file containing both 
+    a. a **codebook** section which describes every variable (column) and its values in your .csv file, 
+    b. a **study design** section which reminds (and updates) us about the source of the data and your research question.
+
+## The Raw Data Set
+
+You need to show me the raw, de-identified data. The data are raw if you:
+
+- Ran no software on the data and Did not manipulate any of the numbers in the data
+- You did not remove any data from the data set other than to de-identify it and eliminate protected information and anything else that you cannot share
+- You did not summarize the data in any way
+
+A direct link (without me having to sign up for anything) is preferred. If this is not possible, send a .csv file of the raw data set, called `yourname-raw.csv`. Note that you should not send me any variables you have no chance of using in your analyses, but may include some variables you haven't made a final decision on.
+
+## The Tidy Data Set
+
+Your .csv file should include only those variables you will actually use in your analysis of Study 2. Your .csv file should include one row per subject in your data, and one column for each variable you will use. Your data are tidy if each variable you measure is in its own column, and each different observation of that variable is in its own row, identifed by the subject `id`.
+
+You need to provide:
+
+1. a header row (row 1 in the spreadsheet) that contains full row names. So if you measured age at diagnosis for patients, you would head that column with the name `AgeAtDiagnosis` or `Age.at.Diagnosis` instead of something like `ADx` or another abbreviation that may be hard for another person (or you, two years from now) to understand.
+2. a study identification number (I would call this variable `id` and use consecutive integers to represent the rows in your data set) which should be the left-most variable in your tidy data.
+3. a quantitative outcome with a meaningful name using no special characters other than a period (`.`), hyphen(`-`) or underscore (`_`) used to separate words, which should be the second variable in your data.
+    + If you have any missing **outcome** values, **delete those rows** entirely from your tidy data set.
+4. at least four predictor variables, each with a meaningful name using no special characters other than `.` or `_` to separate words, and the predictors should be shown in columns to the right of the outcome.
+    + *Continuous* variables are anything measured on a quantitative scale that could be any fractional number.
+    + *Ordinal categorical* data are data that have a fixed, small (< 100) number of levels but are ordered.
+    + *Nominal categorical* data are data where there are multiple categories, but they aren't ordered. 
+    + Categorical predictors should read into R as factors, so your categories should include letters, and not just numbers. In general, try to avoid coding nominal or ordinal categorical variables as numbers. 
+    + Label your categorical predictors in the way you plan to use them in your analyses
+    + *Missing data* are data that are missing and you don't know the mechanism. Missing data in the predictor variables are allowed, and you should code missing values in your tidy data set as `NA`. It is critical to report if there is a reason you know about that some of the data are missing. You should also not impute/make up/throw away missing observations on the predictor values in your tidy data set.
+5. any other variables you need to share with me (typically this would only include things you had to use in order to get to your final choice of outcome and predictors.) Most people will not need to share any additional variables.
+
+I will need to be able to take your submitted `.csv` file and run your eventual Markdown file (Task E) against it and obtain your results, so it must be completely clean. Because it is a `.csv` file, you'll have no highlighting or bolding or any other special formatting. If you have missing values, they should be indicated as NA in the file. If you obtain the file in R, and then write it to a .csv file, you should write the file without row numbers if you already have an identification variable. To do so, you should be able to use `write.csv(dataframeinR, "newfilename.csv", row.names = FALSE)` where you will substitute in the name of your data frame in R, and new (.csv) file name. Don't use the same name for your original data set and your tidy one.
+
+## The Codebook
+
+For almost any data set, the measurements you calculate will need to be described in more detail than you will sneak into the spreadsheet. The code book contains this information. At minimum it should contain:
+
+1. Information about the variables (including units! and codes for any categorical variables) in your tidy data set
+2. Information about the summary choices or transformations you made or the development of any scales from raw data
+
+By reading the codebook, I should understand what you did to get from the raw data to your tidy data, so add any additional information you need to provide to make that clear.
+
+## The Study Design
+
+Here is where I want you to put the information about the experimental study design you used. You can and should reuse (and edit) the information you provided as part of the Proposal in this Codebook. The material you need here consists of three parts from the proposal, updated to mirror your current plan. Specifically, you should provide:
+
+1. Your research question describes your outcome, your key predictor and other predictors, and the population of interest. It is probably easiest to follow one of these formats\footnote{You are welcome to move the clauses around to make for a clearer question.}.
+
+- What is the effect of `*your key predictor*` on `*your outcome*` adjusting for `*your list of other predictors*` in `*your population of subjects*`?
+- How effectively can `*specify your predictors*` predict `*your outcome*` in `*your population of subjects*`? or
+
+2. A thorough description of the data collection process, with complete details as to the nature of the variables, the setting for data collection, and complete details of any apparatus you used which may affect results that **has not already been covered** in the codebook materials.
+
+3. Specification of the people and methods involved.
+    a. Who are the subjects under study? How many are included in your final tidy data set?
+    b. When were the data gathered? By whom?
+    c. What caused subjects to be included or excluded from the study?
+
+\newpage
+
+# Task E (due Wednesday 2016-12-14 at NOON)
+
+Task E requires you to provide a written portfolio of materials, which you will also make use of in your final presentation. 
+
+## Logistics
+
+- Submit your portfolio via email to Dr. Love. Make your email's subject: `431 TASK E FOR YOUR NAME`.
+- The portfolio should be contained in a single .zip file that contains each of the elements below. 
+- Name your .zip file YOURNAME-TASK E.zip
+- The .zip file should contain 
+    + (for Study 1) a .csv, a .Rmd and a .doc/.docx/.pdf file generated from that .Rmd file, and 
+    + (for Study 2) a .Rmd and a .doc/.docx/.pdf file generated from that .Rmd file.
+
+## Materials for Task E
+
+- [`.csv` file] A clean, tidy data set for Study 1, which will require combining the two data sets you are provided, dealing with any missing data and any necessary combination into scales on the variables in which you are interested.
+- [`.Rmd` and `.doc/.docx/.pdf` files] The six required analyses for Study 1, as both a Markdown file and Word/PDF that work with the clean and tidy data set for Study 1.
+- [`.Rmd` and `.doc/.docx/.pdf` files] The eight required analyses for Study 2, as both a Markdown file and Word/PDF that work with the clean and tidy data set you submitted in Task D.
+
+## The Six Required Analyses for Study 1 (The Survey)
+
+The required analyses for the Project Survey that need to be in your Portfolio are:
+
+1. A two-group comparison of population means (could use paired or independent samples)
+2. An analysis of variance with Tukey HSD pairwise comparisons of population means across K subgroups, where 3 $\leq$ K < 7
+3. A regression model to amplify the indepedent samples comparison in a or b by incorporating a quantitative covariate.
+4. A 2x2 Table and resulting analyses for comparison of two population proportions in terms of relative risk, odds ratio and probability difference
+5. A two-way JxK contingency table where 2 $\leq$ J < 7 and 3 $\leq$ K < 7 with an appropriate chi-square test
+6. A three way 2 x 2 x J contingency table analysis whch will expand your 2x2 table from #4 and where 3 $\leq$ J < 7
+
+A demonstration of an appropriate analysis for each of these pieces will be provided at https://sites.google.com/a/case.edu/love-431/home/projects/class-survey.
+
+\newpage
+
+## The Eight Required Analyses for Study 2 (Your Data)
+
+For your portfolio presentation in Study 2 (Your Data) complete these steps:
+
+0. Identify all the variables in your tidy data set that have missing (NA) values. Delete all observations with missing outcomes, and use simple imputation to impute values for the candidate predictors with NAs. Use the resulting imputed data set in all subsequent work.
+1. Obtain a training sample with a randomly selected 80% of your data, and have the remaining 20% in a test sample, properly labeled, and using `set.seed` so that the results can be replicated later. Use this training sample for Steps 2-6 below.
+2. Using the training sample, provide numerical summaries of each predictor variable and the outcome (with `Hmisc::describe`), as well as graphical summaries of the outcome variable. Your results should now show no missing values in any variable. Are there any evident problems, such as substantial skew in the outcome variable?
+3. Build and interpret a scatterplot matrix to describe the associations (both numerically and graphically) between the outcome and all predictors. Use a Box-Cox plot to investigate whether a transformation of your outcome is suggested. Describe what a correlation matrix suggests about collinearity between candidate predictors.
+4. Specify a "kitchen sink" linear regression model to describe the relationship between your outcome (potentially after transformation) and the main effects of each of your predictors. Assess the overall effectiveness, within your training sample, of your model, by specifying and interpreting the R^2^, adjusted R^2^ (especially in light of your collinearity conclusions below), the residual standard error, and the ANOVA F test. Does collinearity in the kitchen sink model have a meaningful impact? How can you tell? Specify the size, magnitude and meaning of all coefficients, and identify appropriate conclusions regarding effect sizes with 90% confidence intervals.
+5. Build a second linear regression model using a subset of your four predictors, chosen by you to maximize predictive value within your training sample. Specify the method you used to obtain this new model. (Backwards stepwise elimination is a likely approach in many cases, but if that doesn't produce a new model, feel free to select two of your more interesting predictors from the kitchen sink model and run that as a new model.)
+6. Compare this new (second) model to your "kitchen sink" model within your training sample using adjusted R^2^, the residual standard error, AIC and BIC. Specify the complete regression equation in both models, based on the training sample. Which model appears better in these comparisons of the four summaries listed above? Produce a table to summarize your results. Does one model "win" each competition in the training sample?
+7. Now, use your two regression models to predict the value of your outcome using the predictor values you observe in the test sample. Be sure to back-transform the predictions to the original units if you wound up fitting a model to a transformed outcome. Compare the two models in terms of mean squared prediction error and mean absolute prediction error in a Table, which Dr. Love will **definitely want to see** in your portfolio. Which model appears better at out-of-sample prediction according to these comparisons, and how do you know?
+8. Select the better of your two models (based on the results you obtain in Questions 6 and 7) and apply it to the entire data set. Do the coefficients or summaries the model show any important changes when applied to the entire data set, and not just the training set? Plot residuals against fitted values, and also a Normal probability plot of the residuals, each of which Dr. Love **will be looking for** in your portfolio. What do you conclude about the validity of standard regression assumptions for your final model based on these two plots?
+
+A demonstration of an appropriate analysis for each of these pieces is available at https://sites.google.com/a/case.edu/love-431/home/projects/your-data
+
+\newpage
+
+# Task F is the Project Presentation, on Dec 12, 13 or 15
+
+The presentation schedule is found at https://goo.gl/PivgQx. Arrive at Dr. Love's office (Wood WG-82L) at least 5 minutes early. If the door is open, please be sure that Dr. Love knows you are there.
+
+You will give your final presentation in a 15-minute meeting with Dr. Love. This will involve materials from both of your studies, in a fairly regimented way, described below.
+
+- You are welcome to bring either a printed presentation or (better) a functioning laptop which you can use to show me the key results as you describe them for each of the analyses in Study 1 and in Study 2 that you wind up discussing.
+- You are welcome to show me results in the context of a Powerpoint-style presentation, if you prefer to develop one, or to show me results straight from your Markdown-created Word or PDF files in your portfolio. Whatever works for you - so long as I can see what you are talking about as you are talking, we'll be fine.
+- The computers in my office will be busy while we are meeting, so I will NOT be able to pull up your portfolio or data while we are talking. You will have to be able to do that.
+- It is 100% appropriate for you to ask questions before the presentation, of Dr. Love or the TAs. Please do. At the presentation, there will be a little time for Dr. Love to address any lingering questions after the main presentation, and he's eager to hear your questions at that time, too.
+
+## Study 1 Presentation (about 5 minutes, total)
+
+In Study 1, you will first select your most interesting / intriguing result out of your six main analyses and present that, in about 90 seconds. In those 90 seconds, you should be showing me the highlights, specifically:
+
+a. What question were you investigating?
+b. What conclusion did you draw about that question?
+c. What statistical method led you to that conclusion?
+
+I will then ask you to present the results of one of the other five main analyses, in a similar way. You will need to come prepared to present this information for any of your six Study 1 analyses at a moment's notice, as you will not know in advance which of your other five main analyses I will ask for.
+
+## Study 2 Presentation (about 10 minutes, total)
+
+In Study 2, you will start with telling me about the most important finding of your little study in four minutes. In these 4 minutes, you will tell me:
+
+a. What your research question was
+b. Why it was interesting to you (parts 1 and 2 combined should take no more than 30 seconds)
+c. What your better model has to say about the answer to your research question
+    + This should include a description of the predictors that wound up in your (final) model and the direction of each of their effects on your outcome. Show me the model as you're telling me about this.
+    + This should also include a sense of how well the model predicted overall (R^2^ is one good choice)
+    + This should also include how well the residual plots for your final model fit regression assumptions. Show me the plots as you're telling me about this.
+d. Your conclusions about rational next steps to learn more from these data, or what specific new data you now wish you'd had when you started the study.
+
+For most of the remaining time, I will ask you about your study, and try to help you think through any problems you had in obtaining or interpreting analyses. You should come prepared to share any of the 8 steps of your analysis at a moment's notice, as we may want to look at any part of your work.
+
+\newpage
+
+# Some Data Management Tips
+
+These tips and demonstrations are designed to address a number of issues that you will confront in completing the remaining tasks (B - F) for this Project. Some apply mainly to Study 2, as indicated below, and the rest may be relevant to either study. Please keep this resource in mind as the semester continues.
+
+An extremely useful link for those of you building a spreadsheet to store data is [Karl Broman's tutorial on the subject](http://kbroman.org/dataorg/). No one was born knowing this stuff - take a look.
+
+## Some Data from the 2015 Class Project Survey
+
+I have provided two data sets (called `survey2015raw_a` and `survey2015raw_b` which are linked by `id`) containing information from the 2015 class project survey to help illustrate key points. Here is a brief codebook identifying the questions that were asked for each item. 
+
+### Data Set survey2015raw_a
+
+Name | Item
+:------: | ----------------------------------------------------------
+S.id  | Subject identification number (501 - 553)
+sex | Are you male or female?
+birth.yr | In what year were you born?
+english | Is English the language you speak better than any other?
+prior.r  | Before taking 431, had you ever used R before?
+height   | What is your height, in inches?
+weight   | What is your weight, in pounds?
+comfort.431 | I am very comfortable with my understanding of the material discussed so far in EPBI 431. (0 = Strongly Disagree to 100 = Strongly Agree)
+load.431 | So far, EPBI 431 has required me to do more work than a course has ever required of me. (0 = Strongly Disagree to 100 = Strongly Agree)
+
+### Data Set survey2015raw_b
+
+Name | Item
+:------: | ----------------------------------------------------------
+S.id  | Subject identification number (501 - 553)
+sex | Are you male or female?
+birth.yr | In what year were you born?
+ex.form | Which form of exercise do you engage in most frequently (jogging, yoga, tennis etc; if you do not exercise regularly respond with "none")?
+medium | Which medium do you use most to get your fictional stories (containing plot)? [Movie, TV, Print (including books, comics, etc), Other]
+fiction | Of these options, which type of fictional stories do you consume most? [Comedy, Drama, Action, Horror/Thriller, Fantasy/SciFi]
+grades | In your graduate and undergraduate educational experience, which of the following types of assignments have you received the HIGHEST grades for? [Options are: Individual Assignments, Partner Assignments (you and one other student only), Group Assignments (you plus two or more other students)]
+seat | In EPBI 431, do you USUALLY sit on the left side, in the middle or on the right side (closest to the podium)?
+r.pre | Prior to taking EPBI 431, I was totally confident and comfortable with using R. (0 = strongly disagree, 100 = strongly agree)
+r.now | Right now, I am totally confident and comfortable with using R. (0 = strongly disagree, 100 = strongly agree)
+cl.enjoy | I enjoy living in (or around) Cleveland. (0 = strongly disagree, 100 = strongly agree)
+cl.ideal | Cleveland is my ideal place to live. (0 = strongly disagree, 100 = strongly agree)
+cl.overall | My overall experience in Cleveland has been outstanding. (0 = strongly disagree, 100 = strongly agree)
+cl.recom | I would recommend Cleveland as a great place to live. (0 = strongly disagree, 100 = strongly agree)
+cl.safe | I feel very safe walking in public areas in Cuyahoga County, for example, within a one mile radius of the CWRU campus. (0 = strongly disagree, 100 = strongly agree)
+
+## Combining two data sets linked by `id` using `dplyr`
+
+First, we'll use the `dplyr` package to combine the `survey2015raw_a` and `survey2015raw_b` data sets into one larger data set. We want to include all of the variables from both data sets in our joined result, and use the `S.id` variable as a link between responses in the two parts. Note also that `sex` and `birth.yr` appear in each of the two data sets already.
+
+The main function we'll use here is `inner_join` which can be used to build a data frame containing all subjects whose `S.id` numbers appear in both `survey2015raw_a` and `survey2015raw_b`.
+
+```{r combine to create survey2015, message=FALSE}
+survey2015raw_a <- read.csv("data/survey2015raw_a.csv") %>% tbl_df
+survey2015raw_b <- read.csv("data/survey2015raw_b.csv") %>% tbl_df
+# now combine the two files, linked by id, including all who are in both files
+survey2015 <- inner_join(survey2015raw_a, survey2015raw_b, by = "S.id")
+survey2015
+```
+
+Recall that, in addition to `S.id`, there were two other variables that were in both the `a` and `b` raw data sets.
+
+```{r sanity check}
+table(survey2015$sex.x, survey2015$sex.y)
+mosaic::favstats(survey2015$birth.yr.x - survey2015$birth.yr.y)
+```
+
+After performing this little sanity check, and seeing that both `sex.x` and `sex.y`, for instance, contain the same information, we can relabel the `.x` version and then drop both the `.x` and `.y` versions of the `sex` and ``birth.yr` variables.
+
+```{r drop extra variables}
+survey2015$sex <- survey2015$sex.x
+survey2015$birth.yr <- survey2015$birth.yr.x
+survey2015 <- select(survey2015, -sex.x, -sex.y, -birth.yr.x, -birth.yr.y)
+survey2015
+```
+
+## Calculating Age from Birth Year
+
+This survey was conducted in the fall of 2015, so a simple way to estimate age is simply to take the birth year and subtract it from 2015. First, we'll check to see that the birth year data falls in a reasonable range. Looking at the class at the time, a reasonable range of birth years implies ages from about 18 to 50, which would be birth years from 1965 through 1997. Note that I'm using the `describe` function from `Hmisc` to check on the range, because I like to look at each of the bottom five and top five values in the data. In fact, the birth years we see extend from 1969 - 1993, so that seems reasonable\footnote{As we'll see shortly when we look at height and weight, if we'd seen any unreasonable values, we'd have had to mark them as missing.}. We'll go ahead and calculate the resulting ages.
+
+```{r creating age}
+Hmisc::describe(survey2015$birth.yr)
+survey2015$age <- 2015 - survey2015$birth.yr
+Hmisc::describe(survey2015$age)
+```
+
+## Combining Height and Weight to form BMI and Specifying NAs
+
+A simple approach to combining two items into a new variable can be shown by calculating `bmi` (body-mass index) from the available `height` and `weight` data. We'll use the formula from http://www.bmi-calculator.net/bmi-formula.php. A reasonable range for BMI values is probably about 15 to 50.
+
+```{r creating bmi}
+survey2015$bmi <- 703 * survey2015$weight / survey2015$height^2
+Hmisc::describe(survey2015$bmi)
+```
+Those two smallest calculated `bmi` values seem impossibly low, and the highest `bmi` seems impossibly high. Let's look at the heights and weights involved. A reasonable guess is that no one in the class was less than 4 feet tall (48 inches) nor were they greater than 7 feet tall (84 inches), and that no one was outside 80 - 400 pounds.
+
+```{r describing height and weight}
+Hmisc::describe(survey2015$height)
+Hmisc::describe(survey2015$weight)
+```
+
+The subjects with heights of 22.83 inches and 217 inches seem implausible, and the subject with weight 1 pound is also not reasonable. If we change those values to missing, we'll better describe the believable results. I'll instruct R to change heights less than 48 inches and greater than 84 inches to NA, and also to change the weights less than 80 pounds to NA and those grater than 400 pounds (which we didn't see here) to NA.
+
+```{r indicating some heights and weights as missing instead of crazy values}
+# make a copy of the original values
+survey2015$height.original <- survey2015$height 
+survey2015$weight.original <- survey2015$weight 
+# mark implausible values as NA
+survey2015$height[survey2015$height < 48] <- NA
+survey2015$height[survey2015$height > 84] <- NA
+survey2015$weight[survey2015$weight < 80] <- NA
+survey2015$weight[survey2015$weight > 400] <- NA
+# verify that this worked out as expected
+Hmisc::describe(survey2015$height)
+Hmisc::describe(survey2015$weight)
+# recalculate BMI
+survey2015$bmi <- 703 * survey2015$weight / survey2015$height^2
+Hmisc::describe(survey2015$bmi)
+```
+
+So now, we have BMI results, with 3 missing values. That better represents what we can actually learn from the survey, I think.
+
+## Reframing a quantitative variable as categorical
+
+### Pre-specified cutpoints - Body-Mass Index
+
+Adults with BMI scores of 25 or higher are regarded as "overweight" and scores greater than or equal to 30 indicate "obese" according to the World Health Organization. So we can use our BMI values to categorize people according to these standards. The `cut2` function within the `Hmisc` package is well suited for this. You can specify the lower bounds for each interval you want to create. Here, we'll create three intervals:
+
+1. everyone with a `bmi` below 25
+2. everyone with a `bmi` in [25, 30)
+3. everyone with a `bmi` of 30 or higher
+
+```{r bmi categories}
+survey2015$bmi.cat <- Hmisc::cut2(survey2015$bmi, cuts = c(25, 30))
+by(round(survey2015$bmi,1), survey2015$bmi.cat, Hmisc::describe)
+```
+
+The default labels from `cut2` are instructive, but we may also want to include the usual descriptions (normal weight, overweight, obese), so we'll create another factor variable (which I'll call `bmi.cat2`) that uses these descriptions as levels, using the `forcats` package.
+
+```{r bmi categories with names}
+survey2015$bmi.cat2 <- survey2015$bmi.cat
+library(forcats)
+levels(survey2015$bmi.cat2)
+survey2015$bmi.cat2 <- fct_recode(survey2015$bmi.cat2,
+                                  "normal" = "[18.6,25.0)",
+                                  "overweight" = "[25.0,30.0)",
+                                  "obese" = "[30.0,41.1]")
+table(survey2015$bmi.cat, survey2015$bmi.cat2)
+```
+
+### Using the data to pick cutpoints for a two-level factor
+
+The `cut2` function from `Hmisc` can also be used to pick cutpoints for a two-level factor. Use `g = 2` within the `cut2` function to indicate we want to split the data into two groups of (roughly) equal size. Let's divide survey respondents into two groups on the basis of their `age`. As it turns out, the median is 27, and `cut2` in this case will place the median age folks in with the younger group, so it will be a bit larger than the older group.
+
+```{r summary of ages}
+mosaic::favstats(survey2015$age)
+survey2015$age.binary <- Hmisc::cut2(survey2015$age, g = 2)
+by(survey2015$age, survey2015$age.binary, mosaic::favstats)
+```
+
+If we like, we could create names for the `older` and `younger` levels of this two-way factor using the following:
+
+```{r build new labels for two way age categories}
+survey2015$age.binary2 <- survey2015$age.binary
+levels(survey2015$age.binary2)
+survey2015$age.binary2 <- fct_recode(survey2015$age.binary2,
+                                  "younger" = "[22,28)",
+                                  "older" = "[28,46]")
+```
+
+### Using the data to pick cutpoints for a three-level factor
+
+The `cut2` function from `Hmisc` can also be used to pick cutpoints for a two-level factor. Use `g = 3` within the `cut2` function to indicate we want to split the data into two groups of (roughly) equal size. Again, we'll create groups based on `age`.
+
+```{r three groups based on age}
+survey2015$age.cat3 <- Hmisc::cut2(survey2015$age, g = 3)
+by(survey2015$age, survey2015$age.cat3, mosaic::favstats)
+```
+
+As before, we could rename the levels of this factor (perhaps to Under 25, 25 to 29, 30 and Over) using the `fct_recode` function, if we wanted to do so.
+
+## Building a Scale from a Series of Items
+
+We have a series of five items, each on a 0 = strongly disagree to 100 = strongly agree scale, that relate to the subject's feelings about Cleveland. 
+
+Name | Item (0 = strongly disagree, 100 = strongly agree)
+:------: | ----------------------------------------------------------
+`cl.enjoy` | I enjoy living in (or around) Cleveland.
+`cl.ideal` | Cleveland is my ideal place to live. 
+`cl.terrible` | My overall experience in Cleveland has been terrible. 
+`cl.recom` | I would recommend Cleveland as a great place to live. 
+`cl.safe` | I feel very safe walking in public areas in Cuyahoga County, for example, within a one mile radius of the CWRU campus. 
+
+In this case, four of the five items are worded in a positive direction (so that results with higher values - indicating greater agreement) should be interpreted as positive feelings about Cleveland, while the `cl.terrible` item is worded in a negative direction\footnote{Actually, on the real 2015 survey, this was phrased in a positive way, too, using outstanding rather than terrible, but I changed it to make this example more illuminating.}, so that higher responses indicate less positive feelings about the city. 
+
+First, we'll check for missing or implausible values. Since every one of these items starts with `cl.` and must fall somewhere in [0, 100], these checks are pretty easy to accomplish.
+
+```{r check the values we see in these Cleveland items}
+survey2015 %>%
+  select(starts_with("cl.")) %>%
+  Hmisc::describe()
+```
+
+Now, we'll build a scale that sums together the four positive values, along with (100 minus the value of the `cl.terrible` item), then divides that total by 5 (actually, we'll multiply by 0.2) to get an overall opinion score on Cleveland which can range from 0 (which we will interpret to mean very unfavorable towards Cleveland) to 100 (which we will interpret as very favorable towards Cleveland.)
+
+```{r create cleveland opinion score}
+survey2015$cleve.score <- 0.2*(survey2015$cl.enjoy + survey2015$cl.ideal + 
+                                 survey2015$cl.recom + survey2015$cl.safe + 
+                                 (100 - survey2015$cl.terrible))
+Hmisc::describe(survey2015$cleve.score)
+```
+
+And we can now use this `cleve.score` as a quantitative variable in our analyses.
+
+## Collapsing Categories to form new factors with fewer levels
+
+### Collapsing Categories to form a Binary (1/0) Variable
+
+Suppose we have a factor with three levels, like the `grades` variable, and we want to collapse it down to two levels. I start by describing the factor in question.
+
+```{r table of grades}
+Hmisc::describe(survey2015$grades)
+levels(survey2015$grades)
+```
+
+Suppose we decide to lump together groups B and C (still maintaining our one missing value as NA) so that we're comparing those who did better on individual work to all others. Here's a way to get a 1/0/NA variable from this.
+
+```{r get binary variable for A vs the rest}
+survey2015$grades.ind <- as.numeric(survey2015$grades == "A. Individual Assignments")
+table(survey2015$grades, survey2015$grades.ind, useNA = "ifany")
+```
+
+### Collapsing Categories to form a Multi-Category Factor with `fct_recode`
+
+Suppose we have a factor with four levels that we want to turn into a three-level factor. Consider the `medium` variable, and suppose we want to combine the Print and Other levels.
+
+```{r collapsing medium factor a bit}
+table(survey2015$medium, useNA = "ifany")
+survey2015$medium.3cat <- fct_recode(survey2015$medium,
+                                     "Movies" = "A. Movies",
+                                     "TV" = "B. Television",
+                                     "Other" = "C. Print (including books, comics, etc.)",
+                                     "Other" = "D. Other")
+table(survey2015$medium, survey2015$medium.3cat, useNA = "ifany")
+```
+
+### Collapsing More Complicated Categories to form a Smaller Variable with `fct_collapse`
+
+Suppose instead we have several categories to put together into each part of an eventual 1/0 variable. For instance, suppose we want to change our very challenging 30-level `ex.form` data into a 1/0 variable indicating Aerobic vs. Non-Aerobic exercise.
+
+The first step is to identify all of the observed values of `ex.form`.
+
+```{r levels of ex.form}
+levels(survey2015$ex.form)
+```
+
+Next, we go through the tedious routine of reassigning each of these values to a meaningful group in a new variable, taking advantage of the `fct_collapse` function. Here, we'll simply classify each as Aerobic or Non-aerobic exercise methods\footnote{I made no effort to do this perfectly, just picked what seemed more appropriate.}. Note that I have to describe all value, funny capitalizations, extra spaces, misspellings and all.
+
+```{r recode ex.form}
+survey2015$exer.form <- 
+fct_collapse(survey2015$ex.form,
+             "Aerobic" = c("Biking", "cardio muscle", "cross training", "crossfit", "Dance", "Elliptical ", "Elliptical at the gym ", "jogging", "Jogging", "running", "Running", "Soccer", "Stairs", "Swimming", "tennis", "walk", "walking", "Zumba"),
+             "Non-Aerobic" = c("Strength Training", "strength training(weight lifiting)", "Weight lifting", "weight lifting1", "Weightlifting", "yoga", "Yoga"),
+             "Unknown" = c("fitness", "Gym", "none", "None", "yoga, tennis") )
+table(survey2015$ex.form, survey2015$exer.form)
+```
+
+## Creating a holdout sample (and indicator variable) [Study 2]
+
+Suppose you have a data set, and you want to create a training sample (for modeling) that contains 80% of the data, and then a holdout (test) sample that contains the other 20% of the data. Here's an approach you might take, using the `survey2015` data as an example.
+
+```{r use dplyr to build training and holdout samples}
+# set a seed so you can replicate
+set.seed(431) 
+
+# create training sample with 80% of subjects
+s2015.train <- survey2015 %>% sample_frac(.80)
+
+# the remaining cases go in the holdout, or test, sample
+s2015.holdout <- anti_join(survey2015, s2015.train, by = "S.id")
+
+# create indicator of holdout sample membership (1/0)
+survey2015$holdout <- 
+  as.numeric(survey2015$S.id %in% intersect(survey2015, s2015.holdout)$S.id)
+
+# sanity check - should have 80% of observations with 0, 20% with 1 (in holdout)
+table(survey2015$holdout)
+```
+
+## Deleting a row (or rows) with a missing outcome [for Study 2]
+
+Suppose in the `survey2015` data, we want to fit a regression model, and we're going to use `bmi` as our outcome. Should we want to remove the rows from the data set that contain missing `bmi` values (as opposed to imputing them, for example) we would do the following.
+
+```{r delete rows with missing BMI}
+# work with a copy of the original data
+s2015 <- survey2015
+dim(s2015)
+# remove the three rows with missing BMI
+s2015 <- s2015 %>% filter(!is.na(bmi))
+
+dim(s2015)
+```
+
+This isn't generally a good idea, but specifically for Study 2 in your course project, I'm recommending you drop rows with missing outcomes.
+
+## Simple Imputing of Missing Values
+
+Suppose we decided to use a simple imputation approach to fill in new values for `NA` in our data. For example, we have three subjects with missing `bmi` and one subject with missing `grades` information.
+
+```{r demonstrate missingness, message = FALSE}
+library(mice)
+md.pattern(select(survey2015, bmi, grades))
+summary(survey2015$bmi)
+summary(survey2015$grades)
+```
+
+If you want to do a simple imputation, a reasonable approach uses the `mice` package. In this case, we will:
+
+- set `m` equal to 1 since we are only doing a single imputation
+- set `maxit` equal to 5 for speed's sake
+
+Neither of these are good decisions outside of the course project.
+
+```{r simple imputation}
+sur2015.temp <- mice(survey2015, m = 1, maxit = 5, meth = 'pmm', seed = 431)
+survey2015.noNA <- mice::complete(sur2015.temp, 1)
+```
+
+The resulting `survey2015.noNA` data contains no missing values for either `bmi` or `grades`.
+
+```{r show results after imputation}
+summary(survey2015.noNA$bmi)
+summary(survey2015.noNA$grades)
+```
+
+# Task C: The Portfolio
+
+Leading up to Task C,
+
+- we will work together as a class to clean the survey data for Study 1, 
+- your group will merge and aggregate the survey data, identify the elements you need and produce and describe a tidy data set, which (as an individual) you will use to make comparisons, and present the final results related to the survey.
+- you as an individual will build and test regression models for Study 2, as applied to your individual data scenario.
+
+Task C will require you to provide a written portfolio of materials, which you will also make use of in your final presentation.
+
+You will receive additional details on requirements related to Task C no later than 2016-11-15.
+
+# Task D: The Final Presentation
+
+You will give your final presentation in a 15-minute meeting with me, in my office (Wood WG-82L). This will involve materials from both of your studies.
+
+## Signing up for a presentation time will happen in late September/early October
+
+- There are 72 available time slots, starting at 8:30 AM and running through 5:45 PM on 2016-12-12, 12-13 and 12-15.
+    + You will sign up for a time slot online - the tool for doing so will be available from 2016-09-29 through 2016-10-04. 
+    + When signing up, you'll need to identify at least twelve time slots, with at least three available times on at each of two different days.
+    + Please do not make any plans to be out of town or unavailable on these three days until we have settled your project time slot, in early October. 
+
+# Setup in R
+
+
+
+# Working with Your Data
+
+Task D is due Friday 2016-12-02 at noon, and will include:
+a raw data set (do not send me identifiable information, and do not send variables you will not use in your study)
+tidy data set
+codebook
+study design description
+
+
+# What is this?
+
+This document demonstrates analyses needed for Task E of your project Study 2 (using your data.) 
+
+To fix ideas, we will use simulated data from a study of high blood pressure in 999 African-American adult subjects who are not of Hispanic or Latino ethnicity. To be included, the subject had to be between 33 and 83 years of age at baseline, have a series of items available in their health record at baseline, including a baseline systolic blood pressure, and then return for a blood pressure check 18 months later. Our goal will be to build a prediction model for the subject's *change* in systolic blood pressure over the 18-month period, on the basis of some of their characteristics at baseline.
+
+The data (which, again, are simulated), are in the `hbp_study.csv` data file on the [Projects - Your Data 
+page of our website](https://sites.google.com/a/case.edu/love-431/home/projects/your-data). 
+
+## Revised Instructions
+
+This document makes use of the revised instructions for Study 2 (Task E) found in the Project Instructions after the Proposal document posted to our website on the evening of November 21, 2016. Those revised instructions are repeated in the steps that follow.
+
+# The Original Data Set and Range Checks/Missingness (Project Task D)
+
+The `hbp_study` data set includes 12 variables and 999 adult subjects. For each subject, we have gathered
+
+- baseline information on their `age`, and their `sex`, 
+- whether or not they have a `diabetes` diagnosis, 
+- the socio-economic status of their neighborhood of residence (`nses`), 
+- their body-mass index (`bmi1`) and systolic blood pressure (`sbp1`), 
+- their `insurance` type, `tobacco` use history, and 
+- whether or not they have a prescription for a `statin`, or for a `diuretic`. 
+- Eighteen months later, we gathered a new systolic blood pressure (`sbp2`) for each subject.
+
+```{r hbp_study data as downloaded}
+glimpse(hbp_study)
+```
+
+This tibble describes twelve variables, including:
+
+- a categorical `id` variable not to be used in our model except for identification of subjects,
+- two variables that, when combined, make up our outcome (`sbp1` and `sbp2`),
+- seven categorical candidate predictors, specifically `sex`, `diabetes`, `nses`, `insurance`, `tobacco`, `statin`, and `diuretic`
+- three quantitative candidate predictors, specifically `age`, `bmi1` and `sbp1`. 
+
+## Which variables should be included in the tidy data set?
+
+Note that I'm not planning to use all of these predictors in my models, but I'm going to build a tidy data set including all of them anyway, so I can demonstrate solutions to some problems you might have. When you build your tidy data set, restrict it to the variables (outcomes, predictors and id) that you will actually use in your modeling.
+
+# Data Management: Building a Tidy Data Set (Project Task D)
+
+In building our tidy version of these data, we must:
+
+- calculate and store the outcome variable (`sbp_diff` = `sbp2 - sbp1`),
+- deal with the ordering of levels in the multi-categorical variables `nses`, `insurance` and `tobacco`,
+- change the name of `nses` to something more helpful - I'll use `nbhd_ses` as the new name\footnote{Admittedly, that's not much better.}.
+
+## Dealing with Missingness
+
+Note that you will need to ensure that any *missing* values are appropriately specified using `NA`. 
+
+- In this data set, we're all set on that issue. 
+    + There are missing data in `nses` (8 NA), `bmi1` (5 NA) and `tobacco` (23 NA).
+    + In these data, we will eventually have to deal with the missing data in a rational way, but we'll do that *after* building the tidy data set and codebook. 
+- [**Missing Outcomes**] Your tidy data set should also delete any subjects with missing values of your outcome variable. 
+    + The elements (`sbp1` and `sbp2`) that go into our outcome, `sbp_diff`, have no missing values, though, so we'll be OK in that regard.
+
+In building the tidy data set, leave all missing values for candidate predictors as `NA`. 
+
+## Calculating the `sbp_diff` outcome 
+
+The simplest approach to creating the new difference and storing it in `hbp_study` follows:
+
+```{r add sbp_diff}
+hbp_study$sbp_diff <- hbp_study$sbp2 - hbp_study$sbp1
+Hmisc::describe(hbp_study$sbp_diff)
+```
+
+We have no missing values in our outcome, and each of the values look plausible. Some subjects had large changes in their systolic blood pressure from baseline to follow-up, as large as a 60 mm Hg difference, it appears. The average change across our 999 subjects was modest at about 2 mm Hg, which seems reasonable, and none of the individual values seem unreasonable\footnote{A change of 60 mm Hg in systolic blood pressure in 18 months is certainly unusual, but in 999 patients, we can't be that surprised to see a change that extreme, especially since we see several other people with similar changes in the data.}, so we'll move on.
+
+## Re-ordering the levels of the categorical variables
+
+For categorical variables, it's always worth it to check to see whether the existing orders of the factor levels match the inherent order of the information. 
+
+```{r see current level orders}
+levels(hbp_study$nses)
+levels(hbp_study$tobacco)
+levels(hbp_study$insurance)
+```
+
+- The order of `nses`, instead of the alphabetical ("High", "Low", "Middle", "Very Low"), should go from "Very Low" to "Low" to "Middle" to "High", or perhaps its reverse.
+- For `tobacco`, instead of ("current", "never", "quit"), we want ("never", "quit", "current").
+- For `insurance`, we'll change the order to ("Medicare", "Private", "Medicaid", "Uninsured")
+
+Let's fix that using the `fct_relevel` function from the `forcats` package.
+
+```{r revise levels of multi-categorical variables}
+hbp_study$nses <- fct_relevel(hbp_study$nses, "Very Low", "Low", "Middle", "High")
+hbp_study$tobacco <- fct_relevel(hbp_study$tobacco, "never", "quit", "current")
+hbp_study$insurance <- fct_relevel(hbp_study$insurance, "Medicare", "Private", 
+                                   "Medicaid", "Uninsured")
+```
+
+We'll also reorder the `diabetes` variable to put "Yes" before "No".
+
+```{r revise nses}
+hbp_study$diabetes <- fct_relevel(hbp_study$diabetes, "Yes")
+```
+
+Note that any levels left out of a `fct_relevel` statement get included in their current order, after whatever levels have been specified.
+
+## Change the name of `nses` to `nbhd_ses`
+
+We can simply create the new variable, using `hbp_study$nbhd_ses <- hbp_study$nses` and then remove the `nses` variable from our final data set, but I'll use `dplyr` to rename the variable.
+
+```{r rename nses}
+hbp_study <- dplyr::rename(hbp_study, nbhd_ses = nses)
+```
+
+## Cleaning Up to get to our final data set
+
+Let's build a data set, called `hbp_tidy` that contains only the twelve variables in our code book.
+
+```{r create hbp_tidy}
+hbp_tidy <- select(hbp_study, id, sbp_diff, sbp1, age, sex, 
+                   diabetes, nbhd_ses, bmi1, insurance, 
+                   tobacco, statin, diuretic )
+Hmisc::describe(hbp_tidy)
+```
+
+# The Codebook (Project Task D)
+
+The 12 variables in our tidy data set for this demonstration are as follows. 
+
+Variable      | Type  | Description / Levels
+---------: | :-------------: | --------------------------------------------
+`id`        | Categorical  | subject code (A001-A999)
+`sbp_diff`  | Quantitative | outcome variable, SBP after 18 months minus SBP at baseline, in mm Hg
+`sbp1`      | Quantitative | baseline SBP (systolic blood pressure), in mm Hg
+`age`       | Quantitative | age of subject at baseline, in years
+`sex`       | Binary | Male or Female
+`diabetes`  | Binary | Does subject have a diabetes diagnosis: Yes or No
+`nbhd_ses`  | 4 level Cat. | Socio-economic status of subject's home neighborhood: Very Low, Low, Middle and High
+`bmi1`      | Quantitative | subject's body-mass index at baseline
+`insurance` | 4 level Cat. | subject's insurance status at baseline: Medicare, Private, Medicaid, Uninsured
+`tobacco`   | 3 level Cat. | subject's tobacco use at baseline: never, quit (former), current
+`statin`    | Binary | 1 = statin prescription at baseline, else 0
+`diuretic`  | Binary | 1 = diuretic prescription at baseline, else 0
+
+# Step 0. Work for Project Task E on Missing Values
+
+## Revised Instructions
+
+Identify all the variables in your tidy data set that have missing (NA) values. Delete all observations with missing outcomes, and use simple imputation to impute values for the candidate predictors with NAs. Use the resulting imputed data set in all subsequent work.
+
+## Identifying Missing Values
+
+We can use the `md.pattern` function from the `mice` package. 
+
+```{r na pattern in hbp_tidy}
+md.pattern(hbp_tidy)
+```
+
+Or, the `colSums` approach gives a count of `NA` values by column in the data frame.
+
+```{r count NAs by column}
+colSums(is.na(hbp_tidy))
+```
+
+We have 963 subjects with no missing values, 8 who are missing `nbhd_ses`, another 5 who are missing `bmi1` and 23 who are missing `tobacco`.
+
+## A Note on the Models I will use
+
+In this example, I have been working with a large set of candidate predictor variables, so that I can demonstrate some data management issues. 
+
+In what follows, I will restrict myself to the following five predictors: `sbp1`, `age`, `bmi1`, `diabetes`, and `tobacco`, in trying to predict `sbp_diff`.
+
+To that end, I'll create a new data set, called `hbp_small` which includes only the `id` value, the outcome `sbp_diff` and these five predictors.
+
+```{r build hbp_s_withNA}
+hbp_small <- select(hbp_tidy, id, sbp_diff, sbp1, age, bmi1, diabetes, tobacco)
+```
+
+## Building Simple Imputations for Predictors with NAs
+
+In no way am I suggesting this is good practice outside of this project, but for now, we'll do a simple imputation to fill in values for the missing `tobacco` and `bmi1` values, creating a new data frame which is completed for our subsequent work.
+
+```{r simple imputation from our tidy data set}
+hbp_temp <- mice(hbp_small, m = 1, maxit = 5, method = 'pmm', seed = 431001)
+```
+
+Note: If this approach bombs out for you, try these three things, in this order.
+
+1. Save your work, close down R and R Studio, and then re-open them and try again, but this time, use `maxit = 1` rather than `maxit = 5`.
+2. If that doesn't work, try `method = 'sample'` instead. Changing `method` to `sample` imputes with a random sample from the existing observations for each variable.
+3. If even that doesn't work, delete the subjects with missing values using the `filter` command as discussed in the Project Instructions after Proposal about deleting rows with missing outcomes (section 7) and then press on with your new, smaller data set.
+
+Once we have the imputed data, we then complete the data set to fill in the missing values:
+
+```{r complete data set}
+hbp_s <- mice::complete(hbp_temp, 1)
+```
+
+This may take a moment or two, but when it's finished, the resulting `hbp_s` will have no missing values.
+
+```{r count NAs by column in completed data set}
+colSums(is.na(hbp_s))
+```
+
+# Step 1. Develop training and test samples.
+
+## Revised Instructions
+
+Obtain a training sample with a randomly selected 80% of your data, and have the remaining 20% in a test sample, properly labeled, and using `set.seed` so that the results can be replicated later. 
+
+## R code
+
+I'll create a training sample, with 80% of the data, called `hbp_s_training` and a test sample, with the remaining 20% of the data, called `hbp_s_test`.
+
+```{r create holdout variable}
+set.seed(431123) # set your own seed, don't use this one
+hbp_s_training <- hbp_s %>% sample_frac(.80)
+hbp_s_test <- anti_join(hbp_s, hbp_s_training, by = "id")
+dim(hbp_s) # number of rows and columns in hbp_s
+dim(hbp_s_training) # check to be sure we have 80% of hbp_s here
+dim(hbp_s_test) # check to be sure we have the rest of hbp_s here
+```
+
+# Step 2. Summarize outcome and predictors numerically and assess the outcome's distribution graphically.
+
+## Revised Instructions
+
+Using the training sample, provide numerical summaries of each predictor variable and the outcome (with Hmisc::describe), as well as graphical summaries of the outcome variable. Your results should now show no missing values in any variable. Are there any evident problems, such as substantial skew in the outcome variable?
+
+## R code
+
+```{r describe variables in step 2}
+Hmisc::describe(hbp_s_training)
+eda.1sam(dataframe = hbp_s_training, 
+         variable = hbp_s_training$sbp_diff, 
+         x.title = "Change in SBP", 
+         ov.title = "Training Sample Change in SBP")
+```
+
+I see no problems with a Normal model for the outcomes in this case.
+
+# Step 3. Build and interpret scatterplot matrix; consider potential transformations of your outcome.
+
+## Revised Instructions
+
+- Build and interpret a scatterplot matrix to describe the associations (both numerically and graphically) between the outcome and all predictors. 
+- Use a Box-Cox plot to investigate whether a transformation of your outcome is suggested.
+- Describe what a correlation matrix suggests about collinearity between candidate predictors.
+
+## R Code
+
+```{r scatterplot matrix, fig.height = 6}
+pairs (~ sbp_diff + sbp1 + age + bmi1 + diabetes + tobacco,
+       data=hbp_s_training, 
+       main="High Blood Pressure Study: Training Data",
+       upper.panel = panel.smooth,
+       diag.panel = panel.hist,
+       lower.panel = panel.cor)
+```
+
+### Collinearity Checking
+
+As for collinearity, none of these candidate predictors show any substantial correlation with each other. The largest Pearson correlation (in absolute value) between predictors is (-0.22) for `age` and `bmi1`, and that's not strong. As we'll see in Step 4, none of the generalized variance inflation factors exceed 1.2, let alone the 5 or so that we'd have to see to be seriously concerned about collinearity.
+
+### boxCox function to assess need for transformation of our outcome
+
+To use the `boxCox` approach here, we need to realize that the distribution of our outcome, `sbp_diff`, includes negative values as well as zeros. The smallest `sbp_diff` value is -60. We'll need to add a value to each `sbp_diff` in order to run the boxCox plot, so that the resulting "outcome" is strictly positive. I'll add 100. Although we're generally using a 90% confidence interval in this project, we won't worry about that issue in the `boxCox` plot, and instead just look at the point estimate from `powerTransform`.
+
+```{r boxCox plot}
+boxCox(lm((sbp_diff + 100) ~ sbp1 + age + bmi1 + diabetes + tobacco, data = hbp_s_training))
+powerTransform(lm((sbp_diff + 100) ~ sbp1 + age + bmi1 + diabetes + tobacco, data = hbp_s_training))
+```
+
+The estimated power transformation is about 0.9, and that's closer to 1 (the raw data) than any of the other transformations I'd consider from Tukey's ladder, so I won't apply a transformation\footnote{If your outcome data are substantially multimodal, I wouldn't look at the boxCox results as meaningful. Otherwise, it is up to you to decide whether a transformation suggested by boxCox should be applied to your data. Don't make the transformation if you wouldn't be able to interpret the result well, which probably means you should stick to transformations of strictly positive outcomes, and to the square root, square, logarithm and inverse transformations. If you do decide to include a transformation of your outcome in fitting models, be sure to back-transform any predictions you make at the end of the study (in Step 7), so that we can understand the prediction error results.}.
+
+# Step 4. Build "kitchen sink" model, and describe/assess it.
+
+## Revised Instructions
+
+Specify a "kitchen sink" linear regression model to describe the relationship between your outcome (potentially after transformation) and the main effects of each of your predictors.
+
+- Assess the overall effectiveness, within your training sample, of your model, by specifying and interpreting the R^2^, adjusted R^2^ (especially in light of your collinearity conclusions below), the residual standard error, and the ANOVA F test. 
+- Does collinearity in the kitchen sink model have a meaningful impact? How can you tell?
+- Specify the size, magnitude and meaning of all coefficients, and identify appropriate conclusions regarding effect sizes with 90% confidence intervals.
+
+## R Code
+
+```{r kitchen sink}
+mod.ksink <- lm(sbp_diff ~ sbp1 + age + bmi1 + diabetes + tobacco, data = hbp_s_training)
+mod.ksink
+```
+
+Our model predicts the `sbp_diff` using the predictors `sbp1`, `age`, `bmi1`, `diabetes` and `tobacco`.
+
+```{r kitchen sink summary}
+summary(mod.ksink)
+```
+
+*Assess the overall effectiveness, within your training sample, of your model, by specifying and interpreting the R^2^, adjusted R^2^ (especially in light of your collinearity conclusions below), the residual standard error, and the ANOVA F test.*
+
+- This model accounts for just over 35% of the variation in `sbp_diff` in our training sample of 799 subjects. 
+- The adjusted R^2^ (0.345) is very close to the raw R^2^ (0.350), suggesting that we're not likely to have a serious problem with collinearity.
+- The residual standard error is about 16.5 mm Hg, which indicates that about 95% of our subjects in this this training sample should have model predictions within 33 mm Hg of the actual value of their `sbp_diff`, and nearly all should be within 49.5 mm Hg. Based on the maximum and minimum residuals, and a sample of 799 observations, it looks like there might be an outlier on the high end (a residual of 53.4), but on the low end, things look reasonable.
+- The ANOVA F test p value (which is zero for all reasonable purposes) indicates a highly statistically significant amount of predictive value is accounted for by the model. This is no surprise given the moderate R^2^ value and reasonably large (*n* = 799) size of this training sample.
+
+*Does collinearity in the kitchen sink model have a meaningful impact? How can you tell?*
+
+```{r kitchen sink vif for collinearity}
+car::vif(mod.ksink)
+```
+
+No, it doesn't. We'd need to see a generalized variance inflation factor above 5 for collinearity to be a meaningful concern.
+
+*Specify the size, magnitude and meaning of all coefficients, and identify appropriate conclusions regarding effect sizes with 90% confidence intervals.*
+
+```{r kitchen sink confidence intervals}
+summary(mod.ksink)$coefficients
+confint(mod.ksink, conf=0.9)
+```
+
+Our model is 82 - 0.67 sbp1 + 0.10 age + 0.05 bmi1 - 0.94 diabetes - 1.34 tobacconever - 2.43 tobaccoquit.
+
+This implies that:
+
+- for every 1 mm Hg increase in `sbp1`, we anticipate a drop in the outcome (difference in SBP) of 0.67 mm Hg (90% confidence interval: -0.73, -0.60). If we had two subjects with the same values of all other variables, but A had a baseline SBP of 150 and B had a baseline SBP of 140, then if all other variables are kept at the same value, our model predicts that subject A's SBP will fall by 6.7 additional (90% CI: 6.0, 7.3) mm Hg as compared to subject B.
+
+Please prepare this level of detail for at least one predictor. For the others, a summary like the one that follows will be fine.
+
+Our kitchen sink model, within our training sample, predicts that ...
+
+- an increase in age of 1 year is associated with a non-significant increase of 0.10 (90% CI -0.02, 0.22) mm Hg of change in SBP.
+- an increase in baseline BMI of one kg/m^2^ is associated with a non-significant increase of 0.05 (90% CI -0.09, 0.20) mm Hg of change in SBP.
+- subjects without diabetes are associated with a non-significant decrease of 0.94 (90% CI for decrease is -1.59, 3.46) mm Hg of change in SBP as compared to subjects with diabetes.
+- subjects who quit using tobacco have the largest drop in SBP (2.43 mm Hg more than those who currently use tobacco, and 1.35 mm Hg more than those who have never used tobacco.) None of the differences between tobacco use groups are statistically significant at the 10% level in our training sample.
+
+# Step 5. Build a second model (probably with stepwise regression), and describe/assess it.
+
+## Revised Instructions 
+
+Build a second linear regression model using a subset of your four predictors, chosen by you to maximize predictive value within your training sample. 
+
+- Specify the method you used to obtain this new model. (Backwards stepwise elimination is a likely approach in many cases, but if that doesn't produce a new model, feel free to select two of your more interesting predictors from the kitchen sink model and run that as a new model.)
+
+## R code
+
+```{r stepwise model development}
+step(mod.ksink)
+```
+
+The backwards selection stepwise approach suggests a model with `sbp1` alone.
+
+### What if stepwise regression doesn't suggest a new model?
+
+If stepwise regression retains the kitchen sink model, develop an alternate model by selecting a subset of the kitchen sink predictors on your own. Your kitchen sink model has at least four predictors - reduce that to the two predictors you're more interested in, and see how that model performs in what follows.
+
+# Step 6. Compare the two models within the training sample.
+
+## Revised Instructions
+
+Compare this new (second) model to your "kitchen sink" model within your training sample using adjusted R^2^, the residual standard error, AIC and BIC.
+
+- Specify the complete regression equation in both models, based on the training sample. 
+- Which model appears better in these comparisons of the four summaries listed above? Produce a table to summarize your results. Does one model "win" each competition in the training sample?
+
+## R Code
+
+```{r fit model 2}
+mod.sbponly <- lm(sbp_diff ~ sbp1, data = hbp_s_training)
+summary(mod.sbponly)
+confint(mod.sbponly)
+```
+
+
+The two models are specified by the coefficient estimates below.
+
+```{r specify and assess the two models}
+pander(mod.ksink$coefficients)
+pander(mod.sbponly$coefficients)
+```
+
+Next, we'll compare the two models in terms of some key statistical summaries.
+
+```{r additional assessments of the two models}
+AIC(mod.ksink); AIC(mod.sbponly)
+BIC(mod.ksink); BIC(mod.sbponly)
+```
+
+Model            | adjusted R^2^ | Resid SE | AIC | BIC  
+---------------: | -------------:| --------:| --: | ---:
+Kitchen Sink | 0.345 | 16.6 | 6765 | 6803
+SBP only     | 0.346 | 16.6 | 6760 | 6774
+
+It looks like the model with `sbp1` alone performs slightly better in the training sample, although the two models have the same residual standard error.
+
+# Step 7. Compare the models' predictive ability in the test sample.
+
+## Revised Instructions
+
+Now, use your two regression models to predict the value of your outcome using the predictor values you observe in the test sample. Be sure to back-transform the predictions to the original units if you wound up fitting a model to a transformed outcome. 
+
+- Compare the two models in terms of mean squared prediction error and mean absolute prediction error in a Table, which Dr. Love will **definitely want to see** in your portfolio. 
+- Which model appears better at out-of-sample prediction according to these comparisons, and how do you know?
+
+## R Code
+
+```{r compare models on MAPE and MSPE, warning = FALSE}
+model.ks.predictions <- predict(mod.ksink, newdata = hbp_s_test)
+model.sbponly.predictions <- predict(mod.sbponly, newdata = hbp_s_test)
+
+model.ks.errors <- hbp_s_test$sbp_diff - model.ks.predictions
+model.sbponly.errors <- hbp_s_test$sbp_diff - model.sbponly.predictions 
+
+model.ks.abserrors <- abs(model.ks.errors)
+model.sbponly.abserrors <- abs(model.sbponly.errors)
+
+model.ks.sqerrors <- model.ks.errors^2
+model.sbponly.sqerrors <- model.sbponly.errors^2
+
+summary(model.ks.abserrors)
+summary(model.ks.sqerrors)
+
+summary(model.sbponly.abserrors)
+summary(model.sbponly.sqerrors)
+```
+
+Model               | MAPE | MSPE | Maximum Abs. Error
+-------------------:|-----:|-----:|---------------:
+Kitchen Sink | 13.55 | 307.5 | 58.2 
+sbp1 only    | 13.59 | 308.0 | 60.4
+
+So, the kitchen sink model also looks slightly better in these out-of-sample predictions.
+
+# Step 8. Pick a winning model, and assess regression assumptions.
+
+## Revised Instructions
+
+Select the better of your two models (based on the results you obtain in Questions 6 and 7) and apply it to the entire data set\footnote{If, as in my case, you have to choose between the in-sample and out-of-sample results, I would likely select the out-of-sample results to choose my final model.}. 
+
+- Do the coefficients or summaries the model show any important changes when applied to the entire data set, and not just the training set?
+- Plot residuals against fitted values, and also a Normal probability plot of the residuals, each of which Dr. Love **will be looking for** in your portfolio. 
+- What do you conclude about the validity of standard regression assumptions for your final model based on these two plots?
+
+## R Code
+
+I will choose the kitchen sink model. First, we apply the model to the full `hbp_s` data set.
+
+```{r model ks applied to entire data set}
+model.final <- lm(sbp_diff ~ sbp1 + age + bmi1 + diabetes + tobacco, data = hbp_s)
+summary(model.final)
+```
+
+At the 90% confidence level, it appears that age and (part of) tobacco usage now appear to be statistically significant in our t tests. The overall R^2^ is very comparable, as is the residual standard error, to the model fit to the training sample alone. No coefficients change their signs.
+
+Here are the residual plots.
+
+```{r residual plots for final model}
+par(mfrow = c(1,2))
+plot(model.final, which = 1:2)
+par(mfrow = c(1,1))
+```
+
+I see no substantial violations of regression assumptions. There is neither a curve, nor a fan shape in the residuals vs. fitted values, and we see no evidence of important non-Normality in the Normal Q-Q plot.
+

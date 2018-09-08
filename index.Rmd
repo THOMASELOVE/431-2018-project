@@ -12,9 +12,18 @@ github-repo: thomaselove/431-2018-project
 description: "These are the instructions for the 431 project portfolio in Fall 2018."
 ---
 
-# About This Website {-}
+# Overview {-}
 
 This website contains the Fall 2018 project information for PQHS / CRSP / MPHP 431: Statistical Methods in Biological & Medical Sciences, Section 1. 
+
+Your final project for this course will result in a portfolio of work related to two studies.
+
+1. [Study 1 - the Class Survey] In the first study, you (sometimes working individually, sometimes in a group of students) will design, administer, analyze and present the results of a survey designed to compare two or three groups of subjects on some *categorical* and *continuous* outcomes we will develop from your initial ideas.
+
+2. [Study 2 - your Data] In the second study, you (working individually) will propose a research question and relevant data of interest to you, and then complete all elements of a data science project designed to create a statistical model for a *quantitative* outcome, then use it for prediction and assess the quality of those predictions.
+
+All materials related to the project (including these instructions) are maintained and linked at https://github.com/THOMASELOVE/431-2018-project. The course home page is at https://github.com/THOMASELOVE/431-2018
+
 
 ## Working with This Document {-}
 
@@ -25,10 +34,6 @@ This website contains the Fall 2018 project information for PQHS / CRSP / MPHP 4
     - download a PDF or EPUB (Kindle-readable) version of the entire document.
 3. The document is a work in progress, and will be updated occasionally through the semester. Check the Version information above to verify the last update time.
 
-## Course Home Page {-}
+## Need Help? {-}
 
-The course home page is at https://github.com/THOMASELOVE/431-2018
-
-## Questions? {-}
-
-Questions about the project can be directed to **431-help at case dot edu** or to Dr. Love directly.
+Questions about the project or the course can be directed to **431-help at case dot edu** or to Dr. Love directly at `thomas dot love at case dot edu`.
