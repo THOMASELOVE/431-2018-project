@@ -1,7 +1,7 @@
 --- 
 title: "431 Project Instructions"
 author: "Thomas E. Love"
-date: "`r Sys.time()`"
+date: "Version: `r Sys.time()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -16,6 +16,9 @@ description: "These are the instructions for the 431 project portfolio in Fall 2
 
 This website contains the Fall 2018 project information for PQHS / CRSP / MPHP 431: Statistical Methods in Biological & Medical Sciences, Section 1. 
 
+- All materials related to the project (including these instructions) are maintained and linked at https://github.com/THOMASELOVE/431-2018-project. 
+- The direct link to this document is https://thomaselove.github.io/431-2018-project.
+
 ## Your Project includes Two Studies {-}
 
 Your final project for this course will result in a portfolio of work related to two studies.
@@ -24,16 +27,21 @@ Your final project for this course will result in a portfolio of work related to
 
 **Study 2 - Your Data**. In the second study, you (working individually) will propose a research question and relevant data of interest to you, and then complete all elements of a data science project designed to create a statistical model for a *quantitative* outcome, then use it for prediction and assess the quality of those predictions.
 
-All materials related to the project (including these instructions) are maintained and linked at https://github.com/THOMASELOVE/431-2018-project. The course home page is at https://github.com/THOMASELOVE/431-2018
+## You have Nine Tasks to Complete this Semester {-}
 
-## Your Tasks {-}
+The project involves two analyses (one for the class survey and one for your personal study), and a total of 9 tasks (deliverables.) Each task is to be completed by **12 NOON** on the specified date.
 
-The project involves two analyses (one for the class survey and one for your personal study), and four tasks.
+- Task A (The Proposal) is due at noon on 2018-10-12
+- Task B (Presentation Sign-Up) is **also** due at noon on 2018-10-12
+- Task C (Survey Editing) involves group work and is due at noon on 2018-10-23
+- Task D (Survey Comparison Plan) is **also** due at noon on 2018-10-23
+- Task E (Taking the Survey) is due at noon on 2018-10-31
+- Task F (Sharing Study 2 Data) is due at noon on 2018-11-14
+- Task G (The Update) is due at noon on 2018-11-28
+- Task H (The Portfolio) is due at noon on 2018-12-13
+- Task I (Your Presentation) will be held on 2018-12-10, 2018-12-11 or 2018-12-13
 
-- Task A (the proposal) is due at noon on **SPECIFY DATE**.
-- Task B (the progress report) is due at noon on **SPECIFY DATE**.
-- Task C (the final portfolio) is due at noon on 2018-12-13, regardless of the date of your final presentation.
-- Task D (the final presentation) will be held on 2018-12-10, 2018-12-11 or 2018-12-13.
+The bulk of this document contains specific instructions for each of these tasks.
 
 ## Working with This Document {-}
 
@@ -42,8 +50,11 @@ The project involves two analyses (one for the class survey and one for your per
     - search the document, 
     - change the size, font or color scheme of the page, and 
     - download a PDF or EPUB (Kindle-readable) version of the entire document.
-3. The document is a work in progress, and will be updated occasionally through the semester. Check the Version information above to verify the last update time.
+3. The document is a work in progress, and will be updated occasionally through the semester. Check the Version information above to verify the last update time^[Note that the ePub and PDF versions will show slightly different times (but on the same day) as the HTML version.].
 
 ## Need Help? {-}
 
 Questions about the project or the course can be directed to **431-help at case dot edu** or to Dr. Love directly at `thomas dot love at case dot edu`.
+
+- The course home page is at https://github.com/THOMASELOVE/431-2018
+

@@ -1,65 +1,21 @@
-# Task D Instructions
+# Task D (Survey Comparison Plan) Instructions
 
-Task D requires you to share your data for Study 2. The model for this Task is Jeff Leek's [Guide to Data Sharing](https://github.com/jtleek/datasharing). Specifically, Task D requires that you submit the following to Dr. Love via email by the deadline. Please make your email's subject: `431 TASK D for YOUR NAME`
+1. **A Word document submitted via Blackboard**, specifying the list of items from the survey that you want to be able to use in your analysis, using the **Template for Task C** available at https://sites.google.com/a/case.edu/love-431/home/projects/class-survey.
+    - You need not do any analyses connected to the items you originally suggested, nor do you need to do analyses that mirror your original research questions.
+    - The Template asks you to specify (by item number and name) the items you wish to you use in your analyses, for each of the six analyses you will complete for Study 1. 
+    - Task E has details. You need to complete either Analysis 1a or 1b, and then Analyses 2-6.
+    - In addition to the items you select related to each Analysis, you will also select two backup quantitative variables, and two backup factors, as described in the Template.
+    - Items with at least 10 possible responses will be treated as quantitative. Other items will be treated as categorical (factors.) For ordered categories, you can consider assigning a score to each response, then treating that score as quantitative.
+        + You are permitted to categorize any quantitative item you choose.
+        + You are permitted to collapse any categories in an item with more than 2 categories, as you choose.
+        + Some items are part of multiple-item scales. If you want to use a scale, specify each item that would go into that scale in Task C.
 
-1. a direct link to the raw data set (without any need for me to sign up for anything) or a .csv copy of the raw data set called `yourname-raw.csv`
-2. a single .csv file with a name of your choice containing a clean, tidy data set for Study 2, along with 
-3. a Word or PDF file containing both 
-    a. a **codebook** section which describes every variable (column) and its values in your .csv file, 
-    b. a **study design** section which reminds (and updates) us about the source of the data and your research question.
-
-## The Raw Data Set
-
-You need to show me the raw, de-identified data. The data are raw if you:
-
-- Ran no software on the data and Did not manipulate any of the numbers in the data
-- You did not remove any data from the data set other than to de-identify it and eliminate protected information and anything else that you cannot share
-- You did not summarize the data in any way
-
-A direct link (without me having to sign up for anything) is preferred. If this is not possible, send a .csv file of the raw data set, called `yourname-raw.csv`. Note that you should not send me any variables you have no chance of using in your analyses, but may include some variables you haven't made a final decision on.
-
-## The Tidy Data Set
-
-Your .csv file should include only those variables you will actually use in your analysis of Study 2. Your .csv file should include one row per subject in your data, and one column for each variable you will use. Your data are tidy if each variable you measure is in its own column, and each different observation of that variable is in its own row, identifed by the subject `id`.
-
-You need to provide:
-
-1. a header row (row 1 in the spreadsheet) that contains full row names. So if you measured age at diagnosis for patients, you would head that column with the name `AgeAtDiagnosis` or `Age.at.Diagnosis` instead of something like `ADx` or another abbreviation that may be hard for another person (or you, two years from now) to understand.
-2. a study identification number (I would call this variable `id` and use consecutive integers to represent the rows in your data set) which should be the left-most variable in your tidy data.
-3. a quantitative outcome with a meaningful name using no special characters other than a period (`.`), hyphen(`-`) or underscore (`_`) used to separate words, which should be the second variable in your data.
-    + If you have any missing **outcome** values, **delete those rows** entirely from your tidy data set.
-4. at least four predictor variables, each with a meaningful name using no special characters other than `.` or `_` to separate words, and the predictors should be shown in columns to the right of the outcome.
-    + *Continuous* variables are anything measured on a quantitative scale that could be any fractional number.
-    + *Ordinal categorical* data are data that have a fixed, small (< 100) number of levels but are ordered.
-    + *Nominal categorical* data are data where there are multiple categories, but they aren't ordered. 
-    + Categorical predictors should read into R as factors, so your categories should include letters, and not just numbers. In general, try to avoid coding nominal or ordinal categorical variables as numbers. 
-    + Label your categorical predictors in the way you plan to use them in your analyses
-    + *Missing data* are data that are missing and you don't know the mechanism. Missing data in the predictor variables are allowed, and you should code missing values in your tidy data set as `NA`. It is critical to report if there is a reason you know about that some of the data are missing. You should also not impute/make up/throw away missing observations on the predictor values in your tidy data set.
-5. any other variables you need to share with me (typically this would only include things you had to use in order to get to your final choice of outcome and predictors.) Most people will not need to share any additional variables.
-
-I will need to be able to take your submitted `.csv` file and run your eventual Markdown file (Task E) against it and obtain your results, so it must be completely clean. Because it is a `.csv` file, you'll have no highlighting or bolding or any other special formatting. If you have missing values, they should be indicated as NA in the file. If you obtain the file in R, and then write it to a .csv file, you should write the file without row numbers if you already have an identification variable. To do so, you should be able to use `write.csv(dataframeinR, "newfilename.csv", row.names = FALSE)` where you will substitute in the name of your data frame in R, and new (.csv) file name. Don't use the same name for your original data set and your tidy one.
-
-## The Codebook
-
-For almost any data set, the measurements you calculate will need to be described in more detail than you will sneak into the spreadsheet. The code book contains this information. At minimum it should contain:
-
-1. Information about the variables (including units! and codes for any categorical variables) in your tidy data set
-2. Information about the summary choices or transformations you made or the development of any scales from raw data
-
-By reading the codebook, I should understand what you did to get from the raw data to your tidy data, so add any additional information you need to provide to make that clear.
-
-## The Study Design
-
-Here is where I want you to put the information about the experimental study design you used. You can and should reuse (and edit) the information you provided as part of the Proposal in this Codebook. The material you need here consists of three parts from the proposal, updated to mirror your current plan. Specifically, you should provide:
-
-1. Your research question describes your outcome, your key predictor and other predictors, and the population of interest. It is probably easiest to follow one of these formats\footnote{You are welcome to move the clauses around to make for a clearer question.}.
-
-- What is the effect of `*your key predictor*` on `*your outcome*` adjusting for `*your list of other predictors*` in `*your population of subjects*`?
-- How effectively can `*specify your predictors*` predict `*your outcome*` in `*your population of subjects*`? or
-
-2. A thorough description of the data collection process, with complete details as to the nature of the variables, the setting for data collection, and complete details of any apparatus you used which may affect results that **has not already been covered** in the codebook materials.
-
-3. Specification of the people and methods involved.
-    a. Who are the subjects under study? How many are included in your final tidy data set?
-    b. When were the data gathered? By whom?
-    c. What caused subjects to be included or excluded from the study?
+Analysis | Variables needed
+---------------------: | --------------------------------------------
+[1a] 2 means via paired samples | Two quantitative (outcomes)
+[1b] 2 means via indep. samples | One quantitative (outcome) and one categorical (2 levels)
+[2] ANOVA with Tukey | One quantitative (outcome) and one categorical (3-6 levels)
+[3] Regression Model | Same as either [1b] or [2], plus one quantitative (covariate)
+[4] 2x2 Table        | Two categorical (2 level) variables
+[5] JxK Table        | Two categorical variables, one with 2-6, other with 3-6 levels
+[6] 2x2xJ Table      | Same as [4], plus one categorical with 3-6 levels

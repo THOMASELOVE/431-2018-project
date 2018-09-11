@@ -1,9 +1,9 @@
-# Task A Instructions: The Proposal
+# Task A (The Proposal) Instructions
 
 Task A requires you to:
 
 1. develop and propose two research questions for Study 1. Here, your research questions should clearly identify meaningful statistical comparisons.
-2. propose 5 "homemade" survey questions for Study 1 (EPBI MS/PhD students have an additional requirement here.)
+2. propose 5 "homemade" survey questions for Study 1. Students in MS or PhD programs in the Department of Population and Quantitative Health Sciences (PQHS) have a modest additional requirement here.
 3. develop and propose a meaningful research question for Study 2. This question needs to clearly relate to modeling and prediction of a quantitative outcome on the basis of a set of predictor variables.
 4. identify and present a data set that is likely to lead to an answer to the research question proposed for Study 2
 
@@ -13,7 +13,7 @@ The rest of this section contains guidance as to what sort of questions you need
 
 In Study 1, you will survey your fellow students through an instrument we will develop in September and October and administer in November. The course survey will be done online, and will include responses (de-identified, of course) from all students in the current 431 class, plus the teaching assistants, and perhaps some volunteers from previous iterations of the course, in an effort to get a reasonable sample of graduate students at CWRU. The final survey will be much longer than would be ideal, and will include questions from each student in the class. 
 
-In Task A, all students will specify first specify two *research questions*, and then specify 5 *survey questions*. Students in the MS/PhD programs in EPBI will also specify a published scale (with proper citations) that is available for our use.
+In Task A, all students will specify first specify two *research questions*, and then specify 5 *survey questions*. Students in the MS/PhD programs in PQHS will also specify a published scale (with proper citations) that is available for our use.
 
 ### Study 1 is about Making Comparisons
 
@@ -56,15 +56,40 @@ Quoting Roger Peng, from [Exploratory Data Analysis with R](https://bookdown.org
 
 ### Specifying Survey Questions
 
-A piece of Task A, then is to specify the exact wording for your survey questions (and potential answers for any categorical responses), which will likely require some editing and rework, once we have the complete set of proposed questions from all students. Be prepared to revise and resubmit, quickly, so that all items can be resolved in time for publication of the survey.
+A piece of Task A, then is to specify the exact wording for your survey questions (and potential answers for any categorical responses.) This will likely require some editing and rework, once we have the complete set of proposed questions from all students. Be prepared to revise and resubmit, quickly, so that all items can be resolved in time for publication of the draft survey.
 
-- Question 1 should ask the people taking the survey to provide you a number that expresses a quantitative outcome of interest to you, and this outcome should directly relate to your research question(s). 
+- Question 1 should ask the people taking the survey to provide you with a number that expresses a quantitative outcome of interest to you, and this outcome should directly relate to your research question(s). 
 - Question 2 should do the same thing as Question 1: ask for a quantitative measure of interest that will serve as your backup outcome in case the first question does not work well. A sensible item will show some variation across individuals, and also across groups of interest.
 - Question 3 should ask the people taking the survey to provide you a response that expresses a categorical outcome of interest to you, and this outcome should directly relate to your research question(s). You will need to specify each of the available responses that you wish to use in the survey. No more than five options for your categorical outcome, please.
 - Question 4 should do the same thing as Question 3 and will again serve as a backup. Again, all responses must be pre-specified.
-- Question 5 should ask the people taking the survey to categorize themselves into one of two (or three) groups. You will need to have at least 10 students in each group. 
+- Question 5 should ask the people taking the survey to categorize themselves into one of two (or three) groups. You will need to have at least 10 students in each group, and there will be somewhere between 52 and 56 people taking the survey, in total. 
 
 For each survey question, you will need to specify the *type* of question you are asking, and the type of outcome (quantitative, or categorical.)
+
+### The 15 Items Dr. Love will automatically include
+
+The following items will be included in the survey to identify "groups" of students in a reasonable way. As a result, you will not want to ask these questions, although you should consider these groupings as candidates for application in your research questions, in addition to the grouping you specify in your Question 5.
+
+Together, after the survey is complete, we will identify "cutpoints" for these first eight items to identify groups of meaningful size. 
+
+1. In what year were you born?
+2. How would you rate your current health overall (Excellent, Very Good, Good, Fair, Poor)
+3. For how long, in months, have you lived in Northeast Ohio?
+4. What is your height in inches? (If you are five feet, eight inches tall, please write 68 inches. To convert from centimeters to inches, multiply your height in centimeters by 0.3937, and then round the result to the nearest inch.)
+5. What is your weight in pounds? (To convert from kilograms to pounds, multiply your weight in kilograms by 2.2046, and then round the result to the nearest pound.)
+6. What is your pulse rate, in beats per minute? (Please either use a tracking device, or count your pulse for 15 seconds then multiply by 4)
+7. Last week, on how many days did you exercise? (0 - 7)
+8. Last night, how many hours of sleep did you get?
+
+The following 7 items will have yes/no responses, and thus produce binary groups for analysis.
+
+1. Were you born in the United States? 
+2. Is English the language you speak better than any other? 
+3. Do you identify as female?
+4. Do you wear prescription glasses or contact lenses?
+5. Before taking 431, had you ever used R before?
+6. Are you currently married or in a stable domestic relationship?
+7. Have you smoked 100 cigarettes or more in your entire life?
 
 #### Permitted Types of Items
 
@@ -86,13 +111,15 @@ For **categorical measures**, Google Forms permit the use of
 #### A Few Notes
 
 - If you are asking people to respond to a prompt using a scale, that scale should be expressed on a wide scale. We will accept 1-10 so long as careful descriptions are provided for the meaning of each endpoint.
-- Our preference is a 0-100 scale for quantitative items, where 0 represents the most negative result and 100 the most positive reaction to the item. One common choice is 0 = Strongly Disagree to 100 = Strongly Agree. The reason we prefer a 0-100 scale is to increase variation in our responses. When answering questions, please use the whole scale.
+- Our preference is a 0-100 scale for quantitative items that involve a rating, where 0 represents the most negative reaction and 100 the most positive reaction to the item. One common choice is 0 = Strongly Disagree to 100 = Strongly Agree. The reason we prefer a 0-100 scale is to increase variation in our responses. When answering questions, please use the whole scale.
 - In the survey, I will ask students to provide their age, select their sex, and whether they were born in the United States. I will use this to provide three additional groupings (lower half of ages vs. higher, males vs. females, and US natives vs. non-natives) that you will be able to use instead of your Question 5 grouping if that grouping doesn't work out for some reason. So, don't include age, gender or country of origin in your survey questions.
-- If you are curious about questions that have been used in the past, the 2014 survey is available at [this link](https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLScEgrawEzqKZNyYQZj3_AvqOzo8ay5NpqvEIg-Bwpcg2fqMKw/viewform?c=0&w=1) and the 2015 survey is available [here](https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLSduLMePv2ZGnjL8zM9a2p_H8JS1-ux0W1Xe3A6iDZW5MxJnMA/viewform).
+- Old surveys (with more than 100 items each) are available for you to view. If you are curious about questions that have been used in the past, here are links to [the 2014 survey](https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLScEgrawEzqKZNyYQZj3_AvqOzo8ay5NpqvEIg-Bwpcg2fqMKw/viewform?c=0&w=1), [the 2015 survey](https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLSduLMePv2ZGnjL8zM9a2p_H8JS1-ux0W1Xe3A6iDZW5MxJnMA/viewform), [the 2016 survey](https://github.com/THOMASELOVE/431project-2017/blob/master/TaskB/2016_431_class_survey.pdf) and [the 2017 survey](https://github.com/THOMASELOVE/431project-2017/blob/master/TaskC/2017-10-31_final_version_classprojectsurvey.pdf).
 
-### Extra task for EPBI MS/PhD students
+### Extra task for PQHS MS/PhD students
 
-Students in the EPBI MS/PhD track for the course will also specify a published scale (available for public use) to generate an outcome or grouping(s) of interest from those completing the survey. 
+Students in MS or PhD programs in the Department of Population and Quantitative Health Sciences will also need to specify a published scale (available for public use) to generate an outcome or grouping(s) of interest from those completing the survey. A scale is a published list of items, usually accompanied by a scoring rubric. Examples of scales we have used in the past include:
+
+- 
 
 Those outside the EPBI MS/PhD track are permitted to submit a scale as well, if they would prefer to use such a scale instead of some part of their homemade group of 5 questions. Please indicate this preference clearly in your proposal.
 

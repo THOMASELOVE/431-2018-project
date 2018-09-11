@@ -85,7 +85,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-09-08 12:15:38}
+    \date{Version: 2018-09-11 08:25:52}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -125,6 +125,17 @@ This website contains the Fall 2018 project information for PQHS / CRSP
 / MPHP 431: Statistical Methods in Biological \& Medical Sciences,
 Section 1.
 
+\begin{itemize}
+\tightlist
+\item
+  All materials related to the project (including these instructions)
+  are maintained and linked at
+  \url{https://github.com/THOMASELOVE/431-2018-project}.
+\item
+  The direct link to this document is
+  \url{https://thomaselove.github.io/431-2018-project}.
+\end{itemize}
+
 \hypertarget{your-project-includes-two-studies}{%
 \section*{Your Project includes Two
 Studies}\label{your-project-includes-two-studies}}
@@ -146,31 +157,44 @@ project designed to create a statistical model for a \emph{quantitative}
 outcome, then use it for prediction and assess the quality of those
 predictions.
 
-All materials related to the project (including these instructions) are
-maintained and linked at
-\url{https://github.com/THOMASELOVE/431-2018-project}. The course home
-page is at \url{https://github.com/THOMASELOVE/431-2018}
-
-\hypertarget{your-tasks}{%
-\section*{Your Tasks}\label{your-tasks}}
-\addcontentsline{toc}{section}{Your Tasks}
+\hypertarget{you-have-nine-tasks-to-complete-this-semester}{%
+\section*{You have Nine Tasks to Complete this
+Semester}\label{you-have-nine-tasks-to-complete-this-semester}}
+\addcontentsline{toc}{section}{You have Nine Tasks to Complete this
+Semester}
 
 The project involves two analyses (one for the class survey and one for
-your personal study), and four tasks.
+your personal study), and a total of 9 tasks (deliverables.) Each task
+is to be completed by \textbf{12 NOON} on the specified date.
 
 \begin{itemize}
 \tightlist
 \item
-  Task A (the proposal) is due at noon on \textbf{SPECIFY DATE}.
+  Task A (The Proposal) is due at noon on 2018-10-12
 \item
-  Task B (the progress report) is due at noon on \textbf{SPECIFY DATE}.
+  Task B (Presentation Sign-Up) is \textbf{also} due at noon on
+  2018-10-12
 \item
-  Task C (the final portfolio) is due at noon on 2018-12-13, regardless
-  of the date of your final presentation.
+  Task C (Survey Editing) involves group work and is due at noon on
+  2018-10-23
 \item
-  Task D (the final presentation) will be held on 2018-12-10, 2018-12-11
-  or 2018-12-13.
+  Task D (Survey Comparison Plan) is \textbf{also} due at noon on
+  2018-10-23
+\item
+  Task E (Taking the Survey) is due at noon on 2018-10-31
+\item
+  Task F (Sharing Study 2 Data) is due at noon on 2018-11-14
+\item
+  Task G (The Update) is due at noon on 2018-11-28
+\item
+  Task H (The Portfolio) is due at noon on 2018-12-13
+\item
+  Task I (Your Presentation) will be held on 2018-12-10, 2018-12-11 or
+  2018-12-13
 \end{itemize}
+
+The bulk of this document contains specific instructions for each of
+these tasks.
 
 \hypertarget{working-with-this-document}{%
 \section*{Working with This Document}\label{working-with-this-document}}
@@ -198,7 +222,9 @@ your personal study), and four tasks.
 \item
   The document is a work in progress, and will be updated occasionally
   through the semester. Check the Version information above to verify
-  the last update time.
+  the last update time\footnote{Note that the ePub and PDF versions will
+    show slightly different times (but on the same day) as the HTML
+    version.}.
 \end{enumerate}
 
 \hypertarget{need-help}{%
@@ -209,18 +235,161 @@ Questions about the project or the course can be directed to
 \textbf{431-help at case dot edu} or to Dr.~Love directly at
 \texttt{thomas\ dot\ love\ at\ case\ dot\ edu}.
 
-\hypertarget{purpose}{%
-\chapter{Purpose}\label{purpose}}
+\begin{itemize}
+\tightlist
+\item
+  The course home page is at
+  \url{https://github.com/THOMASELOVE/431-2018}
+\end{itemize}
+
+\hypertarget{project-objectives}{%
+\chapter{Project Objectives}\label{project-objectives}}
 
 It is hard to learn statistics (or anything else) passively; concurrent
 theory and application are
 essential\footnote{Though by no means an original idea, this particular phrasing is stolen from Harry Roberts.}
-The distinguished statistician, George Box, noted that ``statistics has
-no reason for existence except as the catalyst for investigation and
-discovery.'' I am primarily interested in your learning something
-interesting, useful and even valuable from your project.
 
-An effective project will demonstrate:
+\hypertarget{study-1-is-about-making-comparisons-and-visualizing-groups-of-data.}{%
+\section{Study 1 is about making comparisons and visualizing groups of
+data.}\label{study-1-is-about-making-comparisons-and-visualizing-groups-of-data.}}
+
+\textbf{Study 1} involves data from a \textbf{class survey}, to be
+conducted in October. We will design, administer, analyze and present
+survey results designed to compare two or three groups of subjects from
+the class on some \emph{categorical} and \emph{quantitative} outcomes.
+In the analysis stage, everyone will be working with different parts of
+the same data set.
+
+\begin{quote}
+Think of a graph as a comparison. All graphs are comparisons (indeed,
+all statistical analyses are comparisons). If you already have the graph
+in mind, think of what comparisons it's enabling. Or if you haven't
+settled on the graph yet, think of what comparisons you'd like to make.
+\href{http://andrewgelman.com/2014/03/25/statistical-graphics-course-statistical-graphics-advice/}{Andrew
+Gelman}
+\end{quote}
+
+In your eventual analysis of Study 1, you will be comparing both
+quantitative and categorical outcomes across 2-3 groups. All tools
+necessary for Study 1 are in Parts A and B of the course, and include
+the following\ldots{}
+
+\begin{itemize}
+\tightlist
+\item
+  Descriptive and exploratory summaries of the data across the groups
+  for each of your chosen outcomes, including, of course, attractive and
+  well-constructed visualizations, graphs and tables.
+\item
+  Comparisons of the population mean difference for at least one
+  quantitative outcome across a set of two (or three) groups, including
+  appropriate demonstrations of the reasons behind the choices you made
+  between parametric, non-parametric and bootstrap procedures.
+\item
+  Comparisons of the population proportions for at least one categorical
+  outcome across your set of two (or three) groups, including
+  appropriately interpreted point estimates and confidence intervals.
+\end{itemize}
+
+Note well that Study 1 is \textbf{not} about building sophisticated
+statistical models, and using them to make predictions. That's Study 2.
+
+\hypertarget{study-2-is-about-building-a-model-and-making-predictions.}{%
+\section{Study 2 is about building a model, and making
+predictions.}\label{study-2-is-about-building-a-model-and-making-predictions.}}
+
+\textbf{Study 2} involves data about a \textbf{research question that
+you will propose}, involving data of interest to you. Thus, everyone
+will be working with a different data set. You will complete all
+elements of a data science project designed to create a statistical
+model for a \emph{quantitative} outcome, then use it for prediction, and
+assess the quality of those predictions.
+
+\begin{quote}
+All models are wrong but some are useful.
+\href{https://en.wikipedia.org/wiki/All_models_are_wrong}{George E. P.
+Box}
+\end{quote}
+
+In Study 2, you will be building a multiple linear regression model, and
+using it to predict a quantitative outcome of interest. The tools
+necessary for Study 2 appear in each Part of the course, especially Part
+C, and include the following\ldots{}
+
+\begin{itemize}
+\tightlist
+\item
+  Describing the experimental or observational study design used to
+  gather the data, as well as the complete data collection process.
+\item
+  Sharing the complete raw data in an appropriate way with a
+  statistician (Dr.~Love). This means that, in general, data including
+  protected health information are \emph{not} appropriate for this
+  project.
+\item
+  Developing appropriate research questions that lead to the
+  identification of smart measures for predictors and outcomes, and then
+  the development of a prediction model using multiple linear
+  regression.
+\item
+  Using a training sample to develop a model, and present the process
+  that leads to a final set of 2-3 candidate models in the training
+  sample.
+\item
+  Using a test sample to evaluate the quality of predictions from each
+  of the candidate models, and making a final selection.
+\item
+  Evaluating the adherence of the data you've collected to the
+  assumptions of multiple linear regression, and iterating through the
+  model-building process as necessary until the final model shows no
+  strong violations of those assumptions.
+\end{itemize}
+
+\hypertarget{why-two-studies}{%
+\section{Why Two Studies?}\label{why-two-studies}}
+
+The main reason is that I can't figure out a way to get you to think
+about all of the things I hope you'll learn from this project in a
+single study.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  I set different tasks for Study 1 and for Study 2, allowing us to
+  touch on a wider fraction of the things I hope you'll learn in 431.
+\item
+  I want some of the work to be done as a class, some in groups, some as
+  individuals.
+\item
+  Some of you have easy access to great data you want to study in this
+  class, and in fact, that's a primary motivation for taking the class.
+  But not all of you.
+\item
+  I have to evaluate each of your projects, and there are many students
+  in the class. Knowing at least one of the data sets you'll be working
+  with helps me manage this.
+\item
+  Having a broad range of activities to evaluate helps reduce the cost
+  of a mistake on any one of them, so that we can build on what you do
+  well.
+\item
+  All of Study 1 can be done by the middle of November, leaving the last
+  few weeks of the semester for you to focus on Study 2.
+\end{enumerate}
+
+\hypertarget{educational-objectives}{%
+\section{Educational Objectives}\label{educational-objectives}}
+
+\begin{quote}
+``Statistics has no reason for existence except as the catalyst for
+investigation and discovery.''
+\href{https://en.wikipedia.org/wiki/George_E._P._Box}{George E. P. Box}
+\end{quote}
+
+I am primarily interested in your learning something interesting, useful
+and even valuable from your project. An effective project will
+demonstrate:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -255,9 +424,9 @@ An effective project will demonstrate:
   of slides for presentation.
 \end{enumerate}
 
-\hypertarget{task-a-instructions-the-proposal}{%
-\chapter{Task A Instructions: The
-Proposal}\label{task-a-instructions-the-proposal}}
+\hypertarget{task-a-the-proposal-instructions}{%
+\chapter{Task A (The Proposal)
+Instructions}\label{task-a-the-proposal-instructions}}
 
 Task A requires you to:
 
@@ -269,8 +438,9 @@ Task A requires you to:
   research questions should clearly identify meaningful statistical
   comparisons.
 \item
-  propose 5 ``homemade'' survey questions for Study 1 (EPBI MS/PhD
-  students have an additional requirement here.)
+  propose 5 ``homemade'' survey questions for Study 1. Students in MS or
+  PhD programs in the Department of Population and Quantitative Health
+  Sciences (PQHS) have a modest additional requirement here.
 \item
   develop and propose a meaningful research question for Study 2. This
   question needs to clearly relate to modeling and prediction of a
@@ -300,7 +470,7 @@ class.
 
 In Task A, all students will specify first specify two \emph{research
 questions}, and then specify 5 \emph{survey questions}. Students in the
-MS/PhD programs in EPBI will also specify a published scale (with proper
+MS/PhD programs in PQHS will also specify a published scale (with proper
 citations) that is available for our use.
 
 \hypertarget{study-1-is-about-making-comparisons}{%
@@ -442,17 +612,17 @@ Questions}\label{tips-on-writing-good-research-questions}}
 Questions}\label{specifying-survey-questions}}
 
 A piece of Task A, then is to specify the exact wording for your survey
-questions (and potential answers for any categorical responses), which
+questions (and potential answers for any categorical responses.) This
 will likely require some editing and rework, once we have the complete
 set of proposed questions from all students. Be prepared to revise and
 resubmit, quickly, so that all items can be resolved in time for
-publication of the survey.
+publication of the draft survey.
 
 \begin{itemize}
 \tightlist
 \item
-  Question 1 should ask the people taking the survey to provide you a
-  number that expresses a quantitative outcome of interest to you, and
+  Question 1 should ask the people taking the survey to provide you with
+  a number that expresses a quantitative outcome of interest to you, and
   this outcome should directly relate to your research question(s).
 \item
   Question 2 should do the same thing as Question 1: ask for a
@@ -473,12 +643,77 @@ publication of the survey.
 \item
   Question 5 should ask the people taking the survey to categorize
   themselves into one of two (or three) groups. You will need to have at
-  least 10 students in each group.
+  least 10 students in each group, and there will be somewhere between
+  52 and 56 people taking the survey, in total.
 \end{itemize}
 
 For each survey question, you will need to specify the \emph{type} of
 question you are asking, and the type of outcome (quantitative, or
 categorical.)
+
+\hypertarget{the-15-items-dr.love-will-automatically-include}{%
+\subsection{The 15 Items Dr.~Love will automatically
+include}\label{the-15-items-dr.love-will-automatically-include}}
+
+The following items will be included in the survey to identify
+``groups'' of students in a reasonable way. As a result, you will not
+want to ask these questions, although you should consider these
+groupings as candidates for application in your research questions, in
+addition to the grouping you specify in your Question 5.
+
+Together, after the survey is complete, we will identify ``cutpoints''
+for these first eight items to identify groups of meaningful size.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  In what year were you born?
+\item
+  How would you rate your current health overall (Excellent, Very Good,
+  Good, Fair, Poor)
+\item
+  For how long, in months, have you lived in Northeast Ohio?
+\item
+  What is your height in inches? (If you are five feet, eight inches
+  tall, please write 68 inches. To convert from centimeters to inches,
+  multiply your height in centimeters by 0.3937, and then round the
+  result to the nearest inch.)
+\item
+  What is your weight in pounds? (To convert from kilograms to pounds,
+  multiply your weight in kilograms by 2.2046, and then round the result
+  to the nearest pound.)
+\item
+  What is your pulse rate, in beats per minute? (Please either use a
+  tracking device, or count your pulse for 15 seconds then multiply by
+  4)
+\item
+  Last week, on how many days did you exercise? (0 - 7)
+\item
+  Last night, how many hours of sleep did you get?
+\end{enumerate}
+
+The following 7 items will have yes/no responses, and thus produce
+binary groups for analysis.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Were you born in the United States?
+\item
+  Is English the language you speak better than any other?
+\item
+  Do you identify as female?
+\item
+  Do you wear prescription glasses or contact lenses?
+\item
+  Before taking 431, had you ever used R before?
+\item
+  Are you currently married or in a stable domestic relationship?
+\item
+  Have you smoked 100 cigarettes or more in your entire life?
+\end{enumerate}
 
 \hypertarget{permitted-types-of-items}{%
 \subsubsection{Permitted Types of
@@ -534,12 +769,12 @@ For \textbf{categorical measures}, Google Forms permit the use of
   scale should be expressed on a wide scale. We will accept 1-10 so long
   as careful descriptions are provided for the meaning of each endpoint.
 \item
-  Our preference is a 0-100 scale for quantitative items, where 0
-  represents the most negative result and 100 the most positive reaction
-  to the item. One common choice is 0 = Strongly Disagree to 100 =
-  Strongly Agree. The reason we prefer a 0-100 scale is to increase
-  variation in our responses. When answering questions, please use the
-  whole scale.
+  Our preference is a 0-100 scale for quantitative items that involve a
+  rating, where 0 represents the most negative reaction and 100 the most
+  positive reaction to the item. One common choice is 0 = Strongly
+  Disagree to 100 = Strongly Agree. The reason we prefer a 0-100 scale
+  is to increase variation in our responses. When answering questions,
+  please use the whole scale.
 \item
   In the survey, I will ask students to provide their age, select their
   sex, and whether they were born in the United States. I will use this
@@ -549,20 +784,33 @@ For \textbf{categorical measures}, Google Forms permit the use of
   doesn't work out for some reason. So, don't include age, gender or
   country of origin in your survey questions.
 \item
-  If you are curious about questions that have been used in the past,
-  the 2014 survey is available at
-  \href{https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLScEgrawEzqKZNyYQZj3_AvqOzo8ay5NpqvEIg-Bwpcg2fqMKw/viewform?c=0\&w=1}{this
-  link} and the 2015 survey is available
-  \href{https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLSduLMePv2ZGnjL8zM9a2p_H8JS1-ux0W1Xe3A6iDZW5MxJnMA/viewform}{here}.
+  Old surveys (with more than 100 items each) are available for you to
+  view. If you are curious about questions that have been used in the
+  past, here are links to
+  \href{https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLScEgrawEzqKZNyYQZj3_AvqOzo8ay5NpqvEIg-Bwpcg2fqMKw/viewform?c=0\&w=1}{the
+  2014 survey},
+  \href{https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLSduLMePv2ZGnjL8zM9a2p_H8JS1-ux0W1Xe3A6iDZW5MxJnMA/viewform}{the
+  2015 survey},
+  \href{https://github.com/THOMASELOVE/431project-2017/blob/master/TaskB/2016_431_class_survey.pdf}{the
+  2016 survey} and
+  \href{https://github.com/THOMASELOVE/431project-2017/blob/master/TaskC/2017-10-31_final_version_classprojectsurvey.pdf}{the
+  2017 survey}.
 \end{itemize}
 
-\hypertarget{extra-task-for-epbi-msphd-students}{%
-\subsection{Extra task for EPBI MS/PhD
-students}\label{extra-task-for-epbi-msphd-students}}
+\hypertarget{extra-task-for-pqhs-msphd-students}{%
+\subsection{Extra task for PQHS MS/PhD
+students}\label{extra-task-for-pqhs-msphd-students}}
 
-Students in the EPBI MS/PhD track for the course will also specify a
-published scale (available for public use) to generate an outcome or
-grouping(s) of interest from those completing the survey.
+Students in MS or PhD programs in the Department of Population and
+Quantitative Health Sciences will also need to specify a published scale
+(available for public use) to generate an outcome or grouping(s) of
+interest from those completing the survey. A scale is a published list
+of items, usually accompanied by a scoring rubric. Examples of scales we
+have used in the past include:
+
+\begin{itemize}
+\item
+\end{itemize}
 
 Those outside the EPBI MS/PhD track are permitted to submit a scale as
 well, if they would prefer to use such a scale instead of some part of
@@ -840,10 +1088,15 @@ materially deviate from these specifications, he will return your
 proposal without comment other than to re-specify what needs to be fixed
 before he responds.
 
-\hypertarget{task-b-instructions}{%
-\chapter{Task B Instructions}\label{task-b-instructions}}
+\hypertarget{task-b-presentation-sign-up-instructions}{%
+\chapter{Task B (Presentation Sign-Up)
+Instructions}\label{task-b-presentation-sign-up-instructions}}
 
-For Task B, you need to submit via Blackboard, a single Word document
+\hypertarget{task-c-survey-editing-instructions}{%
+\chapter{Task C (Survey Editing)
+Instructions}\label{task-c-survey-editing-instructions}}
+
+or Task B, you need to submit via Blackboard, a single Word document
 (maximum one page, 12 point font, with your name and Project Task B on
 the top of the Word document) containing these two things:
 
@@ -914,12 +1167,9 @@ the top of the Word document) containing these two things:
   \end{itemize}
 \end{enumerate}
 
-\hypertarget{task-c-instructions}{%
-\chapter{Task C Instructions}\label{task-c-instructions}}
-
-Task C includes two sub-tasks - completion of the main survey (on Google
-Forms), \emph{and} a Word document submitted via Blackboard, following
-the \textbf{Template for Task C}.
+\hypertarget{task-d-survey-comparison-plan-instructions}{%
+\chapter{Task D (Survey Comparison Plan)
+Instructions}\label{task-d-survey-comparison-plan-instructions}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1015,6 +1265,10 @@ Same as {[}4{]}, plus one categorical with 3-6 levels\strut
 \bottomrule
 \end{longtable}
 
+\hypertarget{task-e-taking-the-survey-instructions}{%
+\chapter{Task E (Taking the Survey)
+Instructions}\label{task-e-taking-the-survey-instructions}}
+
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{1}
@@ -1060,10 +1314,11 @@ Same as {[}4{]}, plus one categorical with 3-6 levels\strut
   the Data Management Tips section.
 \end{itemize}
 
-\hypertarget{task-d-instructions}{%
-\chapter{Task D Instructions}\label{task-d-instructions}}
+\hypertarget{task-f-sharing-study-2-data-instructions}{%
+\chapter{Task F (Sharing Study 2 Data)
+Instructions}\label{task-f-sharing-study-2-data-instructions}}
 
-Task D requires you to share your data for Study 2. The model for this
+Task F requires you to share your data for Study 2. The model for this
 Task is Jeff Leek's \href{https://github.com/jtleek/datasharing}{Guide
 to Data Sharing}. Specifically, Task D requires that you submit the
 following to Dr.~Love via email by the deadline. Please make your
@@ -1290,10 +1545,241 @@ updated to mirror your current plan. Specifically, you should provide:
   \end{enumerate}
 \end{enumerate}
 
-\hypertarget{task-e-instructions}{%
-\chapter{Task E Instructions}\label{task-e-instructions}}
+\hypertarget{task-d-instructions}{%
+\chapter{Task D Instructions}\label{task-d-instructions}}
 
-Task E requires you to provide a written portfolio of materials, which
+Task D requires you to share your data for Study 2. The model for this
+Task is Jeff Leek's \href{https://github.com/jtleek/datasharing}{Guide
+to Data Sharing}. Specifically, Task D requires that you submit the
+following to Dr.~Love via email by the deadline. Please make your
+email's subject: \texttt{431\ TASK\ D\ for\ YOUR\ NAME}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  a direct link to the raw data set (without any need for me to sign up
+  for anything) or a .csv copy of the raw data set called
+  \texttt{yourname-raw.csv}
+\item
+  a single .csv file with a name of your choice containing a clean, tidy
+  data set for Study 2, along with
+\item
+  a Word or PDF file containing both
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    a \textbf{codebook} section which describes every variable (column)
+    and its values in your .csv file,
+  \item
+    a \textbf{study design} section which reminds (and updates) us about
+    the source of the data and your research question.
+  \end{enumerate}
+\end{enumerate}
+
+\hypertarget{the-raw-data-set-1}{%
+\section{The Raw Data Set}\label{the-raw-data-set-1}}
+
+You need to show me the raw, de-identified data. The data are raw if
+you:
+
+\begin{itemize}
+\tightlist
+\item
+  Ran no software on the data and Did not manipulate any of the numbers
+  in the data
+\item
+  You did not remove any data from the data set other than to
+  de-identify it and eliminate protected information and anything else
+  that you cannot share
+\item
+  You did not summarize the data in any way
+\end{itemize}
+
+A direct link (without me having to sign up for anything) is preferred.
+If this is not possible, send a .csv file of the raw data set, called
+\texttt{yourname-raw.csv}. Note that you should not send me any
+variables you have no chance of using in your analyses, but may include
+some variables you haven't made a final decision on.
+
+\hypertarget{the-tidy-data-set-1}{%
+\section{The Tidy Data Set}\label{the-tidy-data-set-1}}
+
+Your .csv file should include only those variables you will actually use
+in your analysis of Study 2. Your .csv file should include one row per
+subject in your data, and one column for each variable you will use.
+Your data are tidy if each variable you measure is in its own column,
+and each different observation of that variable is in its own row,
+identifed by the subject \texttt{id}.
+
+You need to provide:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  a header row (row 1 in the spreadsheet) that contains full row names.
+  So if you measured age at diagnosis for patients, you would head that
+  column with the name \texttt{AgeAtDiagnosis} or
+  \texttt{Age.at.Diagnosis} instead of something like \texttt{ADx} or
+  another abbreviation that may be hard for another person (or you, two
+  years from now) to understand.
+\item
+  a study identification number (I would call this variable \texttt{id}
+  and use consecutive integers to represent the rows in your data set)
+  which should be the left-most variable in your tidy data.
+\item
+  a quantitative outcome with a meaningful name using no special
+  characters other than a period (\texttt{.}), hyphen(\texttt{-}) or
+  underscore (\texttt{\_}) used to separate words, which should be the
+  second variable in your data.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    If you have any missing \textbf{outcome} values, \textbf{delete
+    those rows} entirely from your tidy data set.
+  \end{itemize}
+\item
+  at least four predictor variables, each with a meaningful name using
+  no special characters other than \texttt{.} or \texttt{\_} to separate
+  words, and the predictors should be shown in columns to the right of
+  the outcome.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Continuous} variables are anything measured on a quantitative
+    scale that could be any fractional number.
+  \item
+    \emph{Ordinal categorical} data are data that have a fixed, small
+    (\textless{} 100) number of levels but are ordered.
+  \item
+    \emph{Nominal categorical} data are data where there are multiple
+    categories, but they aren't ordered.
+  \item
+    Categorical predictors should read into R as factors, so your
+    categories should include letters, and not just numbers. In general,
+    try to avoid coding nominal or ordinal categorical variables as
+    numbers.
+  \item
+    Label your categorical predictors in the way you plan to use them in
+    your analyses
+  \item
+    \emph{Missing data} are data that are missing and you don't know the
+    mechanism. Missing data in the predictor variables are allowed, and
+    you should code missing values in your tidy data set as \texttt{NA}.
+    It is critical to report if there is a reason you know about that
+    some of the data are missing. You should also not impute/make
+    up/throw away missing observations on the predictor values in your
+    tidy data set.
+  \end{itemize}
+\item
+  any other variables you need to share with me (typically this would
+  only include things you had to use in order to get to your final
+  choice of outcome and predictors.) Most people will not need to share
+  any additional variables.
+\end{enumerate}
+
+I will need to be able to take your submitted \texttt{.csv} file and run
+your eventual Markdown file (Task E) against it and obtain your results,
+so it must be completely clean. Because it is a \texttt{.csv} file,
+you'll have no highlighting or bolding or any other special formatting.
+If you have missing values, they should be indicated as NA in the file.
+If you obtain the file in R, and then write it to a .csv file, you
+should write the file without row numbers if you already have an
+identification variable. To do so, you should be able to use
+\texttt{write.csv(dataframeinR,\ "newfilename.csv",\ row.names\ =\ FALSE)}
+where you will substitute in the name of your data frame in R, and new
+(.csv) file name. Don't use the same name for your original data set and
+your tidy one.
+
+\hypertarget{the-codebook-1}{%
+\section{The Codebook}\label{the-codebook-1}}
+
+For almost any data set, the measurements you calculate will need to be
+described in more detail than you will sneak into the spreadsheet. The
+code book contains this information. At minimum it should contain:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Information about the variables (including units! and codes for any
+  categorical variables) in your tidy data set
+\item
+  Information about the summary choices or transformations you made or
+  the development of any scales from raw data
+\end{enumerate}
+
+By reading the codebook, I should understand what you did to get from
+the raw data to your tidy data, so add any additional information you
+need to provide to make that clear.
+
+\hypertarget{the-study-design-1}{%
+\section{The Study Design}\label{the-study-design-1}}
+
+Here is where I want you to put the information about the experimental
+study design you used. You can and should reuse (and edit) the
+information you provided as part of the Proposal in this Codebook. The
+material you need here consists of three parts from the proposal,
+updated to mirror your current plan. Specifically, you should provide:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Your research question describes your outcome, your key predictor and
+  other predictors, and the population of interest. It is probably
+  easiest to follow one of these
+  formats\footnote{You are welcome to move the clauses around to make for a clearer question.}.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  What is the effect of \texttt{*your\ key\ predictor*} on
+  \texttt{*your\ outcome*} adjusting for
+  \texttt{*your\ list\ of\ other\ predictors*} in
+  \texttt{*your\ population\ of\ subjects*}?
+\item
+  How effectively can \texttt{*specify\ your\ predictors*} predict
+  \texttt{*your\ outcome*} in \texttt{*your\ population\ of\ subjects*}?
+  or
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  A thorough description of the data collection process, with complete
+  details as to the nature of the variables, the setting for data
+  collection, and complete details of any apparatus you used which may
+  affect results that \textbf{has not already been covered} in the
+  codebook materials.
+\item
+  Specification of the people and methods involved.
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    Who are the subjects under study? How many are included in your
+    final tidy data set?
+  \item
+    When were the data gathered? By whom?
+  \item
+    What caused subjects to be included or excluded from the study?
+  \end{enumerate}
+\end{enumerate}
+
+\hypertarget{task-h-the-portfolio-instructions}{%
+\chapter{Task H (The Portfolio)
+Instructions}\label{task-h-the-portfolio-instructions}}
+
+Task H requires you to provide a written portfolio of materials, which
 you will also make use of in your final presentation.
 
 \hypertarget{logistics}{%
@@ -1466,8 +1952,9 @@ A demonstration of an appropriate analysis for each of these pieces is
 available at
 \url{https://sites.google.com/a/case.edu/love-431/home/projects/your-data}
 
-\hypertarget{task-f-instructions}{%
-\chapter{Task F Instructions}\label{task-f-instructions}}
+\hypertarget{task-i-your-presentation-instructions}{%
+\chapter{Task I (Your Presentation)
+Instructions}\label{task-i-your-presentation-instructions}}
 
 The presentation schedule is found at \url{https://goo.gl/PivgQx}.
 Arrive at Dr.~Love's office (Wood WG-82L) at least 5 minutes early. If

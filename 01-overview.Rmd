@@ -1,9 +1,54 @@
-# Purpose
+# Project Objectives
 
 It is hard to learn statistics (or anything else) passively; concurrent theory and application
-are essential\footnote{Though by no means an original idea, this particular phrasing is stolen from Harry Roberts.} The distinguished statistician, George Box, noted that "statistics has no reason for existence except as the catalyst for investigation and discovery." I am primarily interested in your learning something interesting, useful and even valuable from your project.
+are essential\footnote{Though by no means an original idea, this particular phrasing is stolen from Harry Roberts.} 
 
-An effective project will demonstrate:
+## Study 1 is about making comparisons and visualizing groups of data. 
+
+**Study 1** involves data from a **class survey**, to be conducted in October. We will design, administer, analyze and present survey results designed to compare two or three groups of subjects from the class on some *categorical* and *quantitative* outcomes. In the analysis stage, everyone will be working with different parts of the same data set. 
+
+> Think of a graph as a comparison. All graphs are comparisons (indeed, all statistical analyses are comparisons). If you already have the graph in mind, think of what comparisons it's enabling. Or if you haven't settled on the graph yet, think of what comparisons you'd like to make. [Andrew Gelman](http://andrewgelman.com/2014/03/25/statistical-graphics-course-statistical-graphics-advice/)
+
+In your eventual analysis of Study 1, you will be comparing both quantitative and categorical outcomes across 2-3 groups. All tools necessary for Study 1 are in Parts A and B of the course, and include the following...
+
+- Descriptive and exploratory summaries of the data across the groups for each of your chosen outcomes, including, of course, attractive and well-constructed visualizations, graphs and tables.
+- Comparisons of the population mean difference for at least one quantitative outcome across a set of two (or three) groups, including appropriate demonstrations of the reasons behind the choices you made between parametric, non-parametric and bootstrap procedures.
+- Comparisons of the population proportions for at least one categorical outcome across your set of two (or three) groups, including appropriately interpreted point estimates and confidence intervals.
+
+Note well that Study 1 is **not** about building sophisticated statistical models, and using them to make predictions. That's Study 2.
+
+## Study 2 is about building a model, and making predictions. 
+
+**Study 2** involves data about a **research question that you will propose**, involving data of interest to you. Thus, everyone will be working with a different data set. You will complete all elements of a data science project designed to create a statistical model for a *quantitative* outcome, then use it for prediction, and assess the quality of those predictions.
+
+> All models are wrong but some are useful. [George E. P. Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
+
+In Study 2, you will be building a multiple linear regression model, and using it to predict a quantitative outcome of interest. The tools necessary for Study 2 appear in each Part of the course, especially Part C, and include the following...
+
+- Describing the experimental or observational study design used to gather the data, as well as the complete data collection process.
+- Sharing the complete raw data in an appropriate way with a statistician (Dr. Love). This means that, in general, data including protected health information are *not* appropriate for this project.
+- Developing appropriate research questions that lead to the identification of smart measures for predictors and outcomes, and then the development of a prediction model using multiple linear regression.
+- Using a training sample to develop a model, and present the process that leads to a final set of 2-3 candidate models in the training sample.
+- Using a test sample to evaluate the quality of predictions from each of the candidate models, and making a final selection.
+- Evaluating the adherence of the data you've collected to the assumptions of multiple linear regression, and iterating through the model-building process as necessary until the final model shows no strong violations of those assumptions.
+
+
+## Why Two Studies?
+
+The main reason is that I can't figure out a way to get you to think about all of the things I hope you'll learn from this project in a single study.
+
+1. I set different tasks for Study 1 and for Study 2, allowing us to touch on a wider fraction of the things I hope you'll learn in 431. 
+2. I want some of the work to be done as a class, some in groups, some as individuals.
+3. Some of you have easy access to great data you want to study in this class, and in fact, that's a primary motivation for taking the class. But not all of you.
+4. I have to evaluate each of your projects, and there are many students in the class. Knowing at least one of the data sets you'll be working with helps me manage this.
+5. Having a broad range of activities to evaluate helps reduce the cost of a mistake on any one of them, so that we can build on what you do well.
+6. All of Study 1 can be done by the middle of November, leaving the last few weeks of the semester for you to focus on Study 2.
+
+## Educational Objectives
+
+> "Statistics has no reason for existence except as the catalyst for investigation and discovery." [George E. P. Box](https://en.wikipedia.org/wiki/George_E._P._Box)
+
+I am primarily interested in your learning something interesting, useful and even valuable from your project. An effective project will demonstrate:
 
 1. The ability to create and formulate research questions that are statistically and scientifically appropriate.
 2. The ability to turn research questions into measures of interest.

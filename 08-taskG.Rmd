@@ -1,6 +1,6 @@
-# Task F (Sharing Study 2 Data) Instructions
+# Task D Instructions
 
-Task F requires you to share your data for Study 2. The model for this Task is Jeff Leek's [Guide to Data Sharing](https://github.com/jtleek/datasharing). Specifically, Task D requires that you submit the following to Dr. Love via email by the deadline. Please make your email's subject: `431 TASK D for YOUR NAME`
+Task D requires you to share your data for Study 2. The model for this Task is Jeff Leek's [Guide to Data Sharing](https://github.com/jtleek/datasharing). Specifically, Task D requires that you submit the following to Dr. Love via email by the deadline. Please make your email's subject: `431 TASK D for YOUR NAME`
 
 1. a direct link to the raw data set (without any need for me to sign up for anything) or a .csv copy of the raw data set called `yourname-raw.csv`
 2. a single .csv file with a name of your choice containing a clean, tidy data set for Study 2, along with 
