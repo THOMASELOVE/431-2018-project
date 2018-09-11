@@ -10,8 +10,8 @@ On 2018-09-24, you will become part of a **group** of about five people, and you
 
 As an **individual**, you will also:
 
-4. develop and propose a meaningful research question for Study 2 (Your Data). This question needs to clearly relate to modeling and prediction of a quantitative outcome on the basis of a set of predictor variables.
-5. identify and present a data set that is likely to lead to an answer to the research question proposed for Study 2, and that is appropriate for use in this project.
+4. develop and propose a meaningful summary of your ideas and research question for Study 2 (Your Data). Your research question needs to clearly relate to modeling and prediction of a quantitative outcome on the basis of a set of predictor variables.
+5. identify and present a detailed description of a data set that is likely to lead to an answer to the research question proposed for Study 2, and that is appropriate for use in this project.
 
 The rest of this section contains guidance as to what sort of questions your group will need to propose for the class survey in Study 1, and as to what sorts of data sets and research questions are appropriate for your Study 2 proposal. 
 
@@ -137,52 +137,60 @@ For **categorical measures**, Google Forms permit the use of
 
 #### Old Class Surveys
 
-The surveys from 2014, 2015, 2016 and 2017 (some of which were developed under a different set of project rules and requirements) have been provided to you as PDF documents on our web site.
+The surveys (each containing at least 100 items) from [2014](https://github.com/THOMASELOVE/431-2018-project/blob/master/oldsurveys/2014_431_class_survey.pdf), [2015](https://github.com/THOMASELOVE/431-2018-project/blob/master/oldsurveys/2015_431_class_survey.pdf), [2016](https://github.com/THOMASELOVE/431-2018-project/blob/master/oldsurveys/2016_431_class_survey.pdf) and [2017](https://github.com/THOMASELOVE/431-2018-project/blob/master/oldsurveys/2017_431_class_survey.pdf) are available as PDF documents on our web site.
 
-# I AM HERE!
+Remember that the rules used this year have been modified from what has been used for the project previously.
 
-- Old surveys (with more than 100 items each) are available for you to view. If you are curious about questions that have been used in the past, here are links to [the 2014 survey](https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLScEgrawEzqKZNyYQZj3_AvqOzo8ay5NpqvEIg-Bwpcg2fqMKw/viewform?c=0&w=1), [the 2015 survey](https://docs.google.com/a/case.edu/forms/d/e/1FAIpQLSduLMePv2ZGnjL8zM9a2p_H8JS1-ux0W1Xe3A6iDZW5MxJnMA/viewform), [the 2016 survey](https://github.com/THOMASELOVE/431project-2017/blob/master/TaskB/2016_431_class_survey.pdf) and [the 2017 survey](https://github.com/THOMASELOVE/431project-2017/blob/master/TaskC/2017-10-31_final_version_classprojectsurvey.pdf).
 
-### Extra task for PQHS MS/PhD students
+### Specifying a "Scale"
 
-Students in MS or PhD programs in the Department of Population and Quantitative Health Sciences will also need to specify a published scale (available for free public use) to generate an outcome or grouping(s) of interest from those completing the survey. 
+The third part of Task A requires your group to identify and propose a "scale" of items for Study 1 (The Class Survey). 
 
-A scale is a published list of items, usually accompanied by a scoring rubric. Examples of scales we have used in the past include:
+Your group needs to specify a published scale (available for free public use) to generate an outcome or grouping(s) of interest from those completing the survey. You will have to provide a complete reference to the scale (online, ideally) and specify each of the items in the scale, and how the scale is then evaluated, in all necessary detail to allow us to review and replicate the scale in practice. 
+
+The word "scale" is used in many different ways. In this case, by a scale I mean a published list of items, usually accompanied by a scoring rubric that provides some sort of composite score or scores. Examples of scales we have used in the past include:
 
 - Two [Health Consciousness Scales](https://chirr.nlm.nih.gov/health-orientation.php), one due to Gould another to Dutta-Bregman [Gould Health Consciousness Scale](https://chirr.nlm.nih.gov/health-orientation.php)
 - The [Ten-Item Personality Inventory](https://gosling.psy.utexas.edu/scales-weve-developed/ten-item-personality-measure-tipi/ten-item-personality-inventory-tipi/)
 - The [Perceived Stress Scale](https://das.nh.gov/wellness/Docs/Percieved%20Stress%20Scale.pdf)
 - The [Epworth Sleepiness Scale](https://www.sleepapnea.org/assets/files/pdf/ESS%20PDF%201990-97.pdf)
 
-Those outside the EPBI MS/PhD track are permitted to submit a scale as well, if they would prefer to use such a scale instead of some part of their homemade group of 5 questions. Please indicate this preference clearly in your proposal.
+Your group will need to verify explicitly in your Task A materials that the scale your group proposes is freely available for use by anyone, without any fees or registration requirements.
 
 ## Study 2 Work for Task A
 
-You will present a proposal **summary** (< 300 words) and a brief **data description** for Study 2 in Task A.
+You, individually, will present a proposal **summary** (< 300 words) and a brief **data description** for Study 2 in Task A.
 
-You will be building a multiple regression model, and using it to predict your outcome of interest. 
-
-- We prefer data sets for this work containing 250 to 250,000 observations, including at least one quantitative outcome, and at least four predictor variables (one of which may be identified as the "key" predictor of interest.)
-- Predictors may be quantitative or categorical. 
-- If you would like to use a data set which does not meet these specifications, contact Dr. Love via email well in advance of the Task A deadline (2016-10-11) to explain your reasons so that he can either approve your choice of data set, or not, in time for you to find a new data set.
+You will be building a multiple linear regression model, and using it to predict your outcome of interest. 
 
 ### The Proposal Summary
 
-Take the time to come up with a good, interesting title. You are going to work hard on this thing; please resist the temptation to kill my interest at the start by calling it "EPBI 431 Statistics Project."
+The fourth part of Task A is to develop and propose a meaningful summary of your ideas and research question for Study 2 (Your Data).
+
+Your summary should begin with a title for your Study 2. Take the time to come up with a good, interesting title. You are going to work hard on this thing; please resist the temptation to kill my interest at the start by calling it "431 Statistics Project" or anything else that shows a similar lack of effort.
 
 Provide me a very brief summary of what you're trying to accomplish - specifically, what your research question is, and what you hypothesize will happen.
 
-- The summary is the heart of the proposal, and requires some care. You will need to convince me that your topic is interesting, your data are relevant, and building a model and making predictions of a quantitative outcome using the predictors available to you will be worthwhile.
-- The summary ends with a statement of the research question or questions (you may have one, or possibly two.) An excellent question conveys the main objective of the study in terms that allow us to apply statistical models to describe an association between one or more predictors and a quantitative outcome. 
-- It should be possible for me to explain your study accurately just by reading this summary. If it's not possible, it will come back to you for speedy rework.
+The five most important things to do in the summary are:
+
+1. Write clearly. My best advice is to finish the summary as soon as you can, and then give it to someone else to read, who can criticize it for lack of clarity in the writing. 
+2. Specify the topic of interest, and motivate your study of it.
+3. Explicitly specify your key research question, which should be stated as a question, and which should clearly and naturally lead to a prediction model for a quantitative outcome.
+4. Explain what you hypothesize will happen, and
+5. Explicitly link your key research question to the data set you describe in your data description.
+        
+The summary is the heart of the proposal, and requires some care. You will need to convince me that your topic is interesting, your data are relevant, and building a model and making predictions of a quantitative outcome using the predictors available to you will be worthwhile.
+
+- The summary ends with a statement of the research question or questions (you may have one, or possibly two.) An excellent question conveys the main objective of the study in terms that allow us to apply statistical models to describe an association between one or more predictors and a quantitative outcome. Some advice on writing a good research question is provided below, after the data set description information.
+- It should be possible for me to explain your study accurately just by reading this summary. If it's not possible, it will come back to you for a REDO. Statistics is a details business. Get the details right.
 - This summary should be less than 300 words.
-- Use complete English sentences. Write in plain language. Use words we all know. Avoid jargon.
+- Use complete English sentences. Write in plain language. Use words we all know. Avoid jargon. And [look at the general suggestions about writing in the Course Syllabus](https://thomaselove.github.io/2018-431-syllabus/a-few-general-writingpresenting-tips.html).
 
 ### The Data Description
 
-Your data description can be as long as it needs to be. It should include:
+Your data description can be as long as it needs to be, although two pages is usually more than enough. It should include:
 
-1. Your data source, which can be an online source (in which case include a working link), a published paper or journal article (in which case I need a link and a PDF copy of the paper), or unpublished data (in which case I need the details of how the data were gathered)
+1. Your data source, which can be an online source (in which case include a working link), a published paper or journal article (in which case I need a link and a PDF copy of the paper), or unpublished data (in which case I need the details of how the data were gathered).
 
 2. A thorough description of the data collection process, with complete details as to the nature of the variables, the setting for data collection, and complete details of any apparatus you used which may affect results.
 
@@ -192,17 +200,42 @@ Your data description can be as long as it needs to be. It should include:
     + How many subjects are included?
     + What caused subjects to be included or excluded from the study?
 
-4. Your planned quantitative outcome, which must relate directly to the research question you specified above. Provide a complete definition, including specifying the exact wording of the question or details of the measurement procedure used to obtain the outcome. If available, you can also include descriptios of secondary quantitative outcomes.
+4. Your planned **quantitative** outcome, which must relate directly to the research question you specified above. Provide a complete definition, including specifying the exact wording of the question or details of the measurement procedure used to obtain the outcome. If available, you can also include descriptions of secondary **quantitative** outcomes. Your outcomes must be quantitative in Study 2.
 
 5. Your predictors of interest, which should also relate to the research question in an obvious way. Again, define the variables carefully, as you did with the outcome.
 
-6. If you already have the data, tell me that. If you don't, specify any steps you must still take in order to get the data, and specify the date by which you will have your data (must be no later than 2016-11-01.)
+6. If you already have the data, tell me that. If you don't, specify any steps you must still take in order to get the data, and specify the date by which you will have your data (must be no later than November 1.)
 
+### Data Restrictions
+
+Study 2 data sets MUST 
+
+- contain between 250 and 250,000 distinct observations,
+- contain at least one quantitative outcome variable,
+- contain at least four predictor variables, one of which may be identified as the "key" predictor of interest,
+- include at least one quantitative predictor variable, and at least one categorical predictor variable,
+- include a complete description of how the data were gathered, so that information must be publicly available,
+- be in your hands no later than 2017-11-01, 
+- be shared data with a statistician (Dr. Love) following [Jeff Leek's guide to sharing data with a statistician](https://github.com/jtleek/datasharing) as part of Task F. This means you need to have access to the data in the raw, and it means that I have to be able to have access to it in the raw, as well. - be capable of being fully cited for any and all data elements, including a complete codebook, as this must be provided as part of your proposal.
+
+While there are some great resources available to some people in this class by virtue of their affiliation with one of the health systems in town, I can do nothing to get you access to health system specific data as part of your project for this class or for 432, and in general, data from those sources are not especially appropriate because of issues with protected health information.
+
+No more than two students in the class can work on the same data. If two of you have data you would each like to work on, that may be OK, but you'll need to generate separate research questions and perform your analyses and the Project Tasks separately.
+
+I am not interested in you using pre-cleaned data from an educational repository, such as:
+
++ [this one at the Cleveland Clinic](http://www.lerner.ccf.org/qhs/datasets/), or [this one at Vanderbilt University](http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets), or [this one at UCLA](http://www.stat.ucla.edu/projects/datasets/), or [this one at the University of Florida](http://www.stat.ufl.edu/~winner/datasets.html), or [this one at Florida State University](http://people.sc.fsu.edu/~jburkardt/datasets/datasets.html), or
++ [StatLib at Carnegie-Mellon University](http://lib.stat.cmu.edu/datasets/), or [the Journal of Statistics Education Data Archive](http://www.amstat.org/publications/jse/jse_data_archive.htm), or 
++ the data sets gathered in the fivethirtyeight package, the mosaic package, the cars package, the datasets package, or any other R package designed primary for teaching, or 
++ [StatSci.org's repository of textbook examples and ready for teaching data](http://www.statsci.org/datasets.html), or
++ any of the many textbook-linked repositories of data sets, like [this one for Statistics: Unlocking the Power of Data](http://www.lock5stat.com/datapage.html), or
++ any similar repository Professor Love deems to be inappropriate
 
 ### Some Potentially Useful Data Sources
 
 The ideal choice of data source for this project is a public-use version of a meaningful data set without access restrictions. With so many students in the class, I cannot be responsible for supervising your work with restricted data personally. Some appealing sources to explore include:
 
+- the new [Google Datasets Search](https://toolbox.google.com/datasetsearch)
 - https://www.data.gov/ The home of the U.S. Government's open data
 - http://www.census.gov/data.html The U.S. Census Bureau has many interesting data sets, including the [Current Population Survey](http://www.census.gov/programs-surveys/cps.html)
 - http://www.healthdata.gov/ 125 years of U.S. Health Care Data
@@ -222,28 +255,18 @@ The ideal choice of data source for this project is a public-use version of a me
 - http://www.pewinternet.org/datasets/ Pew Research Center's Internet Project
 - http://portals.broadinstitute.org/cgi-bin/cancer/datasets.cgi Broad Institute's Cancer Program
 - http://www.kdnuggets.com/datasets/index.html is a big index of lots of available data repositories
-- https://www.kaggle.com/ Kaggle competition data sets are an interesting possibility
+- https://www.kaggle.com/ Kaggle competition data sets are attractive to students occasionally, but I've seen a lot of them before and don't really want to see them again.
 
-I cannot guarantee the quality of any of the data sets available at these sites, but I've spent at least a little time at most of them in recent months.
+I cannot guarantee the quality of any of the data sets available at these sites, but I've spent at least a little time at many of them in recent months.
 
-### Some Restrictions
+### If you are storing your own data
 
-Note that it is especially appealing, in Study 2, to make use of data that you are studying in your own
-field that fit the criteria I describe and which can be made available to me. Ideally, therefore, you would be working with data that are available to the public.
-
-1. You need to be able to share your data with a statistician (Dr. Love) following [Jeff Leek's guide to sharing data with a statistician](https://github.com/jtleek/datasharing). This means you need to have access to the data in the raw, and it means that I have to be able to have access to it in the raw, as well. So, studies involving protected health information are **not** appropriate. 
-
-2. A full citation for any and all data elements, including a complete codebook, must be provided as part of your proposal.
-
-3. There is more to a statistical application than the analysis of a canned data set, even a good canned data set. Googling "data sets for regression projects" or something similar is not a good strategy. I am not interested in you using pre-cleaned data from an educational repository, such as:
-    + [this one at the Cleveland Clinic](http://www.lerner.ccf.org/qhs/datasets/), or [this one at Vanderbilt University](http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets), or [this one at UCLA](http://www.stat.ucla.edu/projects/datasets/), or [this one at the University of Florida](http://www.stat.ufl.edu/~winner/datasets.html), or [this one at Florida State University](http://people.sc.fsu.edu/~jburkardt/datasets/datasets.html), or
-    + [StatLib at Carnegie-Mellon University](http://lib.stat.cmu.edu/datasets/), or [the Journal of Statistics Education Data Archive](http://www.amstat.org/publications/jse/jse_data_archive.htm), or
-    + [StatSci.org's repository of textbook examples and ready for teaching data](http://www.statsci.org/datasets.html), or
-    + any of the many textbook-linked repositories of data sets, like [this one for Statistics: Unlocking the Power of Data](http://www.lock5stat.com/datapage.html), or
-    + any similar repository Professor Love deems to be inappropriate
-
-4. While there are some great resources available to some people in this class by virtue of their affiliation with one of the health systems in town, I can do nothing to get you access to health system specific data as part of your project for this class or for 432, and in general, data from those sources are not especially appropriate because of issues with protected health information.
+An extremely useful link for those of you **building a spreadsheet to store data** is [Karl Broman's tutorial](http://kbroman.org/dataorg/) on the subject. No one was born knowing this stuff - take a look.
 
 ## Evaluating Task A
 
-Dr. Love will evaluate all proposals (Task A) personally, in the order in which they are received. Proposals will receive one of two grades: OK or REDO. REDO will be accompanied with specific requests that should be accomplished within a short time window (approximately 24 hours). If you materially deviate from these specifications, he will return your proposal without comment other than to re-specify what needs to be fixed before he responds.
+Dr. Love will evaluate all proposals (Task A) personally, in the order in which they are received. Proposals will receive one of two grades: OK or REDO. That grade will be posted to Canvas. REDO will be accompanied with specific requests in the form of a Canvas comment that should be accomplished within a short time window (approximately 24 hours). If you materially deviate from these specifications, Dr. Love will not evaluate your proposal other than to re-specify what needs to be fixed before he will respond.
+
+- A score of OK is worth 10/10 points for Task A, once Task B is also complete. 
+- You (and/or your group, if there are problems with parts 1-3) must REDO the Proposal until you reach OK. Sometimes, that's more than once.
+

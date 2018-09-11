@@ -4,16 +4,3 @@
 
 Task E is due at noon on 2018-10-31. Submit your answers to the course survey via the Google Form linked at **LINK GOES HERE**. That link will go live after class on 2018-10-25.
 
-
-
-2. **Completion (Google form) of the final course survey**, available on November 7 by 5 PM.
-    - The final item asks for your name, and the system is collecting your email address (you must be logged into Google via CWRU). These will be pruned from the survey before data sets are created.
-    - You should answer all of the items. Please don't skip any items you can answer. Your colleagues need data.
-    - If you want to save your work and return later, note that only the *first* item in each section of the survey must be completed for Google to let you submit your work. Once you've submitted a partially completed survey, you can return as often as you like before the deadline to finish up.
-
-## Receiving Your Study 1 Data (November 18)
-
-- We will post **two** data files for you, each containing some of the variables you need.
-- You will need to download both files, and then *combine* and tidy to suit your needs. 
-- The two files will be linked by the subject `id` number. 
-- We discuss combining two data sets, using `dplyr`, as part of the Data Management Tips section.

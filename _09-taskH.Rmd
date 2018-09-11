@@ -1,0 +1,51 @@
+# Task H (The Portfolio) Instructions {#taskH}
+
+Task H requires you to provide a written portfolio of materials, which you will also make use of in your final presentation. 
+
+Details to come.
+
+## Logistics
+
+- Submit your portfolio via email to Dr. Love. Make your email's subject: `431 TASK E FOR YOUR NAME`.
+- The portfolio should be contained in a single .zip file that contains each of the elements below. 
+- Name your .zip file YOURNAME-TASK E.zip
+- The .zip file should contain 
+    + (for Study 1) a .csv, a .Rmd and a .doc/.docx/.pdf file generated from that .Rmd file, and 
+    + (for Study 2) a .Rmd and a .doc/.docx/.pdf file generated from that .Rmd file.
+
+## Materials for Task E
+
+- [`.csv` file] A clean, tidy data set for Study 1, which will require combining the two data sets you are provided, dealing with any missing data and any necessary combination into scales on the variables in which you are interested.
+- [`.Rmd` and `.doc/.docx/.pdf` files] The six required analyses for Study 1, as both a Markdown file and Word/PDF that work with the clean and tidy data set for Study 1.
+- [`.Rmd` and `.doc/.docx/.pdf` files] The eight required analyses for Study 2, as both a Markdown file and Word/PDF that work with the clean and tidy data set you submitted in Task D.
+
+## The Six Required Analyses for Study 1 (The Survey)
+
+The required analyses for the Project Survey that need to be in your Portfolio are:
+
+1. A two-group comparison of population means (could use paired or independent samples)
+2. An analysis of variance with Tukey HSD pairwise comparisons of population means across K subgroups, where 3 $\leq$ K < 7
+3. A regression model to amplify the indepedent samples comparison in a or b by incorporating a quantitative covariate.
+4. A 2x2 Table and resulting analyses for comparison of two population proportions in terms of relative risk, odds ratio and probability difference
+5. A two-way JxK contingency table where 2 $\leq$ J < 7 and 3 $\leq$ K < 7 with an appropriate chi-square test
+6. A three way 2 x 2 x J contingency table analysis whch will expand your 2x2 table from #4 and where 3 $\leq$ J < 7
+
+A demonstration of an appropriate analysis for each of these pieces will be provided at https://sites.google.com/a/case.edu/love-431/home/projects/class-survey.
+
+\newpage
+
+## The Eight Required Analyses for Study 2 (Your Data)
+
+For your portfolio presentation in Study 2 (Your Data) complete these steps:
+
+0. Identify all the variables in your tidy data set that have missing (NA) values. Delete all observations with missing outcomes, and use simple imputation to impute values for the candidate predictors with NAs. Use the resulting imputed data set in all subsequent work.
+1. Obtain a training sample with a randomly selected 80% of your data, and have the remaining 20% in a test sample, properly labeled, and using `set.seed` so that the results can be replicated later. Use this training sample for Steps 2-6 below.
+2. Using the training sample, provide numerical summaries of each predictor variable and the outcome (with `Hmisc::describe`), as well as graphical summaries of the outcome variable. Your results should now show no missing values in any variable. Are there any evident problems, such as substantial skew in the outcome variable?
+3. Build and interpret a scatterplot matrix to describe the associations (both numerically and graphically) between the outcome and all predictors. Use a Box-Cox plot to investigate whether a transformation of your outcome is suggested. Describe what a correlation matrix suggests about collinearity between candidate predictors.
+4. Specify a "kitchen sink" linear regression model to describe the relationship between your outcome (potentially after transformation) and the main effects of each of your predictors. Assess the overall effectiveness, within your training sample, of your model, by specifying and interpreting the R^2^, adjusted R^2^ (especially in light of your collinearity conclusions below), the residual standard error, and the ANOVA F test. Does collinearity in the kitchen sink model have a meaningful impact? How can you tell? Specify the size, magnitude and meaning of all coefficients, and identify appropriate conclusions regarding effect sizes with 90% confidence intervals.
+5. Build a second linear regression model using a subset of your four predictors, chosen by you to maximize predictive value within your training sample. Specify the method you used to obtain this new model. (Backwards stepwise elimination is a likely approach in many cases, but if that doesn't produce a new model, feel free to select two of your more interesting predictors from the kitchen sink model and run that as a new model.)
+6. Compare this new (second) model to your "kitchen sink" model within your training sample using adjusted R^2^, the residual standard error, AIC and BIC. Specify the complete regression equation in both models, based on the training sample. Which model appears better in these comparisons of the four summaries listed above? Produce a table to summarize your results. Does one model "win" each competition in the training sample?
+7. Now, use your two regression models to predict the value of your outcome using the predictor values you observe in the test sample. Be sure to back-transform the predictions to the original units if you wound up fitting a model to a transformed outcome. Compare the two models in terms of mean squared prediction error and mean absolute prediction error in a Table, which Dr. Love will **definitely want to see** in your portfolio. Which model appears better at out-of-sample prediction according to these comparisons, and how do you know?
+8. Select the better of your two models (based on the results you obtain in Questions 6 and 7) and apply it to the entire data set. Do the coefficients or summaries the model show any important changes when applied to the entire data set, and not just the training set? Plot residuals against fitted values, and also a Normal probability plot of the residuals, each of which Dr. Love **will be looking for** in your portfolio. What do you conclude about the validity of standard regression assumptions for your final model based on these two plots?
+
+A demonstration of an appropriate analysis for each of these pieces is available at https://sites.google.com/a/case.edu/love-431/home/projects/your-data
