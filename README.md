@@ -2,6 +2,8 @@
 
 Materials for the Fall 2018 431 Course Project will arrive as soon as possible.
 
+The current draft of the instructions is available at https://thomaselove.github.io/431-2018-project/
+
 ## Your Project includes TWO studies.
 
 Your final project is a portfolio of work related to two studies you will complete.
@@ -16,4 +18,10 @@ In the second study, you (working individually) will propose a research question
 
 ## Your Project Work Will Include Multiple Tasks
 
-and complete Instructions on how to do those tasks are on their way.
+and complete Instructions on how to do those tasks [are under development](https://thomaselove.github.io/431-2018-project/).
+
+## Old Class Surveys
+
+We have posted PDF files of the 2014 Survey, the 2015 Survey, the 2016 Survey and the 2017 Survey to help you see what is involved. Remember that the questions in these Surveys were developed under somewhat different rules than are in place for the 2018 Projects.
+
+
