@@ -1,6 +1,6 @@
 # 431-2018-project
 
-Materials for the Fall 2018 431 Course Project will arrive before class begins on 2018-09-11.
+Materials for the Fall 2018 431 Course Project will arrive as soon as possible.
 
 ## Your Project includes TWO studies.
 
