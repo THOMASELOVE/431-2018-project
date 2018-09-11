@@ -1,6 +1,13 @@
-# Task C (Survey Editing) Instructions
+# Task C (Survey Editing) Instructions {#taskC}
 
-or Task B, you need to submit via Blackboard, a single Word document (maximum one page, 12 point font, with your name and Project Task B on the top of the Word document) containing these two things: 
+## Deadline and Submission information
+
+Task C is due at noon on 2018-10-23. Submit your Task C work via [Canvas](https://canvas.case.edu/). Please note that:
+
+- Task D is also due at the same time. 
+- We do not have class on 2018-10-23 because of CWRU's Fall Break.
+
+You need to submit via Canvas, a single Word document (maximum one page, 12 point font, with your name and Project Task B on the top of the Word document) containing these two things: 
 
 1. Your list of typographical errors, clarifications or other edits to the 96 items currently included in the Survey Draft, available at https://sites.google.com/a/case.edu/love-431/home/projects/class-survey. If you found no errors or items in need of clarification, write a sentence saying that. If you did find an issue, please be sure to specify the item number (1-96) where you feel a revision is needed. 
     + If you see any items in these 96 that you, personally, are not comfortable answering, **please indicate that to us** in this list, and we will consider revisions appropriately.

@@ -1,4 +1,12 @@
-# Task D (Survey Comparison Plan) Instructions
+# Task D (Survey Comparison Plan) Instructions {#taskD}
+
+## Deadline and Submission information
+
+Task D is due at noon on 2018-10-23. Submit your Task D work via [Canvas](https://canvas.case.edu/). Please note that:
+
+- Task C is also due at the same time. 
+- We do not have class on 2018-10-23 because of CWRU's Fall Break.
+
 
 1. **A Word document submitted via Blackboard**, specifying the list of items from the survey that you want to be able to use in your analysis, using the **Template for Task C** available at https://sites.google.com/a/case.edu/love-431/home/projects/class-survey.
     - You need not do any analyses connected to the items you originally suggested, nor do you need to do analyses that mirror your original research questions.
