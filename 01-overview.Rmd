@@ -1,7 +1,7 @@
 # Project Objectives
 
 It is hard to learn statistics (or anything else) passively; concurrent theory and application
-are essential\footnote{Though by no means an original idea, this particular phrasing is stolen from Harry Roberts.} 
+are essential^[Though by no means an original idea, this particular phrasing is stolen from Harry Roberts.].
 
 ## Study 1 is about making comparisons and visualizing groups of data. 
 

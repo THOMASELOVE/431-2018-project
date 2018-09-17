@@ -2,7 +2,7 @@
 
 Task A requires you to accomplish the following:
 
-On 2018-09-24, you will become part of a **group** of about five people, and your group will:
+On 2018-09-25, you will become part of a **group** of about five people, and your group will:
 
 1. develop and propose 2-3 "research questions" for Study 1 (The Class Survey). Here, your research questions must clearly identify meaningful statistical comparisons.
 2. propose 6-10 "homemade" survey questions for Study 1 that relate to your research questions, and
@@ -17,7 +17,7 @@ The rest of this section contains guidance as to what sort of questions your gro
 
 ## Deadline and Submission information
 
-The project groups will only apply to Project Tasks A, C and D. You will become part of a project group on 2018-09-24 and the groups will disband after the survey is finalized in late October. 
+The project groups will only apply to Project Tasks A, C and D. You will become part of a project group on 2018-09-25 and the groups will disband after the survey is finalized in late October. 
 
 Task A is due at noon on 2018-10-12. You will submit your Task A work through [Canvas](https://canvas.case.edu/). 
 
@@ -64,8 +64,8 @@ Quoting Roger Peng, from [Exploratory Data Analysis with R](https://bookdown.org
 
 #### Tips on Writing Good Research Questions
 
-- [Duke](http://twp.duke.edu/uploads/media_items/research-questions.original.pdf) has a nice overview online of key issues.
-- [Vanderbilt](http://vanderbilt.edu/writing/manage/wp-content/uploads/2013/06/Formulating%20Your%20Research%20Question.pdf) has some nice materials, built from the [tutorial at Empire State College](http://www8.esc.edu/htmlpages/writerold/menus.htm#develop) quoted earlier
+- [Duke](https://sites.duke.edu/urgws/files/2014/02/Research-Questions_WS-handout.pdf) has a nice overview online of key issues.
+- [Vanderbilt](https://www.vanderbilt.edu/writing/wp-content/uploads/sites/164/2016/10/Formulating-Your-Research-Question.pdf) has some nice materials, built from the [tutorial at Empire State College](http://www8.esc.edu/htmlpages/writerold/menus.htm#develop) quoted earlier
 - Jeff Leek provides several relevant tips in *The Elements of Data Analytic Style*
 - https://researchrundowns.com/intro/writing-research-questions/ has some excellent tips on wording
 
@@ -215,7 +215,7 @@ Study 2 data sets MUST
 - contain at least four predictor variables, one of which may be identified as the "key" predictor of interest,
 - include at least one quantitative predictor variable, and at least one categorical predictor variable,
 - include a complete description of how the data were gathered, so that information must be publicly available,
-- be in your hands no later than 2017-11-01, 
+- be in your hands no later than November 1, 
 - be shared data with a statistician (Dr. Love) following [Jeff Leek's guide to sharing data with a statistician](https://github.com/jtleek/datasharing) as part of Task F. This means you need to have access to the data in the raw, and it means that I have to be able to have access to it in the raw, as well. - be capable of being fully cited for any and all data elements, including a complete codebook, as this must be provided as part of your proposal.
 
 While there are some great resources available to some people in this class by virtue of their affiliation with one of the health systems in town, I can do nothing to get you access to health system specific data as part of your project for this class or for 432, and in general, data from those sources are not especially appropriate because of issues with protected health information.
