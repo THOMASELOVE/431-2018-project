@@ -2,6 +2,52 @@
 
 Your Presentation will be held on 2018-12-10, 2018-12-11 or 2018-12-13 in Dr. Love's office (Wood WG 82-L), as determined by the Scheduling Process in [Task B](#taskB).
 
-Details to come.
+## Logistics
 
+Arrive at Dr. Love's office (Wood WG-82L on the ground floor of the Wood building at the School of Medicine) at your arrival time, which is ten minutes before your starting time. The complete schedule will be posted after the scheduling process ([Task B](#taskB)) is complete in October. 
+
+If the door is open, please be sure that Dr. Love knows you are there. He likes to get ahead of the schedule whenever possible. If the door is closed, wait nearby so that you can hear the door when it opens and then present yourself.
+
+You will give your final presentation in a 20-minute meeting with Dr. Love. This will involve materials from both of your studies, in a fairly regimented way, described below.
+
+- You will need to bring a functioning laptop which you can use to show me the key results as you describe them for each of the analyses in Study 1 and in Study 2 that you wind up discussing.
+- You are welcome to show me results in the context of a Powerpoint-style presentation, if you prefer to develop one, or to show me results straight from your Markdown-created HTML files in your portfolio. Whatever works for you - so long as I can see what you are talking about as you are talking, we'll be fine.
+- The computers in my office will be busy while we are meeting, so I will NOT be able to pull up your portfolio or data while we are talking. You will have to be able to do that.
+- It is 100% appropriate for you to ask questions before the presentation, of Dr. Love or the TAs. Please do. 
+- At the presentation, there will be a little time for Dr. Love to address any lingering questions, and he's eager to hear your questions at that time, too.
+
+If you have an emergency on the day of your presentation, email Dr. Love as soon as possible.
+
+## Study 1 Presentation (6-8 minutes, total)
+
+In Study 1, you will first select your most interesting / intriguing result out of your six main analyses and present that, in about 2 minutes. In those 2 minutes, you should be showing me the highlights of that Analysis, specifically:
+
+a. What question were you investigating?
+b. What conclusion did you draw about that question?
+c. What statistical method led you to that conclusion?
+
+I will then ask you to present the results of one of the other five main analyses, in a similar way. You will need to come prepared to present this information for any of your six Study 1 analyses at a moment's notice, as you will not know in advance which of your other five main analyses I will ask for.
+
+## Study 2 Presentation (10-12 minutes, total)
+
+In Study 2, you will start with telling me about the most important finding of your little study in four minutes. In these 4 minutes, you will tell me:
+
+a. What your research question was
+b. Why it was interesting to you (parts 1 and 2 combined should take no more than 30 seconds)
+c. What your better model has to say about the answer to your research question
+    + This should include a description of the predictors that wound up in your (final) model and the direction of each of their effects on your outcome. Show me the model as you're telling me about this.
+    + This should also include a sense of how well the model predicted overall (R^2^ is one good choice)
+    + This should also include how well the residual plots for your final model fit regression assumptions. Show me the plots as you're telling me about this.
+d. Your conclusions about rational next steps to learn more from these data, or what specific new data you now wish you'd had when you started the study.
+
+For most of the remaining time, I will ask you about your study, and try to help you think through any problems you had in obtaining or interpreting analyses. You should come prepared to share any of the nine steps of your analysis at a moment's notice, as we may want to look at any part of your work.
+
+## Final Questions (about 2 minutes)
+
+Depending on time, I may ask you any of several questions at the end of our meeting. Some possibilities you should be prepared for...
+
+- What percentage of your time in Study 2 did you spend obtaining, cleaning, merging and tidying data, as opposed to actually performing analyses on tidy data?
+- Tell me something useful that you learned from doing the project.
+- Tell me what the hardest part of doing the project was.
+- What do you know now that you wished you'd known back when you were formulating the proposal, way back in Task A? What would you tell yourself if you could go back in time?
 

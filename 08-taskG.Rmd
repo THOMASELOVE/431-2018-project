@@ -4,4 +4,59 @@ Task G requires you to provide a written portfolio of materials, which you will 
 
 The Portfolio is due at noon on 2018-12-13, via [Canvas](https://canvas.case.edu/).
 
-Details to come.
+## What Will You Submit?
+
+There are three things you need to submit for Task G.
+
+1. [`.csv` file] A clean, tidy data set for Study 1, which will require combining the two data sets you are provided, dealing with any missing data and any necessary combination into scales on the variables in which you are interested.
+2. [`.Rmd` and `.html` files] Your document describing the six required analyses for Study 1 (as listed below), as both a Markdown file and HTML result that work with the clean and tidy data set for Study 1.
+3. [`.Rmd` and `.html` files] Your document describing the nine required analyses for Study 2 (as listed below), as both a Markdown file and HTML result that work with the clean and tidy data set you submitted in [Task F](#taskF).
+
+Do not submit zipped files. 
+
+## Setting Up Your R Markdown Files
+
+You will prepare separate R Markdown files for Study 1 and Study 2. In each, we would like you to include:
+
+- a table of contents
+- where each section and subsection is numbered
+- code-folding, so we can hide code if we like in the HTML, but see it by default.
+
+Do not hide any code. Do not print out anything larger than a tibble summary. Make sure that the final product (HTML) looks terrific, and that the R Markdown file contains more explanation than code, and that explanation is written in complete sentences. 
+
+You are welcome to use any R Markdown formatting approach (for instance, tabs, or a floating table of contents, or other flourishes) that accomplishes the objectives specified above, but we do want to see the results in HTML, rather than any other format.
+
+## The Six Required Analyses for Study 1
+
+The required analyses for the Project Survey that need to be in your Portfolio are:
+
+1. A two-group comparison of population means (could use paired or independent samples)
+2. An analysis of variance with Tukey HSD pairwise comparisons of population means across K subgroups, where 3 $\leq$ K < 7
+3. A regression model to amplify the indepedent samples comparison in a or b by incorporating a quantitative covariate.
+4. A 2x2 Table and resulting analyses for comparison of two population proportions in terms of relative risk, odds ratio and probability difference
+5. A two-way JxK contingency table where 2 $\leq$ J < 7 and 3 $\leq$ K < 7 with an appropriate chi-square test
+6. A three way 2 x 2 x J contingency table analysis whch will expand your 2x2 table from #4 and where 3 $\leq$ J < 7
+
+Each analysis should be self-contained (so that I don't have to read Analysis 1 first to understand Analysis 3, for example). Present each new analysis as a subsection with an appropriate heading in the table of contents, so we can move to a new analysis efficiently. Each analysis should begin with a paragraph explaining what you are doing, specifying the items being used, and how you are using them, and then conclude with a paragraph of discussion of the key conclusions you draw from your detailed analyses, and a discussion of any limitations you can describe that apply to the results. 
+
+You should generally follow the comparison plan you outlined in [Task D](#taskD). If you need to make a change, please indicate that in the text setting up each analysis. 
+
+A demonstration of an appropriate analysis for each of the required pieces of Study 1 Analysis will be provided to you.
+
+## The Nine Required Steps for Study 2
+
+For your portfolio presentation in Study 2 (Your Data) complete these steps:
+
+1. Identify all the variables in your tidy data set that have missing (NA) values. Delete all observations with missing outcomes, and use simple imputation to impute values for the candidate predictors with NAs. Use the resulting imputed data set in all subsequent work. Be sure to describe any choices you make in building your imputed data set.
+2. Obtain a training sample with a randomly selected 80% of your data, and have the remaining 20% in a test sample, properly labeled, and using `set.seed` so that the results can be replicated later. Use this training sample for Steps 3-7 below.
+3. Using the training sample, provide numerical summaries of each predictor variable and the outcome, as well as graphical summaries of the outcome variable. Your results should now show no missing values in any variable. Are there any evident problems, such as substantial skew in the outcome variable?
+4. Build and interpret a scatterplot matrix to describe the associations (both numerically and graphically) between the outcome and all predictors. Use a Box-Cox plot to investigate whether a transformation of your outcome is suggested. Describe what a correlation matrix suggests about collinearity between candidate predictors.
+5. Specify a "kitchen sink" linear regression model to describe the relationship between your outcome (potentially after transformation) and the main effects of each of your predictors. Assess the overall effectiveness, within your training sample, of your model, by specifying and interpreting the R^2^, adjusted R^2^ (especially in light of your collinearity conclusions below), the residual standard error, and the ANOVA F test. Does collinearity in the kitchen sink model have a meaningful impact? How can you tell? Specify the size, magnitude and meaning of all coefficients, and identify appropriate conclusions regarding effect sizes with 90% confidence intervals.
+6. Build a second linear regression model using a subset of your four predictors, chosen by you to maximize predictive value within your training sample. Specify the method you used to obtain this new model. (Backwards stepwise elimination is a likely approach in many cases, but if that doesn't produce a new model, feel free to select two of your more interesting predictors from the kitchen sink model and run that as a new model.)
+7. Compare this new (second) model to your "kitchen sink" model within your training sample using adjusted R^2^, the residual standard error, AIC and BIC. Specify the complete regression equation in both models, based on the training sample. Which model appears better in these comparisons of the four summaries listed above? Produce a table to summarize your results. Does one model "win" each competition in the training sample?
+8. Now, use your two regression models to predict the value of your outcome using the predictor values you observe in the test sample. Be sure to back-transform the predictions to the original units if you wound up fitting a model to a transformed outcome. Compare the two models in terms of mean squared prediction error and mean absolute prediction error in a Table, which Dr. Love will **definitely want to see** in your portfolio. Which model appears better at out-of-sample prediction according to these comparisons, and how do you know?
+9. Select the better of your two models (based on the results you obtain in Steps 7 and 8) and apply it to the entire data set. Do the coefficients or summaries the model show any important changes when applied to the entire data set, and not just the training set? Plot residuals against fitted values, and also a Normal probability plot of the residuals, each of which Dr. Love **will be looking for** in your portfolio. What do you conclude about the validity of standard regression assumptions for your final model based on these two plots?
+
+In the Study 2 work, each step should begin with at least one complete sentence explaining what you are doing, specifying the items being used, and how you are using them, and then conclude with at least one complete sentence of discussion of the key conclusions you draw from the current step, and a discussion of any limitations you can describe that apply to the results. Present each new step as a subsection with an appropriate heading that shows up in the table of contents, so we can move to a new step efficiently in reviewing your work. 
+
+A demonstration of an appropriate analysis for each of the required steps of Study 2 Analysis will be provided to you.

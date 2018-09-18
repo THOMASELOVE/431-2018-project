@@ -85,7 +85,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{Version: 2018-09-18 09:54:16}
+    \date{Version: 2018-09-18 11:47:16}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -2114,7 +2114,203 @@ you will also make use of in your final presentation.
 The Portfolio is due at noon on 2018-12-13, via
 \href{https://canvas.case.edu/}{Canvas}.
 
-Details to come.
+\hypertarget{what-will-you-submit}{%
+\section{What Will You Submit?}\label{what-will-you-submit}}
+
+There are three things you need to submit for Task G.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  {[}\texttt{.csv} file{]} A clean, tidy data set for Study 1, which
+  will require combining the two data sets you are provided, dealing
+  with any missing data and any necessary combination into scales on the
+  variables in which you are interested.
+\item
+  {[}\texttt{.Rmd} and \texttt{.html} files{]} Your document describing
+  the six required analyses for Study 1 (as listed below), as both a
+  Markdown file and HTML result that work with the clean and tidy data
+  set for Study 1.
+\item
+  {[}\texttt{.Rmd} and \texttt{.html} files{]} Your document describing
+  the nine required analyses for Study 2 (as listed below), as both a
+  Markdown file and HTML result that work with the clean and tidy data
+  set you submitted in \protect\hyperlink{taskF}{Task F}.
+\end{enumerate}
+
+Do not submit zipped files.
+
+\hypertarget{setting-up-your-r-markdown-files}{%
+\section{Setting Up Your R Markdown
+Files}\label{setting-up-your-r-markdown-files}}
+
+You will prepare separate R Markdown files for Study 1 and Study 2. In
+each, we would like you to include:
+
+\begin{itemize}
+\tightlist
+\item
+  a table of contents
+\item
+  where each section and subsection is numbered
+\item
+  code-folding, so we can hide code if we like in the HTML, but see it
+  by default.
+\end{itemize}
+
+Do not hide any code. Do not print out anything larger than a tibble
+summary. Make sure that the final product (HTML) looks terrific, and
+that the R Markdown file contains more explanation than code, and that
+explanation is written in complete sentences.
+
+You are welcome to use any R Markdown formatting approach (for instance,
+tabs, or a floating table of contents, or other flourishes) that
+accomplishes the objectives specified above, but we do want to see the
+results in HTML, rather than any other format.
+
+\hypertarget{the-six-required-analyses-for-study-1-1}{%
+\section{The Six Required Analyses for Study
+1}\label{the-six-required-analyses-for-study-1-1}}
+
+The required analyses for the Project Survey that need to be in your
+Portfolio are:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A two-group comparison of population means (could use paired or
+  independent samples)
+\item
+  An analysis of variance with Tukey HSD pairwise comparisons of
+  population means across K subgroups, where 3 \(\leq\) K \textless{} 7
+\item
+  A regression model to amplify the indepedent samples comparison in a
+  or b by incorporating a quantitative covariate.
+\item
+  A 2x2 Table and resulting analyses for comparison of two population
+  proportions in terms of relative risk, odds ratio and probability
+  difference
+\item
+  A two-way JxK contingency table where 2 \(\leq\) J \textless{} 7 and 3
+  \(\leq\) K \textless{} 7 with an appropriate chi-square test
+\item
+  A three way 2 x 2 x J contingency table analysis whch will expand your
+  2x2 table from \#4 and where 3 \(\leq\) J \textless{} 7
+\end{enumerate}
+
+Each analysis should be self-contained (so that I don't have to read
+Analysis 1 first to understand Analysis 3, for example). Present each
+new analysis as a subsection with an appropriate heading in the table of
+contents, so we can move to a new analysis efficiently. Each analysis
+should begin with a paragraph explaining what you are doing, specifying
+the items being used, and how you are using them, and then conclude with
+a paragraph of discussion of the key conclusions you draw from your
+detailed analyses, and a discussion of any limitations you can describe
+that apply to the results.
+
+You should generally follow the comparison plan you outlined in
+\protect\hyperlink{taskD}{Task D}. If you need to make a change, please
+indicate that in the text setting up each analysis.
+
+A demonstration of an appropriate analysis for each of the required
+pieces of Study 1 Analysis will be provided to you.
+
+\hypertarget{the-nine-required-steps-for-study-2}{%
+\section{The Nine Required Steps for Study
+2}\label{the-nine-required-steps-for-study-2}}
+
+For your portfolio presentation in Study 2 (Your Data) complete these
+steps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Identify all the variables in your tidy data set that have missing
+  (NA) values. Delete all observations with missing outcomes, and use
+  simple imputation to impute values for the candidate predictors with
+  NAs. Use the resulting imputed data set in all subsequent work. Be
+  sure to describe any choices you make in building your imputed data
+  set.
+\item
+  Obtain a training sample with a randomly selected 80\% of your data,
+  and have the remaining 20\% in a test sample, properly labeled, and
+  using \texttt{set.seed} so that the results can be replicated later.
+  Use this training sample for Steps 3-7 below.
+\item
+  Using the training sample, provide numerical summaries of each
+  predictor variable and the outcome, as well as graphical summaries of
+  the outcome variable. Your results should now show no missing values
+  in any variable. Are there any evident problems, such as substantial
+  skew in the outcome variable?
+\item
+  Build and interpret a scatterplot matrix to describe the associations
+  (both numerically and graphically) between the outcome and all
+  predictors. Use a Box-Cox plot to investigate whether a transformation
+  of your outcome is suggested. Describe what a correlation matrix
+  suggests about collinearity between candidate predictors.
+\item
+  Specify a ``kitchen sink'' linear regression model to describe the
+  relationship between your outcome (potentially after transformation)
+  and the main effects of each of your predictors. Assess the overall
+  effectiveness, within your training sample, of your model, by
+  specifying and interpreting the R\textsuperscript{2}, adjusted
+  R\textsuperscript{2} (especially in light of your collinearity
+  conclusions below), the residual standard error, and the ANOVA F test.
+  Does collinearity in the kitchen sink model have a meaningful impact?
+  How can you tell? Specify the size, magnitude and meaning of all
+  coefficients, and identify appropriate conclusions regarding effect
+  sizes with 90\% confidence intervals.
+\item
+  Build a second linear regression model using a subset of your four
+  predictors, chosen by you to maximize predictive value within your
+  training sample. Specify the method you used to obtain this new model.
+  (Backwards stepwise elimination is a likely approach in many cases,
+  but if that doesn't produce a new model, feel free to select two of
+  your more interesting predictors from the kitchen sink model and run
+  that as a new model.)
+\item
+  Compare this new (second) model to your ``kitchen sink'' model within
+  your training sample using adjusted R\textsuperscript{2}, the residual
+  standard error, AIC and BIC. Specify the complete regression equation
+  in both models, based on the training sample. Which model appears
+  better in these comparisons of the four summaries listed above?
+  Produce a table to summarize your results. Does one model ``win'' each
+  competition in the training sample?
+\item
+  Now, use your two regression models to predict the value of your
+  outcome using the predictor values you observe in the test sample. Be
+  sure to back-transform the predictions to the original units if you
+  wound up fitting a model to a transformed outcome. Compare the two
+  models in terms of mean squared prediction error and mean absolute
+  prediction error in a Table, which Dr.~Love will \textbf{definitely
+  want to see} in your portfolio. Which model appears better at
+  out-of-sample prediction according to these comparisons, and how do
+  you know?
+\item
+  Select the better of your two models (based on the results you obtain
+  in Steps 7 and 8) and apply it to the entire data set. Do the
+  coefficients or summaries the model show any important changes when
+  applied to the entire data set, and not just the training set? Plot
+  residuals against fitted values, and also a Normal probability plot of
+  the residuals, each of which Dr.~Love \textbf{will be looking for} in
+  your portfolio. What do you conclude about the validity of standard
+  regression assumptions for your final model based on these two plots?
+\end{enumerate}
+
+In the Study 2 work, each step should begin with at least one complete
+sentence explaining what you are doing, specifying the items being used,
+and how you are using them, and then conclude with at least one complete
+sentence of discussion of the key conclusions you draw from the current
+step, and a discussion of any limitations you can describe that apply to
+the results. Present each new step as a subsection with an appropriate
+heading that shows up in the table of contents, so we can move to a new
+step efficiently in reviewing your work.
+
+A demonstration of an appropriate analysis for each of the required
+steps of Study 2 Analysis will be provided to you.
 
 \hypertarget{taskH}{%
 \chapter{Task H (Your Presentation) Instructions}\label{taskH}}
@@ -2123,7 +2319,146 @@ Your Presentation will be held on 2018-12-10, 2018-12-11 or 2018-12-13
 in Dr.~Love's office (Wood WG 82-L), as determined by the Scheduling
 Process in \protect\hyperlink{taskB}{Task B}.
 
-Details to come.
+\hypertarget{logistics}{%
+\section{Logistics}\label{logistics}}
+
+Arrive at Dr.~Love's office (Wood WG-82L on the ground floor of the Wood
+building at the School of Medicine) at your arrival time, which is ten
+minutes before your starting time. The complete schedule will be posted
+after the scheduling process (\protect\hyperlink{taskB}{Task B}) is
+complete in October.
+
+If the door is open, please be sure that Dr.~Love knows you are there.
+He likes to get ahead of the schedule whenever possible. If the door is
+closed, wait nearby so that you can hear the door when it opens and then
+present yourself.
+
+You will give your final presentation in a 20-minute meeting with
+Dr.~Love. This will involve materials from both of your studies, in a
+fairly regimented way, described below.
+
+\begin{itemize}
+\tightlist
+\item
+  You will need to bring a functioning laptop which you can use to show
+  me the key results as you describe them for each of the analyses in
+  Study 1 and in Study 2 that you wind up discussing.
+\item
+  You are welcome to show me results in the context of a
+  Powerpoint-style presentation, if you prefer to develop one, or to
+  show me results straight from your Markdown-created HTML files in your
+  portfolio. Whatever works for you - so long as I can see what you are
+  talking about as you are talking, we'll be fine.
+\item
+  The computers in my office will be busy while we are meeting, so I
+  will NOT be able to pull up your portfolio or data while we are
+  talking. You will have to be able to do that.
+\item
+  It is 100\% appropriate for you to ask questions before the
+  presentation, of Dr.~Love or the TAs. Please do.
+\item
+  At the presentation, there will be a little time for Dr.~Love to
+  address any lingering questions, and he's eager to hear your questions
+  at that time, too.
+\end{itemize}
+
+If you have an emergency on the day of your presentation, email Dr.~Love
+as soon as possible.
+
+\hypertarget{study-1-presentation-6-8-minutes-total}{%
+\section{Study 1 Presentation (6-8 minutes,
+total)}\label{study-1-presentation-6-8-minutes-total}}
+
+In Study 1, you will first select your most interesting / intriguing
+result out of your six main analyses and present that, in about 2
+minutes. In those 2 minutes, you should be showing me the highlights of
+that Analysis, specifically:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  What question were you investigating?
+\item
+  What conclusion did you draw about that question?
+\item
+  What statistical method led you to that conclusion?
+\end{enumerate}
+
+I will then ask you to present the results of one of the other five main
+analyses, in a similar way. You will need to come prepared to present
+this information for any of your six Study 1 analyses at a moment's
+notice, as you will not know in advance which of your other five main
+analyses I will ask for.
+
+\hypertarget{study-2-presentation-10-12-minutes-total}{%
+\section{Study 2 Presentation (10-12 minutes,
+total)}\label{study-2-presentation-10-12-minutes-total}}
+
+In Study 2, you will start with telling me about the most important
+finding of your little study in four minutes. In these 4 minutes, you
+will tell me:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  What your research question was
+\item
+  Why it was interesting to you (parts 1 and 2 combined should take no
+  more than 30 seconds)
+\item
+  What your better model has to say about the answer to your research
+  question
+
+  \begin{itemize}
+  \tightlist
+  \item
+    This should include a description of the predictors that wound up in
+    your (final) model and the direction of each of their effects on
+    your outcome. Show me the model as you're telling me about this.
+  \item
+    This should also include a sense of how well the model predicted
+    overall (R\textsuperscript{2} is one good choice)
+  \item
+    This should also include how well the residual plots for your final
+    model fit regression assumptions. Show me the plots as you're
+    telling me about this.
+  \end{itemize}
+\item
+  Your conclusions about rational next steps to learn more from these
+  data, or what specific new data you now wish you'd had when you
+  started the study.
+\end{enumerate}
+
+For most of the remaining time, I will ask you about your study, and try
+to help you think through any problems you had in obtaining or
+interpreting analyses. You should come prepared to share any of the nine
+steps of your analysis at a moment's notice, as we may want to look at
+any part of your work.
+
+\hypertarget{final-questions-about-2-minutes}{%
+\section{Final Questions (about 2
+minutes)}\label{final-questions-about-2-minutes}}
+
+Depending on time, I may ask you any of several questions at the end of
+our meeting. Some possibilities you should be prepared for\ldots{}
+
+\begin{itemize}
+\tightlist
+\item
+  What percentage of your time in Study 2 did you spend obtaining,
+  cleaning, merging and tidying data, as opposed to actually performing
+  analyses on tidy data?
+\item
+  Tell me something useful that you learned from doing the project.
+\item
+  Tell me what the hardest part of doing the project was.
+\item
+  What do you know now that you wished you'd known back when you were
+  formulating the proposal, way back in Task A? What would you tell
+  yourself if you could go back in time?
+\end{itemize}
 
 \bibliography{book.bib,packages.bib}
 
