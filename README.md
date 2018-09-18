@@ -18,10 +18,12 @@ In the second study, you (working individually) will propose a research question
 
 ## Your Project Work Will Include Multiple Tasks
 
-and complete Instructions on how to do those tasks [are under development](https://thomaselove.github.io/431-2018-project/).
+and complete Instructions [are provided at this link](https://thomaselove.github.io/431-2018-project/).
 
 ## Old Class Surveys
 
-We have posted PDF files of the 2014 Survey, the 2015 Survey, the 2016 Survey and the 2017 Survey to help you see what is involved. Remember that the questions in these Surveys were developed under somewhat different rules than are in place for the 2018 Projects.
+We have posted PDF files of the [2014 Survey](https://github.com/THOMASELOVE/431-2018-project/blob/master/oldsurveys/2014_431_class_survey.pdf), the [2015 Survey](https://github.com/THOMASELOVE/431-2018-project/blob/master/oldsurveys/2015_431_class_survey.pdf), the [2016 Survey](https://github.com/THOMASELOVE/431-2018-project/blob/master/oldsurveys/2016_431_class_survey.pdf) and the [2017 Survey](https://github.com/THOMASELOVE/431-2018-project/blob/master/oldsurveys/2017_431_class_survey.pdf) to help you see what is involved. 
+
+Remember that the questions in these Surveys were developed under somewhat different rules than are in place for the 2018 Projects.
 
 

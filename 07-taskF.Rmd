@@ -11,12 +11,12 @@ Task F requires you to share your data for Study 2. The model for this Task is J
 Specifically, you will submit the following via Canvas on time.
 
 1. a direct link to the raw data set (without any need for me to sign up for anything) or a .csv copy of the raw data set called `yourname-raw.csv`
-2. a single .csv file with a name of your choice containing a clean, tidy data set for Study 2, along with 
+2. a single tidy .csv file with a name of your choice containing a clean, tidy data set for Study 2, along with 
 3. a Word or PDF file containing both 
     a. a **codebook** section which describes every variable (column) and its values in your .csv file, 
     b. a **study design** section which reminds (and updates) us about the source of the data and your research question.
 
-If you must zip the raw data set or tidy data set, OK, but include the Word or PDF file as a separate document, apart from the zip file you submit. The details for these elements of Task F follow.
+If you must zip the raw data set, OK, but include the tidy CSV and Word/PDF files as separate documents, apart from the zip file you submit. The details for these elements of Task F follow.
 
 ## The Raw Data Set
 
@@ -30,7 +30,7 @@ A direct link (without me having to sign up for anything) is preferred. If this 
 
 ## The Tidy Data Set
 
-Your .csv file should include only those variables you will actually use in your analysis of Study 2. Your .csv file should include one row per subject in your data, and one column for each variable you will use. Your data are tidy if each variable you measure is in its own column, and each different observation of that variable is in its own row, identifed by the subject identification code in `Subj_ID`.
+Your tidy .csv file should include only those variables you will actually use in your analysis of Study 2. Your .csv file should include one row per subject in your data, and one column for each variable you will use. Your data are tidy if each variable you measure is in its own column, and each different observation of that variable is in its own row, identifed by the subject identification code in `Subj_ID`.
 
 You need to provide:
 
@@ -47,7 +47,7 @@ You need to provide:
     + *Missing data* are data that are missing and you don't know the mechanism. Missing data in the predictor variables are allowed, and you should code missing values in your tidy data set as `NA`. It is critical to report if there is a reason you know about that some of the data are missing. You should also not impute/make up/throw away missing observations on the predictor values in your tidy data set that you submit for Task F.
 5. any other variables you need to share with me (typically this would only include things you had to use in order to get to your final choice of outcome and predictors.) Most people will not need to share any additional variables.
 
-I will need to be able to take your submitted `.csv` file and run your eventual Markdown file (part of Task H) against it and obtain your results, so it must be completely clean. Because it is a `.csv` file, you'll have no highlighting or bolding or any other special formatting. If you have missing values, they should be indicated as NA in the file. If you obtain the file in R, and then write it to a .csv file, you should write the file without row numbers if you already have an identification variable. To do so, you should be able to use `write.csv(dataframeinR, "newfilename.csv", row.names = FALSE)` where you will substitute in the name of your data frame in R, and new (.csv) file name. Don't use the same name for your original data set and your tidy one.
+I will need to be able to take your submitted `.csv` file and run your eventual Markdown file (part of [Task G](#taskG)) against it and obtain your results, so it must be completely clean. Because it is a `.csv` file, you'll have no highlighting or bolding or any other special formatting. If you have missing values, they should be indicated as NA in the file. If you obtain the file in R, and then write it to a .csv file, you should write the file without row numbers if you already have an identification variable. To do so, you should be able to use `write.csv(dataframeinR, "newfilename.csv", row.names = FALSE)` where you will substitute in the name of your data frame in R, and new (.csv) file name. Don't use the same name for your original data set and your tidy one.
 
 ## The Codebook
 

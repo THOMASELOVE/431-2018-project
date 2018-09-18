@@ -67,7 +67,7 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#your-project-includes-two-studies"><i class="fa fa-check"></i>Your Project includes Two Studies</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#you-have-nine-tasks-to-complete-this-semester"><i class="fa fa-check"></i>You have Nine Tasks to Complete this Semester</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#you-have-eight-tasks-to-complete-this-semester"><i class="fa fa-check"></i>You have Eight Tasks to Complete this Semester</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#working-with-this-document"><i class="fa fa-check"></i>Working with This Document</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#need-help"><i class="fa fa-check"></i>Need Help?</a></li>
 </ul></li>
@@ -137,11 +137,8 @@
 <li class="chapter" data-level="7.5" data-path="taskF.html"><a href="taskF.html#the-codebook"><i class="fa fa-check"></i><b>7.5</b> The Codebook</a></li>
 <li class="chapter" data-level="7.6" data-path="taskF.html"><a href="taskF.html#the-study-design"><i class="fa fa-check"></i><b>7.6</b> The Study Design</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="taskG.html"><a href="taskG.html"><i class="fa fa-check"></i><b>8</b> Task G (The Project Update) Instructions</a><ul>
-<li class="chapter" data-level="8.1" data-path="taskG.html"><a href="taskG.html#deadline-and-submission-information-6"><i class="fa fa-check"></i><b>8.1</b> Deadline and Submission information</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="taskH.html"><a href="taskH.html"><i class="fa fa-check"></i><b>9</b> Task H (The Portfolio) Instructions</a></li>
-<li class="chapter" data-level="10" data-path="taskI.html"><a href="taskI.html"><i class="fa fa-check"></i><b>10</b> Task I (Your Presentation) Instructions</a></li>
+<li class="chapter" data-level="8" data-path="taskG.html"><a href="taskG.html"><i class="fa fa-check"></i><b>8</b> Task G (The Portfolio) Instructions</a></li>
+<li class="chapter" data-level="9" data-path="taskH.html"><a href="taskH.html"><i class="fa fa-check"></i><b>9</b> Task H (Your Presentation) Instructions</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -174,14 +171,14 @@
 <p>Specifically, you will submit the following via Canvas on time.</p>
 <ol style="list-style-type: decimal">
 <li>a direct link to the raw data set (without any need for me to sign up for anything) or a .csv copy of the raw data set called <code>yourname-raw.csv</code></li>
-<li>a single .csv file with a name of your choice containing a clean, tidy data set for Study 2, along with</li>
+<li>a single tidy .csv file with a name of your choice containing a clean, tidy data set for Study 2, along with</li>
 <li>a Word or PDF file containing both
 <ol style="list-style-type: lower-alpha">
 <li>a <strong>codebook</strong> section which describes every variable (column) and its values in your .csv file,</li>
 <li>a <strong>study design</strong> section which reminds (and updates) us about the source of the data and your research question.</li>
 </ol></li>
 </ol>
-<p>If you must zip the raw data set or tidy data set, OK, but include the Word or PDF file as a separate document, apart from the zip file you submit. The details for these elements of Task F follow.</p>
+<p>If you must zip the raw data set, OK, but include the tidy CSV and Word/PDF files as separate documents, apart from the zip file you submit. The details for these elements of Task F follow.</p>
 </div>
 <div id="the-raw-data-set" class="section level2">
 <h2><span class="header-section-number">7.3</span> The Raw Data Set</h2>
@@ -195,7 +192,7 @@
 </div>
 <div id="the-tidy-data-set" class="section level2">
 <h2><span class="header-section-number">7.4</span> The Tidy Data Set</h2>
-<p>Your .csv file should include only those variables you will actually use in your analysis of Study 2. Your .csv file should include one row per subject in your data, and one column for each variable you will use. Your data are tidy if each variable you measure is in its own column, and each different observation of that variable is in its own row, identifed by the subject identification code in <code>Subj_ID</code>.</p>
+<p>Your tidy .csv file should include only those variables you will actually use in your analysis of Study 2. Your .csv file should include one row per subject in your data, and one column for each variable you will use. Your data are tidy if each variable you measure is in its own column, and each different observation of that variable is in its own row, identifed by the subject identification code in <code>Subj_ID</code>.</p>
 <p>You need to provide:</p>
 <ol style="list-style-type: decimal">
 <li>a header row (row 1 in the spreadsheet) that contains full row names. So if you measured age at diagnosis for patients, you would head that column with the name <code>AgeAtDiagnosis</code> or <code>Age.at.Diagnosis</code> instead of something like <code>ADx</code> or another abbreviation that may be hard for another person (or you, two years from now) to understand.</li>
@@ -215,7 +212,7 @@
 </ul></li>
 <li>any other variables you need to share with me (typically this would only include things you had to use in order to get to your final choice of outcome and predictors.) Most people will not need to share any additional variables.</li>
 </ol>
-<p>I will need to be able to take your submitted <code>.csv</code> file and run your eventual Markdown file (part of Task H) against it and obtain your results, so it must be completely clean. Because it is a <code>.csv</code> file, you’ll have no highlighting or bolding or any other special formatting. If you have missing values, they should be indicated as NA in the file. If you obtain the file in R, and then write it to a .csv file, you should write the file without row numbers if you already have an identification variable. To do so, you should be able to use <code>write.csv(dataframeinR, &quot;newfilename.csv&quot;, row.names = FALSE)</code> where you will substitute in the name of your data frame in R, and new (.csv) file name. Don’t use the same name for your original data set and your tidy one.</p>
+<p>I will need to be able to take your submitted <code>.csv</code> file and run your eventual Markdown file (part of <a href="taskG.html#taskG">Task G</a>) against it and obtain your results, so it must be completely clean. Because it is a <code>.csv</code> file, you’ll have no highlighting or bolding or any other special formatting. If you have missing values, they should be indicated as NA in the file. If you obtain the file in R, and then write it to a .csv file, you should write the file without row numbers if you already have an identification variable. To do so, you should be able to use <code>write.csv(dataframeinR, &quot;newfilename.csv&quot;, row.names = FALSE)</code> where you will substitute in the name of your data frame in R, and new (.csv) file name. Don’t use the same name for your original data set and your tidy one.</p>
 </div>
 <div id="the-codebook" class="section level2">
 <h2><span class="header-section-number">7.5</span> The Codebook</h2>
