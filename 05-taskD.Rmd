@@ -2,8 +2,129 @@
 
 ## Deadline and Submission information
 
-Task D is due at noon on 2018-10-23. Submit your Task D work via [Canvas](https://canvas.case.edu/). Please note that:
+Task D is due at noon on 2018-10-23. Submit your Task D work via a Google Form that Dr. Love will provide. Please note that:
 
 - Task C is also due at the same time. 
 - We do not have class on 2018-10-23 because of CWRU's Fall Break.
 
+## Task D requires you to complete a Google Form
+
+Dr. Love will make the Google Form for Project Task D available as soon as the Draft Survey is available.
+
+In this form, you will need to specify the list of items from the Draft Survey that you plan to use in one or more of your six required analyses for Study 1 (the Class Survey.) 
+
+- The Form will ask you to specify by item number and name the items you wish to use for each of the six required Analyses for Study 1. 
+- In addition to the items you select related to each Analysis, you will also select two backup quantitative variables, and two backup factors.
+- You need not do any analyses connected to the items you originally suggested, nor do you need to do analyses that mirror your original research questions.
+- Items with at least 10 possible responses will be treated as quantitative. Other items will be treated as categorical (factors.) 
+    - For ordered categories, you can consider assigning a score to each response, then treating that score as quantitative.
+    - You are permitted to categorize into a group with 2-4 levels any quantitative item you choose.
+    - You are permitted to collapse any categories in an item with more than 2 categories, as you choose.
+    - Some items are part of multiple-item scales. If you want to use a scale, specify each item that would go into that scale on the Task D form, as applicable.
+
+## The Six Required Analyses for Study 1
+
+- The actual analyses you will need to do include either Analysis 1a or 1b (but not both), along with Analyses 2-6, as specified below.
+
+Analysis | Variables needed
+------------------------------------ | --------------------------------------------
+[1a] 2 means via paired samples | Two quantitative (outcomes)
+[1b] 2 means via independent samples | One quantitative (outcome) and one categorical (2 levels)
+[2] ANOVA with Tukey | One quantitative (outcome) and one categorical (3-6 levels)
+[3] Regression Model | Same as either [1b] or [2], plus one quantitative (covariate)
+[4] 2x2 Table        | Two categorical (2 level) variables
+[5] JxK Table        | Two categorical variables, one with 2-6, other with 3-6 levels
+[6] 2x2xJ Table      | Same as [4], plus one categorical with 3-6 levels
+
+
+### Analysis 1: Comparing the Means of Two Populations
+
+Here, you will choose either to use a paired samples design or an independent samples design. 
+
+If you're using paired samples (to do Analysis 1a), then you will specify
+
+- Outcome A, a quantitative variable, and 
+- Outcome B, also a quantitative variable.
+
+If you're using **independent** samples (to do Analysis 1b), then you will specify
+
+- Outcome C, a quantitative variable, and
+- Factor Z, a two-level categorical variable
+
+Each level of your Factor Z must apply to a minimum of 10 subjects in the Survey.
+
+### Analysis 2: Comparing the Means of Three or More Populations
+
+Here, you will complete an analysis of variance, with pre-planned Tukey HSD comparisons. You will specify:
+
+- Outcome D, a quantitative variable (which can repeat A, B or C from before if you like)
+- Factor Y, a 3-6 level categorical variable
+
+Each level of your Factor Y must apply to a minimum of 6 subjects in the Survey.
+
+### Analysis 3: Regression Model with One Covariate
+
+Here, you will use the same outcome and factor as you used in either Analysis 1 (if you used independent samples) or Analysis 2, but add a new covariate. So you will specify:
+
+- Outcome E, which must be the same as either your Outcome C (if you're amplifying Analysis 1b) or Outcome D (if you're amplifying Analysis 2).
+- Factor X, which must be the same as either Factor Z (if you're amplifying Analysis 1b) or Factor Y (if you're amplifying Analysis 2), but now you're also adding:
+- Covariate G, which is to be a quantitative variable not used in Analyses 1 or 2.
+
+### Analysis 4: Comparing Two Population Proportions
+
+Here, you will develop and analyze a 2x2 contingency table. You will specify:
+
+- Factor L (which needs to have exactly 2 levels) and will be in the rows of your table, and
+- Factor M (which also needs to have exactly 2 levels) and be in the columns.
+
+Every cell in your 2x2 table needs to have at least 5 observations. You are welcome to re-use a two-level factor you've used in a previous Analysis for L or M, but must add a new factor for the other.
+
+### Analysis 5: A Larger Two-Way Table
+
+Here, you will develop a contingency table analysis to describe (in the rows) a factor with 2-6 levels, and (in the columns) a factor with 3-6 levels. You will specify:
+
+- Factor J (which must have 2-6 levels) and will be in the rows of this table, and
+- Factor K (which must have 3-6 levels) and will be in the columns
+
+You can re-use at most one of Factors L and M as Factor J, but Factor K must be new.
+
+### Analysis 6: Comparing Population Proportions in a 2x2xN contingency table 
+
+Here, you will amplify Analysis 4 by developing a Mantel-Haenszel analysis of a contingency table with 2 rows (re-using Factor L from Analysis 4), 2 columns (re-using Factor M from Analysis 4) and 3-6 layers (or strata) in a new factor called Factor N. You wlil specify:
+
+- Factor N (which must have 3-6 levels) and can repeat Factor J or K if you like, so long as it is different from Factors L or M.
+
+### Backups
+
+You will also specify
+
+- Quantitative Variable Q: a backup quantitative variable for use as an outcome
+- Quantitative Variable R: another backup quantitative variable, just in case
+- Factor Variable S: a backup 2 level categorical variable for use as a group
+- Factor Variable T: a backup 3-6 level categorical variable for use as a group, and
+
+These backups are for whether the results of the Survey turn out to yield either outcome variables with no variation at all across the groups of interest (in Analyses 1-3) or tables with insufficiently populated cells (in Analysis 4-6).
+
+## Table of What You'll Specify on the Form
+
+You will specify the following elements on your form (remember that you will either specify A and B if you choose Analysis 1a, or C and Z if you choose Analysis 1b.)
+
+Analysis | Description | Item # | Item Name
+----: | :-----------------: | -----: | -----:
+1a | A (quantitative) | -- | -- 
+1a | B (quantitative) | -- | --
+1b | C (quantitative) | -- | --
+1b | Z (two-category) | -- | --
+2  | D (quantitative) | -- | --
+2  | Y (3-6 category) | -- | --
+3  | E (quantitative, same as C or D) | -- | --
+3  | X (same as either Y or Z) | -- | -- 
+4 & 6 | L (two-category) | -- | --
+4 & 6 | M (two-category) | -- | --
+5  | J (2-6 category) | -- | --
+5  | K (3-6 category) | -- | --
+6  | N (3-6 category) | -- | --
+Backup | Q (quantitative) | -- | --
+Backup | R (quantitative) | -- | --
+Backup | S (two-category) | -- | --
+Backup | T (3-6 category) | -- | --
