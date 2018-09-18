@@ -19,74 +19,86 @@ There are 55 available time slots, listed below.
 
 ### Monday 2018-12-10 morning
 
-- Time Slot	1	MON	10-Dec	from	8:00 AM	to	8:20 AM	, so you would arrive at 	7:50 AM
-- Time Slot	2	MON	10-Dec	from	8:25 AM	to	8:45 AM	, so you would arrive at 	8:15 AM
-- Time Slot	3	MON	10-Dec	from	8:50 AM	to	9:10 AM	, so you would arrive at 	8:40 AM
-- Time Slot	4	MON	10-Dec	from	9:15 AM	to	9:35 AM	, so you would arrive at 	9:05 AM
-- Time Slot	5	MON	10-Dec	from	9:40 AM	to	10:00 AM, so you would arrive at 	9:30 AM
-- Time Slot	6	MON	10-Dec	from	10:15 AM to	10:35 AM, so you would arrive at 	10:05 AM
-- Time Slot	7	MON	10-Dec	from	10:40 AM to	11:00 AM, so you would arrive at 	10:30 AM
-- Time Slot	8	MON	10-Dec	from	11:05 AM to	11:25 AM, so you would arrive at 	10:55 AM
-- Time Slot	9	MON	10-Dec	from	11:30 AM to	11:50 AM, so you would arrive at 	11:20 AM
-- Time Slot	10	MON	10-Dec	from	12:35 PM to	12:55 PM, so you would arrive at 	12:25 PM
+Time Slot | Date | Start | Finish | **Arrival Time**
+--------: | --------: | :------: | :------: | :--------:
+1 | MON 12-10 | 8:00 AM | 8:20 AM | **7:50 AM**
+2 | MON 12-10 | 8:25 AM | 8:45 AM | **8:15 AM**
+3 |	MON 12-10 | 8:50 AM	| 9:10 AM | **8:40 AM**
+4 |	MON 12-10 | 9:15 AM	| 9:35 AM | **9:05 AM**
+5 |	MON 12-10 | 9:40 AM	| 10:00 AM | **9:30 AM**
+6 |	MON 12-10 | 10:15 AM | 10:35 AM | **10:05 AM**
+7 |	MON 12-10 | 10:40 AM | 11:00 AM | **10:30 AM**
+8 |	MON 12-10 | 11:05 AM | 11:25 AM | **10:55 AM**
+9 |	MON 12-10 | 11:30 AM | 11:50 AM | **11:20 AM**
 
 ### Monday 2018-12-10 afternoon
 
-- Time Slot	11	MON	10-Dec	from	1:00 PM	to	1:20 PM	, so you would arrive at 	12:50 PM
-- Time Slot	12	MON	10-Dec	from	1:25 PM	to	1:45 PM	, so you would arrive at 	1:15 PM
-- Time Slot	13	MON	10-Dec	from	1:50 PM	to	2:10 PM	, so you would arrive at 	1:40 PM
-- Time Slot	14	MON	10-Dec	from	2:15 PM	to	2:35 PM	, so you would arrive at 	2:05 PM
-- Time Slot	15	MON	10-Dec	from	2:40 PM	to	3:00 PM	, so you would arrive at 	2:30 PM
-- Time Slot	16	MON	10-Dec	from	3:15 PM	to	3:35 PM	, so you would arrive at 	3:05 PM
-- Time Slot	17	MON	10-Dec	from	3:40 PM	to	4:00 PM	, so you would arrive at 	3:30 PM
-- Time Slot	18	MON	10-Dec	from	4:05 PM	to	4:25 PM	, so you would arrive at 	3:55 PM
-- Time Slot	19	MON	10-Dec	from	4:30 PM	to	4:50 PM	, so you would arrive at 	4:20 PM
-- Time Slot	20	MON	10-Dec	from	4:55 PM	to	5:15 PM	, so you would arrive at 	4:45 PM
+Time Slot | Date | Start | Finish | **Arrival Time**
+--------: | --------: | :------: | :------: | :--------:
+10 | MON 12-10 | 12:35 PM | 12:55 PM | **12:25 PM**
+11 | MON 12-10 | 1:00 PM | 1:20 PM | **12:50 PM**
+12 | MON 12-10 | 1:25 PM | 1:45 PM | **1:15 PM**
+13 | MON 12-10 | 1:50 PM | 2:10 PM | **1:40 PM**
+14 | MON 12-10 | 2:15 PM | 2:35 PM | **2:05 PM**
+15 | MON 12-10 | 2:40 PM | 3:00 PM | **2:30 PM**
+16 | MON 12-10 | 3:15 PM | 3:35 PM | **3:05 PM**
+17 | MON 12-10 | 3:40 PM | 4:00 PM | **3:30 PM**
+18 | MON 12-10 | 4:05 PM | 4:25 PM | **3:55 PM**
+19 | MON 12-10 | 4:30 PM | 4:50 PM | **4:20 PM**
+20 | MON 12-10 | 4:55 PM | 5:15 PM | **4:45 PM**
 
 ### Tuesday 2018-12-11 morning
 
-- Time Slot	21	TUE	11-Dec	from	8:00 AM	to	8:20 AM	, so you would arrive at 	7:50 AM
-- Time Slot	22	TUE	11-Dec	from	8:25 AM	to	8:45 AM	, so you would arrive at 	8:15 AM
-- Time Slot	23	TUE	11-Dec	from	8:50 AM	to	9:10 AM	, so you would arrive at 	8:40 AM
-- Time Slot	24	TUE	11-Dec	from	9:15 AM	to	9:35 AM	, so you would arrive at 	9:05 AM
-- Time Slot	25	TUE	11-Dec	from	9:40 AM	to	10:00 AM, so you would arrive at 	9:30 AM
-- Time Slot	26	TUE	11-Dec	from	10:15 AM to	10:35 AM, so you would arrive at 	10:05 AM
-- Time Slot	27	TUE	11-Dec	from	10:40 AM to	11:00 AM, so you would arrive at 	10:30 AM
-- Time Slot	28	TUE	11-Dec	from	11:05 AM to	11:25 AM, so you would arrive at 	10:55 AM
-- Time Slot	29	TUE	11-Dec	from	11:30 AM to	11:50 AM, so you would arrive at 	11:20 AM
+Time Slot | Date | Start | Finish | **Arrival Time**
+--------: | --------: | :------: | :------: | :--------:
+21 | TUE 12-11 | 8:00 AM | 8:20 AM | **7:50 AM**
+22 | TUE 12-11 | 8:25 AM | 8:45 AM | **8:15 AM**
+23 | TUE 12-11 | 8:50 AM	| 9:10 AM | **8:40 AM**
+24 | TUE 12-11 | 9:15 AM	| 9:35 AM | **9:05 AM**
+25 | TUE 12-11 | 9:40 AM	| 10:00 AM | **9:30 AM**
+26 | TUE 12-11 | 10:15 AM | 10:35 AM | **10:05 AM**
+27 | TUE 12-11 | 10:40 AM | 11:00 AM | **10:30 AM**
+28 | TUE 12-11 | 11:05 AM | 11:25 AM | **10:55 AM**
+29 | TUE 12-11 | 11:30 AM | 11:50 AM | **11:20 AM**
 
 ### Tuesday 2018-12-11 afternoon
 
-- Time Slot	30	TUE	11-Dec	from	12:35 PM to	12:55 PM, so you would arrive at 	12:25 PM
-- Time Slot	31	TUE	11-Dec	from	1:00 PM	to	1:20 PM, so you would arrive at 	12:50 PM
-- Time Slot	32	TUE	11-Dec	from	1:25 PM	to	1:45 PM, so you would arrive at 	1:15 PM
-- Time Slot	33	TUE	11-Dec	from	1:50 PM	to	2:10 PM, so you would arrive at 	1:40 PM
-- Time Slot	34	TUE	11-Dec	from	2:15 PM	to	2:35 PM, so you would arrive at 	2:05 PM
-- Time Slot	35	TUE	11-Dec	from	2:40 PM	to	3:00 PM, so you would arrive at 	2:30 PM
-- Time Slot	36	TUE	11-Dec	from	3:15 PM	to	3:35 PM, so you would arrive at 	3:05 PM
+Time Slot | Date | Start | Finish | **Arrival Time**
+--------: | --------: | :------: | :------: | :--------:
+30 | TUE 12-11 | 12:35 PM | 12:55 PM | **12:25 PM**
+31 | TUE 12-11 | 1:00 PM | 1:20 PM | **12:50 PM**
+32 | TUE 12-11 | 1:25 PM | 1:45 PM | **1:15 PM**
+33 | TUE 12-11 | 1:50 PM | 2:10 PM | **1:40 PM**
+34 | TUE 12-11 | 2:15 PM | 2:35 PM | **2:05 PM**
+35 | TUE 12-11 | 2:40 PM | 3:00 PM | **2:30 PM**
+36 | TUE 12-11 | 3:15 PM | 3:35 PM | **3:05 PM**
 
 ### Thursday 2018-12-13 morning
 
-- Time Slot	37	THU	13-Dec	from	8:00 AM	to	8:20 AM, so you would arrive at 	7:50 AM
-- Time Slot	38	THU	13-Dec	from	8:25 AM	to	8:45 AM, so you would arrive at 	8:15 AM
-- Time Slot	39	THU	13-Dec	from	8:50 AM	to	9:10 AM, so you would arrive at 	8:40 AM
-- Time Slot	40	THU	13-Dec	from	9:15 AM	to	9:35 AM, so you would arrive at 	9:05 AM
-- Time Slot	41	THU	13-Dec	from	9:40 AM	to	10:00 AM, so you would arrive at 	9:30 AM
-- Time Slot	42	THU	13-Dec	from	10:15 AM to	10:35 AM, so you would arrive at 	10:05 AM
-- Time Slot	43	THU	13-Dec	from	10:40 AM to	11:00 AM, so you would arrive at 	10:30 AM
-- Time Slot	44	THU	13-Dec	from	11:05 AM to	11:25 AM, so you would arrive at 	10:55 AM
-- Time Slot	45	THU	13-Dec	from	11:30 AM to	11:50 AM, so you would arrive at 	11:20 AM
+Time Slot | Date | Start | Finish | **Arrival Time**
+--------: | --------: | :------: | :------: | :--------:
+37 | THU 12-13 | 8:00 AM | 8:20 AM | **7:50 AM**
+38 | THU 12-13 | 8:25 AM | 8:45 AM | **8:15 AM**
+39 | THU 12-13 | 8:50 AM	| 9:10 AM | **8:40 AM**
+40 | THU 12-13 | 9:15 AM	| 9:35 AM | **9:05 AM**
+41 | THU 12-13 | 9:40 AM	| 10:00 AM | **9:30 AM**
+42 | THU 12-13 | 10:15 AM | 10:35 AM | **10:05 AM**
+43 | THU 12-13 | 10:40 AM | 11:00 AM | **10:30 AM**
+44 | THU 12-13 | 11:05 AM | 11:25 AM | **10:55 AM**
+45 | THU 12-13 | 11:30 AM | 11:50 AM | **11:20 AM**
 
 ### Thursday 2018-12-13 afternoon
 
-- Time Slot	46	THU	13-Dec	from	12:35 PM to	12:55 PM, so you would arrive at 	12:25 PM
-- Time Slot	47	THU	13-Dec	from	1:00 PM	to	1:20 PM, so you would arrive at 	12:50 PM
-- Time Slot	48	THU	13-Dec	from	1:25 PM	to	1:45 PM, so you would arrive at 	1:15 PM
-- Time Slot	49	THU	13-Dec	from	1:50 PM	to	2:10 PM, so you would arrive at 	1:40 PM
-- Time Slot	50	THU	13-Dec	from	2:15 PM	to	2:35 PM, so you would arrive at 	2:05 PM
-- Time Slot	51	THU	13-Dec	from	2:40 PM	to	3:00 PM, so you would arrive at 	2:30 PM
-- Time Slot	52	THU	13-Dec	from	3:15 PM	to	3:35 PM, so you would arrive at 	3:05 PM
-- Time Slot	53	THU	13-Dec	from	3:40 PM	to	4:00 PM, so you would arrive at 	3:30 PM
-- Time Slot	54	THU	13-Dec	from	4:05 PM	to	4:25 PM, so you would arrive at 	3:55 PM
-- Time Slot	55	THU	13-Dec	from	4:30 PM	to	4:50 PM, so you would arrive at 	4:20 PM
+Time Slot | Date | Start | Finish | **Arrival Time**
+--------: | --------: | :------: | :------: | :--------:
+46 | THU 12-13 | 12:35 PM | 12:55 PM | **12:25 PM**
+47 | THU 12-13 | 1:00 PM | 1:20 PM | **12:50 PM**
+48 | THU 12-13 | 1:25 PM | 1:45 PM | **1:15 PM**
+49 | THU 12-13 | 1:50 PM | 2:10 PM | **1:40 PM**
+50 | THU 12-13 | 2:15 PM | 2:35 PM | **2:05 PM**
+51 | THU 12-13 | 2:40 PM | 3:00 PM | **2:30 PM**
+52 | THU 12-13 | 3:15 PM | 3:35 PM | **3:05 PM**
+53 | THU 12-13 | 3:40 PM | 4:00 PM | **3:30 PM**
+54 | THU 12-13 | 4:05 PM | 4:25 PM | **3:55 PM**
+55 | THU 12-13 | 4:30 PM | 4:50 PM | **4:20 PM**
 
