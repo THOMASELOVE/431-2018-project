@@ -19,12 +19,12 @@ The rest of this section contains guidance as to what sort of questions your gro
 
 The project groups will only apply to Project Tasks A, C and D. You will become part of a project group on 2018-09-25 and the groups will disband after the survey is finalized in late October. 
 
-Task A is due at noon on 2018-10-12. You will submit your Task A work through [Canvas](https://canvas.case.edu/). 
+Task A is due at noon on 2018-10-15. (**Note the change of date.**) You will submit your Task A work through [Canvas](https://canvas.case.edu/). 
 
 - The group work (Parts 1-3) need to be submitted by one of the members of your group. 
     - If you are not the person submitting this information for your group, then your Task A submission should begin with the statement: "Parts 1-3 of Task A were submitted for my group by PERSON'S NAME."
-- All students need to submit Parts 4 and 5 of Task A, individually. 
-- Please note that **Task A and Task B** are due at the same time.
+- All students need to submit Parts 4 and 5 of Task A, individually. You can do this in advance of your group's submission of Parts 1-3 if you like.
+- Please note that **Task A and Task B** are no longer due at the same time. Task B is due 2018-10-12, but Task A is now due 2018-10-15.
 
 ## Study 1 work for Task A
 
@@ -53,6 +53,19 @@ Quoting Roger Peng, from [Exploratory Data Analysis with R](https://bookdown.org
 > A general question one could ask is "Are air pollution levels higher on the east coast than on the west coast?" But a more specific question might be "Are hourly ozone levels on average higher in New York City than they are in Los Angeles?"
 
 > Note that both questions may be of interest, and neither is right or wrong. But the first question requires looking at all pollutants across the entire east and west coasts, while the second question only requires looking at single pollutant in two cities. It's usually a good idea to spend a few minutes to figure out what is the question you're really interested in, and narrow it down to be as specific as possible (without becoming uninteresting).
+
+### Research Questions that have worked in the past
+
+For Study 1, your research questions will need to compare two or more exposure groups on a quantitative outcome (in one case) and on a categorical outcome (in another case). Here are several examples that worked in the past:
+
+- "Do messy people tend to have higher levels of self-described creativity than organized people?"
+- "Is whether you voted in the last presidential election strongly associated with your level of interest in the current election?"
+- "Does being in a committed romantic relationship result in higher self-esteem compared to not being in a committed romantic relationship?"
+- "Do conscientious people spend more time every week engaged in activities, such as exercise, thought to promote health and well-being compared to others?"
+- "Do graduate students who routinely pack their lunch have a lower BMI than graduate students who routinely purchase their lunch?"
+- "Do individuals who spend a lot of time on social media each day have more or less social anxiety than those who do not?"
+
+Don't boil the ocean here. You're looking for a research question that can be reasonably addressed in a survey of approximately 50 people, so it has to be pretty straightforward.
 
 #### Checklist for Research Questions
 
@@ -262,6 +275,15 @@ I cannot guarantee the quality of any of the data sets available at these sites,
 ### If you are storing your own data
 
 An extremely useful link for those of you **building a spreadsheet to store data** is [Karl Broman's tutorial](http://kbroman.org/dataorg/) on the subject. No one was born knowing this stuff - take a look.
+
+## Research Questions for Study 2 that worked well in the past
+
+For Study 2, your research questions will need to fit within the confines of a regression model, where a quantitative outcome is predicted using a series of at least four predictor variables. In many cases, a key predictor will be of primary interest, with other predictors serving to "adjust" away noise and generate fairer comparisons. Here are a few examples from past classes:
+
+- "Is the presence of cardiovascular risk factors, specifically elevated hemoglobin A1c, predictive of cognitive impairment as defined by the Digit Symbol Substitution Test in patients over the age of 60 years, after adjusting for age, education, and depression?"
+- "What is the effect of thyroid dysfunction on LDL level after adjusting for age, sex, and level of physical activity in the population of patients at XXXXXXXX location who are 40 years-old and above?"
+- "Do conscientiousness and openness predict more conservative or liberal attitudes about government spending and whether and how much wasteful spending exists, after accounting for age, income and professional status?"
+- "Does overweight or obesity (defined by body mass index) predict insulin resistance (measured by the homeostasis model assessment of insulin resistance (HOMA-IR)) in young adults with first-time acute coronary syndrome after adjusting for age, sex, race/ethnicity and severity of (several comorbid conditions)?"
 
 ## Evaluating Task A
 
