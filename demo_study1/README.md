@@ -26,9 +26,11 @@ Note that we’ll use a 90% confidence level throughout this demonstration proje
 
 ## If I just mimic what you did, will I do well on Project Study 1?
 
-Not really, no. You should probably mimic my YAML code to set up the document, but I expect you can do a lot of things more efficiently and effectively on your own than I can. I'm trying to include a lot of things you son't necessarily need to do in your case. You should also be displaying some creativity, in terms of visualization, but more importantly, showing some good sense about what you do and don't need in order to convince a skeptic of the value of your results, and make the work as replicable as possible.
+Not really, no. You should probably mimic my YAML code to set up the document, but I expect you to do many things more efficiently and effectively by tailoring the work to your project more than I can here. I'm trying to include a lot of things you won't necessarily need to do. 
 
-But each of the analyses I'm showing is done as correctly as I can do it. I'm not trying to confuse you.
+Focus on displaying some creativity, in terms of visualization, but more importantly, focus on showing good sense about what you do and don't need in order to convince a skeptic of the value of your results, and make the work as replicable as possible. As an obvious example, you wouldn't want to show ways of testing a hypothesis when the data don't support the underlying assumptions, but here, I show all ways of doing just about everything.
+
+That said, each of the analyses I'm showing is done as correctly as I can muster. I'm not trying to confuse you.
 
 ## Will there also be a demonstration project for Study 2?
 
