@@ -1,8 +1,6 @@
 # Course Project Demonstration for Study 1
 
-This page provides a demonstration of the sorts of analyses we are asking you to complete for your project Study 1 (using the class survey.) 
-
-We will use data from a prior class survey, gathered in two data files (called `survey2015raw_a` and `survey2015raw_b`) available on [the Data and Code page of our website](https://github.com/THOMASELOVE/431-2018-data).
+This page provides a demonstration of the sorts of analyses we are asking you to complete for your project Study 1 (using the class survey.)  In this demonstration, we use data from a prior class survey, gathered in two data files (called `survey2015raw_a` and `survey2015raw_b`) available on [the Data and Code page of our website](https://github.com/THOMASELOVE/431-2018-data).
 
 ## Accessing the Materials
 
