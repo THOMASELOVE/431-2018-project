@@ -4,7 +4,7 @@ This page provides a demonstration of the sorts of analyses we are asking you to
 
 ## Accessing the Materials
 
-To access the materials, [visit this link to view the HTML version](http://htmlpreview.github.io/?https://github.com/THOMASELOVE/431-2018-project/blob/master/demo_study1/431-project-study1-demonstration.html), or [download the R Markdown code here](https://raw.githubusercontent.com/THOMASELOVE/431-2018-project/master/demo_study1/431-project-study1-demonstration.Rmd) to use as a template for your own work.
+We will make both HTML and R Markdown versions available as soon as possible. We took down the old versions because they weren't executing properly.
 
 ## Current Status
 
