@@ -41,7 +41,7 @@ Each analysis should be self-contained (so that I don't have to read Analysis 1 
 
 You should generally follow the comparison plan you outlined in [Task D](#taskD). If you need to make a change, please indicate that in the text setting up each analysis. 
 
-A demonstration of an appropriate analysis for each of the required pieces of Study 1 Analysis will be provided to you.
+A demonstration of an appropriate analysis for each of the required pieces of Study 1 Analysis will be provided to you at https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1.
 
 ## The Nine Required Steps for Study 2
 
@@ -59,4 +59,4 @@ For your portfolio presentation in Study 2 (Your Data) complete these steps:
 
 In the Study 2 work, each step should begin with at least one complete sentence explaining what you are doing, specifying the items being used, and how you are using them, and then conclude with at least one complete sentence of discussion of the key conclusions you draw from the current step, and a discussion of any limitations you can describe that apply to the results. Present each new step as a subsection with an appropriate heading that shows up in the table of contents, so we can move to a new step efficiently in reviewing your work. 
 
-A demonstration of an appropriate analysis for each of the required steps of Study 2 Analysis will be provided to you.
+A demonstration of an appropriate analysis for each of the required steps of Study 2 Analysis will be provided to you at https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study2.

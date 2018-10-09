@@ -20,6 +20,12 @@ In the second study, you (working individually) will propose a research question
 
 and complete Instructions [are provided at this link](https://thomaselove.github.io/431-2018-project/).
 
+## Demonstration Project
+
+A demonstration of the work you'll need to do in Project Study 1 for your portfolio (Task G) is coming to https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1
+
+A similar demonstration of the Project Study 2 work we're expecting in your portfolio (Task G) will be coming to https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study2
+
 ## Old Class Surveys
 
 We have posted PDF files of the [2014 Survey](https://github.com/THOMASELOVE/431-2018-project/blob/master/oldsurveys/2014_431_class_survey.pdf), the [2015 Survey](https://github.com/THOMASELOVE/431-2018-project/blob/master/oldsurveys/2015_431_class_survey.pdf), the [2016 Survey](https://github.com/THOMASELOVE/431-2018-project/blob/master/oldsurveys/2016_431_class_survey.pdf) and the [2017 Survey](https://github.com/THOMASELOVE/431-2018-project/blob/master/oldsurveys/2017_431_class_survey.pdf) to help you see what is involved. 
