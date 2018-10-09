@@ -12,4 +12,4 @@ Nothing is available yet.
 
 ## Is there a demonstration page for Study 1 (the Course Survey)?
 
-Yes, [it is here]()
+Yes, [it is here](https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1)
