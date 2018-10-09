@@ -13,11 +13,16 @@ The current version is incomplete but it will soon include demonstrations of [al
 Status   | Element 
 -------- | --------------------------------------------------------
 Complete | Data Loading and Merging
+Complete | Description of the Survey Questions Studied in the Demo
 Complete | Data Management
 Complete | Final Codebook
 Complete | Analysis 1a (Comparing Two Paired Samples)
 Complete | Analysis 1b (Comparing Two Independent Samples)
 Not Yet  | Analyses 2-6
+
+## What confidence level should I use?
+
+Note that we’ll use a 90% confidence level throughout this demonstration project for all analyses, and I encourage you to do this in your actual Project Study 1 work, as well, given that your sample size will also be small (near 50).
 
 ## If I just mimic what you did, will I do well on Project Study 1?
 
