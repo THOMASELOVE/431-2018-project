@@ -4,7 +4,7 @@ This page provides a demonstration of the sorts of analyses we are asking you to
 
 ## Accessing the Materials
 
-We will make both HTML and R Markdown versions available as soon as possible. We took down the old versions because they weren't executing properly.
+HTML and R Markdown versions, along with the data used to build the examples, are all available at the Shared Google Drive folder you can access (after logging into Google via CWRU) at http://bit.ly/431-2018-demo-study1.
 
 ## Current Status
 
@@ -18,7 +18,11 @@ Complete | Data Management
 Complete | Final Codebook
 Complete | Analysis 1a (Comparing Two Paired Samples)
 Complete | Analysis 1b (Comparing Two Independent Samples)
-Not Yet  | Analyses 2-6
+Complete | Analysis 2 (Comparing 3+ Population Means via ANOVA)
+Not Yet  | Analysis 3 (Regression Comparison of Means with Adjustment)
+Not Yet | Analysis 4 (Two-Way (2x2) Contingency Table)
+Not Yet | Analysis 5 (Two-Way (JxK) Contingency Table)
+Not Yet | Analysis 6 (Three-Way Contingency Table)
 
 ## What confidence level should I use?
 
