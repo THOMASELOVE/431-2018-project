@@ -1,6 +1,6 @@
 # Course Project Demonstration for Study 1
 
-This page provides a demonstration of the sorts of analyses we are asking you to complete for your project Study 1 (using the class survey.)  In this demonstration, we use data from a prior class survey, gathered in two data files (called `survey2015raw_a` and `survey2015raw_b`) available on [the Data and Code page of our website](https://github.com/THOMASELOVE/431-2018-data).
+This page links to a demonstration of the sorts of analyses we are asking you to complete for your project Study 1 (using the class survey.)  In this demonstration, we use data from a prior class survey, gathered in two data files (called `survey2015raw_a` and `survey2015raw_b`) available on [the Data and Code page of our website](https://github.com/THOMASELOVE/431-2018-data).
 
 ## Accessing the Materials
 
@@ -19,7 +19,7 @@ Complete | Final Codebook
 Complete | Analysis 1a (Comparing Two Paired Samples)
 Complete | Analysis 1b (Comparing Two Independent Samples)
 Complete | Analysis 2 (Comparing 3+ Population Means via ANOVA)
-Complete  | Analysis 3 (Regression Comparison of Means with Adjustment)
+Complete | Analysis 3 (Regression Comparison of Means with Adjustment)
 Complete | Analysis 4 (Two-Way (2x2) Contingency Table)
 Complete | Analysis 5 (Two-Way (JxK) Contingency Table)
 Complete | Analysis 6 (Three-Way Contingency Table)
