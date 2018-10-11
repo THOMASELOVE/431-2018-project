@@ -10,8 +10,8 @@ HTML and R Markdown versions, along with the data used to build the examples, wi
 
 ## Current Status
 
-Nothing is available yet.
+Nothing particularly helpful is available yet, but there is an initial R Markdown and HTML file posted at http://bit.ly/431-2018-demo-study2.
 
-## Is there a demonstration page for Study 1 (the Course Survey)?
+## Is there a demonstration page for Study 1 (the Course Survey), too?
 
 Yes, [it is here](https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1)
