@@ -23,7 +23,7 @@ Reactions to **Group Work** on Project Task A are in the Google Doc at http://bi
 - Sangeetha Raghupathy, "Plasma glucose and pregnancy history in Pima Indian women with diabetes"
     - [The Pima Indians Diabetes Database](https://mail.uhhospitals.org/owa/redir.aspx?C=M_7aS6mrETKOET35Ek3fQyXQWXqYsFpMjXrTfQRT2DKHczQ89DXWCA..&URL=https%3a%2f%2fdata.world%2fdata-society%2fpima-indians-diabetes-database), which is a well-travelled example in medical research originally collected by researchers with the National Institute of Diabetes and Digestive and Kidney Diseases.
 - Alyssa Savadelis, "Do bisexuals experience higher rates of poverty?"
-    - [2015-16 NHANES data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015), looking at elements from the INQ_I, SEQ_I, and demographics data forms.
+    - [2015-16 NHANES data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015), looking at elements from the income (INQ_I), sexual behavior (SXQ_I) and demographics data forms.
 - Liwen Wang, "Predicting medical charges for insurance policy holders"
     - [A Kaggle insurance claims prediction data set](https://www.kaggle.com/easonlai/sample-insurance-claim-prediction-dataset) describing charges and a few health-related records for each of 1338 insurance policy holders.
 - Joshua Wu, "The Association Between Depression and Alcohol Consumption"
