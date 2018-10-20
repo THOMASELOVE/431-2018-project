@@ -20,5 +20,7 @@ Reactions to **Group Work** on Project Task A are in the Google Doc at http://bi
     - Uses data from 1300 patients analyzed at the Cleveland Clinic to study the role of disrupted regulation of pre-mRNA splicing in  several diseases, including acute myeloid leukemia (AML). The data planned for this project is part of a collaboration with Munich Leukemia Laboratory to analyze RNA-seq data from 1300 patients with either AML, myelodysplastic syndrome, or chronic myelomonocytic leukemia (CMML).
 - Michael Osterman, "A New Type of Cancer Prevention: Exercise?"
     - [The 500 Cities Project: Local Data for Better Health](https://www.cdc.gov/500cities/), from which [2017 release data can be obtained here](https://chronicdata.cdc.gov/500-Cities/500-Cities-Local-Data-for-Better-Health-2017-relea/6vp6-wxuq), is the primary source. The primary outcome of interest is the percentage of adults with non-skin cancer within a city. The key predictor is rates of having no leisure-time physical activity.
+- Alyssa Savadelis, "Do bisexuals experience higher rates of poverty?"
+    - [2015-16 NHANES data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015), looking at elements from the INQ_I, SEQ_I, and demographics data forms.
 - Joshua Wu, "The Association Between Depression and Alcohol Consumption"
     - Uses data from the [National Survey on Drug Use and Health](https://www.datafiles.samhsa.gov/study-dataset/national-survey-drug-use-and-health-2016-nsduh-2016-ds0001-nid17185), obtained from the Substance Abuse and Mental Health Data Archive.
