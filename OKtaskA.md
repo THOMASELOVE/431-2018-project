@@ -30,6 +30,8 @@ Reactions to **Group Work** on Project Task A are in the Google Doc at http://bi
     - [2015-16 NHANES data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015), looking at elements from the income (INQ_I), sexual behavior (SXQ_I) and demographics data forms.
 - Liwen Wang, "Predicting medical charges for insurance policy holders"
     - [A Kaggle insurance claims prediction data set](https://www.kaggle.com/easonlai/sample-insurance-claim-prediction-dataset) describing charges and a few health-related records for each of 1338 insurance policy holders.
+- Shengxuan Wang, "Obesity and high cholesterol levels"
+    - Data from the Rich Healthcare Group in China describing medical records for more than 200,000 adult participants receiving a health check over a seven-year period. A [key paper appeared here](https://bmjopen.bmj.com/content/8/9/e021768), and the data were published in August 2018 [at datadryad.org's repository](https://datadryad.org/resource/doi:10.5061/dryad.ft8750v).
 - Joshua Wu, "The Association Between Depression and Alcohol Consumption"
     - Uses data from the [National Survey on Drug Use and Health](https://www.datafiles.samhsa.gov/study-dataset/national-survey-drug-use-and-health-2016-nsduh-2016-ds0001-nid17185), obtained from the Substance Abuse and Mental Health Data Archive.
 - Siyi Zhang, "Sleep Duration, Socioeconomic Status and Diet in NHANES subjects over age 40"
