@@ -16,6 +16,8 @@ Reactions to **Group Work** on Project Task A are in the Google Doc at http://bi
     - Uses data from NHANES 2016, as gathered using [the nhanesA package in R](https://cran.r-project.org/web/packages/nhanesA/vignettes/Introducing_nhanesA.html). The forms used include: DIQ_I (diabetes), ALQ_I (alcohol consumption), PAQ_I (physical activity), and DEMO_I (demographics).
 - Wei (David) Dai, "Early life conditions and elderly life quality in Chinese senior citizens"
     - The Research on Early Life and Aging Trends and Effects (RELATE) study, focusing on the data from China (part 18). Public-use [data maintained by ICSPR](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/34241/summary).
+- Zhanwen Du, "Diagnostic blood tests in chronic kidney disease"
+    - The Chronic Kidney Disease data set, which is available at [Kaggle](https://www.kaggle.com/mansoordaku/ckdisease), but I think a more useful link is [this one from the University of California at Irvine machine learning repository](https://archive.ics.uci.edu/ml/datasets/Chronic_Kidney_Disease), which provides a detailed description of the data on the front page.
 - Logan Harper, "Socioeconomic status and quality of life in adults with sarcoidosis"
     - De-identified, appropriate-to-share data on a questionnaire measuring health-related quality of life [developed by the Foundation for Sarcoidosis Research](https://www.researchgate.net/publication/10766720_The_Sarcoidosis_Health_Questionnaire_A_new_measure_of_health-related_quality_of_life) and referred to as the Sarcoidosis Advanced Registry for Cures.
 - Joseph Hnath, "State-level abortion restrictions and abortion utilization in U.S. counties"
