@@ -4,7 +4,7 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 
 ## Approved Project Proposals (Study 2)
 
-Directory by Last Name: [A-F](Last Name beginning with A-F), [G-M](Last Name beginning with G-M), [N-Z](n-z)
+Directory by Last Name: [A-F](#Last Name beginning with A-F), [G-M](#Last Name beginning with G-M), [N-Z](#n-z)
 
 ### Last Name beginning with A-F
 
@@ -37,7 +37,7 @@ Directory by Last Name: [A-F](Last Name beginning with A-F), [G-M](Last Name beg
 - **Jordan Fiegl**, "Can aircraft specifications be used to predict serious crashes?"
     - Data from the [National Transportation Safety Board's Aviation Accident Database](https://www.ntsb.gov/Pages/default.aspx) (see the Investigations submenu - the data go back to 1962), [as gathered here](https://public.opendatasoft.com/explore/dataset/ntsb-aviation-accident-dataset/table/).
 
-### [Last Name beginning with G-M](#g-m)
+### Last Name beginning with G-M
 
 - **Sam Guadagnino**, "NFL Winning Percentage and Aggregate Team Statistics"
     - Uses data from [Pro Football Reference](https://www.pro-football-reference.com/years/) on various statistics describing outcomes and predictors of NFL teams from 1999 to 2017.
