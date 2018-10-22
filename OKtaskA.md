@@ -4,7 +4,7 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 
 ## Approved Project Proposals (Study 2)
 
-Directory by Last Name: [A-B](#a-b), [C](#c), [D-E-F](#d-f), [G-H-I](#g-i), [J-K-L](#j-l), [M-N](#m-n), [O-Z](#o-z)
+Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j-l), [M-N](#m-n), [O-S](#o-s), [T-Z](#t-z)
 
 ### A-B
 
@@ -76,7 +76,7 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-E-F](#d-f), [G-H-I](#g-i), [J-K
 - **Gregory Nelson**, "Paying the Most for the Least: Predicting Medicare Payments to Hospitals"
     - [Data from CMS](https://data.cms.gov/Medicare-Inpatient/Inpatient-Prospective-Payment-System-IPPS-Provider/97k6-zzx3/data) (Centers for Medicare and Medicaid Services) on inpatient prospective payment system data for fee-for-service medicaree patients for the 100 most common diagnosis groups. Gregory will focus on diagnosis "208- Respiratory System Diagnosis with Ventilator Support, <96 hours" as a way of avoiding some nuisance variation. The study includes 1993 hospitals.
 
-### O-Z
+### O-S
 
 - **Michael Osterman**, "A New Type of Cancer Prevention: Exercise?"
     - [The 500 Cities Project: Local Data for Better Health](https://www.cdc.gov/500cities/), from which [2017 release data can be obtained here](https://chronicdata.cdc.gov/500-Cities/500-Cities-Local-Data-for-Better-Health-2017-relea/6vp6-wxuq), is the primary source. The primary outcome of interest is the percentage of adults with non-skin cancer within a city. The key predictor is rates of having no leisure-time physical activity.
@@ -86,6 +86,9 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-E-F](#d-f), [G-H-I](#g-i), [J-K
     - [The Pima Indians Diabetes Database](https://mail.uhhospitals.org/owa/redir.aspx?C=M_7aS6mrETKOET35Ek3fQyXQWXqYsFpMjXrTfQRT2DKHczQ89DXWCA..&URL=https%3a%2f%2fdata.world%2fdata-society%2fpima-indians-diabetes-database), which is a well-travelled example in medical research originally collected by researchers with the National Institute of Diabetes and Digestive and Kidney Diseases.
 - **Alyssa Savadelis**, "Do bisexuals experience higher rates of poverty?"
     - [2015-16 NHANES data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015), looking at elements from the income (INQ_I), sexual behavior (SXQ_I) and demographics data forms.
+
+### T-Z
+
 - **Liwen Wang**, "Predicting medical charges for insurance policy holders"
     - [A Kaggle insurance claims prediction data set](https://www.kaggle.com/easonlai/sample-insurance-claim-prediction-dataset) describing charges and a few health-related records for each of 1338 insurance policy holders.
 - **Shengxuan Wang**, "Obesity and high cholesterol levels"
