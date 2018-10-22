@@ -4,9 +4,9 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 
 ## Approved Project Proposals (Study 2)
 
-Directory by Last Name: [A-F](OKtaskA.md#a-f), [G-M](OKtaskA.md#g-m), [N-Z](OKtaskA.md#n-z)
+Directory by Last Name: [A-F](Last Name beginning with A-F), [G-M](Last Name beginning with G-M), [N-Z](n-z)
 
-### [Last Name beginning with A-F](#a-f)
+### Last Name beginning with A-F
 
 - **Alicia (Ali) Aguilar**, "Using Social Factors to predict Overall Mental Health in the GSS"
     - Data source is the [General Social Survey](http://gss.norc.org/). Specifically, the 2006 Core Module and Numner Known Module in Sample B, with 62,466 cases. She'll be drawing a sample from that group, after inclusion/exclusion criteria are applied.
