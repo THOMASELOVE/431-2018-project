@@ -4,7 +4,7 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 
 ## Approved Project Proposals (Study 2)
 
-Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j-l), [M-N](#m-n), [O-S](#o-s), [T-Z](#t-z)
+Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j-l), [M](#m), [N-R](#n-r), [S-V](#s-v), [W-Z](#w-z)
 
 ### A-B
 
@@ -61,7 +61,7 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j
 - **Susan Linder**, "Heading in the Right Direction: Using Science to Predict Concussion Recovery"
     - Uses de-identified, appropriate-to-share data from 392 student-athletes who were managed by Cleveland Clinic athletic trainers and incurred concussive injuries documented by an incident report with baseline assessments, and an eventual return to play. Morgan McGrath will use a different cut of data from the same study.
 
-### M-N
+### M
 
 - **Morgan McGrath**, "Symptoms and Cognitive Impairment after Sport-Related Concussion"
     - Uses de-identified, appropriate-to-share data from 1257 student-athletes who were managed by Cleveland Clinic athletic trainers and incurred concussive injuries documented by an incident report with available baseline and follow-up assessments. Susan Linder will use a different cut of data from the same study.
@@ -73,21 +73,24 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j
     - Uses de-identified, appropriate-to-share data from 1300 patients analyzed at the Cleveland Clinic to study the role of disrupted regulation of pre-mRNA splicing in  several diseases, including acute myeloid leukemia (AML). The data planned for this project is part of a collaboration with Munich Leukemia Laboratory to analyze RNA-seq data from 1300 patients with either AML, myelodysplastic syndrome, or chronic myelomonocytic leukemia (CMML).
 - **Yousef Mustafa**, "How Did We Get Here?"
     - Yousef will try to predict county-level percentage of votes won by President Trump in the 2016 U.S. election, as a function of several characteristics of those counties, using several data sources, including [these election results](https://github.com/mkearney/presidential_election_county_results_2016/tree/master/data), [unemployment data from the US Bureau of Labor Statistics](https://www.bls.gov/LAU/), [sex and race rates at the county level from the CDC Wonder site](https://wonder.cdc.gov/controller/datarequest/D140;jsessionid=57D727CB3DC351837598B5B3CF76E993), [educational and income data](https://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml) and [county-level life expectancy](http://ghdx.healthdata.org/record/united-states-adult-life-expectancy-county-1987-2007).
+
+### N-R
+
 - **Gregory Nelson**, "Paying the Most for the Least: Predicting Medicare Payments to Hospitals"
     - [Data from CMS](https://data.cms.gov/Medicare-Inpatient/Inpatient-Prospective-Payment-System-IPPS-Provider/97k6-zzx3/data) (Centers for Medicare and Medicaid Services) on inpatient prospective payment system data for fee-for-service medicaree patients for the 100 most common diagnosis groups. Gregory will focus on diagnosis "208- Respiratory System Diagnosis with Ventilator Support, <96 hours" as a way of avoiding some nuisance variation. The study includes 1993 hospitals.
-
-### O-S
-
 - **Michael Osterman**, "A New Type of Cancer Prevention: Exercise?"
     - [The 500 Cities Project: Local Data for Better Health](https://www.cdc.gov/500cities/), from which [2017 release data can be obtained here](https://chronicdata.cdc.gov/500-Cities/500-Cities-Local-Data-for-Better-Health-2017-relea/6vp6-wxuq), is the primary source. The primary outcome of interest is the percentage of adults with non-skin cancer within a city. The key predictor is rates of having no leisure-time physical activity.
 - **Harry Persaud**, "If defense wins championships, do turnovers lose them?"
     - Data from [Pro Football Reference](https://www.pro-football-reference.com/) on various statistics describing outcomes and predictors of NFL teams from 2008 to 2017.
 - **Sangeetha Raghupathy**, "Plasma glucose and pregnancy history in Pima Indian women with diabetes"
     - [The Pima Indians Diabetes Database](https://mail.uhhospitals.org/owa/redir.aspx?C=M_7aS6mrETKOET35Ek3fQyXQWXqYsFpMjXrTfQRT2DKHczQ89DXWCA..&URL=https%3a%2f%2fdata.world%2fdata-society%2fpima-indians-diabetes-database), which is a well-travelled example in medical research originally collected by researchers with the National Institute of Diabetes and Digestive and Kidney Diseases.
+
+### S-V
+
 - **Alyssa Savadelis**, "Do bisexuals experience higher rates of poverty?"
     - [2015-16 NHANES data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015), looking at elements from the income (INQ_I), sexual behavior (SXQ_I) and demographics data forms.
 
-### T-Z
+### W-Z
 
 - **Liwen Wang**, "Predicting medical charges for insurance policy holders"
     - [A Kaggle insurance claims prediction data set](https://www.kaggle.com/easonlai/sample-insurance-claim-prediction-dataset) describing charges and a few health-related records for each of 1338 insurance policy holders.
