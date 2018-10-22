@@ -4,9 +4,9 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 
 ## Approved Project Proposals (Study 2)
 
-Directory by Last Name: [A-F](#a-f), [G-M](#g-m), [N-Z](#n-z)
+Directory by Last Name: [A-B](#a-b), [C-F](#c-f), [G-M](#g-m), [N-Z](#n-z)
 
-### A to F
+### A-B
 
 - **Alicia (Ali) Aguilar**, "Using Social Factors to predict Overall Mental Health in the GSS"
     - Data source is the [General Social Survey](http://gss.norc.org/). Specifically, the 2006 Core Module and Numner Known Module in Sample B, with 62,466 cases. She'll be drawing a sample from that group, after inclusion/exclusion criteria are applied.
@@ -18,6 +18,9 @@ Directory by Last Name: [A-F](#a-f), [G-M](#g-m), [N-Z](#n-z)
     - [2018 County Health Rankings](http://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation) and [2010 Rural-Urban Commuting Area report](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/) from USDA Economic Research Service
 - **Adam Brown**, "CRASHing: Predicting Amount of Blood Products Required After Significant Hemorrhage"
     - CRASH-2 (Clinical Randomization of an Antifibrinolytic in Significant Hemorrhage) was a randomized, placebo-controlled, double-blind trial of whether tranexamic acid (TXA) use would improve mortality in trauma patients with significant hemorrhage [reported in The Lancet in 2010](https://www.thelancet.com/crash-2-2010). De-identified data on 20,207 patients are available through [the Freebird site (registration required)](https://ctu-app.lshtm.ac.uk/freebird/index.php/data-sharing/downloads/crash2/).
+
+### C-F
+
 - **Jane Carsey**, "Sleep Duration and Sugar Intake, Diet, and Nutrition in U.S. Adults in NHANES"
     - [NHANES 2015-16 data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015) from the CDC including several of the questionnaires available there.
 - **Sandhya Chari**, "Cigarette Smoking and Depression Severity"
