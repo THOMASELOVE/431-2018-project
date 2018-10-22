@@ -1,6 +1,6 @@
 # Fall 2018 431 Task A Approvals for Project Study 2
 
-Reactions to **Group Work** on Project Task A are in the Google Doc at http://bit.ly/431-2018-projecttaskA-groupwork
+Reactions to **Group Work** on Task A are in the Google Doc at http://bit.ly/431-2018-projecttaskA-groupwork
 
 ## Approved Project Proposals (Study 2)
 
