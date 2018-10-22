@@ -4,10 +4,7 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 
 ## Approved Project Proposals (Study 2)
 
-Directory by Last Name: 
-- [A-F](#a-f)
-- [G-M](#g-m)
-- [N-Z](#n-z)
+Directory by Last Name: [A-F](#a-f), [G-M](#g-m), [N-Z](#n-z)
 
 ### A to F
 
