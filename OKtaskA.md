@@ -4,7 +4,7 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 
 ## Approved Project Proposals (Study 2)
 
-Directory by Last Name: [A-F](https://github.com/THOMASELOVE/431-2018-project/blob/master/OKtaskA.md#a-f), [G-M](g-m), [N-Z](n-z)
+Directory by Last Name: [A-F](OKtaskA.md#a-f), [G-M](OKtaskA.md#g-m), [N-Z](OKtaskA.md#n-z)
 
 ### [Last Name beginning with A-F](#a-f)
 
