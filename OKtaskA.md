@@ -4,7 +4,7 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 
 ## Approved Project Proposals (Study 2)
 
-Directory by Last Name: [A-B](#a-b), [C-F](#c-f), [G-M](#g-m), [N-Z](#n-z)
+Directory by Last Name: [A-B](#a-b), [C](#c), [D-E-F](#d-f), [G-H-I](#g-i), [J-K-L](#j-l), [M-N](#m-n), [O-Z](#o-z)
 
 ### A-B
 
@@ -19,7 +19,7 @@ Directory by Last Name: [A-B](#a-b), [C-F](#c-f), [G-M](#g-m), [N-Z](#n-z)
 - **Adam Brown**, "CRASHing: Predicting Amount of Blood Products Required After Significant Hemorrhage"
     - CRASH-2 (Clinical Randomization of an Antifibrinolytic in Significant Hemorrhage) was a randomized, placebo-controlled, double-blind trial of whether tranexamic acid (TXA) use would improve mortality in trauma patients with significant hemorrhage [reported in The Lancet in 2010](https://www.thelancet.com/crash-2-2010). De-identified data on 20,207 patients are available through [the Freebird site (registration required)](https://ctu-app.lshtm.ac.uk/freebird/index.php/data-sharing/downloads/crash2/).
 
-### C-F
+### C
 
 - **Jane Carsey**, "Sleep Duration and Sugar Intake, Diet, and Nutrition in U.S. Adults in NHANES"
     - [NHANES 2015-16 data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015) from the CDC including several of the questionnaires available there.
@@ -29,6 +29,9 @@ Directory by Last Name: [A-B](#a-b), [C-F](#c-f), [G-M](#g-m), [N-Z](#n-z)
     - Uses data from Koyama K et al. "[Time course of immature platelet count and its relation to thrombocytopenia and mortality in patients with sepsis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0192064)" *PLOS One*, 2018-01-30. Data identified via [Google Dataset Search](https://toolbox.google.com/datasetsearch), available through [figshare](https://figshare.com/articles/Time_course_of_immature_platelet_count_and_its_relation_to_thrombocytopenia_and_mortality_in_patients_with_sepsis/5837823).
 - **Brigette Crawley**, "Alcohol Consumption and Long Term Blood Glucose Control in Type 2 Diabetes"
     - Uses data from NHANES 2016, as gathered using [the nhanesA package in R](https://cran.r-project.org/web/packages/nhanesA/vignettes/Introducing_nhanesA.html). The forms used include: DIQ_I (diabetes), ALQ_I (alcohol consumption), PAQ_I (physical activity), and DEMO_I (demographics).
+
+## D-F
+
 - **Wei (David) Dai**, "Early life conditions and elderly life quality in Chinese senior citizens"
     - The Research on Early Life and Aging Trends and Effects (RELATE) study, focusing on the data from China (part 18). Public-use [data maintained by ICSPR](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/34241/summary).
 - **Dustin DeMeo**, "Can we close the gap on HbA1c prediction using inflammatory markers?"
@@ -40,7 +43,7 @@ Directory by Last Name: [A-B](#a-b), [C-F](#c-f), [G-M](#g-m), [N-Z](#n-z)
 - **Jordan Fiegl**, "Can aircraft specifications be used to predict serious crashes?"
     - Data from the [National Transportation Safety Board's Aviation Accident Database](https://www.ntsb.gov/Pages/default.aspx) (see the Investigations submenu - the data go back to 1962), [as gathered here](https://public.opendatasoft.com/explore/dataset/ntsb-aviation-accident-dataset/table/).
 
-### G-M
+### G-I
 
 - **Sam Guadagnino**, "NFL Winning Percentage and Aggregate Team Statistics"
     - Uses data from [Pro Football Reference](https://www.pro-football-reference.com/years/) on various statistics describing outcomes and predictors of NFL teams from 1999 to 2017.
@@ -50,10 +53,16 @@ Directory by Last Name: [A-B](#a-b), [C-F](#c-f), [G-M](#g-m), [N-Z](#n-z)
     - De-identified, appropriate-to-share data on a questionnaire measuring health-related quality of life [developed by the Foundation for Sarcoidosis Research](https://www.researchgate.net/publication/10766720_The_Sarcoidosis_Health_Questionnaire_A_new_measure_of_health-related_quality_of_life) and referred to as the Sarcoidosis Advanced Registry for Cures.
 - **Joseph Hnath**, "State-level abortion restrictions and abortion utilization in U.S. counties"
     - Uses data from individual states, as compiled by Joseph as part of an economic analysis. Data include state-reported abortion counts and birth counts at the county level from 2006-2015, along with state-level abortion restriction policy changes [published by the Guttmacher Institute](https://www.guttmacher.org/state-policy) at the beginning of each year.
+
+### J-L
+
 - **Aravindan (Ara) Krishnan**, "Probe Intensity and Protein Reporters in Gene Expression Analysis"
     - Uses de-identified, appropriate-to-share data from the Mizutani Lab at CWRU. The subjects of this study are brain cells from 8 male and 8 female Vglut-GTRACE D. melanogaster fruit flies. Same study as Jacqui Yarman.
 - **Susan Linder**, "Heading in the Right Direction: Using Science to Predict Concussion Recovery"
     - Uses de-identified, appropriate-to-share data from 392 student-athletes who were managed by Cleveland Clinic athletic trainers and incurred concussive injuries documented by an incident report with baseline assessments, and an eventual return to play. Morgan McGrath will use a different cut of data from the same study.
+
+### M-N
+
 - **Morgan McGrath**, "Symptoms and Cognitive Impairment after Sport-Related Concussion"
     - Uses de-identified, appropriate-to-share data from 1257 student-athletes who were managed by Cleveland Clinic athletic trainers and incurred concussive injuries documented by an incident report with available baseline and follow-up assessments. Susan Linder will use a different cut of data from the same study.
 - **Savannah Mills**, "Influence of 3’ UTR structure in the selection of mRNAs"
@@ -64,11 +73,11 @@ Directory by Last Name: [A-B](#a-b), [C-F](#c-f), [G-M](#g-m), [N-Z](#n-z)
     - Uses de-identified, appropriate-to-share data from 1300 patients analyzed at the Cleveland Clinic to study the role of disrupted regulation of pre-mRNA splicing in  several diseases, including acute myeloid leukemia (AML). The data planned for this project is part of a collaboration with Munich Leukemia Laboratory to analyze RNA-seq data from 1300 patients with either AML, myelodysplastic syndrome, or chronic myelomonocytic leukemia (CMML).
 - **Yousef Mustafa**, "How Did We Get Here?"
     - Yousef will try to predict county-level percentage of votes won by President Trump in the 2016 U.S. election, as a function of several characteristics of those counties, using several data sources, including [these election results](https://github.com/mkearney/presidential_election_county_results_2016/tree/master/data), [unemployment data from the US Bureau of Labor Statistics](https://www.bls.gov/LAU/), [sex and race rates at the county level from the CDC Wonder site](https://wonder.cdc.gov/controller/datarequest/D140;jsessionid=57D727CB3DC351837598B5B3CF76E993), [educational and income data](https://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml) and [county-level life expectancy](http://ghdx.healthdata.org/record/united-states-adult-life-expectancy-county-1987-2007).
-
-### N-Z
-
 - **Gregory Nelson**, "Paying the Most for the Least: Predicting Medicare Payments to Hospitals"
     - [Data from CMS](https://data.cms.gov/Medicare-Inpatient/Inpatient-Prospective-Payment-System-IPPS-Provider/97k6-zzx3/data) (Centers for Medicare and Medicaid Services) on inpatient prospective payment system data for fee-for-service medicaree patients for the 100 most common diagnosis groups. Gregory will focus on diagnosis "208- Respiratory System Diagnosis with Ventilator Support, <96 hours" as a way of avoiding some nuisance variation. The study includes 1993 hospitals.
+
+### O-Z
+
 - **Michael Osterman**, "A New Type of Cancer Prevention: Exercise?"
     - [The 500 Cities Project: Local Data for Better Health](https://www.cdc.gov/500cities/), from which [2017 release data can be obtained here](https://chronicdata.cdc.gov/500-Cities/500-Cities-Local-Data-for-Better-Health-2017-relea/6vp6-wxuq), is the primary source. The primary outcome of interest is the percentage of adults with non-skin cancer within a city. The key predictor is rates of having no leisure-time physical activity.
 - **Harry Persaud**, "If defense wins championships, do turnovers lose them?"
