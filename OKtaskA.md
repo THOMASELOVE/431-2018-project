@@ -6,6 +6,8 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 
 ### Last Name beginning with A-F
 
+- **Alicia (Ali) Aguilar**, "Using Social Factors to predict Overall Mental Health in the GSS"
+    - Data source is the [General Social Survey](http://gss.norc.org/). Specifically, the 2006 Core Module and Numner Known Module in Sample B, with 62,466 cases. She'll be drawing a sample from that group, after some inclusion and exclusion criteria are applied.
 - **Amy Attaway**, "Association of aspirin use with improved severity of COPD in NHANES"
     - 2007-2013 [NHANES data](https://www.cdc.gov/nchs/nhanes/index.htm), including 40,617 subjects in all, but the main work will focus on subgroups with asthma or with COPD (defined here as a diagnosis of either chronic bronchitis or emphysema and an FEV1/FVC ratio below 0.7).
 - **Wyatt Bensken**, "Predicting Premature Death Rates from Key County Indicators"
