@@ -4,6 +4,8 @@ Reactions to **Group Work** on Project Task A are in the Google Doc at http://bi
 
 ## Approved Project Proposals (Study 2)
 
+- Amy Attaway, "Association of aspirin use with improved severity of COPD in NHANES"
+    - 2007-2013 [NHANES data](https://www.cdc.gov/nchs/nhanes/index.htm), including 40,617 subjects in all, but the main work will focus on subgroups with asthma or with COPD (defined here as a diagnosis of either chronic bronchitis or emphysema and an FEV1/FVC ratio below 0.7).
 - Wyatt Bensken, "Predicting Premature Death Rates from Key County Indicators"
     - [2018 County Health Rankings](http://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation) and [2010 Rural-Urban Commuting Area report](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/) from USDA Economic Research Service
 - Adam Brown, "CRASHing: Predicting Amount of Blood Products Required After Significant Hemorrhage"
