@@ -43,6 +43,8 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
     - De-identified, appropriate-to-share data on a questionnaire measuring health-related quality of life [developed by the Foundation for Sarcoidosis Research](https://www.researchgate.net/publication/10766720_The_Sarcoidosis_Health_Questionnaire_A_new_measure_of_health-related_quality_of_life) and referred to as the Sarcoidosis Advanced Registry for Cures.
 - **Joseph Hnath**, "State-level abortion restrictions and abortion utilization in U.S. counties"
     - Uses data from individual states, as compiled by Joseph as part of an economic analysis. Data include state-reported abortion counts and birth counts at the county level from 2006-2015, along with state-level abortion restriction policy changes [published by the Guttmacher Institute](https://www.guttmacher.org/state-policy) at the beginning of each year.
+- **Aravindan (Ara) Krishnan**, "Probe Intensity and Protein Reporters in Gene Expression Analysis"
+    - Uses de-identified, appropriate-to-share data from the Mizutani Lab at CWRU. The subjects of this study are brain cells from 8 male and 8 female Vglut-GTRACE D. melanogaster fruit flies. Same study as Jacqui Yarman.
 - **Susan Linder**, "Heading in the Right Direction: Using Science to Predict Concussion Recovery"
     - Uses de-identified, appropriate-to-share data from 392 student-athletes who were managed by Cleveland Clinic athletic trainers and incurred concussive injuries documented by an incident report with baseline assessments, and an eventual return to play. Morgan McGrath will use a different cut of data from the same study.
 - **Morgan McGrath**, "Symptoms and Cognitive Impairment after Sport-Related Concussion"
@@ -73,6 +75,6 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 - **Joshua Wu**, "The Association Between Depression and Alcohol Consumption"
     - Uses data from the [National Survey on Drug Use and Health](https://www.datafiles.samhsa.gov/study-dataset/national-survey-drug-use-and-health-2016-nsduh-2016-ds0001-nid17185), obtained from the Substance Abuse and Mental Health Data Archive.
 - **Jacqui Yarman**, "Predicting neuron transcriptional activity from spatial position"
-    - Uses de-identified, appropriate-to-share data from the Mizutani Lab at CWRU. The subjects of this study are brain cells from 8 male and 8 female Vglut-GTRACE D. melanogaster fruit flies.
+    - Uses de-identified, appropriate-to-share data from the Mizutani Lab at CWRU. The subjects of this study are brain cells from 8 male and 8 female Vglut-GTRACE D. melanogaster fruit flies. Same study as Ara Krishnan.
 - **Siyi Zhang**, "Sleep Duration, Socioeconomic Status and Diet in NHANES subjects over age 40"
     - [2015-16 NHANES data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015), looking at elements from the demographics, questionnaire and dietary forms.
