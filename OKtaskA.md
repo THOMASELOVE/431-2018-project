@@ -33,6 +33,8 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 
 ### Last Name beginning with G-M
 
+- **Sam Guadagnino**, "NFL Winning Percentage and Aggregate Team Statistics"
+    - Uses data from [Pro Football Reference](https://www.pro-football-reference.com/years/) on various statistics describing outcomes and predictors of NFL teams from 1999 to 2017.
 - **Jesus Gutierrez**, "Household characteristics and the transmission of tuberculosis in Kampala, Uganda"
     - Data from the Kawempe Community Health Study, which was reported on by [Stein CM et al. in 2018 in the American Journal of Epidemiology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6031055/).
 - **Logan Harper**, "Socioeconomic status and quality of life in adults with sarcoidosis"
