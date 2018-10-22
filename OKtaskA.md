@@ -30,6 +30,8 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
     - Data from [NHANES III, from 1998-1994](https://wwwn.cdc.gov/nchs/nhanes/nhanes3/default.aspx), which provides extensive additional data relevant to this project beyond the more recent versions of NHANES. [NHANES III data are available here](https://wwwn.cdc.gov/nchs/nhanes/nhanes3/DataFiles.aspx). 
 - **Zhanwen Du**, "Diagnostic blood tests in chronic kidney disease"
     - A Chronic Kidney Disease data set describing 400 subjects, 250 of whom have chronic kidney disease and 150 of whom do not, which is available at [Kaggle](https://www.kaggle.com/mansoordaku/ckdisease), but I think a more useful link is [this one from the University of California at Irvine machine learning repository](https://archive.ics.uci.edu/ml/datasets/Chronic_Kidney_Disease), which provides a detailed description of the data on the front page.
+- **Lindsay Ferguson**, "Minimally invasive gynecologic surgery and timing of first post-surgical void"
+    - Uses de-identified, appropriate-to-share data on 542 patients who underwent minimally invasive hysterectomies at UC David Medical Center between 2014 and 2017, gathered during Lindsay's residency.
 - **Jordan Fiegl**, "Can aircraft specifications be used to predict serious crashes?"
     - Data from the [National Transportation Safety Board's Aviation Accident Database](https://www.ntsb.gov/Pages/default.aspx) (see the Investigations submenu - the data go back to 1962), [as gathered here](https://public.opendatasoft.com/explore/dataset/ntsb-aviation-accident-dataset/table/).
 
