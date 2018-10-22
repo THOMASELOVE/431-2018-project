@@ -18,6 +18,8 @@ Reactions to **Group Work** on Project Task A are in the Google Doc at http://bi
     - The Research on Early Life and Aging Trends and Effects (RELATE) study, focusing on the data from China (part 18). Public-use [data maintained by ICSPR](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/34241/summary).
 - Zhanwen Du, "Diagnostic blood tests in chronic kidney disease"
     - A Chronic Kidney Disease data set describing 400 subjects, 250 of whom have chronic kidney disease and 150 of whom do not, which is available at [Kaggle](https://www.kaggle.com/mansoordaku/ckdisease), but I think a more useful link is [this one from the University of California at Irvine machine learning repository](https://archive.ics.uci.edu/ml/datasets/Chronic_Kidney_Disease), which provides a detailed description of the data on the front page.
+- Jesus Gutierrez, "Household characteristics and the transmission of tuberculosis in Kampala, Uganda"
+    - Data from the Kawempe Community Health Study, which was reported on by [Stein CM et al. in 2018 in the American Journal of Epidemiology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6031055/).
 - Logan Harper, "Socioeconomic status and quality of life in adults with sarcoidosis"
     - De-identified, appropriate-to-share data on a questionnaire measuring health-related quality of life [developed by the Foundation for Sarcoidosis Research](https://www.researchgate.net/publication/10766720_The_Sarcoidosis_Health_Questionnaire_A_new_measure_of_health-related_quality_of_life) and referred to as the Sarcoidosis Advanced Registry for Cures.
 - Joseph Hnath, "State-level abortion restrictions and abortion utilization in U.S. counties"
