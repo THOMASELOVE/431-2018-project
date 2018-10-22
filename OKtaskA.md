@@ -4,7 +4,9 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 
 ## Approved Project Proposals (Study 2)
 
-### Last Name beginning with A-F
+Directory by Last Name: [A-F](a-f), [G-M](g-m), [N-Z](n-z)
+
+### [Last Name beginning with A-F](#a-f)
 
 - **Alicia (Ali) Aguilar**, "Using Social Factors to predict Overall Mental Health in the GSS"
     - Data source is the [General Social Survey](http://gss.norc.org/). Specifically, the 2006 Core Module and Numner Known Module in Sample B, with 62,466 cases. She'll be drawing a sample from that group, after inclusion/exclusion criteria are applied.
@@ -35,7 +37,7 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 - **Jordan Fiegl**, "Can aircraft specifications be used to predict serious crashes?"
     - Data from the [National Transportation Safety Board's Aviation Accident Database](https://www.ntsb.gov/Pages/default.aspx) (see the Investigations submenu - the data go back to 1962), [as gathered here](https://public.opendatasoft.com/explore/dataset/ntsb-aviation-accident-dataset/table/).
 
-### Last Name beginning with G-M
+### [Last Name beginning with G-M](#g-m)
 
 - **Sam Guadagnino**, "NFL Winning Percentage and Aggregate Team Statistics"
     - Uses data from [Pro Football Reference](https://www.pro-football-reference.com/years/) on various statistics describing outcomes and predictors of NFL teams from 1999 to 2017.
@@ -60,7 +62,7 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
 - **Yousef Mustafa**, "How Did We Get Here?"
     - Yousef will try to predict county-level percentage of votes won by President Trump in the 2016 U.S. election, as a function of several characteristics of those counties, using several data sources, including [these election results](https://github.com/mkearney/presidential_election_county_results_2016/tree/master/data), [unemployment data from the US Bureau of Labor Statistics](https://www.bls.gov/LAU/), [sex and race rates at the county level from the CDC Wonder site](https://wonder.cdc.gov/controller/datarequest/D140;jsessionid=57D727CB3DC351837598B5B3CF76E993), [educational and income data](https://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml) and [county-level life expectancy](http://ghdx.healthdata.org/record/united-states-adult-life-expectancy-county-1987-2007).
 
-### Last Name beginning with N-Z
+### [Last Name beginning with N-Z](#n-z)
 
 - **Gregory Nelson**, "Paying the Most for the Least: Predicting Medicare Payments to Hospitals"
     - [Data from CMS](https://data.cms.gov/Medicare-Inpatient/Inpatient-Prospective-Payment-System-IPPS-Provider/97k6-zzx3/data) (Centers for Medicare and Medicaid Services) on inpatient prospective payment system data for fee-for-service medicaree patients for the 100 most common diagnosis groups. Gregory will focus on diagnosis "208- Respiratory System Diagnosis with Ventilator Support, <96 hours" as a way of avoiding some nuisance variation. The study includes 1993 hospitals.
