@@ -10,51 +10,51 @@ Reactions to **Group Work** on Project Task A are in the Google Doc at http://bi
     - 2007-2013 [NHANES data](https://www.cdc.gov/nchs/nhanes/index.htm), including 40,617 subjects in all, but the main work will focus on subgroups with asthma or with COPD (defined here as a diagnosis of either chronic bronchitis or emphysema and an FEV1/FVC ratio below 0.7).
 - **Wyatt Bensken**, "Predicting Premature Death Rates from Key County Indicators"
     - [2018 County Health Rankings](http://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation) and [2010 Rural-Urban Commuting Area report](https://www.ers.usda.gov/data-products/rural-urban-commuting-area-codes/) from USDA Economic Research Service
-- Adam Brown, "CRASHing: Predicting Amount of Blood Products Required After Significant Hemorrhage"
+- **Adam Brown**, "CRASHing: Predicting Amount of Blood Products Required After Significant Hemorrhage"
     - CRASH-2 (Clinical Randomization of an Antifibrinolytic in Significant Hemorrhage) was a randomized, placebo-controlled, double-blind trial of whether tranexamic acid (TXA) use would improve mortality in trauma patients with significant hemorrhage [reported in The Lancet in 2010](https://www.thelancet.com/crash-2-2010). De-identified data on 20,207 patients are available through [the Freebird site (registration required)](https://ctu-app.lshtm.ac.uk/freebird/index.php/data-sharing/downloads/crash2/).
-- Jane Carsey, "Sleep Duration and Sugar Intake, Diet, and Nutrition in U.S. Adults in NHANES"
+- **Jane Carsey**, "Sleep Duration and Sugar Intake, Diet, and Nutrition in U.S. Adults in NHANES"
     - [NHANES 2015-16 data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015) from the CDC including several of the questionnaires available there.
-- Julijana Conic, "Predictors of APACHE II Scores in Patients with Sepsis"
+- **Julijana Conic**, "Predictors of APACHE II Scores in Patients with Sepsis"
     - Uses data from Koyama K et al. "[Time course of immature platelet count and its relation to thrombocytopenia and mortality in patients with sepsis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0192064)" *PLOS One*, 2018-01-30. Data identified via [Google Dataset Search](https://toolbox.google.com/datasetsearch), available through [figshare](https://figshare.com/articles/Time_course_of_immature_platelet_count_and_its_relation_to_thrombocytopenia_and_mortality_in_patients_with_sepsis/5837823).
-- Brigette Crawley, "Alcohol Consumption and Long Term Blood Glucose Control in Type 2 Diabetes"
+- **Brigette Crawley**, "Alcohol Consumption and Long Term Blood Glucose Control in Type 2 Diabetes"
     - Uses data from NHANES 2016, as gathered using [the nhanesA package in R](https://cran.r-project.org/web/packages/nhanesA/vignettes/Introducing_nhanesA.html). The forms used include: DIQ_I (diabetes), ALQ_I (alcohol consumption), PAQ_I (physical activity), and DEMO_I (demographics).
-- Wei (David) Dai, "Early life conditions and elderly life quality in Chinese senior citizens"
+- **Wei (David) Dai**, "Early life conditions and elderly life quality in Chinese senior citizens"
     - The Research on Early Life and Aging Trends and Effects (RELATE) study, focusing on the data from China (part 18). Public-use [data maintained by ICSPR](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/34241/summary).
-- Zhanwen Du, "Diagnostic blood tests in chronic kidney disease"
+- **Zhanwen Du**, "Diagnostic blood tests in chronic kidney disease"
     - A Chronic Kidney Disease data set describing 400 subjects, 250 of whom have chronic kidney disease and 150 of whom do not, which is available at [Kaggle](https://www.kaggle.com/mansoordaku/ckdisease), but I think a more useful link is [this one from the University of California at Irvine machine learning repository](https://archive.ics.uci.edu/ml/datasets/Chronic_Kidney_Disease), which provides a detailed description of the data on the front page.
 
 ### Last Name beginning with G-M
 
-- Jesus Gutierrez, "Household characteristics and the transmission of tuberculosis in Kampala, Uganda"
+- **Jesus Gutierrez**, "Household characteristics and the transmission of tuberculosis in Kampala, Uganda"
     - Data from the Kawempe Community Health Study, which was reported on by [Stein CM et al. in 2018 in the American Journal of Epidemiology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6031055/).
-- Logan Harper, "Socioeconomic status and quality of life in adults with sarcoidosis"
+- **Logan Harper**, "Socioeconomic status and quality of life in adults with sarcoidosis"
     - De-identified, appropriate-to-share data on a questionnaire measuring health-related quality of life [developed by the Foundation for Sarcoidosis Research](https://www.researchgate.net/publication/10766720_The_Sarcoidosis_Health_Questionnaire_A_new_measure_of_health-related_quality_of_life) and referred to as the Sarcoidosis Advanced Registry for Cures.
-- Joseph Hnath, "State-level abortion restrictions and abortion utilization in U.S. counties"
+- **Joseph Hnath**, "State-level abortion restrictions and abortion utilization in U.S. counties"
     - Uses data from individual states, as compiled by Joseph as part of an economic analysis. Data include state-reported abortion counts and birth counts at the county level from 2006-2015, along with state-level abortion restriction policy changes [published by the Guttmacher Institute](https://www.guttmacher.org/state-policy) at the beginning of each year.
-- Susan Linder, "Heading in the Right Direction: Using Science to Predict Concussion Recovery"
+- **Susan Linder**, "Heading in the Right Direction: Using Science to Predict Concussion Recovery"
     - Uses de-identified, appropriate-to-share data from 392 student-athletes who were managed by Cleveland Clinic athletic trainers and incurred concussive injuries documented by an incident report with baseline assessments, and an eventual return to play.
-- Devlin Moyer, "Predicting survival from splicing changes in patients with myelodysplastic syndromes"
+- **Devlin Moyer**, "Predicting survival from splicing changes in patients with myelodysplastic syndromes"
     - Uses de-identified, appropriate-to-share data from 1300 patients analyzed at the Cleveland Clinic to study the role of disrupted regulation of pre-mRNA splicing in  several diseases, including acute myeloid leukemia (AML). The data planned for this project is part of a collaboration with Munich Leukemia Laboratory to analyze RNA-seq data from 1300 patients with either AML, myelodysplastic syndrome, or chronic myelomonocytic leukemia (CMML).
-- Yousef Mustafa, "How Did We Get Here?"
+- **Yousef Mustafa**, "How Did We Get Here?"
     - Yousef will try to predict county-level percentage of votes won by President Trump in the 2016 U.S. election, as a function of several characteristics of those counties, using several data sources, including [these election results](https://github.com/mkearney/presidential_election_county_results_2016/tree/master/data), [unemployment data from the US Bureau of Labor Statistics](https://www.bls.gov/LAU/), [sex and race rates at the county level from the CDC Wonder site](https://wonder.cdc.gov/controller/datarequest/D140;jsessionid=57D727CB3DC351837598B5B3CF76E993), [educational and income data](https://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml) and [county-level life expectancy](http://ghdx.healthdata.org/record/united-states-adult-life-expectancy-county-1987-2007).
 
 ### Last Name beginning with N-Z
 
-- Gregory Nelson, "Paying the Most for the Least: Predicting Medicare Payments to Hospitals"
+- **Gregory Nelson**, "Paying the Most for the Least: Predicting Medicare Payments to Hospitals"
     - [Data from CMS](https://data.cms.gov/Medicare-Inpatient/Inpatient-Prospective-Payment-System-IPPS-Provider/97k6-zzx3/data) (Centers for Medicare and Medicaid Services) on inpatient prospective payment system data for fee-for-service medicaree patients for the 100 most common diagnosis groups. Gregory will focus on diagnosis "208- Respiratory System Diagnosis with Ventilator Support, <96 hours" as a way of avoiding some nuisance variation. The study includes 1993 hospitals.
-- Michael Osterman, "A New Type of Cancer Prevention: Exercise?"
+- **Michael Osterman**, "A New Type of Cancer Prevention: Exercise?"
     - [The 500 Cities Project: Local Data for Better Health](https://www.cdc.gov/500cities/), from which [2017 release data can be obtained here](https://chronicdata.cdc.gov/500-Cities/500-Cities-Local-Data-for-Better-Health-2017-relea/6vp6-wxuq), is the primary source. The primary outcome of interest is the percentage of adults with non-skin cancer within a city. The key predictor is rates of having no leisure-time physical activity.
-- Harry Persaud, "If defense wins championships, do turnovers lose them?"
+- **Harry Persaud**, "If defense wins championships, do turnovers lose them?"
     - Data from [Pro Football Reference](https://www.pro-football-reference.com/) on various statistics describing outcomes and predictors of NFL teams from 2008 to 2017.
-- Sangeetha Raghupathy, "Plasma glucose and pregnancy history in Pima Indian women with diabetes"
+- **Sangeetha Raghupathy**, "Plasma glucose and pregnancy history in Pima Indian women with diabetes"
     - [The Pima Indians Diabetes Database](https://mail.uhhospitals.org/owa/redir.aspx?C=M_7aS6mrETKOET35Ek3fQyXQWXqYsFpMjXrTfQRT2DKHczQ89DXWCA..&URL=https%3a%2f%2fdata.world%2fdata-society%2fpima-indians-diabetes-database), which is a well-travelled example in medical research originally collected by researchers with the National Institute of Diabetes and Digestive and Kidney Diseases.
-- Alyssa Savadelis, "Do bisexuals experience higher rates of poverty?"
+- **Alyssa Savadelis**, "Do bisexuals experience higher rates of poverty?"
     - [2015-16 NHANES data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015), looking at elements from the income (INQ_I), sexual behavior (SXQ_I) and demographics data forms.
-- Liwen Wang, "Predicting medical charges for insurance policy holders"
+- **Liwen Wang**, "Predicting medical charges for insurance policy holders"
     - [A Kaggle insurance claims prediction data set](https://www.kaggle.com/easonlai/sample-insurance-claim-prediction-dataset) describing charges and a few health-related records for each of 1338 insurance policy holders.
-- Shengxuan Wang, "Obesity and high cholesterol levels"
+- **Shengxuan Wang**, "Obesity and high cholesterol levels"
     - Data from the Rich Healthcare Group in China describing medical records for more than 200,000 adult participants receiving a health check over a seven-year period. A [key paper appeared here](https://bmjopen.bmj.com/content/8/9/e021768), and the data were published in August 2018 [at datadryad.org's repository](https://datadryad.org/resource/doi:10.5061/dryad.ft8750v).
-- Joshua Wu, "The Association Between Depression and Alcohol Consumption"
+- **Joshua Wu**, "The Association Between Depression and Alcohol Consumption"
     - Uses data from the [National Survey on Drug Use and Health](https://www.datafiles.samhsa.gov/study-dataset/national-survey-drug-use-and-health-2016-nsduh-2016-ds0001-nid17185), obtained from the Substance Abuse and Mental Health Data Archive.
-- Siyi Zhang, "Sleep Duration, Socioeconomic Status and Diet in NHANES subjects over age 40"
+- **Siyi Zhang**, "Sleep Duration, Socioeconomic Status and Diet in NHANES subjects over age 40"
     - [2015-16 NHANES data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015), looking at elements from the demographics, questionnaire and dietary forms.
