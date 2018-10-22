@@ -28,6 +28,8 @@ Reactions to Task A **Group Work** are in the Google Doc at http://bit.ly/431-20
     - The Research on Early Life and Aging Trends and Effects (RELATE) study, focusing on the data from China (part 18). Public-use [data maintained by ICSPR](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/34241/summary).
 - **Zhanwen Du**, "Diagnostic blood tests in chronic kidney disease"
     - A Chronic Kidney Disease data set describing 400 subjects, 250 of whom have chronic kidney disease and 150 of whom do not, which is available at [Kaggle](https://www.kaggle.com/mansoordaku/ckdisease), but I think a more useful link is [this one from the University of California at Irvine machine learning repository](https://archive.ics.uci.edu/ml/datasets/Chronic_Kidney_Disease), which provides a detailed description of the data on the front page.
+- **Jordan Fiegl**, "Can aircraft specifications be used to predict serious crashes?"
+    - Data from the [National Transportation Safety Board's Aviation Accident Database](https://www.ntsb.gov/Pages/default.aspx) (see the Investigations submenu - the data go back to 1962), [as gathered here](https://public.opendatasoft.com/explore/dataset/ntsb-aviation-accident-dataset/table/).
 
 ### Last Name beginning with G-M
 
