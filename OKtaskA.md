@@ -8,6 +8,8 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j
 
 ### A-B
 
+- **Clara Adeniyi**, "Mood Disorders Among Pregnant Women"
+    - 2007-2008 [NHANES data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2007), including the demographicm reproductive health and current health status forms.
 - **Alicia (Ali) Aguilar**, "Using Social Factors to predict Overall Mental Health in the GSS"
     - Data source is the [General Social Survey](http://gss.norc.org/). Specifically, the 2006 Core Module and Numner Known Module in Sample B, with 62,466 cases. She'll be drawing a sample from that group, after inclusion/exclusion criteria are applied.
 - **Amy Attaway**, "Association of aspirin use with improved severity of COPD in NHANES"
@@ -49,6 +51,8 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j
 
 ### G-I
 
+- **Sebastian Garcia-Medina**, "Scientific appreciation across ages and political affiliations"
+    - [Pew Research Center Science Issues](http://www.pewinternet.org/dataset/2014-science-issues/) data (registration required) to assess whether age and political affilation are linked with attitudes about science after adjustment for education, religious affiliation and general scientific knowledge.
 - **Sam Guadagnino**, "NFL Winning Percentage and Aggregate Team Statistics"
     - Uses data from [Pro Football Reference](https://www.pro-football-reference.com/years/) on various statistics describing outcomes and predictors of NFL teams from 1999 to 2017.
 - **Jesus Gutierrez**, "Household characteristics and the transmission of tuberculosis in Kampala, Uganda"
