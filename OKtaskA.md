@@ -66,8 +66,12 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j
 
 - **Tianxin (Elena) Jiang**, "Sleep Health in NHANES"
     - Uses [NHANES 2015-16](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015) data from the demographic and questionnaire forms, including sleep disorders information. One of the predictors of interest is your typical bedtime, which poses some interesting modeling challenges.
+- **Amber Kerstetter-Fogle**, "The skinny on media usage and obesity in children in the U.S."
+    - Uses [NHANES data](https://www.cdc.gov/nchs/nhanes/index.htm) from both the 1998-2000 and 2010-12 panels, including demographic, body-mass index, television and computer use, and some other measures looking at children ages 9-18.
 - **Aravindan (Ara) Krishnan**, "Probe Intensity and Protein Reporters in Gene Expression Analysis"
     - Uses de-identified, appropriate-to-share data from the Mizutani Lab at CWRU. The subjects of this study are brain cells from 8 male and 8 female Vglut-GTRACE D. melanogaster fruit flies. Same study as Jacqui Yarman.
+- **Haojia Li**, "Collagen fiber characteristics and oncotype DX risk scores for breast cancer"
+    - Uses de-identified, appropriate-to-share data from 229 digitized H&E stained whole slide images of invasive breast tumors (each slide is of a different patient) for patients treated between 2004 and 2013 at several institutions, including CWRU.
 - **Susan Linder**, "Heading in the Right Direction: Using Science to Predict Concussion Recovery"
     - Uses de-identified, appropriate-to-share data from 392 student-athletes who were managed by Cleveland Clinic athletic trainers and incurred concussive injuries documented by an incident report with baseline assessments, and an eventual return to play. Morgan McGrath will use a different cut of data from the same study.
 
