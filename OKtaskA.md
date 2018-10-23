@@ -36,6 +36,8 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j
     - The Research on Early Life and Aging Trends and Effects (RELATE) study, focusing on the data from China (part 18). Public-use [data maintained by ICSPR](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/34241/summary).
 - **Dustin DeMeo**, "Can we close the gap on HbA1c prediction using inflammatory markers?"
     - Data from [NHANES III, from 1998-1994](https://wwwn.cdc.gov/nchs/nhanes/nhanes3/default.aspx), which provides extensive additional data relevant to this project beyond the more recent versions of NHANES. [NHANES III data are available here](https://wwwn.cdc.gov/nchs/nhanes/nhanes3/DataFiles.aspx). 
+- **Michelle Disher**, "Osteoarthritis and Age-Related Macular Degeneration in the Amish"
+    - Uses de-identified, appropriate-to-share data including clinical survey responses and eye exam measurements for about 300 Amish individuals over the age of 50 living in Ohio and Pennsylvania who have at least one eye affected by age-related macular degeneration.
 - **Zhanwen Du**, "Diagnostic blood tests in chronic kidney disease"
     - A Chronic Kidney Disease data set describing 400 subjects, 250 of whom have chronic kidney disease and 150 of whom do not, which is available at [Kaggle](https://www.kaggle.com/mansoordaku/ckdisease), but I think a more useful link is [this one from the University of California at Irvine machine learning repository](https://archive.ics.uci.edu/ml/datasets/Chronic_Kidney_Disease), which provides a detailed description of the data on the front page.
 - **Lindsay Ferguson**, "Minimally invasive gynecologic surgery and timing of first post-surgical void"
