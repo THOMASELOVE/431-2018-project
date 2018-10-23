@@ -58,6 +58,8 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j
 
 ### J-L
 
+- **Tianxin (Elena) Jiang**, "Sleep Health in NHANES"
+    - Uses [NHANES 2015-16](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015) data from the demographic and questionnaire forms, including sleep disorders information. One of the predictors of interest is your typical bedtime, which poses some interesting modeling challenges.
 - **Aravindan (Ara) Krishnan**, "Probe Intensity and Protein Reporters in Gene Expression Analysis"
     - Uses de-identified, appropriate-to-share data from the Mizutani Lab at CWRU. The subjects of this study are brain cells from 8 male and 8 female Vglut-GTRACE D. melanogaster fruit flies. Same study as Jacqui Yarman.
 - **Susan Linder**, "Heading in the Right Direction: Using Science to Predict Concussion Recovery"
