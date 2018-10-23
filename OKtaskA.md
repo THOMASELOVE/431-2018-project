@@ -107,6 +107,10 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j
     - [2015-16 NHANES data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015), looking at elements from the income (INQ_I), sexual behavior (SXQ_I) and demographics data forms.
 - **Bolin Song**, "Age at diagnosis and survival time for patients with glioblastoma multiforme"
     - Data from the [Cancer Genome Atlas](https://wiki.cancerimagingarchive.net/display/Public/TCGA-GBM#84a3cbcebff84770a700e880d2e01fb5) on 512 subjects with glioblastoma multiforme tumors and known survival times from diagnosis to death, as well as extensive molecular and gene expression data, age at diagnosis and sex.
+- **Afra Syed**, "Alcohol Consumption, Self-Esteem and Income Level"
+    - Data from Wave 8 (2005) of the Longitudinal Study of Generations (from 1971-2005), which is available [through the ICPSR consortium](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/22100/summary) at the University of Michigan. The study involves surveys conducted with multiple generations of members of 300 families in California, covering attitudes, mental health, family structure, behavior and life events, in addition to extensive demographics.
+- **Pranjal Vaidya**, "Recurrence prediction in Early-Stage Lung Cancer using CT Radiomic Features"
+    - Uses de-identified, appropriate-to-share data from 240 patients at the Cleveland Clinic with early stage non-small cell lung cancer, including several radiomic and clinical features.
 
 ### W-Z
 
