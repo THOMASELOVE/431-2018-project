@@ -25,6 +25,8 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j
     - [NHANES 2015-16 data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2015) from the CDC including several of the questionnaires available there.
 - **Sandhya Chari**, "Cigarette Smoking and Depression Severity"
     - [National Survey on Drug Use and Health](https://www.datafiles.samhsa.gov/study/national-survey-drug-use-and-health-nsduh-2016-nid17184) data on 56,897 civilian non-institutionalized American residents ages 12 and older from 2016, available at the [Substance Abuse and Mental Health Data Archive](https://www.datafiles.samhsa.gov/).
+- **Yijiang Chen**, "Can the brightness of images be used to help evaluate heterogeneity?"
+    - NIH NEPTUNE (Nephrotic Syndrome Study Network) kidney whole slide images to evaluate questions about digital pathology, working with some open-source software developed by the [Center for Computational Imaging and Personalilzed Diagnostics](http://engineering.case.edu/centers/ccipd/) at CWRU.
 - **Julijana Conic**, "Predictors of APACHE II Scores in Patients with Sepsis"
     - Uses data from Koyama K et al. "[Time course of immature platelet count and its relation to thrombocytopenia and mortality in patients with sepsis](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0192064)" *PLOS One*, 2018-01-30. Data identified via [Google Dataset Search](https://toolbox.google.com/datasetsearch), available through [figshare](https://figshare.com/articles/Time_course_of_immature_platelet_count_and_its_relation_to_thrombocytopenia_and_mortality_in_patients_with_sepsis/5837823).
 - **Brigette Crawley**, "Alcohol Consumption and Long Term Blood Glucose Control in Type 2 Diabetes"
