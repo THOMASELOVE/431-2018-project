@@ -2,12 +2,12 @@
 
 ## Deadline and Submission information
 
-Task D is due at noon on 2018-10-23. Submit your Task D work by completing the Google Form linked at http://bit.ly/431-2018-survey-comparison-plan-taskD. 
+Task D is now due at noon on 2018-11-02. Submit your Task D work by completing the Google Form linked at http://bit.ly/431-2018-survey-comparison-plan-taskD. 
 
 Please note that:
 
-- Task C is also due at the same time. 
-- We do not have class on 2018-10-23 because of CWRU's Fall Break.
+- Task E is also due at the same time. 
+- Dr. Love will provide specific information on item numbers and variable names in a document made available when the Survey itself is available, no later than noon on 2018-10-29.
 
 ## Task D requires you to complete a Google Form
 
@@ -16,6 +16,7 @@ The Google Form for Task D is now available at http://bit.ly/431-2018-survey-com
 In this form, you will need to specify the list of items from the Draft Survey that you plan to use in one or more of your six required analyses for Study 1 (the Class Survey.) 
 
 - The Form will ask you to specify by item number and name the items you wish to use for each of the six required Analyses for Study 1. 
+    - **NEW** Dr. Love will provide specific information on item numbers and variable names in a document made available when the Survey itself is available, no later than noon on 2018-10-29.
 - In addition to the items you select related to each Analysis, you will also select two backup quantitative variables, and two backup factors.
 - You need not do any analyses connected to the items you originally suggested, nor do you need to do analyses that mirror your original research questions.
 - Items with at least 10 possible responses will be treated as quantitative. Other items will be treated as categorical (factors.) 

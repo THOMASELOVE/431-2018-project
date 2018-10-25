@@ -1,0 +1,297 @@
+## A Note on the Models I will use
+
+In this example, I have been working with a large set of candidate predictor variables, so that I can demonstrate some data management issues. 
+
+In what follows, I will restrict myself to the following five predictors: `sbp1`, `age`, `bmi1`, `diabetes`, and `tobacco`, in trying to predict `sbp_diff`.
+
+To that end, I'll create a new data set, called `hbp_small` which includes only the `subj_id` value, the outcome `sbp_diff` and these five predictors.
+
+```{r build hbp_s_withNA}
+hbp_small <- select(hbp_tidy, subj_id, sbp_diff, sbp1, age, bmi1, diabetes, tobacco)
+```
+
+## Building Simple Imputations for Predictors with NAs
+
+In no way am I suggesting this is good practice outside of this project, but for now, we'll do a simple imputation to fill in values for the missing `tobacco` and `bmi1` values, creating a new data frame which is completed for our subsequent work.
+
+```{r simple imputation from our tidy data set}
+hbp_temp <- mice::mice(hbp_small, m = 1, maxit = 5, method = 'pmm', seed = 431001)
+```
+
+Note: If this approach bombs out for you, try these three things, in this order.
+
+1. Save your work, close down R and R Studio, and then re-open them and try again, but this time, use `maxit = 1` rather than `maxit = 5`.
+2. If that doesn't work, try `method = 'sample'` instead. Changing `method` to `sample` imputes with a random sample from the existing observations for each variable.
+3. If even that doesn't work, delete the subjects with missing values using the `filter` command as discussed in the Project Instructions after Proposal about deleting rows with missing outcomes (section 7) and then press on with your new, smaller data set.
+
+Once we have the imputed data, we then complete the data set to fill in the missing values:
+
+```{r complete data set}
+hbp_s <- mice::complete(hbp_temp, 1)
+```
+
+This may take a moment or two, but when it's finished, the resulting `hbp_s` will have no missing values.
+
+```{r count NAs by column in completed data set}
+colSums(is.na(hbp_s))
+```
+
+# Step 1. Develop training and test samples.
+
+## Revised Instructions
+
+Obtain a training sample with a randomly selected 80% of your data, and have the remaining 20% in a test sample, properly labeled, and using `set.seed` so that the results can be replicated later. 
+
+## R code
+
+I'll create a training sample, with 80% of the data, called `hbp_s_training` and a test sample, with the remaining 20% of the data, called `hbp_s_test`.
+
+```{r create holdout variable}
+set.seed(431123) # set your own seed, don't use this one
+hbp_s_training <- hbp_s %>% sample_frac(.80)
+hbp_s_test <- anti_join(hbp_s, hbp_s_training, by = "id")
+dim(hbp_s) # number of rows and columns in hbp_s
+dim(hbp_s_training) # check to be sure we have 80% of hbp_s here
+dim(hbp_s_test) # check to be sure we have the rest of hbp_s here
+```
+
+# Step 2. Summarize outcome and predictors numerically and assess the outcome's distribution graphically.
+
+## Revised Instructions
+
+Using the training sample, provide numerical summaries of each predictor variable and the outcome (with Hmisc::describe), as well as graphical summaries of the outcome variable. Your results should now show no missing values in any variable. Are there any evident problems, such as substantial skew in the outcome variable?
+
+## R code
+
+```{r describe variables in step 2}
+Hmisc::describe(hbp_s_training)
+eda.1sam(dataframe = hbp_s_training, 
+         variable = hbp_s_training$sbp_diff, 
+         x.title = "Change in SBP", 
+         ov.title = "Training Sample Change in SBP")
+```
+
+I see no problems with a Normal model for the outcomes in this case.
+
+# Step 3. Build and interpret scatterplot matrix; consider potential transformations of your outcome.
+
+## Revised Instructions
+
+- Build and interpret a scatterplot matrix to describe the associations (both numerically and graphically) between the outcome and all predictors. 
+- Use a Box-Cox plot to investigate whether a transformation of your outcome is suggested.
+- Describe what a correlation matrix suggests about collinearity between candidate predictors.
+
+## R Code
+
+```{r scatterplot matrix, fig.height = 6}
+pairs (~ sbp_diff + sbp1 + age + bmi1 + diabetes + tobacco,
+       data=hbp_s_training, 
+       main="High Blood Pressure Study: Training Data",
+       upper.panel = panel.smooth,
+       diag.panel = panel.hist,
+       lower.panel = panel.cor)
+```
+
+### Collinearity Checking
+
+As for collinearity, none of these candidate predictors show any substantial correlation with each other. The largest Pearson correlation (in absolute value) between predictors is (-0.22) for `age` and `bmi1`, and that's not strong. As we'll see in Step 4, none of the generalized variance inflation factors exceed 1.2, let alone the 5 or so that we'd have to see to be seriously concerned about collinearity.
+
+### boxCox function to assess need for transformation of our outcome
+
+To use the `boxCox` approach here, we need to realize that the distribution of our outcome, `sbp_diff`, includes negative values as well as zeros. The smallest `sbp_diff` value is -60. We'll need to add a value to each `sbp_diff` in order to run the boxCox plot, so that the resulting "outcome" is strictly positive. I'll add 100. Although we're generally using a 90% confidence interval in this project, we won't worry about that issue in the `boxCox` plot, and instead just look at the point estimate from `powerTransform`.
+
+```{r boxCox plot}
+boxCox(lm((sbp_diff + 100) ~ sbp1 + age + bmi1 + diabetes + tobacco, data = hbp_s_training))
+powerTransform(lm((sbp_diff + 100) ~ sbp1 + age + bmi1 + diabetes + tobacco, data = hbp_s_training))
+```
+
+The estimated power transformation is about 0.9, and that's closer to 1 (the raw data) than any of the other transformations I'd consider from Tukey's ladder, so I won't apply a transformation\footnote{If your outcome data are substantially multimodal, I wouldn't look at the boxCox results as meaningful. Otherwise, it is up to you to decide whether a transformation suggested by boxCox should be applied to your data. Don't make the transformation if you wouldn't be able to interpret the result well, which probably means you should stick to transformations of strictly positive outcomes, and to the square root, square, logarithm and inverse transformations. If you do decide to include a transformation of your outcome in fitting models, be sure to back-transform any predictions you make at the end of the study (in Step 7), so that we can understand the prediction error results.}.
+
+# Step 4. Build "kitchen sink" model, and describe/assess it.
+
+## Revised Instructions
+
+Specify a "kitchen sink" linear regression model to describe the relationship between your outcome (potentially after transformation) and the main effects of each of your predictors.
+
+- Assess the overall effectiveness, within your training sample, of your model, by specifying and interpreting the R^2^, adjusted R^2^ (especially in light of your collinearity conclusions below), the residual standard error, and the ANOVA F test. 
+- Does collinearity in the kitchen sink model have a meaningful impact? How can you tell?
+- Specify the size, magnitude and meaning of all coefficients, and identify appropriate conclusions regarding effect sizes with 90% confidence intervals.
+
+## R Code
+
+```{r kitchen sink}
+mod.ksink <- lm(sbp_diff ~ sbp1 + age + bmi1 + diabetes + tobacco, data = hbp_s_training)
+mod.ksink
+```
+
+Our model predicts the `sbp_diff` using the predictors `sbp1`, `age`, `bmi1`, `diabetes` and `tobacco`.
+
+```{r kitchen sink summary}
+summary(mod.ksink)
+```
+
+*Assess the overall effectiveness, within your training sample, of your model, by specifying and interpreting the R^2^, adjusted R^2^ (especially in light of your collinearity conclusions below), the residual standard error, and the ANOVA F test.*
+
+- This model accounts for just over 35% of the variation in `sbp_diff` in our training sample of 799 subjects. 
+- The adjusted R^2^ (0.345) is very close to the raw R^2^ (0.350), suggesting that we're not likely to have a serious problem with collinearity.
+- The residual standard error is about 16.5 mm Hg, which indicates that about 95% of our subjects in this training sample should have model predictions within 33 mm Hg of the actual value of their `sbp_diff`, and nearly all should be within 49.5 mm Hg. Based on the maximum and minimum residuals, and a sample of 799 observations, it looks like there might be an outlier on the high end (a residual of 53.4), but on the low end, things look reasonable.
+- The ANOVA F test p value (which is zero for all reasonable purposes) indicates a highly statistically significant amount of predictive value is accounted for by the model. This is no surprise given the moderate R^2^ value and reasonably large (*n* = 799) size of this training sample.
+
+*Does collinearity in the kitchen sink model have a meaningful impact? How can you tell?*
+
+```{r kitchen sink vif for collinearity}
+car::vif(mod.ksink)
+```
+
+No, it doesn't. We'd need to see a generalized variance inflation factor above 5 for collinearity to be a meaningful concern.
+
+*Specify the size, magnitude and meaning of all coefficients, and identify appropriate conclusions regarding effect sizes with 90% confidence intervals.*
+
+```{r kitchen sink confidence intervals}
+summary(mod.ksink)$coefficients
+confint(mod.ksink, level = 0.90)
+```
+
+Our model is 82 - 0.67 sbp1 + 0.10 age + 0.05 bmi1 - 0.94 diabetes - 1.34 tobacconever + 1.09 tobaccoquit.
+
+This implies that:
+
+- for every 1 mm Hg increase in `sbp1`, we anticipate a drop in the outcome (difference in SBP) of 0.67 mm Hg (90% confidence interval: -0.73, -0.60). If we had two subjects with the same values of all other variables, but A had a baseline SBP of 150 and B had a baseline SBP of 140, then if all other variables are kept at the same value, our model predicts that subject A's SBP will fall by 6.7 additional (90% CI: 6.0, 7.3) mm Hg as compared to subject B.
+
+Please prepare this level of detail for at least one predictor. For the others, a summary like the one that follows will be fine.
+
+Our kitchen sink model, within our training sample, predicts that ...
+
+- an increase in age of 1 year is associated with a non-significant increase of 0.10 (90% CI -0.02, 0.22) mm Hg of change in SBP.
+- an increase in baseline BMI of one kg/m^2^ is associated with a non-significant increase of 0.05 (90% CI -0.09, 0.20) mm Hg of change in SBP.
+- subjects without diabetes are associated with a non-significant decrease of 0.94 (90% CI for decrease is -1.59, 3.46) mm Hg of change in SBP as compared to subjects with diabetes.
+- subjects who quit using tobacco are estimated to have a change in SBP that is 1.09 mm Hg larger than those who currently use tobacco, and subjects who never used tobacco are estimated to have a change that is 1.35 mm smaller than those who currently use. None of the differences between tobacco use groups are statistically significant at the 10% level in our training sample.
+
+# Step 5. Build a second model (probably with stepwise regression), and describe/assess it.
+
+## Revised Instructions 
+
+Build a second linear regression model using a subset of your four predictors, chosen by you to maximize predictive value within your training sample. 
+
+- Specify the method you used to obtain this new model. (Backwards stepwise elimination is a likely approach in many cases, but if that doesn't produce a new model, feel free to select two of your more interesting predictors from the kitchen sink model and run that as a new model.)
+
+## R code
+
+```{r stepwise model development}
+step(mod.ksink)
+```
+
+The backwards selection stepwise approach suggests a model with `sbp1` alone.
+
+### What if stepwise regression doesn't suggest a new model?
+
+If stepwise regression retains the kitchen sink model, develop an alternate model by selecting a subset of the kitchen sink predictors on your own. Your kitchen sink model has at least four predictors - reduce that to the two predictors you're more interested in, and see how that model performs in what follows.
+
+# Step 6. Compare the two models within the training sample.
+
+## Revised Instructions
+
+Compare this new (second) model to your "kitchen sink" model within your training sample using adjusted R^2^, the residual standard error, AIC and BIC.
+
+- Specify the complete regression equation in both models, based on the training sample. 
+- Which model appears better in these comparisons of the four summaries listed above? Produce a table to summarize your results. Does one model "win" each competition in the training sample?
+
+## R Code
+
+```{r fit model 2}
+mod.sbponly <- lm(sbp_diff ~ sbp1, data = hbp_s_training)
+summary(mod.sbponly)
+confint(mod.sbponly)
+```
+
+
+The two models are specified by the coefficient estimates below.
+
+```{r specify and assess the two models}
+pander(mod.ksink$coefficients)
+pander(mod.sbponly$coefficients)
+```
+
+Next, we'll compare the two models in terms of some key statistical summaries.
+
+```{r additional assessments of the two models}
+AIC(mod.ksink); AIC(mod.sbponly)
+BIC(mod.ksink); BIC(mod.sbponly)
+```
+
+Model            | adjusted R^2^ | Resid SE | AIC | BIC  
+---------------: | -------------:| --------:| --: | ---:
+Kitchen Sink | 0.345 | 16.6 | 6765 | 6803
+SBP only     | 0.346 | 16.6 | 6760 | 6774
+
+It looks like the model with `sbp1` alone performs slightly better in the training sample, although the two models have the same residual standard error.
+
+# Step 7. Compare the models' predictive ability in the test sample.
+
+## Revised Instructions
+
+Now, use your two regression models to predict the value of your outcome using the predictor values you observe in the test sample. Be sure to back-transform the predictions to the original units if you wound up fitting a model to a transformed outcome. 
+
+- Compare the two models in terms of mean squared prediction error and mean absolute prediction error in a Table, which Dr. Love will **definitely want to see** in your portfolio. 
+- Which model appears better at out-of-sample prediction according to these comparisons, and how do you know?
+
+## R Code
+
+```{r compare models on MAPE and MSPE, warning = FALSE}
+model.ks.predictions <- predict(mod.ksink, newdata = hbp_s_test)
+model.sbponly.predictions <- predict(mod.sbponly, newdata = hbp_s_test)
+
+model.ks.errors <- hbp_s_test$sbp_diff - model.ks.predictions
+model.sbponly.errors <- hbp_s_test$sbp_diff - model.sbponly.predictions 
+
+model.ks.abserrors <- abs(model.ks.errors)
+model.sbponly.abserrors <- abs(model.sbponly.errors)
+
+model.ks.sqerrors <- model.ks.errors^2
+model.sbponly.sqerrors <- model.sbponly.errors^2
+
+summary(model.ks.abserrors)
+summary(model.ks.sqerrors)
+
+summary(model.sbponly.abserrors)
+summary(model.sbponly.sqerrors)
+```
+
+Model               | MAPE | MSPE | Maximum Abs. Error
+-------------------:|-----:|-----:|---------------:
+Kitchen Sink | 13.55 | 307.5 | 58.2 
+sbp1 only    | 13.59 | 308.0 | 60.4
+
+So, the kitchen sink model also looks slightly better in these out-of-sample predictions.
+
+# Step 8. Pick a winning model, and assess regression assumptions.
+
+## Revised Instructions
+
+Select the better of your two models (based on the results you obtain in Questions 6 and 7) and apply it to the entire data set\footnote{If, as in my case, you have to choose between the in-sample and out-of-sample results, I would likely select the out-of-sample results to choose my final model.}. 
+
+- Do the coefficients or summaries the model show any important changes when applied to the entire data set, and not just the training set?
+- Plot residuals against fitted values, and also a Normal probability plot of the residuals, each of which Dr. Love **will be looking for** in your portfolio. 
+- What do you conclude about the validity of standard regression assumptions for your final model based on these two plots?
+
+## R Code
+
+I will choose the kitchen sink model. First, we apply the model to the full `hbp_s` data set.
+
+```{r model ks applied to entire data set}
+model.final <- lm(sbp_diff ~ sbp1 + age + bmi1 + diabetes + tobacco, data = hbp_s)
+summary(model.final)
+```
+
+At the 90% confidence level, it appears that age and (part of) tobacco usage now appear to be statistically significant in our t tests. The overall R^2^ is very comparable, as is the residual standard error, to the model fit to the training sample alone. No coefficients change their signs.
+
+Here are the residual plots.
+
+```{r residual plots for final model}
+par(mfrow = c(1,2))
+plot(model.final, which = 1:2)
+par(mfrow = c(1,1))
+```
+
+I see no substantial violations of regression assumptions. There is neither a curve, nor a fan shape in the residuals vs. fitted values, and we see no evidence of important non-Normality in the Normal Q-Q plot.
+

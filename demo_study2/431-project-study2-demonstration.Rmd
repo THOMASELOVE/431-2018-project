@@ -1,0 +1,326 @@
+---
+title: "431 Project Study 2 Demonstration"
+author: "Thomas E. Love"
+date: "`r Sys.Date()`"
+linkcolor: blue
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    number_sections: true
+    code_folding: show
+---
+
+# Introduction 
+
+This document demonstrates the sorts of analyses we are asking you to complete in your project Study 2 (using your data.) The data we'll use are in the `hbp_study.csv` data file available on [the Data and Code page of our website](https://github.com/THOMASELOVE/431-2018-data).
+
+# R Preliminaries and Data Load/Merge
+
+## Initial Setup and Package Loads in R 
+
+```{r initial_setup, cache=FALSE, message = FALSE, warning = FALSE}
+library(knitr); library(rmdformats); library(magrittr)
+library(skimr); library(Hmisc); library(Epi); library(vcd)
+library(car); library(broom)
+library(tidyverse) 
+
+source("Love-boost.R")
+
+## Global options
+
+options(max.print="75")
+opts_chunk$set(comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=75)
+
+## Skim options (leave out histograms)
+
+skimr::skim_with(numeric = list(hist = NULL),
+                 integer = list(hist = NULL))
+```
+
+## Loading the Raw Data into R 
+
+```{r data_load, message = FALSE}
+hbp_study <- read.csv("hbp_study.csv") %>% tbl_df
+```
+
+# What is this?
+
+This document demonstrates analyses needed for your project Study 2 (using your data.) 
+
+We will use simulated data from a study of high blood pressure in 999 African-American adult subjects who are not of Hispanic or Latino ethnicity. To be included, the subject had to be between 33 and 83 years of age at baseline, have a series of items available in their health record at baseline, including a baseline systolic blood pressure, and then return for a blood pressure check 18 months later. Our goal will be to build a prediction model for the subject's *change* in systolic blood pressure over the 18-month period, on the basis of some of their characteristics at baseline.
+
+The data (which, again, are simulated), are in the `hbp_study.csv` data file available on [the Data and Code page of our website](https://github.com/THOMASELOVE/431-2018-data).
+
+# Original Data Set and Range Checks/Missingness
+
+The `hbp_study` data set includes 12 variables and 999 adult subjects. For each subject, we have gathered
+
+- baseline information on their `age`, and their `sex`, 
+- whether or not they have a `diabetes` diagnosis, 
+- the socio-economic status of their neighborhood of residence (`nses`), 
+- their body-mass index (`bmi1`) and systolic blood pressure (`sbp1`), 
+- their `insurance` type, `tobacco` use history, and 
+- whether or not they have a prescription for a `statin`, or for a `diuretic`. 
+- Eighteen months later, we gathered a new systolic blood pressure (`sbp2`) for each subject.
+
+```{r hbp_study_data_in_the_raw}
+glimpse(hbp_study)
+```
+
+This tibble describes twelve variables, including:
+
+- a categorical `subj_id` variable not to be used in our model except for identification of subjects,
+- two variables that, when combined, make up our outcome (`sbp1` and `sbp2`),
+- seven categorical candidate predictors, specifically `sex`, `diabetes`, `nses`, `insurance`, `tobacco`, `statin`, and `diuretic`
+- three quantitative candidate predictors, specifically `age`, `bmi1` and `sbp1`. 
+
+## Which variables should be included in the tidy data set?
+
+Note that I'm not planning to use all of these predictors in my models, but I'm going to build a tidy data set including all of them anyway, so I can demonstrate solutions to some problems you might have. When you build your tidy data set, restrict it to the variables (outcomes, predictors and `subj_id`) that you will actually use in your modeling.
+
+# Data Management: Building a Tidy Data Set
+
+In building our tidy version of these data, we must:
+
+- calculate and store the outcome variable (`sbp_diff` = `sbp2 - sbp1`),
+- deal with the ordering of levels in the multi-categorical variables `nses`, `insurance` and `tobacco`,
+- change the name of `nses` to something more helpful - I'll use `nbhd_ses` as the new name\footnote{Admittedly, that's not much better.}.
+
+## Dealing with Missingness
+
+Note that you will need to ensure that any *missing* values are appropriately specified using `NA`. 
+
+- In this data set, we're all set on that issue. 
+    + There are missing data in `nses` (8 NA), `bmi1` (5 NA) and `tobacco` (23 NA).
+    + In these data, we will eventually have to deal with the missing data in a rational way, but we'll do that *after* building the tidy data set and codebook. 
+- [**Missing Outcomes**] Your tidy data set should also delete any subjects with missing values of your outcome variable. 
+    + The elements (`sbp1` and `sbp2`) that go into our outcome, `sbp_diff`, have no missing values, though, so we'll be OK in that regard.
+
+In building the tidy data set, leave all missing values for candidate predictors as `NA`. 
+
+## Calculating the `sbp_diff` outcome 
+
+The simplest approach to creating the new difference and storing it in `hbp_study` follows:
+
+```{r create_sbp_diff}
+hbp_study <- hbp_study %>%
+  mutate(sbp_diff = sbp2 - sbp1)
+
+mosaic::favstats(~ sbp_diff, data = hbp_study)
+```
+
+We have no missing values in our outcome, and each of the values look plausible. Some subjects had large changes in their systolic blood pressure from baseline to follow-up, as large as a 60 mm Hg difference, it appears. The average change across our 999 subjects was modest at about 2 mm Hg, which seems reasonable, and none of the individual values seem unreasonable\footnote{A change of 60 mm Hg in systolic blood pressure in 18 months is certainly unusual, but in 999 patients, we can't be that surprised to see a change that extreme, especially since we see several other people with similar changes in the data.}, so we'll move on.
+
+## Checking the Categorical Variables
+
+For categorical variables, it's always worth it to check to see whether the existing orders of the factor levels match the inherent order of the information, as well as whether there are any levels which we might want to collapse due to insufficient data, and whether there are any missing values.
+
+### `nses`: home neighborhood's socio-economic status
+
+```{r levels_of_nses}
+hbp_study %$% levels(nses)
+```
+
+- The order of `nses`, instead of the alphabetical ("High", "Low", "Middle", "Very Low"), should go from "Very Low" to "Low" to "Middle" to "High", or perhaps its reverse.
+- Let's fix that using the `fct_relevel` function from the `forcats` package, which is part of the `tidyverse`. While we're at it, we'll rename the variable `nbhd_ses` which is more helpful to me.
+- Then we'll see how many subjects fall in each category.
+
+```{r relevel_nses}
+hbp_study <- hbp_study %>%
+  rename(nbhd_ses = nses) %>%
+  mutate(nbhd_ses = fct_relevel(nbhd_ses, "Very Low", "Low", 
+                            "Middle", "High"))
+hbp_study %>% count(nbhd_ses)
+```
+
+We have some missing values of `nbhd_ses`. We'll have to deal with that later.
+
+### `tobacco`: tobacco use history
+
+```{r levels_of_tobacco}
+hbp_study %$% levels(tobacco)
+```
+
+- For `tobacco`, instead of ("current", "never", "quit"), we want ("never", "quit", "current").
+
+```{r relevel_tobacco}
+hbp_study <- hbp_study %>%
+  mutate(tobacco = fct_relevel(tobacco, "never", "quit", 
+                            "current"))
+hbp_study %>% count(tobacco)
+```
+
+We have some missing values of `tobacco`, too. Again, we'll deal with that later.
+
+### `insurance`: primary insurance type
+
+```{r levels_insurance}
+hbp_study %$% levels(insurance)
+```
+
+- For `insurance`, we'll change the order to ("Medicare", "Private", "Medicaid", "Uninsured")
+
+```{r relevel_insurance}
+hbp_study <- hbp_study %>%
+  mutate(insurance = fct_relevel(insurance, "Medicare", 
+                                 "Private", "Medicaid", 
+                                 "Uninsured"))
+hbp_study %>% count(insurance)
+```
+
+### `diabetes` status
+
+We'll also reorder the `diabetes` variable to put "Yes" before "No".
+
+```{r revise_diabetes}
+hbp_study <- hbp_study %>%
+  mutate(diabetes = fct_relevel(diabetes, "Yes"))
+
+hbp_study %>% count(diabetes)
+```
+
+Note that any levels left out of a `fct_relevel` statement get included in their current order, after whatever levels have been specified.
+
+## Cleaning Up to get to our final data set
+
+Let's build a data set, called `hbp_tidy` that contains only the twelve variables in our code book.
+
+```{r hbp_tidy}
+hbp_tidy <- hbp_study %>%
+  select(subj_id, sbp_diff, sbp1, age, sex, 
+         diabetes, nbhd_ses, bmi1, insurance, 
+         tobacco, statin, diuretic)
+
+hbp_tidy
+```
+
+# The Codebook
+
+The 12 variables in our tidy data set for this demonstration are as follows. 
+
+Variable      | Type  | Description / Levels
+---------: | :-------------: | --------------------------------------------
+`subj_id`   | Categorical  | subject code (A001-A999)
+`sbp_diff`  | Quantitative | outcome variable, SBP after 18 months minus SBP at baseline, in mm Hg
+`sbp1`      | Quantitative | baseline SBP (systolic blood pressure), in mm Hg
+`age`       | Quantitative | age of subject at baseline, in years
+`sex`       | Binary | Male or Female
+`diabetes`  | Binary | Does subject have a diabetes diagnosis: Yes or No
+`nbhd_ses`  | 4 level Cat. | Socio-economic status of subject's home neighborhood: Very Low, Low, Middle and High
+`bmi1`      | Quantitative | subject's body-mass index at baseline
+`insurance` | 4 level Cat. | subject's insurance status at baseline: Medicare, Private, Medicaid, Uninsured
+`tobacco`   | 3 level Cat. | subject's tobacco use at baseline: never, quit (former), current
+`statin`    | Binary | 1 = statin prescription at baseline, else 0
+`diuretic`  | Binary | 1 = diuretic prescription at baseline, else 0
+
+# Step 1. Deal with Missing Values
+
+Here, we need to:
+
+- identify all the variables in our tidy data set that have missing (NA) values,
+- delete all observations with missing outcomes,
+- use simple imputation to impute values for the candidate predictors with NAs
+
+We will use the resulting imputed data set in all subsequent work. 
+
+As noted in the instructions, you should be sure to describe any choices you make in building your imputed data set.
+
+## Identifying Missing Values
+
+The `colSums` approach gives a count of `NA` values by column in the data frame.
+
+```{r count_NAs_by_variable}
+colSums(is.na(hbp_tidy))
+```
+
+The three variables with missing values are `nbhd_ses`, `bmi1` and `tobacco`.
+
+```{r}
+hbp_tidy %>% 
+  count(is.na(nbhd_ses), is.na(bmi1), is.na(tobacco))
+```
+
+So it appears that there are, in all, 963 subjects who aren't missing anything, and 36 subjects who are missing at least one of these three variables.
+
+- 23 are missing `tobacco` only, 
+- 5 are missing `bmi1` only, and 
+- 8 are missing `nbhd_ses`. 
+
+No subject is missing our outcome (`sbp_diff`) and no subject is missing more than one of our predictors. 
+
+## Imputation Details to come.
+
+# Step 2. Identify training and test samples
+
+Here, we will obtain a training sample with a randomly selected 80% of your data, and have the remaining 20% in a test sample, properly labeled, and using `set.seed` so that the results can be replicated later. We will then use this training sample for Steps 3-7.
+
+## Details to come.
+
+# Step 3. Summarize the predictors and outcome
+
+Using the training sample, we will provide numerical summaries of each predictor variable and the outcome, as well as graphical summaries of the outcome variable. Our results should now show no missing values in any variable. We'll need to determine whether there are any evident problems, such as substantial skew in the outcome variable.
+
+## Details to come.
+
+# Step 4. Scatterplot Matrix Creation and Interpretation
+
+Here, we will build and interpret a scatterplot matrix to describe the associations (both numerically and graphically) between the outcome and all predictors. 
+
+- We'll also use a Box-Cox plot to investigate whether a transformation of our outcome is suggested, and
+- describe what a correlation matrix suggests about collinearity between candidate predictors.
+
+## Details to come.
+
+# Step 5. Kitchen Sink Model Assessment
+
+We will specify a "kitchen sink" linear regression model to describe the relationship between our outcome (potentially after transformation) and the main effects of each of our predictors. We'll need to:
+
+- assess the overall effectiveness, within your training sample, of your model, by specifying and interpreting the R^2^, adjusted R^2^ (especially in light of our collinearity conclusions, below), the residual standard error, and the ANOVA F test. 
+- assess whether collinearity in the kitchen sink model has a meaningful impact, and describe how we know that.
+- We'll need to specify the size, magnitude and meaning of all coefficients, and identify appropriate conclusions regarding effect sizes with 90% confidence intervals.
+
+## Details to come.
+
+# Step 6. Build a Second, Smaller Linear Model
+
+Here, we will build a second linear regression model using a subset of our "kitchen sink" model predictors, chosen to maximize predictive value within our training sample. 
+
+We'll specify the method you used to obtain this new model. (Backwards stepwise elimination is a likely approach in many cases, but if that doesn't produce a new model, we can select two of your more interesting predictors from the kitchen sink model and run that as a new model.)
+
+## Details to come.
+
+# Step 7. Compare the Kitchen Sink and Second Models in the Training Sample
+
+We will compare this new (second) model to our "kitchen sink" model within your training sample using adjusted R^2^, the residual standard error, AIC and BIC. We'll need to specify the complete regression equation in both models, based on the training sample, and identify which model appears better in these comparisons. 
+
+We'll produce a table to summarize our results here, and specify whether one model "wins" each competition in the training sample.
+
+## Details to come.
+
+# Step 8. Use the Two Models to predict the outcome in the Test Sample
+
+Now, we will use our two regression models to predict the value of our outcome using the predictor values  in the test sample. 
+
+- We may need to back-transform the predictions to the original units if we wind up fitting a model to a transformed outcome. 
+- We'll definitely need to compare the two models in terms of mean squared prediction error and mean absolute prediction error in a Table, which apparently I will want to see in your portfolio. 
+- We'll have to specify which model appears better at out-of-sample prediction according to these comparisons, and how we know that.
+
+## Details to come.
+
+# Step 9. Select the better model and apply it to the entire data set
+
+Finally, we select the better of our two models (based on Steps 7 and 8) and apply that model to the entire data set. We'll address the following issues, at a minimum.
+
+- Do the coefficients or summaries the model show any important changes when applied to the entire data set, and not just the training set? 
+- Plot residuals against fitted values, and also a Normal probability plot of the residuals, each of which Dr. Love will be looking for in your portfolio. What do we conclude about the validity of standard regression assumptions for our final model based on these two plots?
+
+## Details to come.
+
+# Two Critical Reminders from Dr. Love
+
+Remember that each step should begin with at least one complete sentence explaining what you are doing, specifying the items being used, and how you are using them, and then conclude with at least one complete sentence of discussion of the key conclusions you draw from the current step, and a discussion of any limitations you can describe that apply to the results.
+
+And, for heaven's sake, DO NOT use my words included in this demonstration project in your project. Rewrite everything to make it relevant to your situation. Do not repeat my instructions back at me. 
