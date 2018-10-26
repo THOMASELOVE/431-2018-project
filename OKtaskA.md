@@ -59,6 +59,8 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j
     - Data from the Kawempe Community Health Study, which was reported on by [Stein CM et al. in 2018 in the American Journal of Epidemiology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6031055/).
 - **Logan Harper**, "Socioeconomic status and quality of life in adults with sarcoidosis"
     - De-identified, appropriate-to-share data on a questionnaire measuring health-related quality of life [developed by the Foundation for Sarcoidosis Research](https://www.researchgate.net/publication/10766720_The_Sarcoidosis_Health_Questionnaire_A_new_measure_of_health-related_quality_of_life) and referred to as the Sarcoidosis Advanced Registry for Cures.
+- **Hannah Hill**, "Does access to mental health care decrease mental illness-related mortality?"
+    - Combines data on county-level mortality and population data from 1999-2016 in the [CDC Wonder database](https://wonder.cdc.gov/), and the 2018 [County Health Rankings data](http://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation) from the Robert Wood Johnson foundation to look at this question at a county level.
 - **Joseph Hnath**, "State-level abortion restrictions and abortion utilization in U.S. counties"
     - Uses data from individual states, as compiled by Joseph as part of an economic analysis. Data include state-reported abortion counts and birth counts at the county level from 2006-2015, along with state-level abortion restriction policy changes [published by the Guttmacher Institute](https://www.guttmacher.org/state-policy) at the beginning of each year.
 
