@@ -9,7 +9,7 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j
 ### A-B
 
 - **Clara Adeniyi**, "Mood Disorders Among Pregnant Women"
-    - 2007-2008 [NHANES data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2007), including the demographicm reproductive health and current health status forms.
+    - 2007-2008 [NHANES data](https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2007), including the demographic, reproductive health and current health status forms.
 - **Alicia (Ali) Aguilar**, "Using Social Factors to predict Overall Mental Health in the GSS"
     - Data source is the [General Social Survey](http://gss.norc.org/). Specifically, the 2006 Core Module and Numner Known Module in Sample B, with 62,466 cases. She'll be drawing a sample from that group, after inclusion/exclusion criteria are applied.
 - **Amy Attaway**, "Association of aspirin use with improved severity of COPD in NHANES"
