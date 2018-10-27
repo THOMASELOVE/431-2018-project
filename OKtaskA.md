@@ -120,6 +120,8 @@ Directory by Last Name: [A-B](#a-b), [C](#c), [D-F](#d-f), [G-I](#g-i), [J-L](#j
     - [A Kaggle insurance claims prediction data set](https://www.kaggle.com/easonlai/sample-insurance-claim-prediction-dataset) describing charges and a few health-related records for each of 1338 insurance policy holders.
 - **Shengxuan Wang**, "Obesity and high cholesterol levels"
     - Data from the Rich Healthcare Group in China describing medical records for more than 200,000 adult participants receiving a health check over a seven-year period. A [key paper appeared here](https://bmjopen.bmj.com/content/8/9/e021768), and the data were published in August 2018 [at datadryad.org's repository](https://datadryad.org/resource/doi:10.5061/dryad.ft8750v).
+- **Bianca Wilson**, "Predicting Poor Mental Health Days in American Young Adults"
+    - Data from the CDC's [Behavioral Risk Factor Surveillance System 2003 Survey](https://www.cdc.gov/brfss/annual_data/annual_2003.htm), as [archived at ICPSR](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/34085).
 - **Joshua Wu**, "The Association Between Depression and Alcohol Consumption"
     - Uses data from the [National Survey on Drug Use and Health](https://www.datafiles.samhsa.gov/study-dataset/national-survey-drug-use-and-health-2016-nsduh-2016-ds0001-nid17185), obtained from the Substance Abuse and Mental Health Data Archive.
 - **Julia Yang**, "Clinical Measures to predict Prostate Specific Antigen levels"
