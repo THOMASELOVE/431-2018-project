@@ -90,7 +90,8 @@
 <li class="chapter" data-level="2.3.2" data-path="taskA.html"><a href="taskA.html#the-data-description"><i class="fa fa-check"></i><b>2.3.2</b> The Data Description</a></li>
 <li class="chapter" data-level="2.3.3" data-path="taskA.html"><a href="taskA.html#data-restrictions"><i class="fa fa-check"></i><b>2.3.3</b> Data Restrictions</a></li>
 <li class="chapter" data-level="2.3.4" data-path="taskA.html"><a href="taskA.html#some-potentially-useful-data-sources"><i class="fa fa-check"></i><b>2.3.4</b> Some Potentially Useful Data Sources</a></li>
-<li class="chapter" data-level="2.3.5" data-path="taskA.html"><a href="taskA.html#if-you-are-storing-your-own-data"><i class="fa fa-check"></i><b>2.3.5</b> If you are storing your own data</a></li>
+<li class="chapter" data-level="2.3.5" data-path="taskA.html"><a href="taskA.html#a-few-tips"><i class="fa fa-check"></i><b>2.3.5</b> A few tips</a></li>
+<li class="chapter" data-level="2.3.6" data-path="taskA.html"><a href="taskA.html#if-you-are-storing-your-own-data"><i class="fa fa-check"></i><b>2.3.6</b> If you are storing your own data</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="taskA.html"><a href="taskA.html#research-questions-for-study-2-that-worked-well-in-the-past"><i class="fa fa-check"></i><b>2.4</b> Research Questions for Study 2 that worked well in the past</a></li>
 <li class="chapter" data-level="2.5" data-path="taskA.html"><a href="taskA.html#evaluating-task-a"><i class="fa fa-check"></i><b>2.5</b> Evaluating Task A</a></li>
@@ -403,10 +404,10 @@
 <li>include at least one quantitative predictor variable, and at least one categorical predictor variable,</li>
 <li>include a complete description of how the data were gathered, so that information must be publicly available,</li>
 <li>be in your hands no later than November 1,</li>
-<li>be shared data with a statistician (Dr. Love) following <a href="https://github.com/jtleek/datasharing">Jeff Leek’s guide to sharing data with a statistician</a> as part of Task F. This means you need to have access to the data in the raw, and it means that I have to be able to have access to it in the raw, as well. - be capable of being fully cited for any and all data elements, including a complete codebook, as this must be provided as part of your proposal.</li>
+<li>be shared with a statistician (Dr. Love) following <a href="https://github.com/jtleek/datasharing">Jeff Leek’s guide to sharing data with a statistician</a> as part of Task F. This means you need to have access to the data in the raw, and it means that I have to be able to have access to it in the raw, as well. - be capable of being fully cited for any and all data elements, including a complete codebook, as this must be provided as part of your proposal.</li>
 </ul>
 <p>While there are some great resources available to some people in this class by virtue of their affiliation with one of the health systems in town, I can do nothing to get you access to health system specific data as part of your project for this class or for 432, and in general, data from those sources are not especially appropriate because of issues with protected health information.</p>
-<p>No more than two students in the class can work on the same data. If two of you have data you would each like to work on, that may be OK, but you’ll need to generate separate research questions and perform your analyses and the Project Tasks separately.</p>
+<p>No more than two students in the class can work on the same question for the same data. If two of you have data you would each like to work on, that may be OK, but you’ll need to generate separate research questions and perform your analyses and the Project Tasks separately.</p>
 <p>I am not interested in you using pre-cleaned data from an educational repository, such as:</p>
 <ul>
 <li><a href="http://www.lerner.ccf.org/qhs/datasets/">this one at the Cleveland Clinic</a>, or <a href="http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets">this one at Vanderbilt University</a>, or <a href="http://www.stat.ucla.edu/projects/datasets/">this one at UCLA</a>, or <a href="http://www.stat.ufl.edu/~winner/datasets.html">this one at the University of Florida</a>, or <a href="http://people.sc.fsu.edu/~jburkardt/datasets/datasets.html">this one at Florida State University</a>, or</li>
@@ -427,7 +428,7 @@
 <li><a href="http://www.healthdata.gov/" class="uri">http://www.healthdata.gov/</a> 125 years of U.S. Health Care Data</li>
 <li><a href="http://www.cdc.gov/nchs/nhanes/index.htm" class="uri">http://www.cdc.gov/nchs/nhanes/index.htm</a> National Health and Nutrition Examination Survey.
 <ul>
-<li>You may want to look at <a href="https://cran.r-project.org/web/packages/nhanesA/vignettes/Introducing_nhanesA.html">the nhanesA package in R</a></li>
+<li>Lots of people choose to use NHANES data, and it is a great resource, but if you do use it, I will require you to look at data collected in at least two different survey forms, so that you’ll have to do some merging. You may want to look at <a href="https://cran.r-project.org/web/packages/nhanesA/vignettes/Introducing_nhanesA.html">the nhanesA package in R</a></li>
 </ul></li>
 <li><a href="http://dashboard.healthit.gov/datadashboard/data.php" class="uri">http://dashboard.healthit.gov/datadashboard/data.php</a> Office of the National Coordinator for Health IT’s dashboard</li>
 <li><a href="http://www.icpsr.umich.edu/icpsrweb/" class="uri">http://www.icpsr.umich.edu/icpsrweb/</a> ICSPR (Inter-university Consortium for Political and Social Research) is a source for many public-use data sets
@@ -445,12 +446,21 @@
 <li><a href="http://www.pewinternet.org/datasets/" class="uri">http://www.pewinternet.org/datasets/</a> Pew Research Center’s Internet Project</li>
 <li><a href="http://portals.broadinstitute.org/cgi-bin/cancer/datasets.cgi" class="uri">http://portals.broadinstitute.org/cgi-bin/cancer/datasets.cgi</a> Broad Institute’s Cancer Program</li>
 <li><a href="http://www.kdnuggets.com/datasets/index.html" class="uri">http://www.kdnuggets.com/datasets/index.html</a> is a big index of lots of available data repositories</li>
-<li><a href="https://www.kaggle.com/" class="uri">https://www.kaggle.com/</a> Kaggle competition data sets are attractive to students occasionally, but I’ve seen a lot of them before and don’t really want to see them again.</li>
+<li><a href="https://www.kaggle.com/" class="uri">https://www.kaggle.com/</a> Kaggle competition data sets are attractive to students occasionally, but I’ve seen a lot of them before and don’t really want to see them again. Use this only as a last resort.</li>
 </ul>
 <p>I cannot guarantee the quality of any of the data sets available at these sites, but I’ve spent at least a little time at many of them in recent months.</p>
 </div>
+<div id="a-few-tips" class="section level3">
+<h3><span class="header-section-number">2.3.5</span> A few tips</h3>
+<ol style="list-style-type: decimal">
+<li>Don’t use hierarchical, multi-level data. That’s not what we need in 431.</li>
+<li>Don’t use a categorical outcome variable, or plan a logistic regression model. That’s for 432, not 431.</li>
+<li>Don’t assume Dr. Love knows anything at all about wet lab biology work or genomics.</li>
+<li>If you are planning to use data you have collected, or that you are working on as part of another course or your research work, that is probably going to work out better in 432 than 431. At a minimum, you will need to be able to convince me that the data you will provide is completely free of any restrictions (after de-identification and compliance with all HIPAA and other security standards), contains NO protected information of any kind, and can be shared freely with the general public. You will need to write a statement asserting that all of this is true for me to approve your proposal.</li>
+</ol>
+</div>
 <div id="if-you-are-storing-your-own-data" class="section level3">
-<h3><span class="header-section-number">2.3.5</span> If you are storing your own data</h3>
+<h3><span class="header-section-number">2.3.6</span> If you are storing your own data</h3>
 <p>An extremely useful link for those of you <strong>building a spreadsheet to store data</strong> is <a href="http://kbroman.org/dataorg/">Karl Broman’s tutorial</a> on the subject. No one was born knowing this stuff - take a look.</p>
 </div>
 </div>

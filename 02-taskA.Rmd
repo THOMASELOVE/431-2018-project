@@ -229,11 +229,11 @@ Study 2 data sets MUST
 - include at least one quantitative predictor variable, and at least one categorical predictor variable,
 - include a complete description of how the data were gathered, so that information must be publicly available,
 - be in your hands no later than November 1, 
-- be shared data with a statistician (Dr. Love) following [Jeff Leek's guide to sharing data with a statistician](https://github.com/jtleek/datasharing) as part of Task F. This means you need to have access to the data in the raw, and it means that I have to be able to have access to it in the raw, as well. - be capable of being fully cited for any and all data elements, including a complete codebook, as this must be provided as part of your proposal.
+- be shared with a statistician (Dr. Love) following [Jeff Leek's guide to sharing data with a statistician](https://github.com/jtleek/datasharing) as part of Task F. This means you need to have access to the data in the raw, and it means that I have to be able to have access to it in the raw, as well. - be capable of being fully cited for any and all data elements, including a complete codebook, as this must be provided as part of your proposal.
 
 While there are some great resources available to some people in this class by virtue of their affiliation with one of the health systems in town, I can do nothing to get you access to health system specific data as part of your project for this class or for 432, and in general, data from those sources are not especially appropriate because of issues with protected health information.
 
-No more than two students in the class can work on the same data. If two of you have data you would each like to work on, that may be OK, but you'll need to generate separate research questions and perform your analyses and the Project Tasks separately.
+No more than two students in the class can work on the same question for the same data. If two of you have data you would each like to work on, that may be OK, but you'll need to generate separate research questions and perform your analyses and the Project Tasks separately.
 
 I am not interested in you using pre-cleaned data from an educational repository, such as:
 
@@ -253,7 +253,7 @@ The ideal choice of data source for this project is a public-use version of a me
 - http://www.census.gov/data.html The U.S. Census Bureau has many interesting data sets, including the [Current Population Survey](http://www.census.gov/programs-surveys/cps.html)
 - http://www.healthdata.gov/ 125 years of U.S. Health Care Data
 - http://www.cdc.gov/nchs/nhanes/index.htm National Health and Nutrition Examination Survey. 
-    + You may want to look at [the nhanesA package in R](https://cran.r-project.org/web/packages/nhanesA/vignettes/Introducing_nhanesA.html)
+    + Lots of people choose to use NHANES data, and it is a great resource, but if you do use it, I will require you to look at data collected in at least two different survey forms, so that you'll have to do some merging. You may want to look at [the nhanesA package in R](https://cran.r-project.org/web/packages/nhanesA/vignettes/Introducing_nhanesA.html)
 - http://dashboard.healthit.gov/datadashboard/data.php Office of the National Coordinator for Health IT's dashboard
 - http://www.icpsr.umich.edu/icpsrweb/ ICSPR (Inter-university Consortium for Political and Social Research) is a source for many public-use data sets
     + This includes the [Health and Medical Care data archive of the Robert Wood Johnson Foundation](http://www.icpsr.umich.edu/icpsrweb/HMCA/)
@@ -268,9 +268,16 @@ The ideal choice of data source for this project is a public-use version of a me
 - http://www.pewinternet.org/datasets/ Pew Research Center's Internet Project
 - http://portals.broadinstitute.org/cgi-bin/cancer/datasets.cgi Broad Institute's Cancer Program
 - http://www.kdnuggets.com/datasets/index.html is a big index of lots of available data repositories
-- https://www.kaggle.com/ Kaggle competition data sets are attractive to students occasionally, but I've seen a lot of them before and don't really want to see them again.
+- https://www.kaggle.com/ Kaggle competition data sets are attractive to students occasionally, but I've seen a lot of them before and don't really want to see them again. Use this only as a last resort.
 
 I cannot guarantee the quality of any of the data sets available at these sites, but I've spent at least a little time at many of them in recent months.
+
+### A few tips
+
+1. Don't use hierarchical, multi-level data. That's not what we need in 431.
+2. Don't use a categorical outcome variable, or plan a logistic regression model. That's for 432, not 431.
+3. Don't assume Dr. Love knows anything at all about wet lab biology work or genomics.
+4. If you are planning to use data you have collected, or that you are working on as part of another course or your research work, that is probably going to work out better in 432 than 431. At a minimum, you will need to be able to convince me that the data you will provide is completely free of any restrictions (after de-identification and compliance with all HIPAA and other security standards), contains NO protected information of any kind, and can be shared freely with the general public. You will need to write a statement asserting that all of this is true for me to approve your proposal.
 
 ### If you are storing your own data
 

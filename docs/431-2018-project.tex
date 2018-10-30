@@ -85,7 +85,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{Version: 2018-10-25 10:25:23}
+    \date{Version: 2018-10-29 22:51:26}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -1080,7 +1080,7 @@ Study 2 data sets MUST
 \item
   be in your hands no later than November 1,
 \item
-  be shared data with a statistician (Dr.~Love) following
+  be shared with a statistician (Dr.~Love) following
   \href{https://github.com/jtleek/datasharing}{Jeff Leek's guide to
   sharing data with a statistician} as part of Task F. This means you
   need to have access to the data in the raw, and it means that I have
@@ -1096,10 +1096,10 @@ as part of your project for this class or for 432, and in general, data
 from those sources are not especially appropriate because of issues with
 protected health information.
 
-No more than two students in the class can work on the same data. If two
-of you have data you would each like to work on, that may be OK, but
-you'll need to generate separate research questions and perform your
-analyses and the Project Tasks separately.
+No more than two students in the class can work on the same question for
+the same data. If two of you have data you would each like to work on,
+that may be OK, but you'll need to generate separate research questions
+and perform your analyses and the Project Tasks separately.
 
 I am not interested in you using pre-cleaned data from an educational
 repository, such as:
@@ -1168,7 +1168,10 @@ include:
   \begin{itemize}
   \tightlist
   \item
-    You may want to look at
+    Lots of people choose to use NHANES data, and it is a great
+    resource, but if you do use it, I will require you to look at data
+    collected in at least two different survey forms, so that you'll
+    have to do some merging. You may want to look at
     \href{https://cran.r-project.org/web/packages/nhanesA/vignettes/Introducing_nhanesA.html}{the
     nhanesA package in R}
   \end{itemize}
@@ -1219,12 +1222,40 @@ include:
 \item
   \url{https://www.kaggle.com/} Kaggle competition data sets are
   attractive to students occasionally, but I've seen a lot of them
-  before and don't really want to see them again.
+  before and don't really want to see them again. Use this only as a
+  last resort.
 \end{itemize}
 
 I cannot guarantee the quality of any of the data sets available at
 these sites, but I've spent at least a little time at many of them in
 recent months.
+
+\hypertarget{a-few-tips}{%
+\subsection{A few tips}\label{a-few-tips}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Don't use hierarchical, multi-level data. That's not what we need in
+  431.
+\item
+  Don't use a categorical outcome variable, or plan a logistic
+  regression model. That's for 432, not 431.
+\item
+  Don't assume Dr.~Love knows anything at all about wet lab biology work
+  or genomics.
+\item
+  If you are planning to use data you have collected, or that you are
+  working on as part of another course or your research work, that is
+  probably going to work out better in 432 than 431. At a minimum, you
+  will need to be able to convince me that the data you will provide is
+  completely free of any restrictions (after de-identification and
+  compliance with all HIPAA and other security standards), contains NO
+  protected information of any kind, and can be shared freely with the
+  general public. You will need to write a statement asserting that all
+  of this is true for me to approve your proposal.
+\end{enumerate}
 
 \hypertarget{if-you-are-storing-your-own-data}{%
 \subsection{If you are storing your own
@@ -1976,8 +2007,9 @@ Specifically, you will submit the following via Canvas on time.
 \tightlist
 \item
   a direct link to the raw data set (without any need for me to sign up
-  for anything) or a .csv copy of the raw data set called
-  \texttt{yourname-raw.csv}
+  for anything) or a .csv copy of the raw data set (containing only the
+  variables you plan to use in your actual project work) which you
+  should call \texttt{yourname-raw.csv}
 \item
   a single tidy .csv file with a name of your choice containing a clean,
   tidy data set for Study 2, along with
@@ -2003,27 +2035,53 @@ submit. The details for these elements of Task F follow.
 \hypertarget{the-raw-data-set}{%
 \section{The Raw Data Set}\label{the-raw-data-set}}
 
-You need to show me the raw, de-identified data. The data are raw if
-you:
+You need to show me the raw, de-identified data. What does this mean?
 
 \begin{itemize}
 \tightlist
 \item
-  Ran no software on the data and Did not manipulate any of the numbers
-  in the data
-\item
-  You did not remove any data from the data set other than to
-  de-identify it and eliminate protected information and anything else
-  that you cannot share
-\item
-  You did not summarize the data in any way
+  The data set should be as you ``received'' it, \textbf{other} than the
+  following:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The ``raw'' data set must be completely de-identified, likely by
+    removing any columns containing identifiable information.
+  \item
+    The ``raw'' data you post should include no protected health
+    information, nor should it include anything you are not 100\% sure
+    you can share with Dr.~Love.
+  \item
+    The ``raw'' data set must include a unique id code for each subject,
+    and that can be generated by you if the original data contained
+    identifiable information within its id codes.
+  \item
+    The ``raw'' data set may in fact be multiple data sets, which you
+    will merge together to form your eventual, tidy, analytic data set.
+  \item
+    The ``raw'' data set must include all variables you will or might
+    use in your project analyses, but you are permitted to delete any
+    variables (columns) that you are 100\% sure will NOT be used in your
+    analyses. Note that you should include any variables that you
+    haven't made a final decision on.
+  \item
+    The ``raw'' data set should indicate all missing values as they were
+    originally provided to you. Do not impute missing values in the
+    ``raw'' data set.
+  \item
+    You should not summarize the raw data in any way, nor should you
+    delete any rows.
+  \end{itemize}
 \end{itemize}
 
-A direct link (without me having to sign up for anything) is preferred.
-If this is not possible, send a .csv file of the raw data set, called
-\texttt{yourname-raw.csv}. Note that you should not send me any
-variables you have no chance of using in your analyses, but may include
-some variables you haven't made a final decision on.
+A direct link (without me having to sign up for anything) to an
+appropriate raw data file(s) is preferred, if possible. If this is not
+possible, then describe the original source(s) of the data carefully,
+and send instead a .csv file or (files) of the raw data set, called
+\texttt{yourname-raw.csv}\footnote{If you have to send more than one
+  ``raw'' .csv data set, append numbers after each name, so you'd submit
+  \texttt{yourname-raw1.csv}, \texttt{yourname-raw2.csv} etc.}
 
 \hypertarget{the-tidy-data-set}{%
 \section{The Tidy Data Set}\label{the-tidy-data-set}}
@@ -2033,7 +2091,8 @@ actually use in your analysis of Study 2. Your .csv file should include
 one row per subject in your data, and one column for each variable you
 will use. Your data are tidy if each variable you measure is in its own
 column, and each different observation of that variable is in its own
-row, identifed by the subject identification code in \texttt{Subj\_ID}.
+row, identifed by the subject identification code in the left-most
+column, which you might call \texttt{Subj\_ID} if that's helpful.
 
 You need to provide:
 
@@ -2044,7 +2103,7 @@ You need to provide:
   a header row (row 1 in the spreadsheet) that contains full row names.
   So if you measured age at diagnosis for patients, you would head that
   column with the name \texttt{AgeAtDiagnosis} or
-  \texttt{Age.at.Diagnosis} instead of something like \texttt{ADx} or
+  \texttt{Age\_at\_Diagnosis} instead of something like \texttt{ADx} or
   another abbreviation that may be hard for another person (or you, two
   years from now) to understand.
 \item
@@ -2054,21 +2113,19 @@ You need to provide:
   data.
 \item
   a quantitative outcome with a meaningful name using no special
-  characters other than a period (\texttt{.}), hyphen(\texttt{-}) or
-  underscore (\texttt{\_}) used to separate words, which should be the
-  second variable in your data.
+  characters other than an underscore (\texttt{\_}) used to separate
+  words, which should be the second variable in your data.
 
   \begin{itemize}
   \tightlist
   \item
     If you have any missing \textbf{outcome} values, \textbf{delete
-    those rows} entirely from your tidy data set.
+    those rows} entirely from your tidy data set before submitting it.
   \end{itemize}
 \item
   at least four predictor variables, each with a meaningful name using
-  no special characters other than \texttt{.} or \texttt{\_} to separate
-  words, and the predictors should be shown in columns to the right of
-  the outcome.
+  no special characters other than \texttt{\_} to separate words, and
+  the predictors should be shown in columns to the right of the outcome.
 
   \begin{itemize}
   \tightlist
@@ -2088,15 +2145,17 @@ You need to provide:
     numbers.
   \item
     Label your categorical predictors in the way you plan to use them in
-    your analyses
+    your analyses.
   \item
     \emph{Missing data} are data that are missing and you don't know the
     mechanism. Missing data in the predictor variables are allowed, and
     you should code missing values in your tidy data set as \texttt{NA}.
     It is critical to report if there is a reason you know about that
-    some of the data are missing. You should also not impute/make
-    up/throw away missing observations on the predictor values in your
-    tidy data set that you submit for Task F.
+    some of the data are missing.
+  \item
+    Note that you should \textbf{not} impute any data in Project Task F.
+    Instead, you will impute as part of your analysis and demonstrate
+    that in Tasks G and H, as necessary.
   \end{itemize}
 \item
   any other variables you need to share with me (typically this would
@@ -2105,19 +2164,28 @@ You need to provide:
   any additional variables.
 \end{enumerate}
 
-I will need to be able to take your submitted \texttt{.csv} file and run
-your eventual Markdown file (part of \protect\hyperlink{taskG}{Task G})
-against it and obtain your results, so it must be completely clean.
-Because it is a \texttt{.csv} file, you'll have no highlighting or
-bolding or any other special formatting. If you have missing values,
-they should be indicated as NA in the file. If you obtain the file in R,
-and then write it to a .csv file, you should write the file without row
-numbers if you already have an identification variable. To do so, you
-should be able to use
+I will need to be able to take your submitted tidy \texttt{.csv} file
+and run your eventual Markdown file (part of
+\protect\hyperlink{taskG}{Task G}) against it and obtain your results,
+so it must be completely clean. Because it is a \texttt{.csv} file,
+you'll have no highlighting or bolding or any other special formatting.
+If you have missing values, they should be indicated as \texttt{NA} in
+the file. If you obtain the file in R, and then write it to a .csv file,
+you should write the file without row numbers if you already have an
+identification variable. To do so, you should be able to use
 \texttt{write.csv(dataframeinR,\ "newfilename.csv",\ row.names\ =\ FALSE)}
 where you will substitute in the name of your data frame in R, and new
 (.csv) file name. Don't use the same name for your original data set and
 your tidy one.
+
+\textbf{Note} If your ``tidy'' \texttt{.csv} file contains more than
+6,000 rows after any rows with missing outcomes have been deleted, and
+after applying any necessary inclusion/exclusion filters, then you will
+be sampling from that file (to create samples of 4,000 for the
+``training set'' and 2,000 for the ``test set'') as part of your
+analyses in \protect\hyperlink{taskG}{Task G}), but the tidy
+\texttt{.csv} should contain all rows in the data, up to the maximum
+permitted of 250,000.
 
 \hypertarget{the-codebook}{%
 \section{The Codebook}\label{the-codebook}}
@@ -2130,7 +2198,7 @@ code book contains this information. At minimum it should contain:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Information about the variables (including units! and codes for any
+  Information about the variables (including units and codes for any
   categorical variables) in your tidy data set
 \item
   Information about the summary choices or transformations you made or
@@ -2266,8 +2334,12 @@ results in HTML, rather than any other format.
 \section{The Six Required Analyses for Study
 1}\label{the-six-required-analyses-for-study-1-1}}
 
-The required analyses for the Project Survey that need to be in your
-Portfolio are:
+The initial work for your portfolio will include all of the code you
+used to merge the data sets provided to you for Study 1, then select the
+variables you'll actually use in your analyses, and then clean up and
+manage any remaining issues within those variables in your data.
+Following that work, the required analyses for the Project Survey that
+need to be in your Portfolio are:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2303,6 +2375,14 @@ a paragraph of discussion of the key conclusions you draw from your
 detailed analyses, and a discussion of any limitations you can describe
 that apply to the results.
 
+\textbf{Missing Data}: If you have missing data on any of the variables
+you study in Project Study 1, then you will need to do simple imputation
+as part of the associated Study 1 analyses. In that case, you should
+show the imputation process in your code, and describe explicitly any
+choices you made, then run the necessary analysis on both the imputed
+sample and the sample using complete cases alone, and compare the two
+results.
+
 You should generally follow the comparison plan you outlined in
 \protect\hyperlink{taskD}{Task D}. If you need to make a change, please
 indicate that in the text setting up each analysis.
@@ -2323,16 +2403,33 @@ steps:
 \tightlist
 \item
   Identify all the variables in your tidy data set that have missing
-  (NA) values. Delete all observations with missing outcomes, and use
-  simple imputation to impute values for the candidate predictors with
-  NAs. Use the resulting imputed data set in all subsequent work. Be
-  sure to describe any choices you make in building your imputed data
-  set.
+  (NA) values. Delete all observations with missing outcomes (actually,
+  this much you should have done before submitting the tidy data in Task
+  F), and now use simple imputation to impute values for the candidate
+  predictors with \texttt{NA}s. Use the resulting imputed data set in
+  all subsequent work. Be sure to describe any choices you make in
+  building your imputed data set.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Note} If your data set contains more than 6,000 rows after
+    any rows with missing outcomes have been deleted, and after applying
+    any necessary inclusion/exclusion filters, then you will be sampling
+    from that file\footnote{The usual choice is to select a random
+      sample of 6,000 observations, without replacement.} (to create a
+    sample of 6,000 observations - which you will soon divide into
+    samples of 4,000 for the ``training set'' and 2,000 for the ``test
+    set'') here.
+  \end{itemize}
 \item
-  Obtain a training sample with a randomly selected 80\% of your data,
-  and have the remaining 20\% in a test sample, properly labeled, and
-  using \texttt{set.seed} so that the results can be replicated later.
-  Use this training sample for Steps 3-7 below.
+  Obtain a training sample with a randomly selected 67-80\% of your
+  data\footnote{The training sample should be 67\% of the data if you
+    have 6,000 rows. If you have 250 rows, 80\% of the data should be in
+    the training sample. Otherwise, anything in the range of 67-80\% is
+    OK.}, and have the remaining 20-33\% in a test sample, properly
+  labeled, and using \texttt{set.seed} so that the results can be
+  replicated later. Use this training sample for Steps 3-7 below.
 \item
   Using the training sample, provide numerical summaries of each
   predictor variable and the outcome, as well as graphical summaries of
@@ -2395,13 +2492,13 @@ steps:
 \end{enumerate}
 
 In the Study 2 work, each step should begin with at least one complete
-sentence explaining what you are doing, specifying the items being used,
-and how you are using them, and then conclude with at least one complete
-sentence of discussion of the key conclusions you draw from the current
-step, and a discussion of any limitations you can describe that apply to
-the results. Present each new step as a subsection with an appropriate
-heading that shows up in the table of contents, so we can move to a new
-step efficiently in reviewing your work.
+sentence explaining what you are doing, specifying the variables being
+used, and how you are using them, and then conclude with at least one
+complete sentence of discussion of the key conclusions you draw from the
+current step, and a discussion of any limitations you can describe that
+apply to the results. Present each new step as a subsection with an
+appropriate heading that shows up in the table of contents, so we can
+move to a new step efficiently in reviewing your work.
 
 A demonstration of an appropriate analysis for each of the required
 steps of Study 2 Analysis will be provided to you at
