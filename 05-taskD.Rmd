@@ -93,7 +93,7 @@ You can re-use at most one of Factors L and M as Factor J, but Factor K must be 
 
 ### Analysis 6: Comparing Population Proportions in a 2x2xN contingency table 
 
-Here, you will amplify Analysis 4 by developing a Mantel-Haenszel analysis of a contingency table with 2 rows (re-using Factor L from Analysis 4), 2 columns (re-using Factor M from Analysis 4) and 3-6 layers (or strata) in a new factor called Factor N. You wlil specify:
+Here, you will amplify Analysis 4 by developing a Mantel-Haenszel analysis of a contingency table with 2 rows (re-using Factor L from Analysis 4), 2 columns (re-using Factor M from Analysis 4) and 3-6 layers (or strata) in a new factor called Factor N. You will specify:
 
 - Factor N (which must have 3-6 levels) and can repeat Factor J or K if you like, so long as it is different from Factors L or M.
 
@@ -122,6 +122,7 @@ Analysis | Description | Item # | Item Name
 2  | Y (3-6 category) | -- | --
 3  | E (quantitative, same as C or D) | -- | --
 3  | X (same as either Y or Z) | -- | -- 
+3  | G (quantitative, not A/B/C/D) | -- | --
 4 & 6 | L (two-category) | -- | --
 4 & 6 | M (two-category) | -- | --
 5  | J (2-6 category) | -- | --
