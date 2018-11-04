@@ -18,7 +18,7 @@ The data for the survey are available in five separate files, which you will nee
 - [`sur2018_04.xls`](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/surv2018_04.xls), which is an **Excel** (`.xls`) file (and not our usual `.csv` text file) containing data on items 0 and 91 - 156 and the scales for the first 25 respondents (ID01 - ID39)
 - [`sur2018_05.xls`](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/surv2018_05.xls), which is an Excel file containing data on items 0, 91 - 156 and the scales for the remaining 24 respondents (ID41 - ID99)
 
-In order to merge the files, you will need to first read them into R, using appropriate tools for Comma-separated text (`.csv`) and for Excel (`.xls`) files, and then you will need to merge and combine them. Note that each file contains the respondent ID information, and that will be the key variable for your merging and combination work. 
+In order to merge the files, you will need to first read them into R, using appropriate tools for Comma-separated text (`.csv`) and for Excel (`.xls`) files, and then you will need to merge and combine them. Note that each of the five data files contains the respondent ID information, and that will be the key variable for your merging and combination work. 
 
 For detailed advice on this merging and combination, 
 - visit [this Results link](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/surv2018_combining-datasets.md) to see the results of my doing the merging and combination work for the 2018 data (so you can make sure we get the same answer). 
