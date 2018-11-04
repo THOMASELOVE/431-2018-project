@@ -1,4 +1,4 @@
-# Project Survey Results
+# Project Survey Results and Comparison Plan Feedback
 
 In Project Study 1, you will analyze data provided by 49 respondents to the Course Project Survey.
 
