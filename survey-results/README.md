@@ -12,7 +12,7 @@ In Project Study 1, you will be responsible for completing six analyses of data 
 
 The data for the survey are available on this page, in five separate files, which you will need to merge together to complete your analyses. These files are:
 
-- `sur2018_01.csv`, which is a .csv file containing data on items 0 - 20 for the first 25 respondents (ID01 - ID39)
+- [`sur2018_01.csv`](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/surv2018_01.csv), which contains items 0 - 20 for the first 25 respondents (ID01 - ID39)
 - `sur2018_02.csv`, which is a .csv file containing data on items 0 - 20 for the remaining 24 respondents (ID41 - ID99)
 - `sur2018_03.csv`, which is a .csv file containing data on items 0, 21 - 90 for all 49 respondents (ID01 - ID99)
 - `sur2018_04.xls`, which is an Excel file containing data on items 0, 91 - 156 and the scales for the first 25 respondents (ID01 - ID39)
