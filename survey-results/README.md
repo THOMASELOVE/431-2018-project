@@ -26,7 +26,7 @@ In Project Study 1, you will analyze data provided by 49 respondents to the Cour
 
 For those of you in need of a pick-me-up, Nathan Yau offers ["Years You Have Left to Live, Probably"](https://flowingdata.com/2015/09/23/years-you-have-left-to-live-probably/) which presents simulation results based on data from the U.S. Social Security Administration.
 
-## Election Viz of the Day
+## Election Day
 
 - We'll check in again on the Ohio [Governor's Race forecast](https://projects.fivethirtyeight.com/2018-midterm-election-forecast/governor/) at FiveThirtyEight, and [anything new they've added recently](https://fivethirtyeight.com/). 
 - We might also glance at the [Latest Polls](https://projects.fivethirtyeight.com/polls/) as compiled by FiveThirtyEight.
