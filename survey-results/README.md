@@ -2,11 +2,11 @@
 
 In Project Study 1, you will analyze data provided by 49 respondents to the Course Project Survey.
 
-## Key Points - What's on this page?
+## Key Points
 
 1. The data files you will need are now available, and this page details how you will get them, and provides additional insight into what you should do with the data once you have it, adding to the material in the [Project Instructions](https://thomaselove.github.io/431-2018-project/) and the [Project Study 1 Demonstration](https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1). Be sure you've read ALL of this page carefully, along with those other instructions.
 
-2. Only 5 of the 49 students who submitted a Survey Comparison Plan for Analyses 1-6 had all six of their analyses approved by Dr. Love on their first try. Congratulations to those five people. For everyone else, you will need to make some changes to address Dr. Love's concerns. Details on how to find out what Dr. Love is worried about in your case, and directions as to how to revise your plan, and communicate those revisions back to us, are also available below.
+2. Only 5 of the 49 students who submitted a Survey Comparison Plan for Analyses 1-6 had all six of their analyses approved by Dr. Love on their first try. Congratulations to those five people. For everyone else, you will need to make some changes to address Dr. Love's concerns. Details on how to find out what Dr. Love is worried about in your case, and directions as to how to revise your plan, and communicate those revisions back to us, [are available here](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/plan-comments.md).
 
 # The Data
 
@@ -47,43 +47,4 @@ An important note is that there are two tabs in the [codebook](http://bit.ly/431
 
 Once you have accomplished these steps, the remainder of your analyses can and should be modeled on the template and analyses contained in the [Study 1 demonstration project](https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1).
 
-# Comments on your Survey Comparison Plans
-
-Dr. Love's [comments on your Survey Comparison Plan](http://bit.ly/431-2018-project-survey-plan-feedback) are in this [Google Sheet](http://bit.ly/431-2018-project-survey-plan-feedback). As usual, log into Google via CWRU in order to open the sheet. Find your Homework ID number, and read the row of comments that apply to that HWID. You will find the following information:
-
-- A summary list of which of your analyses (1, 2, 3, 4, 5 or 6) you will need to revise. Please check to be sure I've got this right, against my comments on each individual item. In many cases, even if a revision isn't necessary, you will want to read what I have to say to facilitate your implementing your plan.
-    - A specification of which analyses (out of Analyses 1, 2 and 3) you will need to revise. (This just repeats the information from the previous bullet, but restricted to Analyses 1-3.)
-    - A specification of which variables for Analyses 4, 5 and 6 (so variables J, K, L, M, and N) you will need to revise. (This just repeats information from the first bullet, but focued on Analyses 4-6.)
-- Dr. Love's comments on your planned Analysis 1, followed by the specifications of what you told us (in the Task D form) you were planning to do for Analysis 1, including variables **A** and **B** if you're using paired samples, and **C** and **Z** if you're using independent samples. The item numbers throughout this document match those in the [codebook](http://bit.ly/431-2018-survey-data-codebook). 
-- Dr. Love's comments on your planned Analysis 2, followed by the specifications of what you told us (in the Task D form) you were planning to do for Analysis 2, and your planned variables **D** and **Y**.
-- Dr. Love's comments on your planned Analysis 3, followed by the specifications of what you told us (in the Task D form) you were planning to do for Analysis 3, and your planned covariate **G**.
-- Dr. Love's comments on your planned factor variable **L**, followed by the specifications of what you told us you were planning to use there. Again, the item numbers throughout this document match the [codebook](http://bit.ly/431-2018-survey-data-codebook). 
-- Similar comments and plans for factor variables **M**, **J**, **K** and then **N**.
-- Comments on your backup variables, and then the specifications of what you planned to use for **Q**, **R**, **S** and **T**.
-
-### What You Specified in Task D (The Survey Comparison Plan)
-
-Analysis | Items Described in Your Plan
-:----: | --------------------------------------------------------------------------------
-[1a](https://thomaselove.github.io/431-2018-project/taskD.html#analysis-1-comparing-the-means-of-two-populations) | **A** and **B** (each quantitative)
-[1b](https://thomaselove.github.io/431-2018-project/taskD.html#analysis-1-comparing-the-means-of-two-populations) | **C** (quantitative), **Z** (two categories)
-[2](https://thomaselove.github.io/431-2018-project/taskD.html#analysis-2-comparing-the-means-of-three-or-more-populations) | **D** (quantitative), **Y** (3-6 categories)
-[3](https://thomaselove.github.io/431-2018-project/taskD.html#analysis-3-regression-model-with-one-covariate) | **E** (quantitative, same as C or D), **X** (same as Y or Z), **G** (quantitative, not C or D)
-[4](https://thomaselove.github.io/431-2018-project/taskD.html#analysis-4-comparing-two-population-proportions) | **L** and **M** (each two categories)
-[5](https://thomaselove.github.io/431-2018-project/taskD.html#analysis-5-a-larger-two-way-table) | **J** (2-6 categories), **K** (3-6 categories)
-[6](https://thomaselove.github.io/431-2018-project/taskD.html#analysis-6-comparing-population-proportions-in-a-2x2xn-contingency-table) | **L**, **M**, and **N** (3-6 categories)
-[Backups](https://thomaselove.github.io/431-2018-project/taskD.html#backups) | *Q* and *R* (quantitative), *S* (2 categories), *T* (3-6 categories)
-
-### Reminders
-
-- The [Study 1 demonstration project](https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1) is available now.
-- You are to do either Analysis 1a or 1b, but not both.
-
-# Next Steps
-
-1. If you need to make revisions to your Analyses 1-6 that are necessary in light of Dr. Love's feedback, you need to complete those revisions as soon as possible. Do so using **THIS LINK TO BE GENERATED BY TEL**. If you have questions about completing your revisions, please ask them of the teaching assistants at office hours, or via 431-help.
-
-2. Get to work on merging the data sets and generating the necessary tibbles in R for Project Study 1.
-
-Let us know if you have any questions. Thank you.
-
+Let us know if you have any questions.
