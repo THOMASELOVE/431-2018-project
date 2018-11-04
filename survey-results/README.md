@@ -1,6 +1,6 @@
 # Project Survey Results
 
-In Project Study 1, you will be responsible for completing six analyses of data from the 49 respondents to the [Course Project Survey](http://bit.ly/431-2018-survey-data-codebook). The data are now available for you to begin your work, as are Dr. Love's [comments on your survey comparison plans](http://bit.ly/431-2018-project-survey-plan-feedback) that you submitted as Project Task D.
+In Project Study 1, you will be responsible for completing six analyses of data from the 49 respondents to the Course Project Survey.
 
 ## Key Points - What's on this page?
 
