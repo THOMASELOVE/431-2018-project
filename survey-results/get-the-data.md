@@ -1,4 +1,4 @@
-# Getting and Managing the Data from the 2018 Project Survey
+# Getting & Managing Data from the 2018 Survey
 
 The data for the survey are available in five separate files, which you will need to merge together to complete your analyses. These files are:
 
