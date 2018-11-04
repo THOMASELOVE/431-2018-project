@@ -49,8 +49,9 @@ Dr. Love's [comments on your Survey Comparison Plan](http://bit.ly/431-2018-proj
 
 In that sheet, find your Homework ID number, and read the row of comments that apply to that HWID. You will find the following information:
 
-- A specification of which analyses (out of Analyses 1, 2 and 3) you will need to revise.
-- A specification of which variables for Analyses 4, 5 and 6 (so variables J, K, L, M, and N) you will need to revise.
+- A summary list of which of your analyses (1, 2, 3, 4, 5 or 6) you will need to revise. Please check to be sure I've got this right, against my comments on each individual item. In many cases, even if a revision isn't necessary, you will want to read what I have to say to facilitate your implementing your plan.
+    - A specification of which analyses (out of Analyses 1, 2 and 3) you will need to revise. (This just repeats the information from the previous bullet, but restricted to Analyses 1-3.)
+    - A specification of which variables for Analyses 4, 5 and 6 (so variables J, K, L, M, and N) you will need to revise. (This just repeats information from the first bullet, but focued on Analyses 4-6.)
 - Dr. Love's comments on your planned Analysis 1, followed by the specifications of what you told us (in the Task D form) you were planning to do for Analysis 1, including variables **A** and **B** if you're using paired samples, and **C** and **Z** if you're using independent samples. The item numbers throughout this document match those in the [codebook](http://bit.ly/431-2018-survey-data-codebook). 
 - Dr. Love's comments on your planned Analysis 2, followed by the specifications of what you told us (in the Task D form) you were planning to do for Analysis 2, and your planned variables **D** and **Y**.
 - Dr. Love's comments on your planned Analysis 3, followed by the specifications of what you told us (in the Task D form) you were planning to do for Analysis 3, and your planned covariate **G**.
