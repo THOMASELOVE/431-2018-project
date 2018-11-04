@@ -1,6 +1,6 @@
 # Project Survey Results
 
-In Project Study 1, you will be responsible for completing six analyses of data from the 49 respondents to the Course Project Survey.
+In Project Study 1, you will analyze data provided by 49 respondents to the Course Project Survey.
 
 ## Key Points - What's on this page?
 
