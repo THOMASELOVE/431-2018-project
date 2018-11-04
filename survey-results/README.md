@@ -21,3 +21,16 @@ In Project Study 1, you will analyze data provided by 49 respondents to the Cour
 - The [Project Instructions](https://thomaselove.github.io/431-2018-project/), in full.
 - The [Project Study 1 Demonstration](https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1) of the main six analyses, and other elements of Project Study 1.
 - The [Course Calendar](https://github.com/THOMASELOVE/431-2018/blob/master/calendar.md), for reminders on deadlines.
+
+## Visualization of the Day (non-Election edition)
+
+For those of you in need of a pick-me-up, Nathan Yau has a great visualization entitled ["Years You Have Left to Live, Probably"](https://flowingdata.com/2015/09/23/years-you-have-left-to-live-probably/).
+
+## Election Viz of the Day
+
+- We'll check in again on the Ohio [Governor's Race forecast](https://projects.fivethirtyeight.com/2018-midterm-election-forecast/governor/) at FiveThirtyEight, and [anything new they've added recently](https://fivethirtyeight.com/). 
+- We might also glance at the [Latest Polls](https://projects.fivethirtyeight.com/polls/) as compiled by FiveThirtyEight.
+
+## One Last Thing
+
+Rafael Irizarry wrote a provocative blog post on 2018-11-01 called ["The role of academia in data science education"](https://simplystatistics.org/2018/11/01/the-role-of-academia-in-data-science-education/) which I found interesting.
