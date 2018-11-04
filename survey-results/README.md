@@ -26,7 +26,7 @@ For detailed advice on this merging and combination,
 
 ## The Codebook for the Data
 
-The [codebook for the survey data](http://bit.ly/431-2018-survey-data-codebook) has been substantially augmented by Dr. Love, to include information about missing values, frequencies and ranges for each variable. Review the comments posted by Dr. Love for every item you use in building your analyses.
+The [codebook for the survey data](http://bit.ly/431-2018-survey-data-codebook) has been substantially augmented by Dr. Love, to include information about missing values, frequencies and ranges, as well as advice on collapsing categories. Review the comments posted by Dr. Love for **every** item you use in building your analyses.
 
 An important note is that there are two tabs in the [codebook](http://bit.ly/431-2018-survey-data-codebook). 
 
