@@ -1,0 +1,144 @@
+---
+title: "431 Project Advice: Combining Data Sets"
+author: "Thomas E. Love"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+# R Packages We'll Use
+
+I'll load three packages here.
+
+```{r, message = FALSE}
+library(Hmisc)
+library(readxl)
+library(tidyverse)
+```
+
+# Read in the data
+
+## Read in the data from the comma-separated text (`.csv`) files
+
+Note that I'm using `read_csv` here deliberately, rather than any other approach. This will make the merging easier later, even though it will leave us with the problem of (eventually) changing the class of many variables from `character` to `factor`.
+
+- Note that I used `message = FALSE` in this chunk heading to suppress some very detailed (but not critical for us to look at) output.
+
+```{r, message = FALSE}
+surv2018_01 <- read_csv("surv2018_01.csv")
+surv2018_02 <- read_csv("surv2018_02.csv")
+surv2018_03 <- read_csv("surv2018_03.csv")
+```
+
+Each of these results in a `tibble` of data. The numbers of rows and columns in each of these can be obtained, to check your work so far.
+
+```{r}
+dim(surv2018_01)
+dim(surv2018_02)
+dim(surv2018_03)
+```
+
+Make sure that your dimensions match mine.
+
+## Read in the data from the Excel files
+
+Note that I'm using `read_xls` here, which is part of the `readxl` package, which is why I loaded that earlier. This will make the merging with the things I've already created easier later, even though it will also leave us with the problem of (eventually) changing the class of many variables from `character` to `factor`.
+
+- Note that I had to specify here that a value of either a blank or `NA` in the Excel sheet means "missing", which I didn't have to do for `read_csv`. `read_csv`, by default, recognizes both blank cells and NA cells as missing, but `read_xls` only recognizes blanks by default.
+- Note that I again used `message = FALSE` in this chunk heading to suppress some very detailed (but not critical for us to look at) output.
+
+```{r, message = FALSE}
+surv2018_04 <- read_xls("surv2018_04.xls", na = c("", "NA"))
+surv2018_05 <- read_xls("surv2018_05.xls", na = c("", "NA"))
+```
+
+Each of these results in a `tibble` of data. The numbers of rows and columns in each of these can be obtained, to check your work so far.
+
+```{r}
+dim(surv2018_04)
+dim(surv2018_05)
+```
+
+Make sure that your dimensions match mine.
+
+# Merge the tibbles you have created
+
+## Merge the data in `surv2018_01` with `surv2018_02`, forming `temp12`
+
+This next bit of code will produce a data frame containing what we need from data sets 1 and 2, putting together the first 25 respondents (in `surv2018_01`) and the remaining 24 (in `surv2018_02`) all together. Since `surv2018_01` and `surv2018_02` contain the same columns of information, and just different rows, we can do this easily with the `bind_rows` function from the `tidyverse`.
+
+Again, I'll output the dimensions of the result, so that we can check that you and I get the same results.
+
+```{r}
+temp12 <- bind_rows(surv2018_01, surv2018_02)
+
+dim(temp12)
+```
+
+## Merge the data in `surv2018_04` with `surv2018_05`, forming `temp45`
+
+This will produce a data frame containing what we need from data sets 4 and 5, putting together the first 25 respondents (in `surv2018_04`) and the remaining 24 (in `surv2018_05`) all together. Since `surv2018_04` and `surv2018_05` contain the same columns of information, and just different rows, we can do this easily with the `bind_rows` function from the `tidyverse`.
+
+As before, I'll output the dimensions of the result, so that we can check that you and I get the same results.
+
+```{r}
+temp45 <- bind_rows(surv2018_04, surv2018_05)
+dim(temp45)
+```
+
+## Merge the data in `temp12` with `surv2018_03`
+
+This will produce a data frame containing what we need from data sets 1, 2 and 3, all together.
+
+```{r}
+temp123 <- left_join(temp12, surv2018_03, by = "response_id")
+dim(temp123)
+```
+
+## Merge the data in `temp123` and `temp45`
+
+This will produce a data frame containing what we need from data sets 1, 2, 3, 4 and 5 all together.
+
+```{r}
+temp12345 <- left_join(temp123, temp45, by = "response_id")
+dim(temp12345)
+```
+
+# Create the `surv2018_full` tibble we all need
+
+## Create the `surv2018_full` tibble
+
+Here, we change all of the variables of "character" class to factor so they will do what we expect in analyses, and then back out of that for `response_id` which we'd like to keep as a "character".
+
+```{r}
+surv2018_full <- temp12345 %>%
+    mutate_if(is.character, funs(as.factor(.))) %>%
+    mutate(response_id = as.character(response_id))
+```
+
+## Remove the temporary data sets you built from your environment
+
+```{r}
+rm(temp12, temp45, temp123, temp12345)
+```
+
+## Remove the raw data sets you initially imported from your environment
+
+```{r}
+rm(surv2018_01, surv2018_02, surv2018_03, surv2018_04, surv2018_05)
+```
+
+We won't need these again.
+
+# What your version of `surv2018_full` should look like
+
+The rest of this output can be used to check to see that what you have and what I have are the same. Once your results match mine, then I encourage you to move on to selecting the actual variables you will need for you analysis, and building your analytic data set.
+
+```{r}
+Hmisc::describe(surv2018_full)
+```
+
+If you have any questions, please direct them to `431-help`.
