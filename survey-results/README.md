@@ -21,7 +21,7 @@ The data for the survey are available in five separate files, which you will nee
 In order to merge the files, you will need to first read them into R, using appropriate tools for Comma-separated text (`.csv`) and for Excel (`.xls`) files, and then you will need to merge and combine them. Note that each file contains the respondent ID information, and that will be the key variable for your merging and combination work. 
 
 For detailed advice on this merging and combination, 
-- visit [this Results link](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/surv2018_combining-datasets.md) to see the results of my doing this for the 2018 data (so you can make sure we get the same answer). 
+- visit [this Results link](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/surv2018_combining-datasets.md) to see the results of my doing the merging and combination work for the 2018 data (so you can make sure we get the same answer). 
 - You can also get the [complete R Markdown file](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/surv2018_combining-datasets.Rmd) I used to create those results.
 
 ## The Codebook for the Data
