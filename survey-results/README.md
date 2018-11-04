@@ -45,9 +45,7 @@ Once you have accomplished these steps, the remainder of your analyses can be mo
 
 # Comments on your Survey Comparison Plans
 
-Dr. Love's [comments on your Survey Comparison Plan](http://bit.ly/431-2018-project-survey-plan-feedback) are in the Google Sheet at [http://bit.ly/431-2018-project-survey-plan-feedback](http://bit.ly/431-2018-project-survey-plan-feedback). As usual, log into Google via CWRU in order to open the sheet.
-
-In that sheet, find your Homework ID number, and read the row of comments that apply to that HWID. You will find the following information:
+Dr. Love's [comments on your Survey Comparison Plan](http://bit.ly/431-2018-project-survey-plan-feedback) are in this [Google Sheet](http://bit.ly/431-2018-project-survey-plan-feedback). As usual, log into Google via CWRU in order to open the sheet. Find your Homework ID number, and read the row of comments that apply to that HWID. You will find the following information:
 
 - A summary list of which of your analyses (1, 2, 3, 4, 5 or 6) you will need to revise. Please check to be sure I've got this right, against my comments on each individual item. In many cases, even if a revision isn't necessary, you will want to read what I have to say to facilitate your implementing your plan.
     - A specification of which analyses (out of Analyses 1, 2 and 3) you will need to revise. (This just repeats the information from the previous bullet, but restricted to Analyses 1-3.)
@@ -58,7 +56,6 @@ In that sheet, find your Homework ID number, and read the row of comments that a
 - Dr. Love's comments on your planned factor variable **L**, followed by the specifications of what you told us you were planning to use there. Again, the item numbers throughout this document match the [codebook](http://bit.ly/431-2018-survey-data-codebook). 
 - Similar comments and plans for factor variables **M**, **J**, **K** and then **N**.
 - Comments on your backup variables, and then the specifications of what you planned to use for **Q**, **R**, **S** and **T**.
-
 
 ### What You Specified in Task D (The Survey Comparison Plan)
 
