@@ -4,11 +4,12 @@ In Project Study 1, you will analyze data provided by 49 respondents to the Cour
 
 ## Key Points
 
-1. Dr. Love has now reviewed and commented on your Survey Comparison Plan. To see the details, visit [this link](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/plan-comments.md). 
+1. Dr. Love has now reviewed and commented on your Survey Comparison Plan. To see the details, visit [the plan-comments page](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/plan-comments.md). 
+    - Five of the 49 students who submitted a Survey Comparison Plan for Analyses 1-6 had all six of their analyses approved by Dr. Love on their first try. Congratulations to those five people. 
+    - For everyone else, you will need to make some changes to address Dr. Love's concerns. 
     - The [plan-comments page](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/plan-comments.md) contains:
         - Details on how to find out what Dr. Love is worried about in your case, and 
         - Directions as to how to revise your plan, and communicate those revisions back to us.
-    - Only 5 of the 49 students who submitted a Survey Comparison Plan for Analyses 1-6 had all six of their analyses approved by Dr. Love on their first try. Congratulations to those five people. For everyone else, you will need to make some changes to address Dr. Love's concerns. 
     
 2. Dr. Love has also prepared the data files you will need to do Project Study 1. See the details and [get the data here](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/get-the-data.md).
     - Our [get-the-data page](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/get-the-data.md) has links to the five data sets you'll be merging and combining to get the data set you need. It also links to instructions for doing that merging and combining.
