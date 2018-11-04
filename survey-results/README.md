@@ -33,4 +33,4 @@ For those of you in need of a pick-me-up, Nathan Yau offers ["Years You Have Lef
 
 ## One Last Thing
 
-Rafael Irizarry wrote a provocative blog post on 2018-11-01 called ["The role of academia in data science education"](https://simplystatistics.org/2018/11/01/the-role-of-academia-in-data-science-education/) which I found interesting.
+Rafael Irizarry wrote a provocative blog post on 2018-11-01 called ["The role of academia in data science education"](https://simplystatistics.org/2018/11/01/the-role-of-academia-in-data-science-education/) which I found interesting. I would very much enjoy finding the time to ponder this sort of thing more deeply.
