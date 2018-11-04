@@ -2,7 +2,13 @@
 
 In Project Study 1, you will be responsible for completing six analyses of data from the 49 respondents to the [Course Project Survey](http://bit.ly/431-2018-survey-data-codebook). The data are now available for you to begin your work, as are Dr. Love's [comments on your survey comparison plans](http://bit.ly/431-2018-project-survey-plan-feedback) that you submitted as Project Task D.
 
-## The Data
+## Key Points - What's on this page?
+
+1. The data files you will need are now available, and this page details how you will get them, and provides additional insight into what you should do with the data once you have it, adding to the material in the Project Instructions and the Project Study 1 Demonstration. Be sure you've read this page carefully, along with those other instructions.
+
+2. 5 of the 49 students who submitted a Survey Comparison Plan for Analyses 1-6 had all six of their analyses approved by Dr. Love on their first try. Congratulations to those five people. For everyone else, you will need to make some changes to address Dr. Love's concerns. Details on how to find out what Dr. Love is worried about in your case, and directions as to how to revise your plan, and communicate those revisions back to us, are also available below.
+
+# The Data
 
 The data for the survey are available in five separate files, which you will need to merge together to complete your analyses. These files are:
 
@@ -22,7 +28,7 @@ An important note is that there are two tabs in the [codebook](http://bit.ly/431
 - The second tab shows the 4 items that were planned for but, for various reasons, were excluded from the final data sets.
     - This includes items 7, 8, 26 and 155. See the [codebook](http://bit.ly/431-2018-survey-data-codebook) for more details.
 
-### Key Steps in Data Management for Project Study 1
+## Key Steps in Data Management for Project Study 1
 
 1. The first step in your Portfolio (Project Task G) for Study 1 (the Course Survey) will be to create a complete data file, combining all five of these smaller files within R. The code in R that you write must take the original five files (.csv and .xls) and result in an initial tibble (which you will call `sur2018_full` in R) containing all 165 variables described in the [codebook](http://bit.ly/431-2018-survey-data-codebook), for all 49 respondents. 
 
@@ -35,8 +41,7 @@ An important note is that there are two tabs in the [codebook](http://bit.ly/431
 
 Once you have accomplished these steps, the remainder of your analyses can mirror the analyses in the [Study 1 demonstration project](https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1).
 
-
-## Survey Comparison Plans
+# Comments on your Survey Comparison Plans
 
 Dr. Love's [comments on your Survey Comparison Plan](http://bit.ly/431-2018-project-survey-plan-feedback) are in the Google Sheet at [http://bit.ly/431-2018-project-survey-plan-feedback](http://bit.ly/431-2018-project-survey-plan-feedback). As usual, log into Google via CWRU in order to open the sheet.
 
@@ -53,11 +58,11 @@ Analysis | Items Described in Your Plan
 [6](https://thomaselove.github.io/431-2018-project/taskD.html#analysis-6-comparing-population-proportions-in-a-2x2xn-contingency-table) | **L**, **M**, and **N** (3-6 categories)
 [Backups](https://thomaselove.github.io/431-2018-project/taskD.html#backups) | *Q* and *R* (quantitative), *S* (2 categories), *T* (3-6 categories)
 
-#### Reminders
+### Reminders
 
 - The Study 1 demonstration project is available at https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1.
 - You are to do either Analysis 1a or 1b, but not both.
 
-## Next Steps
+# Next Steps
 
 
