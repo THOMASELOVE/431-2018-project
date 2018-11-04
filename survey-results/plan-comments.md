@@ -2,20 +2,6 @@
 
 Dr. Love's [comments on your Survey Comparison Plan](http://bit.ly/431-2018-project-survey-plan-feedback) are in this [Google Sheet](http://bit.ly/431-2018-project-survey-plan-feedback). As usual, log into Google via CWRU in order to open the sheet. Find your Homework ID number, and read the row of comments that apply to that HWID. 
 
-## Study 1 Update is now due 2018-11-28 at noon (as part of Project Task F)
-
-Whether you need to revise your plan or not, you will submit a **STUDY 1 UPDATE** document no later than noon on 2018-11-28 (the Wednesday after Thanksgiving) via Canvas, as part of what you submit for **Project Task F**.
-
-You will build a single document in HTML, Word or PDF (which should have the filename `study1-update.html` or `study1-update.doc` or `study1-update.pdf`) to provide your update. In that document, please include the following:
-
-1. The title "Study 1 Update for *Your Name*"
-2. A list of the analyses (1, 2, 3, 4, 5 and/or 6) that you are revising here. 
-    - This **must** include things that you revised because I told you to do so, but it can also include any other changes you decided to make. 
-    - If you are one of the five people who did not require any revisions in Dr. Love's comments, you can stop here if you are making no changes.
-3. For each analysis listed above as being revised, specify what your **new** planned analysis will be, including the appropriate item numbers from the [codebook](http://bit.ly/431-2018-survey-data-codebook).
-
-That's it. The whole thing shouldn't be more than a page.
-
 ## What is in Dr Love's comments in the [Feedback Google Sheet](http://bit.ly/431-2018-project-survey-plan-feedback)
 
 You will find the following information:
@@ -42,6 +28,8 @@ How can you be sure that your revised plan is OK? Ask a TA, through office hours
 - In Analysis 4, show the 2x2 table that comes from your choices of L and M (without any imputation) and demonstrate that there are at least 10 subjects in each row and 10 subjects in each column of your table. 
 - In Analysis 5, show the larger cross-tabulation that comes from your choices of J and K (without any imputation) and demonstrate that there are at least 10 subjects in each row and 10 subjects in each column of your table.
 - In Analysis 6, show that your variable N is categorical and has at least 3 levels, each with at least 10 subjects in it. 
+
+We are not going to review in a formal way any revisions to the Survey Comparison Plan. We expect you to review our comments and make revisions, which are reflected in the final work for Study 1 that you submit as part of the Project Portfolio and present in December. It is **UP TO YOU** to verify (with the teaching assistants, through office hours or 431-help as needed) that your revisions are appropriate. Dr. Lovw will assess how well you've succeeded by reviewing your Portfolio and your Presentation. 
 
 ## What You Specified in Task D (The Survey Comparison Plan)
 
