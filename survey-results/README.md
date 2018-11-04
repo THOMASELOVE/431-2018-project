@@ -17,7 +17,7 @@ In Project Study 1, you will analyze data provided by 49 respondents to the Cour
 
 ## Key Links for Project Study 1
 
-- The [Project Survey Codebook](http://bit.ly/431-2018-survey-data-codebook), listing all items and advice from Dr. Love on using them.
+- The [Project Survey Codebook](http://bit.ly/431-2018-survey-data-codebook), listing all items and scales that are provided in the data files, and advice from Dr. Love on using those items and scales.
 - The [Project Instructions](https://thomaselove.github.io/431-2018-project/), in full.
 - The [Project Study 1 Demonstration](https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1) of the main six analyses, and other elements of Project Study 1.
 - The [Course Calendar](https://github.com/THOMASELOVE/431-2018/blob/master/calendar.md), for reminders on deadlines.
