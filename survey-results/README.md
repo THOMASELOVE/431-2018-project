@@ -12,8 +12,10 @@ In Project Study 1, you will analyze data provided by 49 respondents to the Cour
         - Directions as to how to revise your plan so that you can complete your work on the Project.
     
 2. Dr. Love has also prepared the data files you will need to do Project Study 1. See the details and [get the data here](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/get-the-data.md).
-    - Our [get-the-data page](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/get-the-data.md) has links to the five data sets you'll be merging and combining to get the data set you need. It also links to instructions for doing that merging and combining, and the results Dr. Love obtained when he did that merging and combining work, so you can check your own.
-    - Combined with the material in the [Project Instructions](https://thomaselove.github.io/431-2018-project/) and the [Project Study 1 Demonstration](https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1), these two new pieces should get you started nicely, and enable you to complete Project Study 1.
+    - Our [get-the-data page](https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/get-the-data.md) has links to the five data sets you'll be merging and combining to get the data set you need. It also links to 
+        - instructions for doing that merging and combining, and the results Dr. Love obtained when he did that merging and combining work, so you can check your own.
+        - instructions for how we would like you to impute data for Project Study 1 (and Project Study 2).
+    - Combined with the material in the [Project Instructions](https://thomaselove.github.io/431-2018-project/) and the [Project Study 1 Demonstration](https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1), these new pieces should get you started nicely, and enable you to complete Project Study 1.
 
 ## Key Links for Project Study 1
 
