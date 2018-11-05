@@ -1,0 +1,184 @@
+---
+title: "Imputation Example for Course Project"
+author: "Thomas E. Love"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+```
+
+# Setup and Data Load
+
+```{r, message = FALSE}
+library(Epi)
+library(simputation)
+library(tidyverse)
+```
+
+Next, we'll import the data using `read_csv` and then change the character variables (other than `subject`) into factors.
+
+```{r, message = FALSE}
+dat <- read_csv("impute_example.csv") %>%
+    mutate_if(is.character, funs(as.factor(.))) %>%
+    mutate(subject = as.character(subject))
+
+dat
+```
+
+# How Much Missing Data is there in this `dat` data?
+
+```{r}
+dat %>% summarize_all(funs(sum(is.na(.))))
+```
+
+Let's see those subjects with missing values...
+
+```{r}
+dat %>% filter(!complete.cases(.))
+```
+
+# Imputing missing data in a categorical variable
+
+Here, we'll demonstrate the imputation of a categorical variable value (`ses` for subject `A12`) and then perform a 2x2 table analysis with the imputed value included, and then again without it, to see the impact.
+
+There are several methods available for single imputation of a categorical variable in the `simputation` package. For the project, we will assume the data are missing at random, though perhaps not missing completely at random. What this means here is that we have at least three choices:
+
+**PLEASE Save your work prior to trying any of these approaches!**
+
+1. Use the variables available in your data set which have complete data for the people with missing data on `ses` to help predict the `ses` level, using a decision tree approach.
+
+```{r}
+set.seed(431)
+dat_imp1 <- impute_cart(dat, ses ~ treatment + satisfaction)
+
+dat_imp1 %>% filter(subject == "A12")
+```
+
+You may find this crashes your R session, or takes a long time. If so, you might want to try method 2 instead.
+
+2. Use the variables available in your data set which have complete data for the people with missing data on `ses` to help predict the `ses` level, using a random hot deck approach. Here, you may need to convince the machine that your tibble is also a data frame, with...
+
+```{r}
+set.seed(431)
+dat_imp2 <- impute_rhd(data.frame(dat), ses ~ treatment)
+
+dat_imp2 %>% filter(subject == "A12")
+```
+
+3. If you cannot make approach 1 or 2 work, then impute the modal (most common) value from the existing observations in the categorical data. First, let's determine the mode of `ses`:
+
+```{r}
+dat %>% count(ses)
+```
+
+Since we have the same number of High and Low values, let's arbitrarily pick one to serve as the mode here. We'll pick "High".
+
+```{r}
+dat_imp3 <- dat %>% replace_na(list(ses = "High"))
+
+dat_imp3 %>% filter(subject == "A12")
+```
+
+## The Imputation's Impact on a 2x2 Table 
+
+### With the imputed `ses` data
+
+Let's use the results from our first imputation here.
+
+```{r}
+Epi::twoby2(dat_imp1$treatment, dat_imp1$ses)
+```
+
+### Without the imputed `ses` data
+
+Compare the results above to what we see when we look at the original, unimputed data.
+
+```{r}
+Epi::twoby2(dat$treatment, dat$ses)
+```
+
+# Imputing missing data in a quantitative variable
+
+Here, we'll demonstrate the imputation of a quantitative variable value (`satisfaction` for subject `A29`) and then perform a two-sample comparison of `satisfaction` by `treatment` level, with the imputed value included, and then again without it, to see the impact.
+
+There are even more methods available for single imputation of a quantitative variable in the `simputation` package. For the project, we will assume the data are missing at random, though perhaps not missing completely at random. What this means here is that we have at least three choices:
+
+**PLEASE Save your work prior to trying any of these approaches!**
+
+1. Use the variables available in your data set which have complete data for the people with missing data on `satisfaction` to help predict the `satisfaction` level, using a predictive mean matching approach. Here, you may need to convince the machine that your tibble is also a data frame, with...
+
+```{r}
+set.seed(431)
+dat_imp4 <- impute_pmm(dat, satisfaction ~ treatment + ses)
+
+dat_imp4 %>% filter(subject == "A29")
+```
+
+This "predictive mean matching" approach can only be used with numeric data. It will first use a model to impute a value, and then replace that prediction with the observed value nearest to the prediction. That means that the new value must be the same as one of the existing `satisfaction` values.
+
+2. Use the variables available in your data set which have complete data for the people with missing data on `satisfaction` to help predict the `satisfaction` level, using a robust linear model approach.
+
+```{r}
+set.seed(431)
+dat_imp5 <- impute_rlm(dat, satisfaction ~ treatment + ses)
+
+dat_imp5 %>% filter(subject == "A29")
+```
+
+This may, as in this case, produce a result that doesn't happen in practice (the rest of the `satisfaction` values are integers.)
+
+3. If you cannot make approach 1 or 2 work, then impute the median value from the existing observations in the quantitative data. 
+
+```{r}
+dat_imp6 <- impute_median(dat, satisfaction ~ 1)
+
+dat_imp6 %>% filter(subject == "A29")
+```
+
+```{r}
+dat %>% filter(complete.cases(satisfaction)) %>% summarize(median(satisfaction))
+```
+
+If we wanted instead to group the data by `ses` level before imputing `satisfaction`, that would be...
+
+```{r}
+dat_imp7 <- impute_median(dat, satisfaction ~ ses)
+
+dat_imp7 %>% filter(subject == "A29")
+
+```
+
+## The Imputation's Impact on an Independent Samples Comparison
+
+### With the imputed `satisfaction` data
+
+Let's use the results from our first imputation here, in `dat_imp4`.
+
+```{r}
+anova(lm(satisfaction ~ treatment, data = dat_imp4))
+```
+
+### Without the imputed `satisfaction` data
+
+Compare the results above to what we see when we look at the original, unimputed data.
+
+```{r}
+anova(lm(satisfaction ~ treatment, data = dat))
+```
+
+# Imputing Both the Categorical and Quantitative Variables
+
+I suggest the following approach. First impute one variable, then the other. Chain them together with the pipe (`%>%`) like this:
+
+```{r}
+dat_imp8 <- dat %>%
+    impute_pmm(satisfaction ~ ses + treatment) %>%
+    impute_cart(ses ~ satisfaction)
+
+dat_imp8 %>%
+    filter(subject %in% c("A12", "A29"))
+```
+
+Good luck!
