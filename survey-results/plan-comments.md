@@ -2,7 +2,7 @@
 
 Dr. Love's [comments on your Survey Comparison Plan](http://bit.ly/431-2018-project-survey-plan-feedback) are in this [Google Sheet](http://bit.ly/431-2018-project-survey-plan-feedback). As usual, log into Google via CWRU in order to open the sheet. Find your Homework ID number, and read the row of comments that apply to that HWID. 
 
-Many of you will see that you need to revise some or much of your plan. That revision is accomplished on your own, and the new choices you make will be the ones you present in your Portfolio and in the Presentation at the end of the semester. You're not turning in any revisions to this Comparison Plan.
+Many of you will see that you need to revise some or much of your plan. That revision is accomplished on your own, and the new choices you make will be the ones you present in your Portfolio and in the Presentation at the end of the semester. **You're not turning in any revisions to this Comparison Plan for our further review.**
 
 ## What is in Dr Love's comments in the [Feedback Google Sheet](http://bit.ly/431-2018-project-survey-plan-feedback)
 
@@ -27,9 +27,9 @@ How can you be sure that your revised plan is OK? Ask a TA, through office hours
     - If you are doing paired samples (analysis 1a), verify that the two variables you are comparing have the same units (hours, inches, rating points, whatever) and demonstrate that the paired difference is meaningful by explaining what the result is for one of the subjects.
 - In Analysis 2, convince yourself that you do actually have a quantitative outcome, and that your factor variable has at least 3 categories. Demonstrate that each group (category) contains data on the quantitative outcome for at least 10 subjects.
 - In Analysis 3, convince yourself that you do have a quantitative outcome, and a quantitative covariate, and make sure which analysis (1b or 2) you are augmenting with a covariate.
-- In Analysis 4, convince yourself the 2x2 table that comes from your choices of L and M (without any imputation) and demonstrate that there are at least 10 subjects in each row and 10 subjects in each column of your table. 
-- In Analysis 5, convince yourself the larger cross-tabulation that comes from your choices of J and K (without any imputation) and demonstrate that there are at least 10 subjects in each row and 10 subjects in each column of your table.
-- In Analysis 6, convince yourself that your variable N is categorical and has at least 3 levels, each with at least 10 subjects in it. 
+- In Analysis 4, build the 2x2 table that comes from your choices of L and M (without any imputation) and demonstrate that there are at least 10 subjects in each row and 10 subjects in each column of your table. 
+- In Analysis 5, build the larger cross-tabulation that comes from your choices of J and K (without any imputation) and demonstrate that there are at least 10 subjects in each row and 10 subjects in each column of your table.
+- In Analysis 6, convince yourself that your variable N is categorical and has at least 3 levels, each with at least 10 subjects in it, then build the necessary table. 
 
 We are not going to review your revisions to the Survey Comparison Plan. We expect you to review Dr. Love's comments and make changes, which will be reflected in the final work for Study 1 that you submit as part of the Project Portfolio and present in December. 
 
