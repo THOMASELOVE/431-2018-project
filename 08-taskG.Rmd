@@ -6,13 +6,14 @@ The Portfolio is due at noon on 2018-12-13, via [Canvas](https://canvas.case.edu
 
 ## What Will You Submit?
 
-There are three things you need to submit for Task G.
+There are four things (2 `.Rmd` and 2 `.html` files) you will submit for Task G.
 
-1. [`.csv` file] A clean, tidy data set for Study 1, which will require combining the two data sets you are provided, dealing with any missing data and any necessary combination into scales on the variables in which you are interested.
-2. [`.Rmd` and `.html` files] Your document describing the six required analyses for Study 1 (as listed below), as both a Markdown file and HTML result that work with the clean and tidy data set for Study 1.
-3. [`.Rmd` and `.html` files] Your document describing the nine required analyses for Study 2 (as listed below), as both a Markdown file and HTML result that work with the clean and tidy data set you submitted in [Task F](#taskF).
+1. [`.Rmd` and `.html` files] Your document describing the six required analyses for Study 1 (as listed below), as both a Markdown file and HTML result that work with the data provided to you for Study 1.
+2. [`.Rmd` and `.html` files] Your document describing the nine required analyses for Study 2 (as listed below), as both a Markdown file and HTML result that work with the clean and tidy data set you submitted in [Task F](#taskF).
 
-Do not submit zipped files. 
+In addition, if something has happened to require you to change your clean and tidy data set for Study 2 from the one you submitted in Task F, then **please resubmit** a clean version of the new Study 2 .csv here, as well. 
+
+- Do not submit zipped files. 
 
 ## Setting Up Your R Markdown Files
 
