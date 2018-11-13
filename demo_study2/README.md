@@ -14,4 +14,4 @@ The complete R Markdown and HTML documents were posted on 2018-11-12, on the Sha
 
 ## Is there a demonstration page for Study 1 (the Course Survey), too?
 
-Yes, [it is here](https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1)
+Yes, [it is here](https://github.com/THOMASELOVE/431-2018-project/tree/master/demo_study1).
