@@ -6,11 +6,11 @@ This demonstration study uses **simulated** data from a study of high blood pres
 
 ## Accessing the Materials
 
-HTML and R Markdown versions, along with the data used to build the examples, will be available at the Shared Google Drive folder you can access (after logging into Google via CWRU) at http://bit.ly/431-2018-demo-study2.
+HTML and R Markdown versions, along with the data used to build the examples, are now available at the Shared Google Drive folder you can access (after logging into Google via CWRU) at http://bit.ly/431-2018-demo-study2.
 
 ## Current Status
 
-Nothing particularly helpful is available yet, but there is an initial R Markdown and HTML file posted at http://bit.ly/431-2018-demo-study2.
+The complete R Markdown and HTML documents were posted on 2018-11-12, on the Shared Google Drive, at http://bit.ly/431-2018-demo-study2.
 
 ## Is there a demonstration page for Study 1 (the Course Survey), too?
 
