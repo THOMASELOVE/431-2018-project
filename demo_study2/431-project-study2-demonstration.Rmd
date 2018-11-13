@@ -8,6 +8,7 @@ output:
     highlight: kate
     number_sections: true
     code_folding: show
+    df_print: paged
 ---
 
 # Introduction 
@@ -19,12 +20,13 @@ This document demonstrates the sorts of analyses we are asking you to complete i
 ## Initial Setup and Package Loads in R 
 
 ```{r initial_setup, cache=FALSE, message = FALSE, warning = FALSE}
-library(knitr); library(rmdformats); library(magrittr)
-library(skimr); library(Hmisc); library(Epi); library(vcd)
-library(car); library(broom)
-library(tidyverse) 
+# source("Love-boost.R")
+# library(Hmisc); library(Epi); library(vcd)
 
-source("Love-boost.R")
+library(knitr); library(rmdformats); library(rmarkdown)
+library(simputation); library(skimr); library(magrittr)
+library(broom); library(GGally); library(car)
+library(tidyverse) 
 
 ## Global options
 
@@ -42,8 +44,12 @@ skimr::skim_with(numeric = list(hist = NULL),
 
 ## Loading the Raw Data into R 
 
+Here, we load the data using `read_csv` and then convert all `character` variables to `factors` in R, except for our identifying code: `subj_id`.
+
 ```{r data_load, message = FALSE}
-hbp_study <- read.csv("hbp_study.csv") %>% tbl_df
+hbp_study <- read_csv("hbp_study.csv") %>%
+  mutate_if(is.character, funs(as.factor(.))) %>%
+  mutate(subj_id = as.character(subj_id))
 ```
 
 # What is this?
@@ -52,7 +58,7 @@ This document demonstrates analyses needed for your project Study 2 (using your 
 
 We will use simulated data from a study of high blood pressure in 999 African-American adult subjects who are not of Hispanic or Latino ethnicity. To be included, the subject had to be between 33 and 83 years of age at baseline, have a series of items available in their health record at baseline, including a baseline systolic blood pressure, and then return for a blood pressure check 18 months later. Our goal will be to build a prediction model for the subject's *change* in systolic blood pressure over the 18-month period, on the basis of some of their characteristics at baseline.
 
-The data (which, again, are simulated), are in the `hbp_study.csv` data file available on [the Data and Code page of our website](https://github.com/THOMASELOVE/431-2018-data).
+The data (which, again, are simulated), are in the `hbp_study.csv` data file available on [the Data and Code page](https://github.com/THOMASELOVE/431-2018-data) of our Github site.
 
 # Original Data Set and Range Checks/Missingness
 
@@ -70,16 +76,20 @@ The `hbp_study` data set includes 12 variables and 999 adult subjects. For each 
 glimpse(hbp_study)
 ```
 
+**Note**: If you have more than 20 variables in your initial (raw) data set, prune it down to 20 as the first step before showing us the results of `glimpse` for your data.
+
 This tibble describes twelve variables, including:
 
-- a categorical `subj_id` variable not to be used in our model except for identification of subjects,
+- a character variable called `subj_id` not to be used in our model except for identification of subjects,
 - two variables that, when combined, make up our outcome (`sbp1` and `sbp2`),
-- seven categorical candidate predictors, specifically `sex`, `diabetes`, `nses`, `insurance`, `tobacco`, `statin`, and `diuretic`
+- seven categorical candidate predictors, specifically `sex`, `diabetes`, `nses`, `insurance`, `tobacco`, `statin`, and `diuretic`, each specified here in R as either a factor or a 1/0 numeric variable (`statin` and `diuretic`),
 - three quantitative candidate predictors, specifically `age`, `bmi1` and `sbp1`. 
 
 ## Which variables should be included in the tidy data set?
 
-Note that I'm not planning to use all of these predictors in my models, but I'm going to build a tidy data set including all of them anyway, so I can demonstrate solutions to some problems you might have. When you build your tidy data set, restrict it to the variables (outcomes, predictors and `subj_id`) that you will actually use in your modeling.
+In fitting my models, I actually plan only to use five predictors: `sbp1`, `age`, `bmi1`, `diabetes` and `tobacco` to model my outcome: `sbp_diff`. Even though I'm not planning to use all of these predictors in my models, I'm going to build a tidy data set including all of them anyway, so I can demonstrate solutions to some problems you might have. 
+
+When you build your tidy data set in the next section, restrict it to the variables (outcomes, predictors and `subj_id`) that you will actually use in your modeling. 
 
 # Data Management: Building a Tidy Data Set
 
@@ -87,7 +97,7 @@ In building our tidy version of these data, we must:
 
 - calculate and store the outcome variable (`sbp_diff` = `sbp2 - sbp1`),
 - deal with the ordering of levels in the multi-categorical variables `nses`, `insurance` and `tobacco`,
-- change the name of `nses` to something more helpful - I'll use `nbhd_ses` as the new name\footnote{Admittedly, that's not much better.}.
+- change the name of `nses` to something more helpful - I'll use `nbhd_ses` as the new name^[Admittedly, that's not much better.].
 
 ## Dealing with Missingness
 
@@ -96,7 +106,8 @@ Note that you will need to ensure that any *missing* values are appropriately sp
 - In this data set, we're all set on that issue. 
     + There are missing data in `nses` (8 NA), `bmi1` (5 NA) and `tobacco` (23 NA).
     + In these data, we will eventually have to deal with the missing data in a rational way, but we'll do that *after* building the tidy data set and codebook. 
-- [**Missing Outcomes**] Your tidy data set should also delete any subjects with missing values of your outcome variable. 
+- **Missing Outcomes**. In building your tidy data set, delete any subjects with missing values of your outcome variable. 
+    + If we needed to delete the rows with missing values of an outcome, I would use code of the form `data_fixed <- data_original %>% complete.cases(outcomevariablename)` to accomplish that.
     + The elements (`sbp1` and `sbp2`) that go into our outcome, `sbp_diff`, have no missing values, though, so we'll be OK in that regard.
 
 In building the tidy data set, leave all missing values for candidate predictors as `NA`. 
@@ -112,7 +123,8 @@ hbp_study <- hbp_study %>%
 mosaic::favstats(~ sbp_diff, data = hbp_study)
 ```
 
-We have no missing values in our outcome, and each of the values look plausible. Some subjects had large changes in their systolic blood pressure from baseline to follow-up, as large as a 60 mm Hg difference, it appears. The average change across our 999 subjects was modest at about 2 mm Hg, which seems reasonable, and none of the individual values seem unreasonable\footnote{A change of 60 mm Hg in systolic blood pressure in 18 months is certainly unusual, but in 999 patients, we can't be that surprised to see a change that extreme, especially since we see several other people with similar changes in the data.}, so we'll move on.
+We have no missing values in our outcome, and each of the values look plausible. Some subjects had large changes in their systolic blood pressure from baseline to follow-up, as large as a 60 mm Hg difference, it appears. The average change across our 999 subjects was modest at about 2 mm Hg, which seems reasonable, and none of the individual values seem unreasonable^[A change of 60 mm Hg in systolic blood pressure in 18 months is certainly unusual, but in 999 patients, we can't be that surprised to see a change that extreme, especially since we see several other people with similar changes in the data.], so we'll move on.
+
 
 ## Checking the Categorical Variables
 
@@ -136,7 +148,7 @@ hbp_study <- hbp_study %>%
 hbp_study %>% count(nbhd_ses)
 ```
 
-We have some missing values of `nbhd_ses`. We'll have to deal with that later.
+We have some missing values of `nbhd_ses`. We'll deal with that later.
 
 ### `tobacco`: tobacco use history
 
@@ -171,17 +183,6 @@ hbp_study <- hbp_study %>%
 hbp_study %>% count(insurance)
 ```
 
-### `diabetes` status
-
-We'll also reorder the `diabetes` variable to put "Yes" before "No".
-
-```{r revise_diabetes}
-hbp_study <- hbp_study %>%
-  mutate(diabetes = fct_relevel(diabetes, "Yes"))
-
-hbp_study %>% count(diabetes)
-```
-
 Note that any levels left out of a `fct_relevel` statement get included in their current order, after whatever levels have been specified.
 
 ## Cleaning Up to get to our final data set
@@ -203,18 +204,21 @@ The 12 variables in our tidy data set for this demonstration are as follows.
 
 Variable      | Type  | Description / Levels
 ---------: | :-------------: | --------------------------------------------
-`subj_id`   | Categorical  | subject code (A001-A999)
+`subj_id`   | Character  | subject code (A001-A999)
 `sbp_diff`  | Quantitative | outcome variable, SBP after 18 months minus SBP at baseline, in mm Hg
 `sbp1`      | Quantitative | baseline SBP (systolic blood pressure), in mm Hg
 `age`       | Quantitative | age of subject at baseline, in years
 `sex`       | Binary | Male or Female
-`diabetes`  | Binary | Does subject have a diabetes diagnosis: Yes or No
+`diabetes`  | Binary | Does subject have a diabetes diagnosis: No or Yes
 `nbhd_ses`  | 4 level Cat. | Socio-economic status of subject's home neighborhood: Very Low, Low, Middle and High
 `bmi1`      | Quantitative | subject's body-mass index at baseline
 `insurance` | 4 level Cat. | subject's insurance status at baseline: Medicare, Private, Medicaid, Uninsured
 `tobacco`   | 3 level Cat. | subject's tobacco use at baseline: never, quit (former), current
 `statin`    | Binary | 1 = statin prescription at baseline, else 0
 `diuretic`  | Binary | 1 = diuretic prescription at baseline, else 0
+
+**Note**: I've demonstrated this task for a larger set of predictors than I actually intend to use. In fitting my models, I actually plan only to use five predictors: `sbp1`, `age`, `bmi1`, `diabetes` and `tobacco` to model my outcome: `sbp_diff`.
+
 
 # Step 1. Deal with Missing Values
 
@@ -243,72 +247,454 @@ hbp_tidy %>%
   count(is.na(nbhd_ses), is.na(bmi1), is.na(tobacco))
 ```
 
-So it appears that there are, in all, 963 subjects who aren't missing anything, and 36 subjects who are missing at least one of these three variables.
+So it appears that there are, in all, 963 subjects who aren't missing anything, and 36 subjects who are missing at least one of these three variables. No subject is missing our outcome (`sbp_diff`) and no subject is missing more than one of our predictors. 
 
-- 23 are missing `tobacco` only, 
-- 5 are missing `bmi1` only, and 
-- 8 are missing `nbhd_ses`. 
+## Imputation Details
 
-No subject is missing our outcome (`sbp_diff`) and no subject is missing more than one of our predictors. 
+Follow the detailed instructions and examples provided at https://github.com/THOMASELOVE/431-2018-project/blob/master/survey-results/impute_example.md to complete the imputation work.
 
-## Imputation Details to come.
+Here, we will use the `simputation` package to impute missing values of `tobacco`, `bmi1` and `nbhd_ses`. For each of these, we need to specify the approach we will use to do the imputation, and the variables we plan to use as predictors in our imputation model (the variables we plan to use to help predict the missing values). Some of these choices will be a little arbitrary, but I'm mostly demonstrating options here.
+
+Variable | NAs | Class | Imputation Approach | Imputation Model Predictors
+-------: | ---: | -----------: | -------------------------- | -------------------
+`nbhd_ses` | `r sum(is.na(hbp_tidy$nbhd_ses))` | `r class(hbp_tidy$nbhd_ses)` | CART (decision tree) | `age`, `sex`, `insurance`
+`tobacco` | `r sum(is.na(hbp_tidy$tobacco))` | `r class(hbp_tidy$tobacco)` | CART (decision tree) | `age`, `sex`, `insurance`, `nbhd_ses`
+`bmi1` | `r sum(is.na(hbp_tidy$bmi1))` | `r class(hbp_tidy$bmi1)` | Predictive Mean Matching | `age`, `sex`, `diabetes`, `sbp1`
+
+Here's the actual set of imputation commands, that first renames my `hbp_tidy` as `hbp_tidy_unimputed` and then creates my imputed data set which I will then name `hbp_imputed`.
+
+```{r}
+hbp_imputed <- hbp_tidy %>%
+  impute_cart(nbhd_ses ~ age + sex + insurance) %>%
+  impute_cart(tobacco ~ age + sex + insurance + nbhd_ses) %>%
+  impute_pmm(bmi1 ~ age + sex + diabetes + sbp1)
+
+colSums(is.na(hbp_imputed))
+```
+
+Note that I imputed `tobacco` after `nbhd_ses` largely because I wanted to use the `nbhd_ses` results to aid in my imputation of `tobacco`.
 
 # Step 2. Identify training and test samples
 
-Here, we will obtain a training sample with a randomly selected 80% of your data, and have the remaining 20% in a test sample, properly labeled, and using `set.seed` so that the results can be replicated later. We will then use this training sample for Steps 3-7.
+Here, we will obtain a training sample with a randomly selected 80% of the data (after imputing), and have the remaining 20% in a test sample, properly labeled, and using `set.seed` so that the results can be replicated later. We will then use this training sample for Steps 3-7.
 
-## Details to come.
+I will call the training sample `hbp_training` and the test sample `hbp_test`. 
 
-# Step 3. Summarize the predictors and outcome
+  - The `sample_frac` function will sample the specified proportion of the data.
+  - Your training sample should contain a randomly selected 67-80% of your data. The training sample should be 67% of the data if you have 6,000 rows. If you have 250 rows, 80% of the data should be in the training sample. Otherwise, as in our case, anything in the range of 67-80% is OK.
+  - Another option (also part of `dplyr`) is `sample_n` if you want to instead specify the exact number of observations to be selected. If you'd prefer to do that, fine.
+  - The `anti_join` function returns all rows in the first data frame (here specified as `hbp_imputed`) that are not in the second data frame (here specified as `hbp_training`) as assessed by the row-specific identification code (here `subj_id`)).
+
+```{r splitting_samples}
+set.seed(431123) # set your own seed, don't use this one
+
+hbp_training <- hbp_imputed %>% sample_frac(.80)
+hbp_test <- anti_join(hbp_imputed, hbp_training, by = "subj_id")
+
+dim(hbp_imputed) # number of rows and columns in hbp_imputed
+dim(hbp_training) # check to be sure we have 80% of hbp_imputed here
+dim(hbp_test) # check to be sure we have the rest of hbp_imputed here
+```
+
+# Step 3. Summarize the outcome and the predictors
 
 Using the training sample, we will provide numerical summaries of each predictor variable and the outcome, as well as graphical summaries of the outcome variable. Our results should now show no missing values in any variable. We'll need to determine whether there are any evident problems, such as substantial skew in the outcome variable.
 
-## Details to come.
+## Visualizing the Outcome Distribution
 
-# Step 4. Scatterplot Matrix Creation and Interpretation
+I see at least three potential graphs to use to describe the distribution of our outcome variable, `sbp_diff`. Again, remember we're using only the **training** sample here.
 
-Here, we will build and interpret a scatterplot matrix to describe the associations (both numerically and graphically) between the outcome and all predictors. 
+- A boxplot, probably accompanied by a violin plot to show the shape of the distribution more honestly.
+- A histogram, which could perhaps be presented as a density plot with a Normal distribution superimposed.
+- A Normal Q-Q plot to directly assess Normality.
+
+I expect you to show at least two of these three, but I will display all three here. Should we see substantial skew in the outcome data, we will want to consider an appropriate transformation, and then display the results of that transformation, as well.
+
+**WARNING**: Please note that I am deliberately showing you plots that are less finished than I hope you will provide. 
+
+  - The coloring is dull or non-existent.
+  - The theme is the default gray and white grid that lots of people dislike.
+  - There are no meaningful titles or subtitles.
+  - The axis labels select the default settings, and use incomprehensible variable names.
+  - The coordinates aren't flipped when that might be appropriate.
+  - I expect a much nicer presentation in your final work. Use the class slides and homework answer sketches as a model for better plotting.
+
+```{r}
+viz1 <- ggplot(hbp_training, aes(x = "", y = sbp_diff)) +
+  geom_violin() +
+  geom_boxplot(width = 0.25)
+
+viz2 <- ggplot(hbp_training, aes(x = sbp_diff)) +
+  geom_histogram(bins = 30, col = "white")
+
+viz3 <- ggplot(hbp_training, aes(sample = sbp_diff)) +
+  geom_qq() + geom_qq_line()
+
+gridExtra::grid.arrange(viz1, viz2, viz3, nrow = 1, 
+                        top = "Less-Than-Great Plots of My Outcome's Distribution",
+                        bottom = "complete with a rotten title, default axis labels and bad captions")
+```
+
+Later, we'll augment this initial look at the outcome data with a Box-Cox plot to suggest a potential transformation. Should you decide to make such a transformation, remember to return here to plot the results for you new and transformed outcome.
+
+## Numerical Summary of the Outcome
+
+Assuming you plan no transformation of the outcome (and in our case, I am happy that the outcome data appear reasonably well-modeled by the Normal distribution) then you should just summarize the training data, with your favorite tool for that task. That might be:
+
+- `favstats` from the `mosaic` package, as shown below, or
+- `skim` from the `skimr` package, or
+- `describe` from the `Hmisc` package, or 
+- something else, I guess. 
+
+But show **ONE** of these choices, and not all of them. Make a decision and go with it!
+
+```{r}
+mosaic::favstats(~ sbp_diff, data = hbp_training)
+```
+
+## Numerical Summaries of the Predictors
+
+We also need an appropriate set of numerical summaries of each predictor variable, in the training data. I see at least three potential options here:
+
+1. Use `inspect` from the `mosaic` package to describe the predictors of interest briefly.
+2. Use `skim` from the `skimr` package to describe the predictors in the training data set.
+3. Use `describe` from the `Hmisc` package for a more detailed description of the entire data set.
+
+Again, **DO NOT** do all of these. Pick one that works for you. I'm just demonstrating possible choices here.
+
+**Note**: Again, in this case, I've demonstrated this task for a larger set of predictors than I actually intend to use. In fitting my models, I actually plan only to use five predictors: `sbp1`, `age`, `bmi1`, `diabetes` and `tobacco`.
+
+### Using the `inspect` function from `mosaic`
+
+The `inspect` function provides a way to get results like `favstats`, but for an entire data frame.
+
+```{r}
+hbp_training %>% select(-subj_id, -sbp_diff) %>% 
+  mosaic::inspect()
+```
+
+### Using `skim` to summarize the predictors
+
+I've set up this demo to use [paged HTML printing for data frames](https://bookdown.org/yihui/rmarkdown/html-document.html#data-frame-printing). To look at `skim` output, we need to turn this off, as I've done in the chunk label below, which adds the command `paged.print = FALSE`.
+
+```{r, paged.print = FALSE}
+hbp_training %>% select(-subj_id, -sbp_diff) %>% skim()
+```
+
+Note that I made sure that the histograms did not appear here, back at the beginning of this demonstration when I specified that as part of the R Preliminaries. You need to do that, too.
+
+
+### Using `describe` from `Hmisc`
+
+The `describe` function from `Hmisc` certainly produces the most extensive output of these options, and is very nice for categorical variables. But the lack of a standard deviation isn't really a plus, in my view. These days, I prefer the first two approaches shown above.
+
+```{r}
+hbp_training %>% select(-subj_id, -sbp_diff) %>% Hmisc::describe()
+```
+
+# Step 4. Scatterplot Matrix and Transformation Checking
+
+In this step, we will build and interpret a scatterplot matrix to describe the associations (both numerically and graphically) between the outcome and all predictors. 
 
 - We'll also use a Box-Cox plot to investigate whether a transformation of our outcome is suggested, and
 - describe what a correlation matrix suggests about collinearity between candidate predictors.
 
-## Details to come.
+## Scatterplot Matrix
+
+Here, we will build a scatterplot matrix (or two) to show the relationship between our outcome and the predictors. I'll demonstrate the use of `ggpairs` from the `GGally` package.
+
+- If you have more than five predictors (as we do in our case) you should build two scatterplot matrices, each starting with the outcome. Anything more than one outcome and five predictors becomes unreadable in Professor Love's view.
+- This is the primary reason why (even if your sample size is quite large) we've limited you to a maximum of 10 predictor variables. 
+- If you have a multi-categorical predictor with more than four categories, that predictor will be very difficult to see and explore in the scatterplot matrix produced.
+
+```{r, message = FALSE}
+hbp_training %>% 
+  select(sbp_diff, sbp1, age, bmi1, diabetes, tobacco) %>% 
+  ggpairs(., title = "First Scatterplot Matrix",
+          lower = list(combo = wrap("facethist", bins = 20)))
+```
+
+```{r, message = FALSE}
+hbp_training %>% 
+  select(sbp_diff, nbhd_ses, insurance, statin, diuretic) %>% 
+  ggpairs(., title = "Second Scatterplot Matrix",
+          lower = list(combo = wrap("facethist", bins = 20)))
+```
+
+At the end of this section, you should provide some discussion of the distribution of any key predictors, and their relationship to the outcome (all of that is provided in the left-hand column if you place the outcome first, as you should, in selecting variables for the plot.)
+
+**HINT**: For categorical variables, your efforts in this regard to summarize the relationships you see may be challenging. Your comments would be aided by the judicious use of numerical summaries. For example, suppose you want to study the relationship between statin use and `sbp_diff`, then you probably want to run and discuss the following results, in addition to the scatterplot matrix above.
+
+```{r}
+mosaic::favstats(sbp_diff ~ statin, data = hbp_training)
+```
+
+**Note**: Again, in this case, I've demonstrated this task for a larger set of predictors than I actually intend to use. In fitting my models, I actually plan only to use five predictors: `sbp1`, `age`, `bmi1`, `diabetes` and `tobacco`.
+
+## Collinearity Checking
+
+Next, we'll take a brief look at potential collinearity. Remember that we want to see strong correlations between our **outcome** and the predictors, but relatively modest correlations between the predictors.
+
+None of the numeric candidate predictors show any substantial correlation with each other. The largest Pearson correlation (in absolute value) between predictors is (-0.227) for `age` and `bmi1`, and that's not strong. If we did see signs of meaningful collinearity, we might rethink our selected set of predictors.
+
+I'll recommend later that you run a generalized VIF (variance inflation factor) calculation^[As we'll see in that setting, none of the generalized variance inflation factors will exceed 1.2, let alone the 5 or so that would cause us to be seriously concerned about collinearity.] after fitting your kitchen sink model just to see if anything pops up (in my case, it won't.) 
+
+## `boxCox` function to assess need for transformation of our outcome
+
+To use the `boxCox` approach here, we need to realize that the distribution of our outcome, `sbp_diff`, includes negative values as well as zeros. The smallest `sbp_diff` value is -60. We'll need to add a value to each `sbp_diff` in order to run the boxCox plot, so that the resulting "outcome" is strictly positive. I'll add 100. 
+
+- Note that I am restricting myself here to the five predictors I actually intend to use in building models.
+- Although we're generally using a 90% confidence interval in this project, we won't worry about that issue in the `boxCox` plot, and instead just look at the point estimate from `powerTransform`. 
+- These commands (`boxCox` and `powerTransform`) come from the `car` package.
+
+```{r boxCox_plot}
+model_temp <- lm((sbp_diff + 100) ~ sbp1 + age + bmi1 + diabetes + tobacco,
+                 data = hbp_training)
+
+boxCox(model_temp)
+
+powerTransform(model_temp)
+```
+
+The estimated power transformation is about 0.9, and that's closer to 1 (the raw data) than any of the other transformations I'd consider from Tukey's ladder, so I won't apply a transformation.
+
+- It is up to you to decide whether a transformation suggested by `boxCox` should be applied to your data. 
+- For the purposes of this project, you should stick to transformations of strictly positive outcomes, and to the square root (power = 0.5), square (power = 2), logarithm (power = 0) and inverse (power = -1) transformations. Don't make the transformation without being able to interpret the result well.
+- If you do decide to include a transformation of your outcome in fitting models, be sure to back-transform any predictions you make at the end of the study (Steps 7 and 8), so that we can understand the prediction error results.
+- If your outcome data are substantially multimodal, I wouldn't treat the `boxCox` results as meaningful. 
 
 # Step 5. Kitchen Sink Model Assessment
 
 We will specify a "kitchen sink" linear regression model to describe the relationship between our outcome (potentially after transformation) and the main effects of each of our predictors. We'll need to:
 
-- assess the overall effectiveness, within your training sample, of your model, by specifying and interpreting the R^2^, adjusted R^2^ (especially in light of our collinearity conclusions, below), the residual standard error, and the ANOVA F test. 
-- assess whether collinearity in the kitchen sink model has a meaningful impact, and describe how we know that.
+- We'll assess the overall effectiveness, within your training sample, of your model, by specifying and interpreting the R^2^, adjusted R^2^ (especially in light of our collinearity conclusions, below), the residual standard error, and the ANOVA F test. 
 - We'll need to specify the size, magnitude and meaning of all coefficients, and identify appropriate conclusions regarding effect sizes with 90% confidence intervals.
+- Finally, we'll assess whether collinearity in the kitchen sink model has a meaningful impact, and describe how we know that.
 
-## Details to come.
+## Fitting/Summarizing the Kitchen Sink model
+
+Our "kitchen sink" or "large" model predicts `sbp_diff` using the predictors `sbp1`, `age`, `bmi1`, `diabetes` and `tobacco`.
+
+```{r kitchen_sink}
+mod_ksink <- lm(sbp_diff ~ sbp1 + age + bmi1 + diabetes + tobacco, 
+                data = hbp_training)
+
+summary(mod_ksink)
+```
+
+## Interpreting the Model Summary
+
+```{r}
+glance(mod_ksink)
+```
+
+- This model accounts for just over 35% of the variation in `sbp_diff` in our training sample of 799 subjects. 
+- The adjusted R^2^ (0.345) is very close to the raw R^2^ (0.350), suggesting that we're not likely to have a serious problem with collinearity.
+- The residual standard error is about 16.5 mm Hg, which indicates that about 95% of our subjects in this training sample should have model predictions within about 33 mm Hg of the actual value of their `sbp_diff`, and nearly all should be within 50 mm Hg. Based on the maximum and minimum residuals, and a sample of 799 observations, it looks like there might be an outlier on the high end (a residual of 53.4), but on the low end, things look reasonable.
+- The ANOVA F test p value (which is zero for all reasonable purposes) indicates a highly statistically significant amount of predictive value is accounted for by the model. This is no surprise given the moderate R^2^ value and reasonably large (*n* = 799) size of this training sample.
+- The AIC and BIC values will be of use to us later on.
+
+## Effect Sizes: Interpreting Coefficient Estimates
+
+Specify the size, magnitude and meaning of all coefficients, and identify appropriate conclusions regarding effect sizes with 90% confidence intervals.
+
+```{r effect_sizes}
+tidy(mod_ksink, conf.int = TRUE, conf.level = 0.9) 
+```
+
+Our model is 82 - 0.67 sbp1 + 0.10 age + 0.05 bmi1 - 0.94 diabetes - 1.34 tobacconever + 1.09 tobaccoquit.
+
+This implies that:
+
+- for every 1 mm Hg increase in `sbp1`, we anticipate a drop in the outcome (difference in SBP) of 0.67 mm Hg (90% confidence interval: -0.72, -0.61). If we had two subjects with the same values of all other variables, but A had a baseline SBP of 150 and B had a baseline SBP of 140, then if all other variables are kept at the same value, our model predicts that subject A's SBP will fall by 6.7 additional (90% CI: 6.1, 7.2) mm Hg as compared to subject B.
+
+Please prepare this level of detail for at least one predictor. For the others, a summary like the one that follows will be fine.
+
+Our kitchen sink model, within our training sample, predicts that ...
+
+- an increase in age of 1 year is associated with a non-significant increase of 0.10 (90% CI -0.003, 0.20) mm Hg of change in SBP.
+- an increase in baseline BMI of one kg/m^2^ is associated with a non-significant increase of 0.05 (90% CI -0.08, 0.17) mm Hg of change in SBP.
+- subjects with diabetes are associated with a non-significant increase of 0.96 (90% CI for decrease is -1.16, 3.09) mm Hg of change in SBP as compared to subjects with diabetes.
+- subjects who quit using tobacco are estimated to have a change in SBP that is 1.67 mm Hg smaller than those who never used tobacco, and subjects who currently used tobacco are estimated to have a change that is 0.73 mm larger than those who have never used. Neither of those studied differences between tobacco use groups are statistically significant at the 10% level in our training sample.
+
+## Does collinearity in the kitchen sink model have a meaningful impact?
+
+```{r kitchen_sink_vif_for_collinearity}
+car::vif(mod_ksink)
+```
+
+We'd need to see a generalized variance inflation factor above 5 for collinearity to be a meaningful concern, so we should be fine in our case.
+
 
 # Step 6. Build a Second, Smaller Linear Model
 
 Here, we will build a second linear regression model using a subset of our "kitchen sink" model predictors, chosen to maximize predictive value within our training sample. 
 
-We'll specify the method you used to obtain this new model. (Backwards stepwise elimination is a likely approach in many cases, but if that doesn't produce a new model, we can select two of your more interesting predictors from the kitchen sink model and run that as a new model.)
+- We'll specify the method you used to obtain this new model. (Backwards stepwise elimination is a likely approach in many cases, but if that doesn't produce a new model, we can select two of your more interesting predictors from the kitchen sink model and run that as a new model.) 
+- Then, we'll need to specify the complete regression equation for this new model, again using the training sample.
 
-## Details to come.
+## Backwards Stepwise Elimination
+
+```{r stepwise_bw_model}
+step(mod_ksink)
+```
+
+The backwards selection stepwise approach suggests a model with `sbp1` alone.
+
+## Fitting the "small" model
+
+```{r fit_mod_small}
+mod_small <- lm(sbp_diff ~ sbp1, data = hbp_training)
+
+summary(mod_small)
+```
+
+## What if stepwise regression doesn't suggest a new model?
+
+1. If stepwise regression retains the kitchen sink model, develop an alternate model by selecting a subset of the kitchen sink predictors on your own. Your kitchen sink model has at least four predictors - reduce that to the two predictors you're more interested in, and see how that model performs in what follows.
+
+2. If stepwise regression throws out every predictor in your kitchen sink model, then you should rethink your choice of predictors, and start over with a new kitchen sink model.
+
+3. We will learn several other methods for model selection in 432. If you want to use one of them (for instance, a C_p_ plot) here, that's OK, but I will hold you to high expectations for getting that done correctly.
 
 # Step 7. Compare the Kitchen Sink and Second Models in the Training Sample
 
-We will compare this new (second) model to our "kitchen sink" model within your training sample using adjusted R^2^, the residual standard error, AIC and BIC. We'll need to specify the complete regression equation in both models, based on the training sample, and identify which model appears better in these comparisons. 
+We will compare this new (smaller) model to our "kitchen sink" (large) model within your training sample using adjusted R^2^, the residual standard error, AIC and BIC. We'll need to specify the complete regression equation in both models, based on the training sample, and identify which model appears better in these comparisons. 
 
 We'll produce a table to summarize our results here, and specify whether one model "wins" each competition in the training sample.
 
-## Details to come.
+## Comparing models in the training set
+
+We'll be a little bit slick here. 
+
+- First, we'll use `glance` to build a tibble of key results for the kitchen sink model, and append to that a description of the model. We'll toss that in a temporary tibble called `temp_a`.
+- Next we do the same for the smaller model, and put that in `temp_b`.
+- Finally, we put the temp files together into a new tibble, called `training_comp`, and examine that.
+
+```{r}
+temp_a <- glance(mod_ksink) %>% 
+  select(-logLik, -deviance) %>%
+  round(digits = 3) %>%
+  mutate(modelname = "kitchen sink")
+
+temp_b <- glance(mod_small) %>%
+  select(-logLik, -deviance) %>%
+  round(digits = 3) %>%
+  mutate(modelname = "smaller model")
+
+training_comp <- bind_rows(temp_a, temp_b) %>%
+  select(modelname, df, AIC, BIC, everything())
+```
+
+```{r}
+training_comp
+```
+
+It looks like the model with `sbp1` alone performs slightly better in the training sample.
+
+- The AIC and BIC for the smaller model are each a little smaller than for the kitchen sink model.
+- The adjusted R^2^ is slightly higher in the smaller model
+- The residual standard deviation (`sigma`) is essentially identical.
 
 # Step 8. Use the Two Models to predict the outcome in the Test Sample
 
 Now, we will use our two regression models to predict the value of our outcome using the predictor values  in the test sample. 
 
 - We may need to back-transform the predictions to the original units if we wind up fitting a model to a transformed outcome. 
-- We'll definitely need to compare the two models in terms of mean squared prediction error and mean absolute prediction error in a Table, which apparently I will want to see in your portfolio. 
+- We'll definitely need to compare the two models in terms of mean squared prediction error and mean absolute prediction error in a Table, which I will definitely want to see in your portfolio. 
 - We'll have to specify which model appears better at out-of-sample prediction according to these comparisons, and how we know that.
 
-## Details to come.
+## Calculating the Prediction Errors
+
+### Kitchen Sink Model
+
+We'll use the `augment` function from the `broom` package to help us here, and create a variable called `.resid` to contain the prediction errors we observe using that kitchen sink model in the `hbp_test` data.
+
+```{r}
+test_ksink <- augment(mod_ksink, newdata = hbp_test) %>% 
+  mutate(modelname = "kitchen sink", 
+         .resid = sbp_diff - .fitted) %>%
+  select(subj_id, modelname, sbp_diff, .fitted, .resid, 
+         sbp1, age, bmi1, diabetes, tobacco, 
+         everything())
+
+head(test_ksink,3)
+```
+
+### Smaller Model
+
+Again, we'll use the `augment` function from the `broom` package to help us here, and create a variable called `.resid` to contain the prediction errors we observe using the smaller model in the `hbp_test` data.
+
+```{r}
+test_small <- augment(mod_small, newdata = hbp_test) %>% 
+  mutate(modelname = "smaller model", 
+         .resid = sbp_diff - .fitted) %>%
+  select(subj_id, modelname, sbp_diff, .fitted, .resid, 
+         sbp1, age, bmi1, diabetes, tobacco, 
+         everything())
+
+head(test_small,3)
+```
+
+### Combine test sample results from the two models
+
+```{r}
+test_comp <- union(test_ksink, test_small) %>%
+  arrange(subj_id, modelname)
+
+test_comp
+```
+
+Given this tibble, including predictions and residuals from the kitchen sink model on our test data, we can now:
+
+1. Visualize the prediction errors from each model.
+2. Summarize those errors across each model.
+3. Identify the "worst fitting" subject for each model in the test sample.
+
+The next few subsections actually do these things.
+
+## Visualize the prediction errors
+
+Visualize the distribution of the errors made by the two models in the test sample, definitely in a more attractive, and perhaps a more useful fashion than the "default choices, no title, crummy labels" comparison histogram shown below.
+
+```{r}
+ggplot(test_comp, aes(x = .resid)) +
+  geom_histogram(bins = 20, col = "white") + 
+  facet_grid (modelname ~ .)
+```
+
+## Form the table comparing the model predictions
+
+Calculate the mean absolute prediction error (MAPE), the mean squared prediction error (MSPE) and the maximum absolute error across the predictions made by each model. 
+
+```{r}
+test_comp %>%
+  group_by(modelname) %>%
+  summarize(n = n(),
+            MAPE = mean(abs(.resid)), 
+            MSPE = mean(.resid^2),
+            max_error = max(abs(.resid)))
+```
+
+This is a table Dr. Love will **definitely** need to see during your presentation.
+
+- So in our case, each of these summaries is better (smaller) for the kitchen sink model, suggesting it is the better choice.
+
+## Identify the largest errors
+
+Identify the subject(s) where that maximum prediction error was made by each model, and the observed and model-fitted values of `sbp_diff` for that subject in each case.
+
+```{r}
+temp1 <- test_ksink %>%
+  filter(abs(.resid) == max(abs(.resid)))
+
+temp2 <- test_small %>%
+  filter(abs(.resid) == max(abs(.resid)))
+
+bind_rows(temp1, temp2)
+```
+
+- In our case, the same subject was most poorly fit by each model.
 
 # Step 9. Select the better model and apply it to the entire data set
 
@@ -317,10 +703,36 @@ Finally, we select the better of our two models (based on Steps 7 and 8) and app
 - Do the coefficients or summaries the model show any important changes when applied to the entire data set, and not just the training set? 
 - Plot residuals against fitted values, and also a Normal probability plot of the residuals, each of which Dr. Love will be looking for in your portfolio. What do we conclude about the validity of standard regression assumptions for our final model based on these two plots?
 
-## Details to come.
+## Fitting the Chosen Model to the Complete Data
 
-# Two Critical Reminders from Dr. Love
+I will choose the kitchen sink model. First, we apply the model to the full `hbp_imputed` data set.
 
-Remember that each step should begin with at least one complete sentence explaining what you are doing, specifying the items being used, and how you are using them, and then conclude with at least one complete sentence of discussion of the key conclusions you draw from the current step, and a discussion of any limitations you can describe that apply to the results.
+```{r ksink_for_full_data_set}
+model_final <- lm(sbp_diff ~ sbp1 + age + bmi1 + 
+                    diabetes + tobacco, data = hbp_imputed)
 
-And, for heaven's sake, DO NOT use my words included in this demonstration project in your project. Rewrite everything to make it relevant to your situation. Do not repeat my instructions back at me. 
+summary(model_final)
+```
+
+At the 90% confidence level, it appears that age and (part of) tobacco usage now appear to be statistically significant in our t tests. The overall R^2^ is very comparable, as is the residual standard error, to the model fit to the training sample alone. No coefficients change their signs.
+
+## Residual Plots for the Chosen Model in the Complete Data
+
+Here are the two key residual plots.
+
+```{r residual_plots_final_model}
+par(mfrow = c(1,2))
+plot(model_final, which = 1:2)
+par(mfrow = c(1,1))
+```
+
+I see no substantial violations of regression assumptions. There is neither a curve, nor a fan shape in the residuals vs. fitted values, and we see no evidence of important non-Normality in the Normal Q-Q plot.
+
+# Important Reminders from Dr. Love {-}
+
+1. Remember that each step should begin with at least one complete sentence explaining what you are doing, specifying the items being used, and how you are using them, and then conclude with at least one complete sentence of discussion of the key conclusions you draw from the current step, and a discussion of any limitations you can describe that apply to the results.
+
+2. For heaven's sake, DO NOT use my words included in this demonstration project in your project. Rewrite everything to make it relevant to your situation. Do not repeat my instructions back at me. 
+
+
+
