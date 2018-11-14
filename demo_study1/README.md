@@ -6,6 +6,8 @@ This page links to a demonstration of the sorts of analyses we are asking you to
 
 HTML and R Markdown versions, along with the data used to build the examples, are all available at the Shared Google Drive folder you can access (after logging into Google via CWRU) at http://bit.ly/431-2018-demo-study1.
 
+To **view** the HTML file, you can download it, or you can view it at http://rpubs.com/TELOVE/study1-demo-431-2018.
+
 ## Current Status
 
 The most recent version includes demonstrations of [all six required analyses](https://thomaselove.github.io/431-2018-project/taskG.html#the-six-required-analyses-for-study-1-1) in addition to the other required elements for your final portfolio regarding Study 1. Again, you will find this material at http://bit.ly/431-2018-demo-study1.
