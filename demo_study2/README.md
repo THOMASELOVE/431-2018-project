@@ -8,6 +8,8 @@ This demonstration study uses **simulated** data from a study of high blood pres
 
 HTML and R Markdown versions, along with the data used to build the examples, are now available at the Shared Google Drive folder you can access (after logging into Google via CWRU) at http://bit.ly/431-2018-demo-study2.
 
+To **view** the HTML file, you can download it, or you can view it at http://rpubs.com/TELOVE/study2-demo-431-2018.
+
 ## Current Status
 
 The complete R Markdown and HTML documents were posted on 2018-11-12, on the Shared Google Drive, at http://bit.ly/431-2018-demo-study2.
