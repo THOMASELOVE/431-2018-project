@@ -1,0 +1,26 @@
+response_id,usborn_001,english_002,female_003,glasses_004,r_pre431_005,domestic_006,yearborn_009,sroh_010,neohio_011,height_012,weight_013,pulse_014,exercise_015,sleep_016,sleepq_017,checkup_018,kids_019,workhrs_020
+ID01,Yes,Yes,Yes,Yes,Yes,No,1995,Fair,14,63,107,92,0,10,Good,Yes,No,0
+ID03,No,No,Yes,Yes,No,No,1998,Good,11,71,154,72,2,2,Good,No,No,0
+ID04,Yes,Yes,No,Yes,Yes,Yes,1977,Excellent,4,65,152,54,3,4.5,Good,Yes,No,0
+ID06,Yes,Yes,No,Yes,Yes,Yes,1986,Good,15,70,190,68,2,8.5,Fair,No,Yes,20
+ID07,No,No,Yes,Yes,Yes,No,1994,Good,27,62,132,68,2,6,Good,No,No,40
+ID09,Yes,Yes,Yes,Yes,Yes,No,1997,Very Good,35,63,NA,68,3,8.5,Fair,Yes,No,0
+ID10,Yes,Yes,No,Yes,Yes,Yes,1986,Very Good,57,70,180,80,4,7,Very Good,Yes,No,0
+ID11,No,No,Yes,No,Yes,No,1994,Good,26,54,100,68,1,7,Fair,No,No,12
+ID14,No,Yes,Yes,Yes,No,No,1990,Very Good,3,63,115,68,0,6,Good,No,No,0
+ID17,Yes,Yes,Yes,Yes,No,No,1997,Good,29,65,105,80,2,7,Good,Yes,No,0
+ID19,Yes,Yes,No,Yes,No,Yes,1992,Good,230,68,155,68,5,7.5,Good,No,No,0
+ID20,No,No,Yes,No,No,Yes,1987,Fair,48,63,140,64,0,10,Good,Yes,No,15
+ID22,Yes,Yes,No,Yes,No,No,1996,Very Good,38,71,168,54,0,5.5,Fair,Yes,No,9
+ID23,Yes,Yes,Yes,Yes,No,No,1994,Good,240,70,200,112,1,6,Fair,Yes,No,40
+ID24,No,Yes,Yes,No,Yes,Yes,1976,Excellent,172,61,135,72,4,6,Good,No,Yes,40
+ID25,No,No,No,Yes,Yes,No,1995,Good,3,71,159,68,4,7.5,Very Good,Yes,No,0
+ID27,Yes,Yes,Yes,Yes,No,Yes,1994,Good,27,67,170,68,2,7,Fair,No,No,40
+ID28,Yes,Yes,No,Yes,Yes,No,1992,Very Good,4,72,198,64,2,7,Good,No,No,0
+ID30,No,No,No,Yes,Yes,No,1994,Very Good,60,70,175,70,5,6,Good,No,No,50
+ID31,Yes,Yes,Yes,No,No,Yes,1990,Excellent,112,66,130,60,3,7,Very Good,Yes,No,40
+ID32,Yes,Yes,Yes,Yes,No,No,1995,Good,3,62,105,80,0,6,Poor,No,No,0
+ID33,Yes,Yes,Yes,Yes,Yes,Yes,1989,Good,12,65,150,84,0,7.5,Good,No,No,0
+ID35,No,No,Yes,No,Yes,No,1993,Good,36,64,110,68,0,8,Fair,No,No,12
+ID38,No,Yes,No,No,No,Yes,1983,Good,4,67,195,56,0,3,Fair,Yes,Yes,0
+ID39,Yes,Yes,No,Yes,Yes,No,1995,Fair,238,67,190,100,0,6,Fair,No,No,3

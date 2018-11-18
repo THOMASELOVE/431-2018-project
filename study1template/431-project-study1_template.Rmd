@@ -1,0 +1,99 @@
+---
+title: "431 Project One Template for 2018"
+author: "YOUR NAME GOES HERE"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    number_sections: true
+    code_folding: show
+---
+
+# Introduction 
+
+Your introduction goes here.
+
+## Setup 
+
+```{r setup, message = FALSE, warning = FALSE}
+## this is Dr. Love's recommended plan
+
+knitr::opts_chunk$set(comment = NA)
+
+source("Love-boost.R")
+
+library(knitr); library(rmdformats)
+library(Hmisc); library(Epi); library(vcd)
+library(skimr); library(readxl)
+library(simputation); library(magrittr)
+library(tidyverse) 
+
+## Skim options (leave out histograms)
+
+skimr::skim_with(numeric = list(hist = NULL),
+                 integer = list(hist = NULL))
+```
+
+# Data Load/Merge {.tabset .tabset-pills}
+
+## 2018 Data Load {-}
+
+```{r, message = FALSE}
+surv2018_01 <- read_csv("surv2018_01.csv")
+surv2018_02 <- read_csv("surv2018_02.csv")
+surv2018_03 <- read_csv("surv2018_03.csv")
+surv2018_04 <- read_xls("surv2018_04.xls", na = c("", "NA"))
+surv2018_05 <- read_xls("surv2018_05.xls", na = c("", "NA"))
+```
+
+```{r}
+dim(surv2018_01) # should be 25 rows, 19 columns
+dim(surv2018_02) # should be 24 rows, 19 columns
+dim(surv2018_03) # should be 49 rows, 70 columns
+dim(surv2018_04) # should be 25 rows, 78 columns
+dim(surv2018_05) # should be 24 rows, 78 columns
+```
+
+## Merge 2018 Data {-}
+
+```{r}
+temp12 <- bind_rows(surv2018_01, surv2018_02)
+temp45 <- bind_rows(surv2018_04, surv2018_05)
+temp123 <- left_join(temp12, surv2018_03, by = "response_id")
+temp12345 <- left_join(temp123, temp45, by = "response_id")
+
+surv2018_full <- temp12345 %>%
+    mutate_if(is.character, funs(as.factor(.))) %>%
+    mutate(response_id = as.character(response_id))
+
+dim(surv2018_full) # should be 49 rows, 165 columns
+```
+
+## Remove Intermediate Steps {-}
+
+```{r}
+rm(temp12, temp45, temp123, temp12345)
+rm(surv2018_01, surv2018_02, surv2018_03, 
+   surv2018_04, surv2018_05)
+```
+
+# The Survey Questions Studied Here
+
+# Tidying the Data
+
+# Final, Clean Codebook
+
+# Analysis 1 (specify 1a or 1b)
+
+# Analysis 2
+
+# Analysis 3
+
+# Analysis 4
+
+# Analysis 5
+
+# Analysis 6
+
+
+
