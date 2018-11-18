@@ -1,4 +1,4 @@
-The Project Study 1 (course survey) template became available on 2018-11-17.
+# Project Study 1 (course survey) template
 
 Dr. Love emailed you a template for Project Study 1 on 2018-11-17. It is also available as an [R Markdown file here](https://github.com/THOMASELOVE/431-2018-project/blob/master/study1template/431-project-study1_template.Rmd). 
 
